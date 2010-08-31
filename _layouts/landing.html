@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+    <title>{{ page.title }}</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" ></script>
+    {% include analytics.html %}
+  </head>
+  <body id="{{ page.section }}">
+    {% include ie6nomore.html %}
+    {{ content }}
+  </body>
+</html>
