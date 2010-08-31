@@ -67,13 +67,16 @@ body {
 
 /* line 15, ../_sass/screen.sass */
 #welcome {
-  position: absolute;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   font-size: 36px;
   line-height: 1.5;
-  margin: 20px;
+  margin: 0.5em;
+  text-shadow: black 3px 3px 5px;
 }
 
-/* line 21, ../_sass/screen.sass */
+/* line 24, ../_sass/screen.sass */
 #mugshot {
   display: block;
   position: fixed;
@@ -82,13 +85,13 @@ body {
   right: 0;
 }
 
-/* line 28, ../_sass/screen.sass */
+/* line 31, ../_sass/screen.sass */
 #twitter_bubble, #github_bubble {
   position: fixed;
   width: 400px;
   height: 200px;
 }
-/* line 31, ../_sass/screen.sass */
+/* line 34, ../_sass/screen.sass */
 #twitter_bubble .bubble1, #twitter_bubble .bubble2, #twitter_bubble .bubble3, #twitter_bubble .bubble4, #github_bubble .bubble1, #github_bubble .bubble2, #github_bubble .bubble3, #github_bubble .bubble4 {
   position: absolute;
   border: 4px solid #999999;
@@ -97,7 +100,7 @@ body {
   -o-box-shadow: #333333 1px 1px 5px;
   box-shadow: #333333 1px 1px 5px;
 }
-/* line 35, ../_sass/screen.sass */
+/* line 38, ../_sass/screen.sass */
 #twitter_bubble .bubble1, #github_bubble .bubble1 {
   background-color: #080908;
   border: 2px solid #999999;
@@ -110,7 +113,7 @@ body {
   -khtml-border-radius: 10px;
   border-radius: 10px;
 }
-/* line 40, ../_sass/screen.sass */
+/* line 43, ../_sass/screen.sass */
 #twitter_bubble .bubble2, #github_bubble .bubble2 {
   background-color: #080908;
   border: 3px solid #999999;
@@ -123,7 +126,7 @@ body {
   -khtml-border-radius: 18px;
   border-radius: 18px;
 }
-/* line 45, ../_sass/screen.sass */
+/* line 48, ../_sass/screen.sass */
 #twitter_bubble .bubble3, #github_bubble .bubble3 {
   border: 4px solid #999999;
   width: 50px;
@@ -135,7 +138,7 @@ body {
   -khtml-border-radius: 29px;
   border-radius: 29px;
 }
-/* line 49, ../_sass/screen.sass */
+/* line 52, ../_sass/screen.sass */
 #twitter_bubble .bubble4, #github_bubble .bubble4 {
   border: 6px solid #999999;
   width: 340px;
@@ -147,72 +150,73 @@ body {
   -khtml-border-radius: 32px;
   border-radius: 32px;
 }
-/* line 53, ../_sass/screen.sass */
+/* line 56, ../_sass/screen.sass */
 #twitter_bubble .content, #github_bubble .content {
-  padding: 20px;
-  font-size: 20px;
-  line-height: 30px;
+  padding: 18px;
+  font-size: 18px;
+  line-height: 1.556;
 }
-/* line 57, ../_sass/screen.sass */
+/* line 60, ../_sass/screen.sass */
 #twitter_bubble .content .info, #github_bubble .content .info {
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 2;
   color: #999999;
 }
 
-/* line 61, ../_sass/screen.sass */
+/* line 65, ../_sass/screen.sass */
 #twitter_bubble {
   bottom: 430px;
   right: 0px;
 }
-/* line 64, ../_sass/screen.sass */
+/* line 68, ../_sass/screen.sass */
 #twitter_bubble .bubble1 {
   bottom: 0;
   right: 255px;
 }
-/* line 67, ../_sass/screen.sass */
+/* line 71, ../_sass/screen.sass */
 #twitter_bubble .bubble2 {
   bottom: 12px;
   right: 275px;
 }
-/* line 70, ../_sass/screen.sass */
+/* line 74, ../_sass/screen.sass */
 #twitter_bubble .bubble3 {
   bottom: 45px;
   right: 290px;
   background-color: #080908;
   background-image: url(../images/twitter-bubble.png);
 }
-/* line 75, ../_sass/screen.sass */
+/* line 79, ../_sass/screen.sass */
 #twitter_bubble .bubble4 {
   bottom: 80px;
   right: 30px;
   background-color: #080908;
 }
 
-/* line 80, ../_sass/screen.sass */
+/* line 84, ../_sass/screen.sass */
 #github_bubble {
   bottom: 260px;
-  right: 320px;
+  right: 300px;
 }
-/* line 83, ../_sass/screen.sass */
+/* line 87, ../_sass/screen.sass */
 #github_bubble .bubble1 {
-  bottom: 90px;
+  bottom: 125px;
   right: 0;
 }
-/* line 86, ../_sass/screen.sass */
+/* line 90, ../_sass/screen.sass */
 #github_bubble .bubble2 {
-  bottom: 100px;
+  bottom: 130px;
   right: 20px;
 }
-/* line 89, ../_sass/screen.sass */
+/* line 93, ../_sass/screen.sass */
 #github_bubble .bubble3 {
   bottom: 130px;
-  right: 40px;
+  right: 60px;
   background-color: #080908;
   background-image: url(../images/github-bubble.png);
 }
-/* line 94, ../_sass/screen.sass */
+/* line 98, ../_sass/screen.sass */
 #github_bubble .bubble4 {
   bottom: 100px;
-  right: 80px;
+  right: 100px;
   background-color: #080908;
 }

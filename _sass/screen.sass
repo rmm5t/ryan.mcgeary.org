@@ -13,10 +13,13 @@ body
   font-family: Georgia, serif
 
 #welcome
-  position: absolute
+  position: fixed
+  bottom: 0
+  left: 0
   font-size: 36px
   line-height: 1.5
-  margin: 20px
+  margin: 0.5em
+  +text-shadow(#000, 3px, 3px, 5px)
 
 #mugshot
   display: block
@@ -51,11 +54,12 @@ body
     +dimensions(340px, auto)
     +border-radius(32px)
   .content
-    padding: 20px
-    font-size: 20px
-    line-height: 30px
+    padding: 18px
+    font-size: 18px
+    line-height: 1.556
     .info
-      font-size: 16px
+      font-size: 14px
+      line-height: 2
       color: #999
 
 #twitter_bubble
@@ -79,20 +83,20 @@ body
 
 #github_bubble
   bottom: 260px
-  right: 320px
+  right: 300px
   .bubble1
-    bottom: 90px
+    bottom: 125px
     right: 0
   .bubble2
-    bottom: 100px
+    bottom: 130px
     right: 20px
   .bubble3
     bottom: 130px
-    right: 40px
+    right: 60px
     background-color: $background_color
     background-image: url(../images/github-bubble.png)
   .bubble4
     bottom: 100px
-    right: 80px
+    right: 100px
     background-color: $background_color
 
