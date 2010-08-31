@@ -8,6 +8,12 @@ $background_color: #080908
   width: $width
   height: $height
 
+=highlight-gradient($start_opacity, $stop_position: 100%)
+  +linear-gradient(color-stops(rgba(255, 255, 255, $start_opacity), rgba(255, 255, 255, 0) $stop_position))
+
+=shade-gradient($stop_opacity, $start_position: 0%)
+  +linear-gradient(color-stops(rgba(0, 0, 0, 0) $start_position, rgba(0, 0, 0, $stop_opacity)))
+
 body
   background-color: $background_color
   color: #fff
@@ -18,7 +24,7 @@ body
   bottom: 0
   left: 0
   margin: 10px
-  a.button
+  .button
     display: block
     float: left
     +dimensions(64px, 64px)
@@ -34,8 +40,8 @@ body
     +replace-text("facebook-button.png")
   .claimid
     +replace-text("claimid-button.png")
-  .workingwithrails
-    +replace-text("blank-button.png")
+  .wwr
+    +replace-text("wwr-button.png")
 
 #welcome
   margin: 0.5em
@@ -43,7 +49,7 @@ body
   line-height: 1.5
   +text-shadow(#000, 3px, 3px, 5px)
   a
-    color: inherit
+    +link-colors(#fff)
     +hover-link
 
 #bio
@@ -54,7 +60,7 @@ body
   p
     margin-top: 1em
   a
-    color: #ccc
+    +link-colors(#eee, #fff)
     +hover-link
 
 #mugshot
@@ -72,6 +78,7 @@ body
     position: absolute
     border: 4px solid #999
     +box-shadow
+    +highlight-gradient(0.2)
   .bubble1
     border: 2px solid #999
     background-color: $background_color
