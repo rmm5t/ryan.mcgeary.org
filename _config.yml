@@ -1,2 +1,2 @@
 auto: true
-exclude: Rakefile
+exclude: Rakefile, Gemfile, Gemfile.lock, vendor
