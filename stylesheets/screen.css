@@ -1,0 +1,218 @@
+/* line 14, ../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* line 17, ../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+
+/* line 19, ../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 21, ../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+/* line 23, ../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 25, ../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: "" "";
+}
+/* line 96, ../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+}
+
+/* line 27, ../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 10, ../_sass/screen.sass */
+body {
+  background-color: #080908;
+  color: white;
+  font-family: Georgia, serif;
+}
+
+/* line 15, ../_sass/screen.sass */
+#welcome {
+  position: absolute;
+  font-size: 36px;
+  line-height: 1.5;
+  margin: 20px;
+}
+
+/* line 21, ../_sass/screen.sass */
+#mugshot {
+  display: block;
+  position: fixed;
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+}
+
+/* line 28, ../_sass/screen.sass */
+#twitter_bubble, #github_bubble {
+  position: fixed;
+  width: 400px;
+  height: 200px;
+}
+/* line 31, ../_sass/screen.sass */
+#twitter_bubble .bubble1, #twitter_bubble .bubble2, #twitter_bubble .bubble3, #twitter_bubble .bubble4, #github_bubble .bubble1, #github_bubble .bubble2, #github_bubble .bubble3, #github_bubble .bubble4 {
+  position: absolute;
+  border: 4px solid #999999;
+  -moz-box-shadow: #333333 1px 1px 5px;
+  -webkit-box-shadow: #333333 1px 1px 5px;
+  -o-box-shadow: #333333 1px 1px 5px;
+  box-shadow: #333333 1px 1px 5px;
+}
+/* line 35, ../_sass/screen.sass */
+#twitter_bubble .bubble1, #github_bubble .bubble1 {
+  background-color: #080908;
+  border: 2px solid #999999;
+  width: 16px;
+  height: 16px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+}
+/* line 40, ../_sass/screen.sass */
+#twitter_bubble .bubble2, #github_bubble .bubble2 {
+  background-color: #080908;
+  border: 3px solid #999999;
+  width: 30px;
+  height: 30px;
+  -moz-border-radius: 18px;
+  -webkit-border-radius: 18px;
+  -o-border-radius: 18px;
+  -ms-border-radius: 18px;
+  -khtml-border-radius: 18px;
+  border-radius: 18px;
+}
+/* line 45, ../_sass/screen.sass */
+#twitter_bubble .bubble3, #github_bubble .bubble3 {
+  border: 4px solid #999999;
+  width: 50px;
+  height: 50px;
+  -moz-border-radius: 29px;
+  -webkit-border-radius: 29px;
+  -o-border-radius: 29px;
+  -ms-border-radius: 29px;
+  -khtml-border-radius: 29px;
+  border-radius: 29px;
+}
+/* line 49, ../_sass/screen.sass */
+#twitter_bubble .bubble4, #github_bubble .bubble4 {
+  border: 6px solid #999999;
+  width: 340px;
+  height: auto;
+  -moz-border-radius: 32px;
+  -webkit-border-radius: 32px;
+  -o-border-radius: 32px;
+  -ms-border-radius: 32px;
+  -khtml-border-radius: 32px;
+  border-radius: 32px;
+}
+/* line 53, ../_sass/screen.sass */
+#twitter_bubble .content, #github_bubble .content {
+  padding: 20px;
+  font-size: 20px;
+  line-height: 30px;
+}
+/* line 57, ../_sass/screen.sass */
+#twitter_bubble .content .info, #github_bubble .content .info {
+  font-size: 16px;
+  color: #999999;
+}
+
+/* line 61, ../_sass/screen.sass */
+#twitter_bubble {
+  bottom: 430px;
+  right: 0px;
+}
+/* line 64, ../_sass/screen.sass */
+#twitter_bubble .bubble1 {
+  bottom: 0;
+  right: 255px;
+}
+/* line 67, ../_sass/screen.sass */
+#twitter_bubble .bubble2 {
+  bottom: 12px;
+  right: 275px;
+}
+/* line 70, ../_sass/screen.sass */
+#twitter_bubble .bubble3 {
+  bottom: 45px;
+  right: 290px;
+  background-color: #080908;
+  background-image: url(../images/twitter-bubble.png);
+}
+/* line 75, ../_sass/screen.sass */
+#twitter_bubble .bubble4 {
+  bottom: 80px;
+  right: 30px;
+  background-color: #080908;
+}
+
+/* line 80, ../_sass/screen.sass */
+#github_bubble {
+  bottom: 260px;
+  right: 320px;
+}
+/* line 83, ../_sass/screen.sass */
+#github_bubble .bubble1 {
+  bottom: 90px;
+  right: 0;
+}
+/* line 86, ../_sass/screen.sass */
+#github_bubble .bubble2 {
+  bottom: 100px;
+  right: 20px;
+}
+/* line 89, ../_sass/screen.sass */
+#github_bubble .bubble3 {
+  bottom: 130px;
+  right: 40px;
+  background-color: #080908;
+  background-image: url(../images/github-bubble.png);
+}
+/* line 94, ../_sass/screen.sass */
+#github_bubble .bubble4 {
+  bottom: 100px;
+  right: 80px;
+  background-color: #080908;
+}
