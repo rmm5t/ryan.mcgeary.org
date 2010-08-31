@@ -1,5 +1,6 @@
-@import "compass/reset"
 @import "compass/css3"
+@import "compass/utilities"
+@import "compass/reset"
 
 $background_color: #080908
 
@@ -12,14 +13,49 @@ body
   color: #fff
   font-family: Georgia, serif
 
-#welcome
+#social
   position: fixed
   bottom: 0
   left: 0
+  margin: 10px
+  a.button
+    display: block
+    float: left
+    +dimensions(64px, 64px)
+  .email
+    +replace-text("mail-button.png")
+  .github
+    +replace-text("github-button.png")
+  .twitter
+    +replace-text("twitter-button.png")
+  .linkedin
+    +replace-text("linkedin-button.png")
+  .facebook
+    +replace-text("facebook-button.png")
+  .claimid
+    +replace-text("claimid-button.png")
+  .workingwithrails
+    +replace-text("blank-button.png")
+
+#welcome
+  margin: 0.5em
   font-size: 32px
   line-height: 1.5
-  margin: 0.5em
   +text-shadow(#000, 3px, 3px, 5px)
+  a
+    color: inherit
+    +hover-link
+
+#bio
+  width: 320px
+  margin: 2em 1em 9em 1em
+  line-height: 1.5
+  color: #999
+  p
+    margin-top: 1em
+  a
+    color: #ccc
+    +hover-link
 
 #mugshot
   display: block
@@ -31,26 +67,29 @@ body
 #twitter_bubble, #github_bubble
   position: fixed
   +dimensions(400px, 200px)
-  .bubble1, .bubble2, .bubble3, .bubble4
+  .bubble
+    display: block
     position: absolute
     border: 4px solid #999
     +box-shadow
   .bubble1
-    background-color: $background_color
     border: 2px solid #999
+    background-color: $background_color
     +dimensions(16px, 16px)
     +border-radius(10px)
   .bubble2
-    background-color: $background_color
     border: 3px solid #999
+    background-color: $background_color
     +dimensions(30px, 30px)
     +border-radius(18px)
   .bubble3
     border: 4px solid #999
+    background-color: $background_color
     +dimensions(50px, 50px)
     +border-radius(29px)
   .bubble4
     border: 6px solid #999
+    background-color: rgba(0, 0, 0, 0.8)
     +dimensions(340px, auto)
     +border-radius(32px)
   .content
@@ -74,12 +113,11 @@ body
   .bubble3
     bottom: 45px
     right: 290px
-    background-color: $background_color
     background-image: url(../images/twitter-bubble.png)
+    +replace-text("twitter-bubble.png")
   .bubble4
     bottom: 80px
     right: 30px
-    background-color: $background_color
 
 #github_bubble
   bottom: 260px
@@ -93,10 +131,10 @@ body
   .bubble3
     bottom: 130px
     right: 60px
-    background-color: $background_color
     background-image: url(../images/github-bubble.png)
+    +replace-text("Github-bubble.png")
   .bubble4
     bottom: 100px
     right: 100px
-    background-color: $background_color
+    +dimensions(260px, auto)
 

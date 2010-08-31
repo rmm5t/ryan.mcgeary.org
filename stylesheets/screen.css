@@ -58,25 +58,130 @@ a img {
   border: none;
 }
 
-/* line 10, ../_sass/screen.sass */
+/* line 11, ../_sass/screen.sass */
 body {
   background-color: #080908;
   color: white;
   font-family: Georgia, serif;
 }
 
-/* line 15, ../_sass/screen.sass */
-#welcome {
+/* line 16, ../_sass/screen.sass */
+#social {
   position: fixed;
   bottom: 0;
   left: 0;
-  font-size: 32px;
-  line-height: 1.5;
-  margin: 0.5em;
-  text-shadow: black 3px 3px 5px;
+  margin: 10px;
+}
+/* line 21, ../_sass/screen.sass */
+#social a.button {
+  display: block;
+  float: left;
+  width: 64px;
+  height: 64px;
+}
+/* line 25, ../_sass/screen.sass */
+#social .email {
+  text-indent: -9999em;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('/images/mail-button.png?1283259361');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+/* line 27, ../_sass/screen.sass */
+#social .github {
+  text-indent: -9999em;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('/images/github-button.png?1283265556');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+/* line 29, ../_sass/screen.sass */
+#social .twitter {
+  text-indent: -9999em;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('/images/twitter-button.png?1283259332');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+/* line 31, ../_sass/screen.sass */
+#social .linkedin {
+  text-indent: -9999em;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('/images/linkedin-button.png?1283259315');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+/* line 33, ../_sass/screen.sass */
+#social .facebook {
+  text-indent: -9999em;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('/images/facebook-button.png?1283262635');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+/* line 35, ../_sass/screen.sass */
+#social .claimid {
+  text-indent: -9999em;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('/images/claimid-button.png?1283262336');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+/* line 37, ../_sass/screen.sass */
+#social .workingwithrails {
+  text-indent: -9999em;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('/images/blank-button.png?1283264259');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
-/* line 24, ../_sass/screen.sass */
+/* line 40, ../_sass/screen.sass */
+#welcome {
+  margin: 0.5em;
+  font-size: 32px;
+  line-height: 1.5;
+  text-shadow: black 3px 3px 5px;
+}
+/* line 45, ../_sass/screen.sass */
+#welcome a {
+  color: inherit;
+  text-decoration: none;
+}
+/* line 4, ../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/links/_hover-link.scss */
+#welcome a:hover {
+  text-decoration: underline;
+}
+
+/* line 49, ../_sass/screen.sass */
+#bio {
+  width: 320px;
+  margin: 2em 1em 9em 1em;
+  line-height: 1.5;
+  color: #999999;
+}
+/* line 54, ../_sass/screen.sass */
+#bio p {
+  margin-top: 1em;
+}
+/* line 56, ../_sass/screen.sass */
+#bio a {
+  color: #cccccc;
+  text-decoration: none;
+}
+/* line 4, ../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/links/_hover-link.scss */
+#bio a:hover {
+  text-decoration: underline;
+}
+
+/* line 60, ../_sass/screen.sass */
 #mugshot {
   display: block;
   position: fixed;
@@ -85,14 +190,15 @@ body {
   right: 0;
 }
 
-/* line 31, ../_sass/screen.sass */
+/* line 67, ../_sass/screen.sass */
 #twitter_bubble, #github_bubble {
   position: fixed;
   width: 400px;
   height: 200px;
 }
-/* line 34, ../_sass/screen.sass */
-#twitter_bubble .bubble1, #twitter_bubble .bubble2, #twitter_bubble .bubble3, #twitter_bubble .bubble4, #github_bubble .bubble1, #github_bubble .bubble2, #github_bubble .bubble3, #github_bubble .bubble4 {
+/* line 70, ../_sass/screen.sass */
+#twitter_bubble .bubble, #github_bubble .bubble {
+  display: block;
   position: absolute;
   border: 4px solid #999999;
   -moz-box-shadow: #333333 1px 1px 5px;
@@ -100,10 +206,10 @@ body {
   -o-box-shadow: #333333 1px 1px 5px;
   box-shadow: #333333 1px 1px 5px;
 }
-/* line 38, ../_sass/screen.sass */
+/* line 75, ../_sass/screen.sass */
 #twitter_bubble .bubble1, #github_bubble .bubble1 {
-  background-color: #080908;
   border: 2px solid #999999;
+  background-color: #080908;
   width: 16px;
   height: 16px;
   -moz-border-radius: 10px;
@@ -113,10 +219,10 @@ body {
   -khtml-border-radius: 10px;
   border-radius: 10px;
 }
-/* line 43, ../_sass/screen.sass */
+/* line 80, ../_sass/screen.sass */
 #twitter_bubble .bubble2, #github_bubble .bubble2 {
-  background-color: #080908;
   border: 3px solid #999999;
+  background-color: #080908;
   width: 30px;
   height: 30px;
   -moz-border-radius: 18px;
@@ -126,9 +232,10 @@ body {
   -khtml-border-radius: 18px;
   border-radius: 18px;
 }
-/* line 48, ../_sass/screen.sass */
+/* line 85, ../_sass/screen.sass */
 #twitter_bubble .bubble3, #github_bubble .bubble3 {
   border: 4px solid #999999;
+  background-color: #080908;
   width: 50px;
   height: 50px;
   -moz-border-radius: 29px;
@@ -138,9 +245,10 @@ body {
   -khtml-border-radius: 29px;
   border-radius: 29px;
 }
-/* line 52, ../_sass/screen.sass */
+/* line 90, ../_sass/screen.sass */
 #twitter_bubble .bubble4, #github_bubble .bubble4 {
   border: 6px solid #999999;
+  background-color: rgba(0, 0, 0, 0.8);
   width: 340px;
   height: auto;
   -moz-border-radius: 32px;
@@ -150,73 +258,83 @@ body {
   -khtml-border-radius: 32px;
   border-radius: 32px;
 }
-/* line 56, ../_sass/screen.sass */
+/* line 95, ../_sass/screen.sass */
 #twitter_bubble .content, #github_bubble .content {
   padding: 18px;
   font-size: 18px;
   line-height: 1.556;
 }
-/* line 60, ../_sass/screen.sass */
+/* line 99, ../_sass/screen.sass */
 #twitter_bubble .content .info, #github_bubble .content .info {
   font-size: 14px;
   line-height: 2;
   color: #999999;
 }
 
-/* line 65, ../_sass/screen.sass */
+/* line 104, ../_sass/screen.sass */
 #twitter_bubble {
   bottom: 430px;
   right: 0px;
 }
-/* line 68, ../_sass/screen.sass */
+/* line 107, ../_sass/screen.sass */
 #twitter_bubble .bubble1 {
   bottom: 0;
   right: 255px;
 }
-/* line 71, ../_sass/screen.sass */
+/* line 110, ../_sass/screen.sass */
 #twitter_bubble .bubble2 {
   bottom: 12px;
   right: 275px;
 }
-/* line 74, ../_sass/screen.sass */
+/* line 113, ../_sass/screen.sass */
 #twitter_bubble .bubble3 {
   bottom: 45px;
   right: 290px;
-  background-color: #080908;
   background-image: url(../images/twitter-bubble.png);
+  text-indent: -9999em;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('/images/twitter-bubble.png?1283259304');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
-/* line 79, ../_sass/screen.sass */
+/* line 118, ../_sass/screen.sass */
 #twitter_bubble .bubble4 {
   bottom: 80px;
   right: 30px;
-  background-color: #080908;
 }
 
-/* line 84, ../_sass/screen.sass */
+/* line 122, ../_sass/screen.sass */
 #github_bubble {
   bottom: 260px;
   right: 300px;
 }
-/* line 87, ../_sass/screen.sass */
+/* line 125, ../_sass/screen.sass */
 #github_bubble .bubble1 {
   bottom: 125px;
   right: 0;
 }
-/* line 90, ../_sass/screen.sass */
+/* line 128, ../_sass/screen.sass */
 #github_bubble .bubble2 {
   bottom: 130px;
   right: 20px;
 }
-/* line 93, ../_sass/screen.sass */
+/* line 131, ../_sass/screen.sass */
 #github_bubble .bubble3 {
   bottom: 130px;
   right: 60px;
-  background-color: #080908;
   background-image: url(../images/github-bubble.png);
+  text-indent: -9999em;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('/images/Github-bubble.png?1283224655');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
-/* line 98, ../_sass/screen.sass */
+/* line 136, ../_sass/screen.sass */
 #github_bubble .bubble4 {
   bottom: 100px;
   right: 100px;
-  background-color: #080908;
+  width: 260px;
+  height: auto;
 }
