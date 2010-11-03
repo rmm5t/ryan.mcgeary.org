@@ -2,7 +2,8 @@
 @import "compass/utilities"
 @import "compass/reset"
 
-$background_color: #080908
+$background_color: rgb(8, 9, 8)
+$background_color_opacity: rgba(8, 9, 8, 0.85)
 
 =dimensions($width, $height)
   width: $width
@@ -45,8 +46,17 @@ body
   .wwr
     +replace-text("wwr-button.png")
 
+#content
+  margin: 0 710px 6em 0
+  padding: 1em
+  min-width: 300px
+  max-width: 400px
+  background-color: $background_color_opacity
+  +border-bottom-right-radius(1em)
+  +box-shadow($background_color)
+
 #welcome
-  margin: 0.5em
+  margin: 0
   font-size: 32px
   line-height: 1.5
   +text-shadow(#000, 3px, 3px, 5px)
@@ -55,8 +65,7 @@ body
     +hover-link
 
 #bio
-  width: 320px
-  margin: 2em 1em 9em 1em
+  margin: 2em 0 0
   line-height: 1.5
   color: #999
   p
@@ -73,6 +82,7 @@ body
   right: 0
 
 #twitter_bubble, #github_bubble
+  z-index: -1
   position: fixed
   +dimensions(400px, 200px)
   .bubble
