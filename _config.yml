@@ -5,3 +5,4 @@ exclude:
   - Gemfile.lock
   - vendor
   - config.rb
+permalink: pretty
