@@ -81,8 +81,6 @@ body#post #content {
     font-style: italic; }
     body#post #content h2 a, body#post #content h2 em {
       color: #aaaaaa; }
-    body#post #content h2 a:hover {
-      text-decoration: underline; }
   body#post #content p {
     margin-bottom: 1em; }
   body#post #content a {
@@ -101,6 +99,36 @@ body#post #content {
     box-shadow: #080908 1px 1px 5px 0; }
   body#post #content a:hover img {
     background-color: rgba(0, 153, 238, 0.3); }
+
+body#post #sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 360px;
+  padding: 1em;
+  background-color: rgba(8, 9, 8, 0.9);
+  color: #999999;
+  -moz-border-radius-bottomleft: 1em;
+  -webkit-border-bottom-left-radius: 1em;
+  -o-border-bottom-left-radius: 1em;
+  -ms-border-bottom-left-radius: 1em;
+  -khtml-border-bottom-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+  -moz-box-shadow: #080908 1px 1px 5px 0;
+  -webkit-box-shadow: #080908 1px 1px 5px 0;
+  -o-box-shadow: #080908 1px 1px 5px 0;
+  box-shadow: #080908 1px 1px 5px 0; }
+  body#post #sidebar a {
+    color: #eeeeee;
+    text-decoration: none; }
+    body#post #sidebar a:hover {
+      color: white; }
+    body#post #sidebar a:hover {
+      text-decoration: underline; }
+  body#post #sidebar #bio {
+    margin: 0; }
+    body#post #sidebar #bio p {
+      margin: 0 0 1em 0; }
 
 #social {
   position: fixed;
@@ -181,9 +209,8 @@ body#post #content {
     background-position: 50% 50%; }
 
 #welcome {
-  margin: 0;
+  margin: 0 0 32px 0;
   font-size: 32px;
-  line-height: 1.5;
   text-shadow: black 3px 3px 5px; }
   #welcome a {
     color: white;
@@ -192,8 +219,6 @@ body#post #content {
       text-decoration: underline; }
 
 #bio {
-  margin: 2em 0 0;
-  line-height: 1.5;
   color: #999999; }
   #bio p {
     margin-top: 1em; }
@@ -213,7 +238,7 @@ body#post #content {
   right: 0; }
 
 #twitter_bubble, #github_bubble {
-  z-index: -1;
+  z-index: 0;
   position: fixed;
   width: 400px;
   height: 200px; }

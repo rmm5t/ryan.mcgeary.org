@@ -6,3 +6,14 @@ section: post
 <h2>by <a href="/">Ryan McGeary</a> on <em>{{ page.date | date_to_string }}</em>{% if page.duration %} in <em>{{ page.duration }}</em>{% endif %}</h2>
 
 {{ content }}
+
+<div id="sidebar">
+  <p>
+    <a href="/">Ryan McGeary</a> is a freelance software consultant, business
+    starter, rubyist, web guru, and amateur triathlete.  Ryan
+    owns <a href="http://mcgearygroup.com">McGeary Consulting Group</a>, a software
+    development and consulting firm located in Northern Virginia.
+  </p>
+  {% include hire_me.html %}
+</div>
+

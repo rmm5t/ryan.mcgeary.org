@@ -47,8 +47,6 @@ body#post #content
     font-style: italic
     a, em
       color: #aaa
-    a:hover
-      text-decoration: underline
   p
     margin-bottom: 1em
   a
@@ -65,6 +63,23 @@ body#post #content
   a:hover img
     background-color: rgba(0, 153, 238, .3)
 
+body#post #sidebar
+  position: fixed
+  top: 0
+  right: 0
+  width: 360px
+  padding: 1em
+  background-color: $background_color_opacity
+  color: #999
+  +border-bottom-left-radius(1em)
+  +box-shadow($background_color)
+  a
+    +link-colors(#eee, #fff)
+    +hover-link
+  #bio
+    margin: 0
+    p
+      margin: 0 0 1em 0
 
 #social
   position: fixed
@@ -96,17 +111,14 @@ body#post #content
     +replace-text("wwr-button.png")
 
 #welcome
-  margin: 0
+  margin: 0 0 32px 0
   font-size: 32px
-  line-height: 1.5
   +text-shadow(#000, 3px, 3px, 5px)
   a
     +link-colors(#fff)
     +hover-link
 
 #bio
-  margin: 2em 0 0
-  line-height: 1.5
   color: #999
   p
     margin-top: 1em
@@ -122,7 +134,7 @@ body#post #content
   right: 0
 
 #twitter_bubble, #github_bubble
-  z-index: -1
+  z-index: 0
   position: fixed
   +dimensions(400px, 200px)
   .bubble
