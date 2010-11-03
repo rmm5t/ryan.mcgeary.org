@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+    {% include openid.html %}
+    {% include microid.html %}
+    <title>{{ page.title }}</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js" ></script>
+    <script type="text/javascript" src="/javascripts/landing.js" ></script>
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <!--[if IE]>
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    {% include analytics.html %}
+  </head>
+  <body id="{{ page.section }}">
+    {% include ie6nomore.html %}
+    {% include mugshot.html %}
+    <div id="content">{{ content }}</div>
+    {% include social.html %}
+  </body>
+</html>
