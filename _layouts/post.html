@@ -1,0 +1,8 @@
+---
+layout: default
+section: post
+---
+<h1>{{ page.title }}</h1>
+<h2>by <a href="/">Ryan McGeary</a> on <em>{{ page.date | date_to_string }}</em>{% if page.duration %} in <em>{{ page.duration }}</em>{% endif %}</h2>
+
+{{ content }}
