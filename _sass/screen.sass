@@ -96,19 +96,19 @@ body
     background-color: $background_color
     +dimensions(50px, 50px)
     +border-radius(29px)
-  .bubble4
+  .main_bubble
     border: 6px solid #999
     background-color: rgba(0, 0, 0, 0.8)
-    +dimensions(340px, auto)
-    +border-radius(32px)
-  .content
     padding: 18px
-    font-size: 18px
-    line-height: 1.556
-    .info
-      font-size: 14px
-      line-height: 2
-      color: #999
+    +dimensions(300px, auto)
+    +border-radius(32px)
+    blockquote
+      font-size: 18px
+      line-height: 1.556
+      .info
+        font-size: 14px
+        line-height: 2
+        color: #999
 
 #twitter_bubble
   bottom: 430px
@@ -124,26 +124,26 @@ body
     right: 290px
     background-image: url(../images/twitter-bubble.png)
     +replace-text("twitter-bubble.png")
-  .bubble4
+  .main_bubble
     bottom: 80px
     right: 30px
 
 #github_bubble
-  bottom: 260px
+  bottom: 360px
   right: 300px
   .bubble1
-    bottom: 125px
+    bottom: 25px
     right: 0
   .bubble2
-    bottom: 130px
+    bottom: 30px
     right: 20px
   .bubble3
-    bottom: 130px
+    bottom: 30px
     right: 60px
     background-image: url(../images/github-bubble.png)
     +replace-text("github-bubble.png")
-  .bubble4
-    bottom: 100px
+  .main_bubble
+    bottom: 0
     right: 100px
-    +dimensions(260px, auto)
+    +dimensions(240px, auto)
 

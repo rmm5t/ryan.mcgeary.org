@@ -58,59 +58,59 @@ body {
     width: 64px;
     height: 64px; }
   #social .email {
-    text-indent: -9999em;
+    text-indent: -119988px;
     overflow: hidden;
     text-align: left;
-    background-image: url('/images/mail-button.png?1283259361');
+    background-image: url('/images/mail-button.png?1287763329');
     background-repeat: no-repeat;
     background-position: 50% 50%; }
   #social .github {
-    text-indent: -9999em;
+    text-indent: -119988px;
     overflow: hidden;
     text-align: left;
-    background-image: url('/images/github-button.png?1283265556');
+    background-image: url('/images/github-button.png?1287763329');
     background-repeat: no-repeat;
     background-position: 50% 50%; }
   #social .stackoverflow {
-    text-indent: -9999em;
+    text-indent: -119988px;
     overflow: hidden;
     text-align: left;
-    background-image: url('/images/stackoverflow-button.png?1283273514');
+    background-image: url('/images/stackoverflow-button.png?1287763329');
     background-repeat: no-repeat;
     background-position: 50% 50%; }
   #social .twitter {
-    text-indent: -9999em;
+    text-indent: -119988px;
     overflow: hidden;
     text-align: left;
-    background-image: url('/images/twitter-button.png?1283259332');
+    background-image: url('/images/twitter-button.png?1287763329');
     background-repeat: no-repeat;
     background-position: 50% 50%; }
   #social .linkedin {
-    text-indent: -9999em;
+    text-indent: -119988px;
     overflow: hidden;
     text-align: left;
-    background-image: url('/images/linkedin-button.png?1283259315');
+    background-image: url('/images/linkedin-button.png?1287763329');
     background-repeat: no-repeat;
     background-position: 50% 50%; }
   #social .facebook {
-    text-indent: -9999em;
+    text-indent: -119988px;
     overflow: hidden;
     text-align: left;
-    background-image: url('/images/facebook-button.png?1283262635');
+    background-image: url('/images/facebook-button.png?1287763329');
     background-repeat: no-repeat;
     background-position: 50% 50%; }
   #social .claimid {
-    text-indent: -9999em;
+    text-indent: -119988px;
     overflow: hidden;
     text-align: left;
-    background-image: url('/images/claimid-button.png?1283262336');
+    background-image: url('/images/claimid-button.png?1287763329');
     background-repeat: no-repeat;
     background-position: 50% 50%; }
   #social .wwr {
-    text-indent: -9999em;
+    text-indent: -119988px;
     overflow: hidden;
     text-align: left;
-    background-image: url('/images/wwr-button.png?1283267367');
+    background-image: url('/images/wwr-button.png?1287763329');
     background-repeat: no-repeat;
     background-position: 50% 50%; }
 
@@ -155,12 +155,13 @@ body {
     display: block;
     position: absolute;
     border: 4px solid #999999;
-    -moz-box-shadow: #333333 1px 1px 5px;
-    -webkit-box-shadow: #333333 1px 1px 5px;
-    -o-box-shadow: #333333 1px 1px 5px;
-    box-shadow: #333333 1px 1px 5px;
+    -moz-box-shadow: #333333 1px 1px 5px 0;
+    -webkit-box-shadow: #333333 1px 1px 5px 0;
+    -o-box-shadow: #333333 1px 1px 5px 0;
+    box-shadow: #333333 1px 1px 5px 0;
     background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(255, 255, 255, 0)));
-    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%); }
+    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%); }
   #twitter_bubble .bubble1, #github_bubble .bubble1 {
     border: 2px solid #999999;
     background-color: #080908;
@@ -194,10 +195,11 @@ body {
     -ms-border-radius: 29px;
     -khtml-border-radius: 29px;
     border-radius: 29px; }
-  #twitter_bubble .bubble4, #github_bubble .bubble4 {
+  #twitter_bubble .main_bubble, #github_bubble .main_bubble {
     border: 6px solid #999999;
     background-color: rgba(0, 0, 0, 0.8);
-    width: 340px;
+    padding: 18px;
+    width: 300px;
     height: auto;
     -moz-border-radius: 32px;
     -webkit-border-radius: 32px;
@@ -205,14 +207,13 @@ body {
     -ms-border-radius: 32px;
     -khtml-border-radius: 32px;
     border-radius: 32px; }
-  #twitter_bubble .content, #github_bubble .content {
-    padding: 18px;
-    font-size: 18px;
-    line-height: 1.556; }
-    #twitter_bubble .content .info, #github_bubble .content .info {
-      font-size: 14px;
-      line-height: 2;
-      color: #999999; }
+    #twitter_bubble .main_bubble blockquote, #github_bubble .main_bubble blockquote {
+      font-size: 18px;
+      line-height: 1.556; }
+      #twitter_bubble .main_bubble blockquote .info, #github_bubble .main_bubble blockquote .info {
+        font-size: 14px;
+        line-height: 2;
+        color: #999999; }
 
 #twitter_bubble {
   bottom: 430px;
@@ -227,37 +228,37 @@ body {
     bottom: 45px;
     right: 290px;
     background-image: url(../images/twitter-bubble.png);
-    text-indent: -9999em;
+    text-indent: -119988px;
     overflow: hidden;
     text-align: left;
-    background-image: url('/images/twitter-bubble.png?1283259304');
+    background-image: url('/images/twitter-bubble.png?1287763329');
     background-repeat: no-repeat;
     background-position: 50% 50%; }
-  #twitter_bubble .bubble4 {
+  #twitter_bubble .main_bubble {
     bottom: 80px;
     right: 30px; }
 
 #github_bubble {
-  bottom: 260px;
+  bottom: 360px;
   right: 300px; }
   #github_bubble .bubble1 {
-    bottom: 125px;
+    bottom: 25px;
     right: 0; }
   #github_bubble .bubble2 {
-    bottom: 130px;
+    bottom: 30px;
     right: 20px; }
   #github_bubble .bubble3 {
-    bottom: 130px;
+    bottom: 30px;
     right: 60px;
     background-image: url(../images/github-bubble.png);
-    text-indent: -9999em;
+    text-indent: -119988px;
     overflow: hidden;
     text-align: left;
-    background-image: url('/images/github-bubble.png?1283224655');
+    background-image: url('/images/github-bubble.png?1287763329');
     background-repeat: no-repeat;
     background-position: 50% 50%; }
-  #github_bubble .bubble4 {
-    bottom: 100px;
+  #github_bubble .main_bubble {
+    bottom: 0;
     right: 100px;
-    width: 260px;
+    width: 240px;
     height: auto; }
