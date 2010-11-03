@@ -104,10 +104,11 @@ body#post #sidebar {
   position: fixed;
   top: 0;
   right: 0;
-  width: 360px;
+  width: 300px;
   padding: 1em;
   background-color: rgba(8, 9, 8, 0.9);
   color: #999999;
+  font-size: 14px;
   -moz-border-radius-bottomleft: 1em;
   -webkit-border-bottom-left-radius: 1em;
   -o-border-bottom-left-radius: 1em;
