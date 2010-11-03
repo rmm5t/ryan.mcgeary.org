@@ -26,6 +26,8 @@
     var index = 0;
     var timeout = null;
 
+    if (slideCount == 0) return this;
+
     slides.wrapAll("<div class='simpleCycle_wrapper'></div>");
     var wrapper = slides.parent();
 
