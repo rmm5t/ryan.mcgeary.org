@@ -7,7 +7,7 @@ duration: 15 minutes
 
 [![CoffeeScript](/images/talks/coffeescript-novarug.png)][slides]
 
-NORFOLK, VIRGINIA &mdash; [NovaRUG][novarug] &mdash; I discovered
+RESTON, VIRGINIA &mdash; [NovaRUG][novarug] &mdash; I discovered
 [CoffeeScript][coffeescript] during a recent project that [Jim Garvin][garvin]
 and I were working on.  We knew the app was going to be heavy on the JavaScript,
 and that’s how we started &ndash; writing straight JavaScript.  Even though I
