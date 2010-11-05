@@ -20,12 +20,12 @@ body
   background-color: $background_color
   color: #fff
   font-family: Georgia, serif
+  line-height: 1.5
 
 strong
   font-weight: bold
 
 #content
-  line-height: 1.5
   margin: 0 430px 6em 0
   padding: 1em
   background-color: $background_color_opacity
@@ -65,14 +65,6 @@ body#post #content
     a:hover img
       background-color: rgba(0, 153, 238, .3)
 
-#disqus_thread
-  display: none
-  border-top: 3px dashed #999
-#dsq-new-post
-  font-size: 12px !important
-#dsq-content
-  font-size: 16px !important
-
 body#post #sidebar
   position: fixed
   top: 0
@@ -87,10 +79,16 @@ body#post #sidebar
   a
     +link-colors(#eee, #fff)
     +hover-link
-  #bio
-    margin: 0
-    p
-      margin: 0 0 1em 0
+  p
+    margin-bottom: 1em
+
+#disqus_thread
+  display: none
+  border-top: 3px dashed #999
+#dsq-new-post
+  font-size: 12px !important
+#dsq-content
+  font-size: 16px !important
 
 #social
   position: fixed

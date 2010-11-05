@@ -45,13 +45,13 @@ a img {
 body {
   background-color: #080908;
   color: white;
-  font-family: Georgia, serif; }
+  font-family: Georgia, serif;
+  line-height: 1.5; }
 
 strong {
   font-weight: bold; }
 
 #content {
-  line-height: 1.5;
   margin: 0 430px 6em 0;
   padding: 1em;
   background-color: rgba(8, 9, 8, 0.9);
@@ -102,16 +102,6 @@ body#post #content {
     body#post #content #body a:hover img {
       background-color: rgba(0, 153, 238, 0.3); }
 
-#disqus_thread {
-  display: none;
-  border-top: 3px dashed #999999; }
-
-#dsq-new-post {
-  font-size: 12px !important; }
-
-#dsq-content {
-  font-size: 16px !important; }
-
 body#post #sidebar {
   position: fixed;
   top: 0;
@@ -138,10 +128,18 @@ body#post #sidebar {
       color: white; }
     body#post #sidebar a:hover {
       text-decoration: underline; }
-  body#post #sidebar #bio {
-    margin: 0; }
-    body#post #sidebar #bio p {
-      margin: 0 0 1em 0; }
+  body#post #sidebar p {
+    margin-bottom: 1em; }
+
+#disqus_thread {
+  display: none;
+  border-top: 3px dashed #999999; }
+
+#dsq-new-post {
+  font-size: 12px !important; }
+
+#dsq-content {
+  font-size: 16px !important; }
 
 #social {
   position: fixed;
