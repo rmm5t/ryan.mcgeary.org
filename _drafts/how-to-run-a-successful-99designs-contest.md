@@ -1,4 +1,5 @@
 ---
+layout: post
 title: How to Run a Successful 99designs Contest
 ---
 

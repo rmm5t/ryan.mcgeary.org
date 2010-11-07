@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Lightning Talk: CoffeeScript at NovaRUG"
 category: talks
+title: "Lightning Talk: CoffeeScript at NovaRUG"
 duration: 15 minutes
 ---
 

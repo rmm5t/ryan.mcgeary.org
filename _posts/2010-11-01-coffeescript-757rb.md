@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Talk: CoffeeScript at 757rb"
 category: talks
+title: "Talk: CoffeeScript at 757rb"
 duration: 50 minutes
 ---
 

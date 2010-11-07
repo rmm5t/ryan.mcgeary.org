@@ -1,4 +1,5 @@
 ---
+layout: post
 title: RVM Gemsets Are Overrated
 ---
 _vender everything still applies_
