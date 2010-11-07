@@ -79,9 +79,14 @@ body#post #content {
     color: #bbbbbb; }
   body#post #content a:hover {
     color: rgba(0, 153, 238, 0.8); }
+  body#post #content em {
+    font-style: italic; }
+  body#post #content strong {
+    font-weight: bold; }
   body#post #content h1 {
     font-size: 32px; }
   body#post #content h2 {
+    margin-bottom: 1em;
     font-style: italic; }
     body#post #content h2 a, body#post #content h2 em {
       color: #aaaaaa; }
@@ -101,6 +106,9 @@ body#post #content {
       box-shadow: #080908 1px 1px 5px 0; }
     body#post #content #body a:hover img {
       background-color: rgba(0, 153, 238, 0.3); }
+    body#post #content #body .edit {
+      color: #aaaaaa;
+      font-style: italic; }
 
 body#post #sidebar {
   position: fixed;

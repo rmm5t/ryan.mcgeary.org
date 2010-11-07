@@ -45,9 +45,14 @@ body#post #content
     color: #bbb
   a:hover
     color: rgba(0, 153, 238, .8)
+  em
+    font-style: italic
+  strong
+    font-weight: bold
   h1
     font-size: 32px
   h2
+    margin-bottom: 1em
     font-style: italic
     a, em
       color: #aaa
@@ -64,6 +69,9 @@ body#post #content
       +box-shadow($background_color)
     a:hover img
       background-color: rgba(0, 153, 238, .3)
+    .edit
+      color: #aaa
+      font-style: italic
 
 body#post #sidebar
   position: fixed
