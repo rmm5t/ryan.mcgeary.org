@@ -23,5 +23,7 @@ The guys from [thoughtbot](http://thoughtbot.com/)
 and explain how it can help your development team stay on top of production
 problems.
 
-Please check it out and vote up my video so other people learn about me and [McGeary
-Consulting Group](http://mcgearygroup.com).
+Please
+[check it out](http://how-i-work.com/workbenches/30-working-with-os-x-and-emacs)
+and vote up my video so other people learn about me and
+[McGeary Consulting Group](http://mcgearygroup.com).
