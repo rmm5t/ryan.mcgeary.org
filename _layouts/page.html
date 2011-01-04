@@ -1,0 +1,15 @@
+---
+layout: default
+section: page
+scripts: |
+  <script src="/javascripts/post.js"></script>
+---
+<div id="content">
+  <h1>{{ page.title }}</h1>
+  <div id="body">
+    {{ content }}
+  </div>
+</div>
+
+{% include sidebar.html %}
+

@@ -71,30 +71,30 @@ body#landing #content {
   min-width: 300px;
   max-width: 400px; }
 
-body#post #content {
+body#page #content {
   width: auto;
   min-width: 400px;
   max-width: 600px; }
-  body#post #content a {
+  body#page #content a {
     color: #bbbbbb; }
-  body#post #content a:hover {
+  body#page #content a:hover {
     color: rgba(0, 153, 238, 0.8); }
-  body#post #content em {
+  body#page #content em {
     font-style: italic; }
-  body#post #content strong {
+  body#page #content strong {
     font-weight: bold; }
-  body#post #content h1 {
+  body#page #content h1 {
     font-size: 32px; }
-  body#post #content h2 {
+  body#page #content h2 {
     margin-bottom: 1em;
     font-style: italic; }
-    body#post #content h2 a, body#post #content h2 em {
+    body#page #content h2 a, body#page #content h2 em {
       color: #aaaaaa; }
-  body#post #content #body {
+  body#page #content #body {
     margin-bottom: 3em; }
-    body#post #content #body p {
+    body#page #content #body p {
       margin-bottom: 1em; }
-    body#post #content #body img {
+    body#page #content #body img {
       display: block;
       max-width: 360px;
       background-color: rgba(40, 40, 40, 0.5);
@@ -104,13 +104,13 @@ body#post #content {
       -webkit-box-shadow: #080908 1px 1px 5px 0;
       -o-box-shadow: #080908 1px 1px 5px 0;
       box-shadow: #080908 1px 1px 5px 0; }
-    body#post #content #body a:hover img {
+    body#page #content #body a:hover img {
       background-color: rgba(0, 153, 238, 0.3); }
-    body#post #content #body .edit {
+    body#page #content #body .edit {
       color: #aaaaaa;
       font-style: italic; }
 
-body#post #sidebar {
+body#page #sidebar {
   position: fixed;
   top: 0;
   right: 0;
@@ -129,14 +129,14 @@ body#post #sidebar {
   -webkit-box-shadow: #080908 1px 1px 5px 0;
   -o-box-shadow: #080908 1px 1px 5px 0;
   box-shadow: #080908 1px 1px 5px 0; }
-  body#post #sidebar a {
+  body#page #sidebar a {
     color: #eeeeee;
     text-decoration: none; }
-    body#post #sidebar a:hover {
+    body#page #sidebar a:hover {
       color: white; }
-    body#post #sidebar a:hover {
+    body#page #sidebar a:hover {
       text-decoration: underline; }
-  body#post #sidebar p {
+  body#page #sidebar p {
     margin-bottom: 1em; }
 
 #disqus_thread {
