@@ -16,6 +16,19 @@ referencing the now _defunkt_ [err the blog](http://errtheblog.com/posts/50-vend
 ** ...gemsets are overrated...
 ** Bundler can handle it all (too bad these aren't the defaults)
 
+* `bundle package` is important
+** It ensures the gems are available without having to sync with a gem server
+** It speeds up
+** It speeds up deployments and makes them more resilient
+
+* For applications, check-in your Gemfile.lock.  Don't .gitignore it
+** This ensures everyone running the applications guaranteed to have the same dependencies
+* For applications, check-in your .rvmrc file.  Don't .gitignore it.
+** Yes, do it!
+** It documents the Ruby version that you expect people to run your application under
+** I've seen too many applications where I can't run `bundle install` because some dependency doesn't work on 1.9
+** If you intended to run on 1.8, document it with an .rvmrc file
+
 https://gist.github.com/622202#gistcomment-11626
 
 > Off topic, but for projects, I don't find gemsets to be of much use. Every
