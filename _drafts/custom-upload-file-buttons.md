@@ -2,7 +2,7 @@
 layout: post
 title: Custom Upload File Buttons
 ---
-Requires an interesting CSS and HTML hack to get a browser compliant file upload button with style that still pulls up the file dialog without using flash.
+Requires an interesting CSS and HTML hack to get a cross-browser compliant file upload button with style that still pulls up the file dialog without using flash.
 
 the button has the input[type=file] within. The button gets an overflow hidden. The input[type=file] gets a huge font size and right justified. To top it off, it gets an opacity of 0. So when you click the blue button, you'r really clicking the ugly input[type=file]; you just don't know it.
 
@@ -34,3 +34,5 @@ You are using [Sass](http://sass-lang.com/) and [Compass](http://compass-style.o
         padding: 0
         cursor: pointer
         +opacity(0)
+
+Note: Firefox will not give you a pointer cursor no matter what you do.
