@@ -140,3 +140,17 @@ run `bi` and the gems are installed in an application specific location
 a new project or trying to convert an old project to these new conventions, I
 just run `binit`, which installs and packages the gems within the application
 while also gitignoring the `vendor/ruby` directory.
+
+## TL;DR
+
+* Avoid RVM gemsets for your applications; Bundler solves the same problem in a better way (`bundle install --path vendor`).
+* Check your `.rvmrc` into version control; it's a form of documentation.
+* Always keep a cache of your gem dependencies in version control for your applications using `bundle package`.
+
+{% highlight text %}
+$ bundle install --path vendor
+$ bundle package
+$ echo 'vendor/ruby' >> .gitignore
+{% endhighlight %}
+
+

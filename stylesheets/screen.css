@@ -338,6 +338,12 @@ body#page #content {
     margin-bottom: 3em; }
     body#page #content #body p {
       margin-bottom: 1.5em; }
+    body#page #content #body ul {
+      list-style-type: disc;
+      margin-bottom: 1.5em;
+      margin-left: 1.5em; }
+    body#page #content #body li p {
+      margin-bottom: 0; }
     body#page #content #body img {
       display: block;
       max-width: 360px;
