@@ -20,7 +20,7 @@ end
 
 desc "Watch for changes and test the site"
 task :watch => :build do
-  sh("open http://ryan.mcgeary.local")
+  sh("open http://ryan.mcgeary.local/blog/")
   monitor
 end
 

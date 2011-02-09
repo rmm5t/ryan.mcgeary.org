@@ -7,9 +7,9 @@ GEM
       haml (>= 3.0.4)
     directory_watcher (1.3.2)
     fast-stemmer (1.0.0)
-    fssm (0.1.4)
-    haml (3.0.23)
-    jekyll (0.7.0)
+    fssm (0.2.5)
+    haml (3.0.25)
+    jekyll (0.10.0)
       classifier (>= 1.3.1)
       directory_watcher (>= 1.1.1)
       liquid (>= 1.9.0)
@@ -23,6 +23,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  compass (= 0.10.6)
-  fssm (= 0.1.4)
-  jekyll (= 0.7.0)
+  compass
+  fssm
+  jekyll
