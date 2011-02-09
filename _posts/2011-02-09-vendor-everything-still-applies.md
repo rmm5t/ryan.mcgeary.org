@@ -3,7 +3,7 @@ layout: post
 title: "“Vendor Everything” Still Applies"
 ---
 
-That's right, the title is a homage to the (now
+That's right. The title is a homage to the (now
 [_defunkt_](http://twitter.com/defunkt))
 [err the blog](http://errtheblog.com/posts/50-vendor-everything), and keeping
 your application dependencies with your application is _still_ a very good
@@ -13,7 +13,7 @@ As a consultant, I jump between a lot of different Ruby projects from day to
 day.  Some are my own; some are owned by others. Some are greenfield; some are
 legacy. Sometimes, I'm the sole developer; sometimes, I'm working with a team.
 
-There's nothing more frustrating that jumping on an existing project only to
+There's nothing more frustrating than jumping on an existing project only to
 fall into dependency hell when your first goal is just a passing test suite.
 Dependencies can be quite difficult to manage, and fortunately, we have some
 great tools like [Bundler](http://gembundler.com/) and
@@ -112,11 +112,11 @@ gems are available without having to sync with a gem server.
 
 I've seen resistance to this practice, but the only arguments against it usually
 refer to taking up too much space in version control. That argument is
-poppycock. Storage is cheap, and you'll thank me later when your deployments run
-smoothly and when you would have otherwise been stuck not able to find a missing
-gem from somewhere in the future. Not to mention, having all your gems in
-`vendor/cache` makes `bundle install` run much faster for new team
-members. Deployment environments like [Heroku](http://heroku.com/) really
+poppycock. Storage is cheap. You'll thank me later when your deployments run
+smoothly, and when several years from now, an otherwise missing gem is at your
+fingertips. Not to mention, having all your gems in `vendor/cache` makes `bundle
+install` run faster both for new team members and in your continuous integration
+environment. Deployment environments like [Heroku](http://heroku.com/) really
 benefit from this practice too.
 
 \*\* By the way, for applications, please do
@@ -126,13 +126,11 @@ benefit from this practice too.
 
 Here are some command line aliases that help me:
 
-{% highlight bash %}
-alias b="bundle"
-alias bi="b install --path vendor"
-alias bu="b update"
-alias be="b exec"
-alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"
-{% endhighlight %}
+    alias b="bundle"
+    alias bi="b install --path vendor"
+    alias bu="b update"
+    alias be="b exec"
+    alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"
 
 Any time I jump into a new project that already has a Gemfile, I merely need to
 run `bi` and the gems are installed in an application specific location
@@ -145,7 +143,8 @@ while also gitignoring the `vendor/ruby` directory.
 
 * Avoid RVM gemsets for your applications; Bundler solves the same problem in a better way (`bundle install --path vendor`).
 * Check your `.rvmrc` into version control; it's a form of documentation.
-* Always keep a cache of your gem dependencies in version control for your applications using `bundle package`.
+* Keep a cache of your gem dependencies in version control using `bundle package`.
+* This only applies to Ruby applications; gem development is a different beast.
 
 {% highlight text %}
 $ bundle install --path vendor
