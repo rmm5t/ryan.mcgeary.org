@@ -17,7 +17,9 @@ scripts: |
 
   <div id="comments">
     <h2><a href="{{ page.url }}#disqus_thread">Comments</a></h2>
-    {% include disqus_comments.html %}
+    <div id="disqus_wrapper">
+      {% include disqus_comments.html %}
+    </div>
   </div>
 </div>
 
