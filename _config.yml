@@ -7,3 +7,4 @@ exclude:
   - vendor
   - config.rb
 permalink: pretty
+pygments: true

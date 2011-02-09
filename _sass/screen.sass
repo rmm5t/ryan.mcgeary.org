@@ -2,6 +2,8 @@
 @import "compass/utilities"
 @import "compass/reset"
 
+@import "pygments/monokai"
+
 $background_color: rgb(8, 9, 8)
 $background_color_opacity: rgba(8, 9, 8, 0.9)
 $highlight_color: rgb(0, 153, 238)
@@ -20,7 +22,7 @@ body
   background-color: $background_color
   color: #fff
   font-family: Georgia, serif
-  line-height: 1.5
+  line-height: 24px
 
 strong
   font-weight: bold
@@ -42,24 +44,33 @@ body#page #content
   min-width: 400px
   max-width: 600px
   a
-    color: #bbb
+    color: #7cf
+    text-decoration: none
   a:hover
-    color: rgba(0, 153, 238, .8)
+    text-decoration: underline
   em
     font-style: italic
   strong
     font-weight: bold
   h1
+    color: #fc8
     font-size: 32px
-  h2
-    margin-bottom: 1em
-    font-style: italic
+    line-height: 48px
+  h2, .byline
     a, em
       color: #aaa
+  h2
+    color: #fc8
+    font-size: 20px
+    border-bottom: 2px solid #222
+    margin-bottom: 22px
+  .byline
+    font-style: italic
+    margin-bottom: 1.5em
   #body
     margin-bottom: 3em
     p
-      margin-bottom: 1em
+      margin-bottom: 1.5em
     img
       display: block
       max-width: 360px
@@ -67,6 +78,38 @@ body#page #content
       padding: 20px
       margin: 1em 0
       +box-shadow($background_color)
+    pre
+      margin-bottom: 1.714em
+      background-color: #222
+      padding: 10px
+      border: 2px solid #333
+      +border-radius(6px)
+      +box-shadow(#000, 1px, 1px, 2px, 0, inset)
+      +text-shadow(#000)
+      code
+        color: #fff
+        font-size: 14px
+    code
+      color: #8ca
+      font-size: 80%
+      line-height: 24px
+      font-family: Monaco, "Courier New", monospace
+    a code
+      color: #7cf
+    blockquote
+      max-width: 10em
+      float: right
+      margin: 0 0 24px 24px
+      padding: 22px
+      font-size: 20px
+      font-style: italic
+      background-color: #444
+      border: 2px solid #666
+      +border-radius(12px)
+      +box-shadow(#000, 2px, 2px, 2px, 0, inset)
+      +text-shadow(#000, 2px, 2px, 2px)
+      p
+        margin-bottom: 0
     a:hover img
       background-color: rgba(0, 153, 238, .3)
     .edit
@@ -130,6 +173,7 @@ body#page #sidebar
 #welcome
   margin: 0 0 32px 0
   font-size: 32px
+  line-height: 48px
   +text-shadow(#000, 3px, 3px, 5px)
   a
     +link-colors(#fff)
