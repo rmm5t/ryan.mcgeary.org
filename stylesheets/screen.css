@@ -473,11 +473,11 @@ body#page #content #comments h2 {
     float: left;
     width: 64px;
     height: 64px; }
-  #social .email {
+  #social .rss {
     text-indent: -119988px;
     overflow: hidden;
     text-align: left;
-    background-image: url('/images/mail-button.png?1283259361');
+    background-image: url('/images/rss-button.png?1297293045');
     background-repeat: no-repeat;
     background-position: 50% 50%; }
   #social .github {
@@ -527,6 +527,13 @@ body#page #content #comments h2 {
     overflow: hidden;
     text-align: left;
     background-image: url('/images/wwr-button.png?1283267367');
+    background-repeat: no-repeat;
+    background-position: 50% 50%; }
+  #social .email {
+    text-indent: -119988px;
+    overflow: hidden;
+    text-align: left;
+    background-image: url('/images/mail-button.png?1283259361');
     background-repeat: no-repeat;
     background-position: 50% 50%; }
 
