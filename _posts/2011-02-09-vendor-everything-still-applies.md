@@ -22,12 +22,12 @@ we as a community have not fully standardized on the best set of conventions
 surrounding these tools.
 
 _Disclaimer: The set of conventions described here apply to Ruby applications
-only.  Theis inclues Rails apps, Sinatra apps, or other Ruby applications that
+only.  This includes Rails apps, Sinatra apps, or other Ruby applications that
 aren't deployed in the form of a gem._
 
 ## Stop Using RVM Gemsets For Your Applications
 
-Please stop using RVM gem for your applications. Seriously. The original title
+Please stop using RVM gemsets for your applications. Seriously. The original title
 of this post was going to be, "RVM Gemsets are overrated," but that seemed too
 much like flamebait, and I didn't want anyone to miscontrue my overall point.
 
@@ -62,7 +62,7 @@ until we went to deploy and took a look at the production environment that we
 realized we should have been developing against Ruby Enterprise Edition (REE)
 instead of MRI.
 
-Keep your `.rvmrc` file simple by trying to only specify the version of Ruby.  For
+Keep your `.rvmrc` file simple by only specifying the Ruby version.  For
 example:
 
 {% highlight bash %}
@@ -83,15 +83,16 @@ without using an RVM gemset.  I like to install all application dependencies
 into a gitignored directory within the application itself.  This not only
 alleviates the need for different gemsets per project, but it also gives us a
 quick and easy way to jump into the source code of any one of our gem
-dependencies.  We can do this with the `--path` option passed to `bundle
-install`.  Here's the convention I like to use:
+dependencies.  We can do this with the `--path` option passed to
+[`bundle install`](http://gembundler.com/bundle_install.html).  Here's the
+convention I like to use:
 
     $ bundle install --path vendor
     $ echo 'vendor/ruby' >> .gitignore
 
-After running this, all gems (and gems pull directly from git repositories) will
-be unpacked into the `vendor/ruby` directory of your project.  It's a good idea
-to ignore this directory from version control.
+After running this, all gems (and gems pulled directly from git repositories)
+will be unpacked into the `vendor/ruby` directory of your project.  It's a good
+idea to ignore this directory from version control.
 
 This one step removes the need of creating a custom RVM gemset for any of your
 applications, and it ensures that your default gemset is never polluted by
