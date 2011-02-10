@@ -39,8 +39,8 @@ don't want to pollute their default gemset, but this reliance on gemsets for
 applications is totally unnecessary.  It also seems to be a common point of
 confusion amongst teams.
 
-There's a better way, and it includes a lesser known feature of Bundler.  More
-on that in a bit.
+There's a better way, that still doesn't pollute the default gemset, and it
+includes a lesser known feature of Bundler.  More on that in a bit.
 
 ## Do Check Your `.rvmrc` into Version Control
 
