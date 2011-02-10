@@ -1,9 +1,76 @@
 (function($) {
   $(document).ready(function() {
-    $("#github_bubble blockquote").simpleCycle(5500);
-    $("#twitter_bubble blockquote").simpleCycle(7000);
+    $("#twitter_bubble .main_bubble").appendTwitterQuotes("rmm5t", "mcgearygroup", function() {
+      $("#twitter_bubble blockquote").simpleCycle(7000);
+    });
+    $("#github_bubble .main_bubble").appendGithubPushes("rmm5t", function() {
+      $("#github_bubble blockquote").simpleCycle(5500);
+    });
   });
-})(jQuery);
+
+  $.fn.appendTwitterQuotes = function(screen_name, filtered_by_screen_name, callback) {
+    return this.each(function() {
+      var container = $(this);
+      filtered_by_screen_name = filtered_by_screen_name || screen_name;
+      var params = { screen_name: filtered_by_screen_name, count: 6, include_rts: true };
+      $.getJSON("http://api.twitter.com/1/statuses/user_timeline.json?callback=?", params, function(data) {
+        $.each(data, function(i, tweet) { 
+          if (tweet.retweeted_status && tweet.retweeted_status.user.screen_name != screen_name) { return; }
+          var status = tweet.retweeted_status || tweet;
+          var blockquote = $('<blockquote></blockquote>');
+          var message = $('<div class="message"></div>').text(status.text).autolink();
+          var time = $('<div class="info"></div>').text(status.created_at);
+          container.append(blockquote.append(message).append(time));
+        });
+        if (callback) { callback(); }
+      });
+    });
+  };
+
+  $.fn.autolink = function () {
+    return this.each( function(){
+      var link    = /((http|https|ftp):\/\/[\w?=&.\/-;#~%-]+(?![\w\s?&.\/;#~%"=-]*>))/g;
+      var twitter = /@([a-zA-Z0-9_]+)/g;
+      var text = $(this).text();
+      text = text.replace(link,    '<a href="$1">$1</a>');
+      text = text.replace(twitter, '@<a href="http://twitter.com/$1">$1</a>');
+      $(this).html(text);
+    });
+  };
+
+  $.fn.appendGithubPushes = function(username, callback) {
+    return this.each(function() {
+      var container = $(this);
+      $.getJSON("https://github.com/" + username + ".json?callback=?", function(data) {
+        var count = 0;
+        $.each(data, function(i, event) { 
+          if ((event.type != "PushEvent") || (count >= 8)) { return; }
+          count++;
+          var payload = event.payload;
+          var refs = payload.ref.split("/");
+          var branch = refs[refs.length - 1];
+          var repo = payload.repo;
+          var text = "pushed to " + branch + ' at <a href="' + event.url + '">' + repo + "</a>";
+
+          var blockquote = $('<blockquote></blockquote>');
+          var message = $('<div class="message"></div>').html(text);
+          blockquote.append(message);
+
+          $.each(payload.shas, function(i, sha) { 
+            var commit = sha[2].split("\n", 1)[0];
+            var info = $('<div class="info"></div>').text(commit);
+            blockquote.append(info);
+          });
+
+          var time = $('<div class="info"></div>').text(event.created_at);
+          container.append(blockquote.append(time));
+        });
+        if (callback) { callback(); }
+      });
+    });
+  };
+}(jQuery));
+
 
 /*
  * Inspired by the jQuery Cycle and the Quovolver plugins:
@@ -72,4 +139,10 @@
 
     return this;
   };
-})(jQuery);
+}(jQuery));
+
+
+// protection against accidental left-over console.log statements
+if (typeof console === "undefined" || console === null) {
+  console = { log: function() { } };
+}

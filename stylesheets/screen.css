@@ -567,6 +567,15 @@ body#page #content #comments h2 {
   bottom: 0;
   right: 0; }
 
+.bubble a {
+  color: #aaaaaa;
+  text-decoration: none; }
+.bubble a:hover {
+  text-decoration: underline; }
+
+.bubble:hover a {
+  color: #77ccff; }
+
 #twitter_bubble, #github_bubble {
   z-index: 0;
   position: fixed;
