@@ -14,6 +14,7 @@
       filtered_by_screen_name = filtered_by_screen_name || screen_name;
       var params = { screen_name: filtered_by_screen_name, count: 6, include_rts: true };
       $.getJSON("http://api.twitter.com/1/statuses/user_timeline.json?callback=?", params, function(data) {
+                  
         $.each(data, function(i, tweet) { 
           if (tweet.retweeted_status && tweet.retweeted_status.user.screen_name != screen_name) { return; }
           var status = tweet.retweeted_status || tweet;
@@ -22,6 +23,7 @@
           var time = $('<div class="info"></div>').text(status.created_at);
           container.append(blockquote.append(message).append(time));
         });
+        container.find(".loading").remove();
         if (callback) { callback(); }
       });
     });
@@ -50,10 +52,11 @@
           var refs = payload.ref.split("/");
           var branch = refs[refs.length - 1];
           var repo = payload.repo;
-          var text = "pushed to " + branch + ' at <a href="' + event.url + '">' + repo + "</a>";
+          var text = "pushed to " + branch + " at ";
+          var repoLink = $("<a></a>").attr("href", event.repository.url).text(repo);
 
           var blockquote = $('<blockquote></blockquote>');
-          var message = $('<div class="message"></div>').html(text);
+          var message = $('<div class="message"></div>').text(text).append(repoLink);
           blockquote.append(message);
 
           $.each(payload.shas, function(i, sha) { 
@@ -62,9 +65,11 @@
             blockquote.append(info);
           });
 
-          var time = $('<div class="info"></div>').text(event.created_at);
+          var timeLink = $("<a></a>").attr("href", event.url).text(event.created_at);
+          var time = $('<div class="info"></div>').append(timeLink);
           container.append(blockquote.append(time));
         });
+        container.find(".loading").remove();
         if (callback) { callback(); }
       });
     });

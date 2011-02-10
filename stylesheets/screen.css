@@ -567,15 +567,6 @@ body#page #content #comments h2 {
   bottom: 0;
   right: 0; }
 
-.bubble a {
-  color: #aaaaaa;
-  text-decoration: none; }
-.bubble a:hover {
-  text-decoration: underline; }
-
-.bubble:hover a {
-  color: #77ccff; }
-
 #twitter_bubble, #github_bubble {
   z-index: 0;
   position: fixed;
@@ -592,6 +583,13 @@ body#page #content #comments h2 {
     background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(255, 255, 255, 0)));
     background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
     background-image: linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%); }
+    #twitter_bubble .bubble a, #github_bubble .bubble a {
+      color: #aaaaaa;
+      text-decoration: none; }
+    #twitter_bubble .bubble a:hover, #github_bubble .bubble a:hover {
+      text-decoration: underline; }
+    #twitter_bubble .bubble:hover a, #github_bubble .bubble:hover a {
+      color: #77ccff; }
   #twitter_bubble .bubble1, #github_bubble .bubble1 {
     border: 2px solid #999999;
     background-color: #080908;
@@ -637,6 +635,9 @@ body#page #content #comments h2 {
     -ms-border-radius: 32px;
     -khtml-border-radius: 32px;
     border-radius: 32px; }
+    #twitter_bubble .main_bubble .loading, #github_bubble .main_bubble .loading {
+      height: 64px;
+      background: transparent url('/images/spinner-gray-on-transparent.gif?1297303500') no-repeat 50% 50%; }
     #twitter_bubble .main_bubble blockquote, #github_bubble .main_bubble blockquote {
       font-size: 18px;
       line-height: 1.556; }
