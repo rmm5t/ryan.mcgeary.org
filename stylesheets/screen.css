@@ -281,7 +281,7 @@ a img {
 body {
   background-color: #080908;
   color: white;
-  font-family: Georgia, serif;
+  font-family: Palatino, Georgia, serif;
   line-height: 24px; }
 
 strong {
@@ -440,8 +440,8 @@ body#page #sidebar {
 body#page #content #comments h2 {
   border: none; }
 
-#disqus_wrapper {
-  display: none; }
+#comments {
+  font-family: Helvetica, Arial, sans-serif; }
 
 #disqus_thread {
   border-top: 3px dashed #999999; }
