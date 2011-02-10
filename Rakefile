@@ -7,9 +7,16 @@ SETTINGS = {
 
 task :default => :watch
 
-desc "Publish to server (edit Rakefile to config)"
-task :publish => :build do
+desc "Publish to server and ping services(edit Rakefile to config)"
+task :publish => [:build, :sync, :ping]
+
+task :sync do
   sh "rsync #{SETTINGS['rsync_options']} _site/ #{SETTINGS['rsync_server']}"
+end
+
+task :ping do
+  ping "http://feedburner.google.com/fb/a/pingSubmit?bloglink=http%3A%2F%2Fryan.mcgeary.org%2Fblog%2F"
+  ping "http://rubycorner.com/ping/xmlrpc/fa66e0188d1914df45fdfe84036d1d4b068a61ec"
 end
 
 desc "Build site"
@@ -21,7 +28,13 @@ end
 desc "Watch for changes and test the site"
 task :watch => :build do
   sh("open http://ryan.mcgeary.local/blog/")
-  monitor
+end
+
+def ping(url)
+  require 'open-uri'
+  print "\nPinging #{url[0..30]}... "
+  io = open(url)
+  puts io.status[0]
 end
 
 def rebuild_sass(base = nil, relative = nil)
