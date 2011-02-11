@@ -1,2 +1,2 @@
 .bubble1, .bubble2 {
-  display: none; }
+  display: none !important; }
