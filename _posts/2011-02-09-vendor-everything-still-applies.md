@@ -25,23 +25,6 @@ _Disclaimer: The set of conventions described here apply to Ruby applications
 only.  This includes Rails apps, Sinatra apps, or other Ruby applications that
 aren't deployed in the form of a gem._
 
-## Stop Using RVM Gemsets For Your Applications
-
-Please stop using RVM gemsets for your applications. Seriously. The original title
-of this post was going to be, "RVM Gemsets are overrated," but that seemed too
-much like flamebait, and I didn't want anyone to miscontrue my overall point.
-
-RVM is absolutely one of the best things that has hit the Ruby community in
-recent history, and [RVM gemsets](http://rvm.beginrescueend.com/gemsets/basics/)
-are a great tool. It's just that I see too many applications rely on the use of
-gemsets when it yields no added benefit.  I understand why people do it; they
-don't want to pollute their default gemset, but this reliance on gemsets for
-applications is totally unnecessary.  It also seems to be a common point of
-confusion amongst teams.
-
-There's a better way, that still doesn't pollute the default gemset, and it
-includes a lesser known feature of Bundler.  More on that in a bit.
-
 ## Do Check Your `.rvmrc` into Version Control
 
 > Your `.rvmrc` file is an important piece of documentation.
@@ -74,16 +57,33 @@ ruby-1.9.2@myapp`) or other personal configuration, and they don't want to
 impose those personal choices on the rest of the team. With a simpler `.rvmrc`,
 there's little reason not to check it in.
 
+## Stop Using RVM Gemsets For Your Applications
+
+Please stop using RVM gemsets for your applications. Seriously. The original title
+of this post was going to be, "RVM Gemsets are overrated," but that seemed too
+much like flamebait, and I didn't want anyone to miscontrue my overall point.
+
+RVM is absolutely one of the best things that has hit the Ruby community in
+recent history, and [RVM gemsets](http://rvm.beginrescueend.com/gemsets/basics/)
+are a great tool. It's just that I see too many applications rely on the use of
+gemsets when it yields no added benefit.  I understand why people do it; they
+don't want to pollute their default gemset, but this reliance on gemsets for
+applications is totally unnecessary.  It also seems to be a common point of
+confusion amongst teams.
+
+There is a better way, that still doesn't pollute the default gemset, and it
+includes a lesser known feature of Bundler.
+
 ## Let Bundler Follow the `--path`
 
 > Bundler alleviates the need for different gemsets per project.
 
-I mentioned that there was a better way to install application dependencies
-without using an RVM gemset.  I like to install all application dependencies
-into a gitignored directory within the application itself.  This not only
-alleviates the need for different gemsets per project, but it also gives us a
-quick and easy way to jump into the source code of any one of our gem
-dependencies.  We can do this with the `--path` option passed to
+It is possible to install application dependencies cleanly without relying on an
+RVM gemset. I like to install all application dependencies into a gitignored
+directory within the application itself.  This not only alleviates the need for
+different gemsets per project, but it also gives us a quick and easy way to jump
+into the source code of any one of our gem dependencies.  We can do this with
+the `--path` option passed to
 [`bundle install`](http://gembundler.com/bundle_install.html).  Here's the
 convention I like to use:
 
@@ -94,9 +94,10 @@ After running this, all gems (and gems pulled directly from git repositories)
 will be unpacked into the `vendor/ruby` directory of your project.  It's a good
 idea to ignore this directory from version control.
 
-This one step removes the need of creating a custom RVM gemset for any of your
+This one step removes the need to create a custom RVM gemset for any of your
 applications, and it ensures that your default gemset is never polluted by
-application dependencies.
+application dependencies. This way, Bundler completely isolates the gems from
+the system, guaranteeing a clear set of dependencies.
 
 ## Package Your Gems in `vendor/cache`
 
@@ -141,8 +142,8 @@ while also gitignoring the `vendor/ruby` directory.
 
 ## TL;DR
 
-* Avoid RVM gemsets for your applications; Bundler solves the same problem in a better way (`bundle install --path vendor`).
 * Check your `.rvmrc` into version control; it's a form of documentation.
+* Avoid RVM gemsets for your applications; Bundler solves the same problem in a better way (`bundle install --path vendor`).
 * Keep a cache of your gem dependencies in version control using `bundle package`.
 * This only applies to Ruby applications; gem development is a different beast.
 
