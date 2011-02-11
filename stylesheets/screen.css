@@ -626,7 +626,7 @@ body#page #content #comments h2 {
   #twitter_bubble .main_bubble, #github_bubble .main_bubble {
     border: 6px solid #999999;
     background-color: rgba(0, 0, 0, 0.8);
-    padding: 18px;
+    padding: 18px 21px;
     width: 300px;
     height: auto;
     -moz-border-radius: 32px;
@@ -639,8 +639,8 @@ body#page #content #comments h2 {
       height: 64px;
       background: transparent url('/images/spinner-gray-on-transparent.gif?1297303500') no-repeat 50% 50%; }
     #twitter_bubble .main_bubble blockquote, #github_bubble .main_bubble blockquote {
-      font-size: 18px;
-      line-height: 1.556; }
+      width: 300px;
+      font-size: 18px; }
       #twitter_bubble .main_bubble blockquote .info, #github_bubble .main_bubble blockquote .info {
         font-size: 14px;
         line-height: 2;
@@ -693,3 +693,5 @@ body#page #content #comments h2 {
     right: 100px;
     width: 240px;
     height: auto; }
+    #github_bubble .main_bubble blockquote {
+      width: 240px; }

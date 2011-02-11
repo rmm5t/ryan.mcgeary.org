@@ -242,15 +242,15 @@ body#page #content #comments h2
   .main_bubble
     border: 6px solid #999
     background-color: rgba(0, 0, 0, 0.8)
-    padding: 18px
+    padding: 18px 21px
     +dimensions(300px, auto)
     +border-radius(32px)
     .loading
       height: 64px
       background: transparent image-url("spinner-gray-on-transparent.gif") no-repeat 50% 50%
     blockquote
+      width: 300px
       font-size: 18px
-      line-height: 1.556
       .info
         font-size: 14px
         line-height: 2
@@ -292,4 +292,6 @@ body#page #content #comments h2
     bottom: 0
     right: 100px
     +dimensions(240px, auto)
+    blockquote
+      width: 240px
 
