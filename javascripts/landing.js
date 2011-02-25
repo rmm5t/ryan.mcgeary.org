@@ -60,7 +60,8 @@
           blockquote.append(message);
 
           $.each(payload.shas, function(i, sha) { 
-            var commit = sha[2].split("\n", 1)[0];
+            if (i > 4) { return; }
+            var commit = (i < 4) ? sha[2].split("\n", 1)[0] : "...";
             var info = $('<div class="info"></div>').text(commit);
             blockquote.append(info);
           });
