@@ -17,6 +17,4 @@ things I'm focussing on now.
 
 [Transform Ideas into Software Reality][interview]
 
-{% include audio.html %}
-
 [interview]: http://lifeofthefreelancer.com/software-development-consulting-with-ryan-mcgeary/ "Transform Ideas into Software Reality"

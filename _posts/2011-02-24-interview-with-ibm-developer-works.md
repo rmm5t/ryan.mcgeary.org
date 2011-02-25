@@ -19,5 +19,3 @@ I talked about [CoffeeScript](http://jashkenas.github.com/coffee-script/),
 [BusyConf](http://busyconf.com/).
 
 [Ryan McGeary on CoffeeScript](http://www.ibm.com/developerworks/java/library/j-gloverpodcast2/index.html#mcgeary)
-
-{% include audio.html %}

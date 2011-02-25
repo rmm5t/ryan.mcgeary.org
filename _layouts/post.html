@@ -11,6 +11,7 @@ section: page
   </div>
   <div id="body">
     {{ content }}
+    {% if page.mp3 %}{% include audio.html %}{% endif %}
   </div>
 
   <div id="comments">
