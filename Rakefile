@@ -15,7 +15,7 @@ task :sync do
 end
 
 task :ping do
-  ping "http://feedburner.google.com/fb/a/pingSubmit?bloglink=http%3A%2F%2Fryan.mcgeary.org%2Fblog%2F"
+  ping "http://feedburner.google.com/fb/a/pingSubmit?bloglink=http%3A%2F%2Ffeeds.feedburner.com%2Fryanmcgeary"
   ping "http://rubycorner.com/ping/xmlrpc/fa66e0188d1914df45fdfe84036d1d4b068a61ec"
 end
 
