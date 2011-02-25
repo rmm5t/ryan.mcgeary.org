@@ -2,8 +2,9 @@
 layout: post
 category: interviews
 title: Interview with IBM developerWorks
+mp3: "http://files.mcgeary.org/interviews/gloverseries-mcgeary.mp3"
+ogg: "http://files.mcgeary.org/interviews/gloverseries-mcgeary.ogg"
 ---
-
 In December, I was interviewed by [Andy Glover](http://thediscoblog.com/) for
 the [IBM developerWorks podcast](http://lifeofthefreelancer.com/).  Today, that
 interview was published.
@@ -17,9 +18,6 @@ I talked about [CoffeeScript](http://jashkenas.github.com/coffee-script/),
 [MongoDB](http://www.mongodb.org/), and my new venture
 [BusyConf](http://busyconf.com/).
 
-[**Ryan McGeary on CoffeeScript**][interview]. Please give it a listen and
-let me know what you think.
+[Ryan McGeary on CoffeeScript](http://www.ibm.com/developerworks/java/library/j-gloverpodcast2/index.html#mcgeary)
 
-Here's a direct link to the [Audio](http://www.ibm.com/developerworks/podcast/ag/gloverseries-mcgeary.mp3)
-
-[interview]: http://www.ibm.com/developerworks/java/library/j-gloverpodcast2/index.html#mcgeary "Ryan McGeary on CoffeeScript"
+{% include audio.html %}

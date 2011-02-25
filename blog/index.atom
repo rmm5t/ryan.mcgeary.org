@@ -3,7 +3,7 @@ layout: nil
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Ryan McGeary's Blog Posts</title>
+  <title>Ryan McGeary</title>
   <link href="http://ryan.mcgeary.org/atom.xml" rel="self"/>
   <link href="http://ryan.mcgeary.org/blog/"/>
   <updated>{{site.time | date_to_xmlschema }}</updated>
@@ -16,6 +16,8 @@ layout: nil
   <entry>
     <title>{{ post.title }}</title>
     <link href="http://ryan.mcgeary.org{{ post.url }}"/>
+    {% if post.mp3 %}<link rel="enclosure" type="audio/mpeg" href="{{ post.mp3 }}"/>{% endif %}
+    {% if post.ogg %}<link rel="enclosure" type="audio/ogg" href="{{ post.ogg }}"/>{% endif %}
     <updated>{{post.date | date_to_xmlschema }}</updated>
     <id>http://ryan.mcgeary.org{{ post.id }}</id>
     <content type="html">{{ post.content | xml_escape }}</content>
