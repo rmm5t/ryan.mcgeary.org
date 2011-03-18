@@ -6,8 +6,8 @@ mp3: "http://files.mcgeary.org/interviews/gloverseries-mcgeary.mp3"
 ogg: "http://files.mcgeary.org/interviews/gloverseries-mcgeary.ogg"
 ---
 In December, I was interviewed by [Andy Glover](http://thediscoblog.com/) for
-the [IBM developerWorks podcast](http://lifeofthefreelancer.com/).  Today, that
-interview was published.
+the [IBM developerWorks podcast](http://www.ibm.com/developerworks/java/library/j-gloverpodcast2/index.html#mcgeary).
+Today, that interview was published.
 
 I talked about [CoffeeScript](http://jashkenas.github.com/coffee-script/),
 [JavaScript](http://www.amazon.com/gp/product/0596517742?ie=UTF8&tag=rmm5t-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=0596517742),
