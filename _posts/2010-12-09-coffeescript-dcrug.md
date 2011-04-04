@@ -7,7 +7,7 @@ duration: 30 minutes
 
 [![CoffeeScript](/images/talks/coffeescript-dcrug.png)][slides]
 
-WASHINGTON, DC &mdash; [DCRUG][dcrug] &mdash; I discovered
+WASHINGTON, DC &mdash; [DCRUG][location] &mdash; I discovered
 [CoffeeScript][coffeescript] during a recent project that [Jim Garvin][garvin]
 and I were working on.  We knew the app was going to be heavy on the JavaScript,
 and that’s how we started &ndash; writing straight JavaScript.  Even though I
@@ -26,4 +26,4 @@ Were you there? Please [rate my talk](http://spkr8.com/t/5216).
 [slides]: http://files.mcgeary.org/presentations/coffeescript-dcrug.pdf "Download the Slides"
 [coffeescript]: http://jashkenas.github.com/coffee-script/
 [garvin]: http://thegarvin.com
-[dcrug]:http://www.meetup.com/dcruby/calendar/15339405/
+[location]:http://www.meetup.com/dcruby/calendar/15339405/

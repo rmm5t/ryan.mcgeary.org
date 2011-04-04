@@ -7,7 +7,7 @@ duration: 30 minutes
 
 [![BusyConf and MongoDB](/images/talks/busyconf-mongodc.png)][slides]
 
-WASHINGTON, DC &mdash; [MongoDB Users Group][mongodc] &mdash; [Jim Garvin][garvin] and I
+WASHINGTON, DC &mdash; [MongoDB Users Group][location] &mdash; [Jim Garvin][garvin] and I
 attend conferences, and as attendees, the schedule at the conference is often
 lacking.  It's poorly organized, lacks information, and requires Internet
 access. This makes it hard as an attendee to choose the talks you want to go
@@ -29,4 +29,4 @@ Were you there? Please [rate my talk](http://spkr8.com/t/5230).
 [busyconf]: http://busyconf.com/
 [mongodb]: http://www.mongodb.org/
 [garvin]: http://thegarvin.com/
-[mongodc]: http://www.meetup.com/Washington-DC-MongoDB-Users-Group/calendar/15584661/
+[location]: http://www.meetup.com/Washington-DC-MongoDB-Users-Group/calendar/15584661/

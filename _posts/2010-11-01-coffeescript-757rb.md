@@ -7,7 +7,7 @@ duration: 50 minutes
 
 [![CoffeeScript](/images/talks/coffeescript-757rb.png)][slides]
 
-NORFOLK, VIRGINIA &mdash; [757rb][757rb] &mdash; I discovered
+NORFOLK, VIRGINIA &mdash; [757rb][location] &mdash; I discovered
 [CoffeeScript][coffeescript] during a recent project that [Jim Garvin][garvin]
 and I were working on.  We knew the app was going to be heavy on the JavaScript,
 and that’s how we started &ndash; writing straight JavaScript.  Even though I
@@ -26,4 +26,4 @@ Were you there? Please [rate my talk](http://spkr8.com/t/4988).
 [slides]: http://files.mcgeary.org/presentations/coffeescript-757rb.pdf "Download the Slides"
 [coffeescript]: http://jashkenas.github.com/coffee-script/
 [garvin]: http://thegarvin.com
-[757rb]:http://www.meetup.com/ruby-130/calendar/14404872/
+[location]:http://www.meetup.com/ruby-130/calendar/14404872/

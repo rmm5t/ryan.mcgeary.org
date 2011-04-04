@@ -7,7 +7,7 @@ duration: 15 minutes
 
 [![CoffeeScript](/images/talks/coffeescript-novarug.png)][slides]
 
-RESTON, VIRGINIA &mdash; [NovaRUG][novarug] &mdash; I discovered
+RESTON, VIRGINIA &mdash; [NovaRUG][location] &mdash; I discovered
 [CoffeeScript][coffeescript] during a recent project that [Jim Garvin][garvin]
 and I were working on.  We knew the app was going to be heavy on the JavaScript,
 and that’s how we started &ndash; writing straight JavaScript.  Even though I
@@ -27,4 +27,4 @@ Were you there? Please [rate my talk](http://spkr8.com/t/4985).
 
 [coffeescript]: http://jashkenas.github.com/coffee-script/
 [garvin]: http://thegarvin.com
-[novarug]: http://novarug.org/articles/2010/09/29/oct-21-lightning-talks
+[location]: http://novarug.org/articles/2010/09/29/oct-21-lightning-talks
