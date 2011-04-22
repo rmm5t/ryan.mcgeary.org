@@ -27,7 +27,7 @@ end
 
 desc "Watch for changes and test the site"
 task :watch => :build do
-  sh("open http://ryan.mcgeary.local/blog/")
+  sh("open http://ryan.mcgeary.dev/blog/")
   monitor
 end
 
@@ -89,6 +89,7 @@ def jekyll_glob(source)
     dirs = Dir['*'].select { |x| File.directory?(x) }
     dirs -= ['_site']
     dirs -= ['_sass']
+    dirs -= ['public']
     dirs = dirs.map { |x| "#{x}/**/*" }
     dirs += ['*']
   end

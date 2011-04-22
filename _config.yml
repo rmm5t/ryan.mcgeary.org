@@ -6,5 +6,6 @@ exclude:
   - Gemfile.lock
   - vendor
   - config.rb
+  - public
 permalink: pretty
 pygments: true
