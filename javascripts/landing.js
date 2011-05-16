@@ -11,13 +11,11 @@
   $.fn.appendTwitterQuotes = function(screen_name, filtered_by_screen_name, callback) {
     return this.each(function() {
       var container = $(this);
-      filtered_by_screen_name = filtered_by_screen_name || screen_name;
-      var params = { screen_name: filtered_by_screen_name, count: 6, include_rts: true };
+      var params = { screen_name: screen_name, count: 20, include_rts: true };
       $.getJSON("http://api.twitter.com/1/statuses/user_timeline.json?callback=?", params, function(data) {
                   
-        $.each(data, function(i, tweet) { 
-          if (tweet.retweeted_status && tweet.retweeted_status.user.screen_name != screen_name) { return; }
-          var status = tweet.retweeted_status || tweet;
+        $.each(data, function(i, status) { 
+          if (status.text.indexOf("@") === 0) { return; } // Skip replies
           var blockquote = $('<blockquote></blockquote>');
           var message = $('<div class="message"></div>').text(status.text).autolink();
           var time = $('<div class="info"></div>').text(status.created_at);
