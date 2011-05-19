@@ -1,33 +1,32 @@
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
+del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  outline: 0;
-  font-weight: inherit;
-  font-style: inherit;
   font-size: 100%;
-  font-family: inherit;
+  font: inherit;
   vertical-align: baseline; }
 
 body {
-  line-height: 1;
-  color: black;
-  background: white; }
+  line-height: 1; }
 
 ol, ul {
   list-style: none; }
 
 table {
-  border-collapse: separate;
-  border-spacing: 0;
-  vertical-align: middle; }
+  border-collapse: collapse;
+  border-spacing: 0; }
 
 caption, th, td {
   text-align: left;
@@ -35,12 +34,17 @@ caption, th, td {
   vertical-align: middle; }
 
 q, blockquote {
-  quotes: "" ""; }
+  quotes: none; }
   q:before, q:after, blockquote:before, blockquote:after {
-    content: ""; }
+    content: "";
+    content: none; }
 
 a img {
   border: none; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
 
 .hll {
   background-color: #49483e; }
@@ -297,10 +301,10 @@ strong {
   -ms-border-bottom-right-radius: 1em;
   -khtml-border-bottom-right-radius: 1em;
   border-bottom-right-radius: 1em;
-  -moz-box-shadow: #080908 1px 1px 5px 0;
-  -webkit-box-shadow: #080908 1px 1px 5px 0;
-  -o-box-shadow: #080908 1px 1px 5px 0;
-  box-shadow: #080908 1px 1px 5px 0; }
+  -moz-box-shadow: #080908;
+  -webkit-box-shadow: #080908;
+  -o-box-shadow: #080908;
+  box-shadow: #080908; }
 
 body#landing #content {
   margin-right: 710px;
@@ -350,10 +354,10 @@ body#page #content {
       background-color: rgba(40, 40, 40, 0.5);
       padding: 20px;
       margin: 1em 0;
-      -moz-box-shadow: #080908 1px 1px 5px 0;
-      -webkit-box-shadow: #080908 1px 1px 5px 0;
-      -o-box-shadow: #080908 1px 1px 5px 0;
-      box-shadow: #080908 1px 1px 5px 0; }
+      -moz-box-shadow: #080908;
+      -webkit-box-shadow: #080908;
+      -o-box-shadow: #080908;
+      box-shadow: #080908; }
     body#page #content #body pre {
       margin-bottom: 1.714em;
       background-color: #222222;
@@ -369,7 +373,7 @@ body#page #content {
       -webkit-box-shadow: black 1px 1px 2px 0 inset;
       -o-box-shadow: black 1px 1px 2px 0 inset;
       box-shadow: black 1px 1px 2px 0 inset;
-      text-shadow: black 1px 1px 1px; }
+      text-shadow: black; }
       body#page #content #body pre code {
         color: white;
         font-size: 14px; }
@@ -423,10 +427,10 @@ body#page #sidebar {
   -ms-border-bottom-left-radius: 1em;
   -khtml-border-bottom-left-radius: 1em;
   border-bottom-left-radius: 1em;
-  -moz-box-shadow: #080908 1px 1px 5px 0;
-  -webkit-box-shadow: #080908 1px 1px 5px 0;
-  -o-box-shadow: #080908 1px 1px 5px 0;
-  box-shadow: #080908 1px 1px 5px 0; }
+  -moz-box-shadow: #080908;
+  -webkit-box-shadow: #080908;
+  -o-box-shadow: #080908;
+  box-shadow: #080908; }
   body#page #sidebar a {
     color: #eeeeee;
     text-decoration: none; }
@@ -464,10 +468,10 @@ body#page #content #comments h2 {
   -ms-border-top-right-radius: 1em;
   -khtml-border-top-right-radius: 1em;
   border-top-right-radius: 1em;
-  -moz-box-shadow: #080908 1px 1px 5px 0;
-  -webkit-box-shadow: #080908 1px 1px 5px 0;
-  -o-box-shadow: #080908 1px 1px 5px 0;
-  box-shadow: #080908 1px 1px 5px 0; }
+  -moz-box-shadow: #080908;
+  -webkit-box-shadow: #080908;
+  -o-box-shadow: #080908;
+  box-shadow: #080908; }
   #social .button {
     display: block;
     float: left;
@@ -477,63 +481,63 @@ body#page #content #comments h2 {
     text-indent: -119988px;
     overflow: hidden;
     text-align: left;
-    background-image: url('/images/rss-button.png?1297293045');
+    background-image: url('/images/rss-button.png?1299455794');
     background-repeat: no-repeat;
     background-position: 50% 50%; }
   #social .github {
     text-indent: -119988px;
     overflow: hidden;
     text-align: left;
-    background-image: url('/images/github-button.png?1283265556');
+    background-image: url('/images/github-button.png?1287763329');
     background-repeat: no-repeat;
     background-position: 50% 50%; }
   #social .stackoverflow {
     text-indent: -119988px;
     overflow: hidden;
     text-align: left;
-    background-image: url('/images/stackoverflow-button.png?1283273514');
+    background-image: url('/images/stackoverflow-button.png?1287763329');
     background-repeat: no-repeat;
     background-position: 50% 50%; }
   #social .twitter {
     text-indent: -119988px;
     overflow: hidden;
     text-align: left;
-    background-image: url('/images/twitter-button.png?1283259332');
+    background-image: url('/images/twitter-button.png?1287763329');
     background-repeat: no-repeat;
     background-position: 50% 50%; }
   #social .linkedin {
     text-indent: -119988px;
     overflow: hidden;
     text-align: left;
-    background-image: url('/images/linkedin-button.png?1283259315');
+    background-image: url('/images/linkedin-button.png?1287763329');
     background-repeat: no-repeat;
     background-position: 50% 50%; }
   #social .facebook {
     text-indent: -119988px;
     overflow: hidden;
     text-align: left;
-    background-image: url('/images/facebook-button.png?1283262635');
+    background-image: url('/images/facebook-button.png?1287763329');
     background-repeat: no-repeat;
     background-position: 50% 50%; }
   #social .claimid {
     text-indent: -119988px;
     overflow: hidden;
     text-align: left;
-    background-image: url('/images/claimid-button.png?1283262336');
+    background-image: url('/images/claimid-button.png?1287763329');
     background-repeat: no-repeat;
     background-position: 50% 50%; }
   #social .wwr {
     text-indent: -119988px;
     overflow: hidden;
     text-align: left;
-    background-image: url('/images/wwr-button.png?1283267367');
+    background-image: url('/images/wwr-button.png?1287763329');
     background-repeat: no-repeat;
     background-position: 50% 50%; }
   #social .email {
     text-indent: -119988px;
     overflow: hidden;
     text-align: left;
-    background-image: url('/images/mail-button.png?1283259361');
+    background-image: url('/images/mail-button.png?1287763329');
     background-repeat: no-repeat;
     background-position: 50% 50%; }
 
@@ -576,13 +580,20 @@ body#page #content #comments h2 {
     display: block;
     position: absolute;
     border: 4px solid #999999;
-    -moz-box-shadow: #333333 1px 1px 5px 0;
-    -webkit-box-shadow: #333333 1px 1px 5px 0;
-    -o-box-shadow: #333333 1px 1px 5px 0;
-    box-shadow: #333333 1px 1px 5px 0;
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(255, 255, 255, 0)));
-    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
-    background-image: linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%); }
+    -moz-box-shadow: 0px 0px 5px #333333;
+    -webkit-box-shadow: 0px 0px 5px #333333;
+    -o-box-shadow: 0px 0px 5px #333333;
+    box-shadow: 0px 0px 5px #333333;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(255, 255, 255, 0)));
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 100%);
+    background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 100%);
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 100%);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 100%);
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.2)));
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2));
+    background-image: -moz-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2));
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2));
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2)); }
     #twitter_bubble .bubble a, #github_bubble .bubble a {
       color: #aaaaaa;
       text-decoration: none; }
@@ -637,7 +648,7 @@ body#page #content #comments h2 {
     border-radius: 32px; }
     #twitter_bubble .main_bubble .loading, #github_bubble .main_bubble .loading {
       height: 64px;
-      background: transparent url('/images/spinner-gray-on-transparent.gif?1297303500') no-repeat 50% 50%; }
+      background: transparent url('/images/spinner-gray-on-transparent.gif?1299455794') no-repeat 50% 50%; }
     #twitter_bubble .main_bubble blockquote, #github_bubble .main_bubble blockquote {
       width: 300px;
       font-size: 18px; }
@@ -662,7 +673,7 @@ body#page #content #comments h2 {
     text-indent: -119988px;
     overflow: hidden;
     text-align: left;
-    background-image: url('/images/twitter-bubble.png?1283259304');
+    background-image: url('/images/twitter-bubble.png?1287763329');
     background-repeat: no-repeat;
     background-position: 50% 50%; }
   #twitter_bubble .main_bubble {
@@ -685,7 +696,7 @@ body#page #content #comments h2 {
     text-indent: -119988px;
     overflow: hidden;
     text-align: left;
-    background-image: url('/images/github-bubble.png?1283224655');
+    background-image: url('/images/github-bubble.png?1287763329');
     background-repeat: no-repeat;
     background-position: 50% 50%; }
   #github_bubble .main_bubble {

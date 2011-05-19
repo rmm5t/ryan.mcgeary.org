@@ -13,10 +13,10 @@ $highlight_color: rgb(0, 153, 238)
   height: $height
 
 =highlight-gradient($start_opacity, $stop_position: 100%)
-  +linear-gradient(color-stops(rgba(255, 255, 255, $start_opacity), rgba(255, 255, 255, 0) $stop_position))
+  +background-image(linear-gradient(rgba(255, 255, 255, $start_opacity), rgba(255, 255, 255, 0) $stop_position))
 
 =shade-gradient($stop_opacity, $start_position: 0%)
-  +linear-gradient(color-stops(rgba(0, 0, 0, 0) $start_position, rgba(0, 0, 0, $stop_opacity)))
+  +background-image(linear-gradient(rgba(0, 0, 0, 0) $start_position, rgba(0, 0, 0, $stop_opacity)))
 
 body
   background-color: $background_color
@@ -91,7 +91,7 @@ body#page #content
       padding: 10px
       border: 2px solid #333
       +border-radius(6px)
-      +box-shadow(#000, 1px, 1px, 2px, 0, inset)
+      +box-shadow(#000 1px 1px 2px 0 inset)
       +text-shadow(#000)
       code
         color: #fff
@@ -113,8 +113,8 @@ body#page #content
       background-color: mix(#000, #fc8)
       border: 2px solid #fc8
       +border-radius(12px)
-      +box-shadow(#000, 2px, 2px, 2px, 0, inset)
-      +text-shadow(#000, 2px, 2px, 2px)
+      +box-shadow(#000 2px 2px 2px 0 inset)
+      +text-shadow(#000 2px 2px 2px)
       p
         margin-bottom: 0
     a:hover img
@@ -187,7 +187,7 @@ body#page #content #comments h2
   margin: 0 0 32px 0
   font-size: 32px
   line-height: 48px
-  +text-shadow(#000, 3px, 3px, 5px)
+  +text-shadow(#000 3px 3px 5px)
   a
     +link-colors(#fff)
     +hover-link
@@ -224,6 +224,7 @@ body#page #content #comments h2
       color: #7cf
     +box-shadow
     +highlight-gradient(0.2)
+    +shade-gradient(0.2)
   .bubble1
     border: 2px solid #999
     background-color: $background_color
