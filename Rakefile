@@ -20,7 +20,7 @@ task :ping do
 end
 
 desc "Build site"
-task :build do
+task :build => :sanity_check do
   rebuild_sass
   rebuild_jekyll
 end
@@ -29,6 +29,13 @@ desc "Watch for changes and test the site"
 task :watch => :build do
   sh("open http://ryan.mcgeary.dev/blog/")
   monitor
+end
+
+task :sanity_check do
+  unless system("which pygmentize")
+    STDERR.puts "Pygments is missing. Please install it first (see README)."
+    exit 1
+  end
 end
 
 def ping(url)
