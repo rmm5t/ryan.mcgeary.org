@@ -1,44 +1,8 @@
-<!DOCTYPE html>
-<html dir="ltr" lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <link href="/favicon.ico" rel="icon" type="image/x-icon" />
-    <link href="http://feeds.feedburner.com/ryanmcgeary" rel="alternate" title="" type="application/atom+xml" />
-    <link rel="openid.server" href="http://www.myopenid.com/server" />
-<link rel="openid.delegate" href="http://ryan.mcgeary.myopenid.com/" />
-<meta http-equiv="X-XRDS-Location" content="http://ryan.mcgeary.myopenid.com/xrds" />
-
-    <meta name="microid" content="mailto+http:sha1:8df16f4a2b5fab6b32d2469fe2291686fb47a909" />
-
-    <meta name="google-site-verification" content="_8VeV30p3ACH5-9hJ4EtaYoeQ04dFAOQ_bRPVjxK-Ss" />
-
-    <title>Ryan McGeary</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
-    <script src="/javascripts/landing.js"></script>
-
-    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" />
-    <!--[if IE]>
-      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" />
-    <![endif]-->
-    <script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-604149-3']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
-
-  </head>
-  <body id="landing">
-      <!--[if lt IE 7]>  <div style='border: 1px solid #F7941D; background: #FEEFDA; text-align: center; clear: both; height: 75px; position: relative;'>    <div style='position: absolute; right: 3px; top: 3px; font-family: courier new; font-weight: bold;'><a href='#' onclick='javascript:this.parentNode.parentNode.style.display="none"; return false;'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-cornerx.jpg' style='border: none;' alt='Close this notice'/></a></div>    <div style='width: 640px; margin: 0 auto; text-align: left; padding: 0; overflow: hidden; color: black;'>      <div style='width: 75px; float: left;'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-warning.jpg' alt='Warning!'/></div>      <div style='width: 275px; float: left; font-family: Arial, sans-serif;'>        <div style='font-size: 14px; font-weight: bold; margin-top: 12px;'>You are using an outdated browser</div>        <div style='font-size: 12px; margin-top: 6px; line-height: 12px;'>For a better experience using this site, please upgrade to a modern web browser.</div>      </div>      <div style='width: 75px; float: left;'><a href='http://www.firefox.com' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-firefox.jpg' style='border: none;' alt='Get Firefox 3.5'/></a></div>      <div style='width: 75px; float: left;'><a href='http://www.browserforthebetter.com/download.html' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-ie8.jpg' style='border: none;' alt='Get Internet Explorer 8'/></a></div>      <div style='width: 73px; float: left;'><a href='http://www.apple.com/safari/download/' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-safari.jpg' style='border: none;' alt='Get Safari 4'/></a></div>      <div style='float: left;'><a href='http://www.google.com/chrome' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-chrome.jpg' style='border: none;' alt='Get Google Chrome'/></a></div>    </div>  </div>  <![endif]-->
-
-    <img id="mugshot" src="/images/ryan.mcgeary.jpg" />
-
-    <div id="content"><div id="welcome">
+---
+layout: landing
+title: Ryan McGeary
+---
+<div id="welcome">
   <h1><a href="/">I am Ryan McGeary.</a></h1>
   <h2>I build software.</h2>
   <h2>I mentor teams.</h2>
@@ -53,10 +17,7 @@
     by <a href="/">Ryan McGeary</a>.  We transform your ideas into reality with
     elegant solutions.
   </p>
-  <p>
-  Are you planning a new project and are interested in hiring me?  <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;%72%79%61%6e@%6d%63%67%65%61%72%79.%6f%72%67">Tell me about it.</a>
-</p>
-
+  {% include hire_me.html %}
 </div>
 
 <div id="github_bubble">
@@ -73,28 +34,4 @@
   <a class="bubble bubble3" href="http://twitter.com/rmm5t">Twitter</a>
 </div>
 
-<div id="social">
-  <a class="button rss" href="/blog/">Blog</a>
-  <a class="button github" href="http://github.com/rmm5t">GitHub</a>
-  <a class="button stackoverflow" href="http://stackoverflow.com/users/8985/ryan-mcgeary">Stack Overflow</a>
-  <a class="button twitter" href="http://twitter.com/rmm5t">Twitter</a>
-  <a class="button linkedin" href="http://www.linkedin.com/in/ryanmcgeary">LinkedIn</a>
-  <a class="button facebook" href="http://www.facebook.com/ryan.mcgeary">Facebook</a>
-  <a class="button claimid" href="http://claimid.com/rmm5t">ClaimID</a>
-  <a class="button wwr" href="http://workingwithrails.com/person/7397-ryan-mcgeary">Working With Rails</a>
-  <a class="button email" href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;%72%79%61%6e@%6d%63%67%65%61%72%79.%6f%72%67">Email</a>
-</div>
-
-</div>
-
-    <script type="text/javascript">
-var disqus_shortname = 'ryanmcgeary';
-(function () {
-  var s = document.createElement('script'); s.async = true;
-  s.src = 'http://disqus.com/forums/ryanmcgeary/count.js';
-  (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-}());
-</script>
-
-  </body>
-</html>
+{% include social.html %}
