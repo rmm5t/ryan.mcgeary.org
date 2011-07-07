@@ -5,6 +5,19 @@ This site utilizes [jekyll](https://github.com/mojombo/jekyll) and
 
     $ bundle install --path vendor
 
+Code samples also rely on Pygments, so make sure that is installed.  Here's how
+I do it on OS X, but there's more info on the
+[jekyll wiki](https://github.com/mojombo/jekyll/wiki/install).
+
+    $ brew install python
+    $ easy_install pip
+    $ pip install --upgrade distribute
+    $ pip install pygments
+
+_Note: Immediately after installing python, be sure to add `/usr/local/share/python` to the `PATH`_
+
+    export PATH="/usr/local/Cellar/python:${PATH}"
+
 # Development
 
     $ rake watch     # also the default task
