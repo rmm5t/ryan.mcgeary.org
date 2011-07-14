@@ -5,6 +5,8 @@ title: "Talk: One Man Lightning Talks"
 duration: 40 minutes
 ---
 
+<embed src="http://blip.tv/play/AYK%2B808C" type="application/x-shockwave-flash" width="550" height="339" wmode="transparent" allowscriptaccess="always" allowfullscreen="true" ></embed>
+
 [![One Man Lightning Talks](/images/talks/one-man-lightning.png)][slides]
 
 RESTON, VA &mdash; [RubyNation 2011][location] &mdash; To celebrate the
@@ -22,7 +24,10 @@ topics, including:
 
 [Download the Slides][slides] \[PDF 25 MB\]
 
+[Watch the Video][video] \[blip.tv\]
+
 Were you there? Please [rate my talk](http://spkr8.com/t/7045).
 
 [slides]: http://files.mcgeary.org/presentations/one-man-lightning-rubynation.pdf "Download the Slides"
 [location]: http://www.rubynation.org//
+[video]: http://blip.tv/rubynation/one-man-lightning-talks-5224811
