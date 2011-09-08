@@ -19,7 +19,7 @@ The project history plus a strong blame engine give us the power to answer
 future questions about what we were thinking at the time something was added or
 changed.
 
-[Download the Slides][slides] \[PDF 25 MB\]
+[Download the Slides][slides] \[PDF 7.8 MB\]
 
 Were you there? Please [rate my talk](http://spkr8.com/t/8263).
 
