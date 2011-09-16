@@ -17,8 +17,9 @@ paranoid, you can even let DNSimple generate the private key and certificate
 signing request for you. Don't worry, you can delete the private key from the
 DNSimple servers immediately after you save it to a secure place.
 
-After a few minutes, you should receive some emails with your new SSL cert (the
-resulting certificate will actually come from [Comodo](http://www.comodo.com/)).
+After a few minutes, you should receive some emails with your new SSL cert (a
+resulting wildcard certificate will actually come from
+[Comodo](http://www.comodo.com/)).
 
 ## 2. Build the Public Certificate Chain PEM file
 
@@ -34,6 +35,10 @@ certificate chain.
 Make sure you concatenate these files in the correct order, starting with your
 cert and ending at the root cert; otherwise, Heroku will not be able to
 recognize the result as a public key certificate.
+
+This example shows the chain for a wildcard certificate (from Comodo). Your
+chain might be different if you purchased a single subdomain certificate from
+DNSimple (I think those come from RapidSSL, which might deliver root certs).
 
 _Note: To make sure Heroku can automatically start your server, you must not
 have a passphrase assigned to the certficate.  If you let DNSimple do all the
