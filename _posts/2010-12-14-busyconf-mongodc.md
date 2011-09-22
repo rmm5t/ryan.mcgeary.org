@@ -5,7 +5,9 @@ title: "Talk: How we use MongoDB at BusyConf"
 duration: 30 minutes
 ---
 
-[![BusyConf and MongoDB](/images/talks/busyconf-mongodc.png)][slides]
+<div class="slides">
+<script src="http://speakerdeck.com/embed/4e7a84530ac8a4003c009d00.js?size=preview">enable javascript to see slides</script>
+</div>
 
 WASHINGTON, DC &mdash; [MongoDB Users Group][location] &mdash; [Jim Garvin][garvin] and I
 attend conferences, and as attendees, the schedule at the conference is often
@@ -20,6 +22,8 @@ formats.
 [MongoDB][mongodb] was a huge win for us while designing our application. The
 goal of this talk is to explain why we chose MongoDB, how we use it at Busyconf,
 what design decisions we considered, and what the alternatives might have been.
+
+[![BusyConf and MongoDB](/images/talks/busyconf-mongodc.png)][slides]
 
 [Download the Slides][slides] \[PDF 2.2 MB\]
 

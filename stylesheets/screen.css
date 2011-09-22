@@ -348,12 +348,13 @@ body#page #content {
       margin-left: 1.5em; }
     body#page #content #body li p {
       margin-bottom: 0; }
-    body#page #content #body img {
+    body#page #content #body img, body#page #content #body .slides {
       display: block;
       max-width: 480px;
+      margin: 1em 0; }
+    body#page #content #body img {
       background-color: rgba(40, 40, 40, 0.5);
       padding: 20px;
-      margin: 1em 0;
       -moz-box-shadow: #080908;
       -webkit-box-shadow: #080908;
       -o-box-shadow: #080908;

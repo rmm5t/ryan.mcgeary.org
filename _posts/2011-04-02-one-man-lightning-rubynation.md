@@ -7,7 +7,10 @@ duration: 40 minutes
 
 <embed src="http://blip.tv/play/AYK%2B808C" type="application/x-shockwave-flash" width="550" height="339" wmode="transparent" allowscriptaccess="always" allowfullscreen="true" ></embed>
 
-[![One Man Lightning Talks](/images/talks/one-man-lightning.png)][slides]
+<!-- [![One Man Lightning Talks](/images/talks/one-man-lightning.png)][slides] -->
+<div class="slides">
+<script src="http://speakerdeck.com/embed/4e78eef960cf9e003c006d1c.js?size=preview">enable javascript to see slides</script>
+</div>
 
 RESTON, VA &mdash; [RubyNation 2011][location] &mdash; To celebrate the
 NovaRUG's 50th meeting, they opened the floor to lightning talks. As an added

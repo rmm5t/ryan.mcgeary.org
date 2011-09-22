@@ -5,7 +5,10 @@ title: "Lightning Talk: Do Your Commit Messages Suck?"
 duration: 5 minutes
 ---
 
-[![Do Your Commit Messages Suck?](/images/talks/commit-messages.png)][slides]
+<!-- [![Do Your Commit Messages Suck?](/images/talks/commit-messages.png)][slides] -->
+<div class="slides">
+<script src="http://speakerdeck.com/embed/4e68d6c47fbf030001006581.js?size=preview">enable javascript to see slides</script>
+</div>
 
 BOULDER, CO &mdash; [Rocky Mountain Ruby 2011][location] &mdash; Software
 projects are collaborative.  They usually encompass many months or years and are
