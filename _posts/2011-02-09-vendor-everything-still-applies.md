@@ -3,6 +3,11 @@ layout: post
 title: "“Vendor Everything” Still Applies"
 ---
 
+**UPDATE:** Since writing this post, I have since switched to using
+[rbenv](https://github.com/sstephenson/rbenv) for my ruby version management.  I
+no longer use RVM. Rbenv lends itself nicely to the workflow described here, and
+some of the workflow below has been modified to reflect that.
+
 That's right. The title is a homage to the (now
 [_defunkt_](http://twitter.com/defunkt))
 [err the blog](http://errtheblog.com/posts/50-vendor-everything), and keeping
@@ -17,24 +22,24 @@ There's nothing more frustrating than jumping on an existing project only to
 fall into dependency hell when your first goal is just a passing test suite.
 Dependencies can be quite difficult to manage, and fortunately, we have some
 great tools like [Bundler](http://gembundler.com/) and
-[RVM](http://rvm.beginrescueend.com/) to help out. The problem, however, is that
-we as a community have not fully standardized on the best set of conventions
-surrounding these tools.
+[rbenv](https://github.com/sstephenson/rbenv) to help out. The problem, however,
+is that we as a community have not fully standardized on the best set of
+conventions surrounding these tools.
 
 _Disclaimer: The set of conventions described here apply to Ruby applications
 only.  This includes Rails apps, Sinatra apps, or other Ruby applications that
 aren't deployed in the form of a gem._
 
-## Do Check Your `.rvmrc` into Version Control
+## Do Check Your `.rbenv-version`  (or `.rvmrc`) into Version Control
 
-> Your `.rvmrc` file is an important piece of documentation.
+> Your `.rbenv-version` or `.rvmrc` file is an important piece of documentation.
 
-I see too many teams gitignore their `.rvmrc` file. This is a mistake. For
-applications, your `.rvmrc` file is an important piece of documentation.  I
-think this is the best way to communicate the Ruby version dependency to other
-team members. This is especially true given that an `.rvmrc` file at the root of
-your project will make RVM automatically switch to that version of Ruby
-everytime you change to that project directory.
+I see too many teams gitignore their `.rbenv-version` or `.rvmrc` file. This is
+a mistake. For applications, your `.rbenv-version` or `.rvmrc` file is an
+important piece of documentation.  I think this is the best way to communicate
+the Ruby version dependency to other team members. This is especially true given
+that these files at the root of your project will make rbenv or RVM automatically
+use that version of Ruby when you're in that project directory.
 
 I recently inherited a project that had a test suite with very little coverage
 and no documentation as to which version of Ruby was required. I could tell the
@@ -45,8 +50,8 @@ until we went to deploy and took a look at the production environment that we
 realized we should have been developing against Ruby Enterprise Edition (REE)
 instead of MRI.
 
-Keep your `.rvmrc` file simple by only specifying the Ruby version.  For
-example:
+If using RVM, keep your `.rvmrc` file simple by only specifying the Ruby
+version.  For example:
 
 {% highlight bash %}
 rvm ruby-1.8.6  # ZOMG, seriously? We still use this version?
