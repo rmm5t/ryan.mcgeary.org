@@ -6,7 +6,8 @@ title: "“Vendor Everything” Still Applies"
 **UPDATE:** Since writing this post, I have since switched to using
 [rbenv](https://github.com/sstephenson/rbenv) for my ruby version management.  I
 no longer use RVM. Rbenv lends itself nicely to the workflow described here, and
-some of the workflow below has been modified to reflect that.
+some of the workflow below has been modified to reflect that. RVM instructions
+are still included though.
 
 That's right. The title is a homage to the (now
 [_defunkt_](http://twitter.com/defunkt))
@@ -158,5 +159,3 @@ $ bundle install --path vendor
 $ bundle package
 $ echo 'vendor/ruby' >> .gitignore
 {% endhighlight %}
-
-
