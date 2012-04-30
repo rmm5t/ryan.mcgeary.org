@@ -44,11 +44,18 @@ _Note: To make sure Heroku can automatically start your server, you must not
 have a passphrase assigned to the certficate.  If you let DNSimple do all the
 work for you, you should already have a passphrase-free cert._
 
-## 3. Upload your SSL Cert and Private Key to Heroku
+## 3. Add the SSL Endpoint Add-on to Your App
 
-    $ heroku ssl:add STAR_yourdomain_com-bundle.pem STAR_yourdomain_com-private.key
+    $ heroku addons:add ssl:endpoint
+
+Read more about the
+[SSL Endpoint Add-on](https://devcenter.heroku.com/articles/ssl-endpoint#add_the_ssl_endpoint_addon_to_your_app).
+
+## 4. Upload your SSL Cert and Private Key to Heroku
+
+    $ heroku certs:add STAR_yourdomain_com-bundle.pem STAR_yourdomain_com-private.key
 
 That's it! You can find more information and instructions on what to do after
- this from the [Heroku Dev Center](http://devcenter.heroku.com/articles/ssl).
+ this from the [Heroku Dev Center](https://devcenter.heroku.com/articles/ssl-endpoint).
 
 [dnsimple]: https://dnsimple.com/r/fb212a64f8e1b6
