@@ -18,10 +18,11 @@ growth. There's nothing like trying to register a new service only to realize
 that one of your customers already has the subdomain that you had hoped to use.
 
 It's a good idea to make a list of subdomains that your don't want your
-customer's to use. Here's a list of subdomains that I like to reserve in my
+customers to use. Here's a list of subdomains that I like to reserve in my
 multi-tenant applications:
 
-`www, manage, admin, assets, files, mail, docs, calendar, sites, ftp, git, ssl, support, status, blog, api, staging, demo, lab`
+`www, manage, admin, assets, files, mail, docs, calendar, sites, ftp, git, ssl,
+support, status, blog, api, staging, demo, lab`
 
 In terms of an `ActiveModel` validation in Rails, that looks something like this:
 
