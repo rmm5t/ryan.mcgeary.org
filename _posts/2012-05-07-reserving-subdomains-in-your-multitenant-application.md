@@ -8,8 +8,10 @@ subdomains. [GitHub](http://github.com) gives you a subdomain that matches your
 username
 (e.g. [`rmm5t.github.com`](http://rmm5t.github.com)). [Freshbooks](https://mcgearygroup.freshbooks.com/refer/www
 ) gives you a subdomain that matches your company name
-(e.g. [`busyconf.freshbooks.com`](http://busyconf.freshbooks.com)).  At [BusyConf](http://busyconf.com), we give
-you a subdomain that matches your conference name (e.g. [`railsconf2012.busyconf.com`](http://railsconf2012.busyconf.com)).
+(e.g. [`busyconf.freshbooks.com`](http://busyconf.freshbooks.com)).  At
+[BusyConf](http://busyconf.com), we give you a subdomain that matches your
+conference name
+(e.g. [`railsconf2012.busyconf.com`](http://railsconf2012.busyconf.com)).
 
 Your customers usually get to choose their own subdomain during account sign-up,
 and when developing a subdomain-based multi-tenant application, it easy to
@@ -24,6 +26,8 @@ multi-tenant applications:
 `www, manage, admin, assets, files, mail, docs, calendar, sites, ftp, git, ssl,
 support, status, blog, api, staging, demo, lab`
 
+What subdomains are missing from this list?
+
 In terms of an `ActiveModel` validation in Rails, that looks something like this:
 
 {% highlight ruby %}
@@ -34,5 +38,3 @@ RESERVED_SUBDOMAINS = %w(
 validates_exclusion_of :subdomain, :in => RESERVED_SUBDOMAINS,
                        :message => "Subdomain %{value} is reserved."
 {% endhighlight %}
-
-What subdomains are missing from this list?
