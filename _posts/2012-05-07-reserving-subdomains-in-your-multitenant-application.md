@@ -19,7 +19,7 @@ forget to reserve some common subdomains for your own use and future
 growth. There's nothing like trying to register a new service only to realize
 that one of your customers already has the subdomain that you had hoped to use.
 
-It's a good idea to make a list of subdomains that your don't want your
+It's a good idea to make a list of subdomains that you don't want your
 customers to use. Here's a list of subdomains that I like to reserve in my
 multi-tenant applications:
 
