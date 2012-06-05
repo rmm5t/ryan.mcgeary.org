@@ -4,7 +4,10 @@ title: MongoDB Schema Design at BusyConf
 ---
 
 This post is in response to the
-[10gen MongoDB Schema Design Contest](http://blog.10gen.com/post/23237721457/blogging-contest-mongodb-schema-design).
+[10gen MongoDB Schema Design Contest](http://blog.10gen.com/post/23237721457/blogging-contest-mongodb-schema-design). It
+was also extracted from
+[talks](http://ryan.mcgeary.org/talks/2010/12/14/busyconf-mongodc/) that I've
+given on the subject.
 
 ## Obligatory Plug
 
@@ -114,7 +117,7 @@ until we piece it together on the client side, but that is okay because we don't
 need the full logical model until until we put the leg work in to render the
 schedules in the browser.
 
-## Conculsion
+## Conclusion
 
 MongoDB can be somewhat tricky when it comes to the up front design, but if done
 right, it has some great benefits both in defining and matching your unique
