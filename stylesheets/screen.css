@@ -324,6 +324,15 @@ body#page #content {
     font-style: italic; }
   body#page #content strong {
     font-weight: bold; }
+  body#page #content sub, body#page #content sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline; }
+  body#page #content sup {
+    top: -0.5em; }
+  body#page #content sub {
+    bottom: -0.25em; }
   body#page #content h1 {
     color: #ffcc88;
     font-size: 32px;
@@ -342,10 +351,13 @@ body#page #content {
     margin-bottom: 3em; }
     body#page #content #body p {
       margin-bottom: 1.5em; }
-    body#page #content #body ul {
-      list-style-type: disc;
+    body#page #content #body ul, body#page #content #body ol {
       margin-bottom: 1.5em;
       margin-left: 1.5em; }
+    body#page #content #body ul {
+      list-style-type: disc; }
+    body#page #content #body ol {
+      list-style-type: decimal; }
     body#page #content #body li p {
       margin-bottom: 0; }
     body#page #content #body img, body#page #content #body .slides {
