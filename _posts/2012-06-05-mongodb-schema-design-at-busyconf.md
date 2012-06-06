@@ -123,8 +123,9 @@ MongoDB can be somewhat tricky when it comes to the up front design, but if done
 right, it has some great benefits both in defining and matching your unique
 access patterns along with fairly decent long-term maintenance benefits.
 
-[^1]: Later, we decided to embedd Speakers under Activities to improve our patterns
-of access.
+[^1]: Later, we decided to embed Speakers under Activities to improve our
+patterns of access, but ironically, we plan to switch Speakers back out to their
+own collection again to provide cleaner normalization.
 
 [busyconf]: http://busyconf.com/
 [mongodb]: http://www.mongodb.org/
