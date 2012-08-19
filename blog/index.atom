@@ -4,7 +4,7 @@ layout: nil
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Ryan McGeary</title>
-  <link href="http://ryan.mcgeary.org/atom.xml" rel="self"/>
+  <link href="http://ryan.mcgeary.org/blog/index.atom" rel="self"/>
   <link href="http://ryan.mcgeary.org/blog/"/>
   <updated>{{site.time | date_to_xmlschema }}</updated>
   <id>http://ryan.mcgeary.org/</id>
