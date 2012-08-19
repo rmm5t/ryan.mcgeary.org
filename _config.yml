@@ -8,4 +8,4 @@ exclude:
   - config.rb
   - public
 permalink: pretty
-pygments: true
+pygments: false

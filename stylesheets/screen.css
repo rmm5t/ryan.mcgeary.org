@@ -14,11 +14,11 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   font: inherit;
+  font-size: 100%;
   vertical-align: baseline; }
 
-body {
+html {
   line-height: 1; }
 
 ol, ul {
@@ -42,8 +42,7 @@ q, blockquote {
 a img {
   border: none; }
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
 .hll {
@@ -297,13 +296,9 @@ strong {
   background-color: rgba(8, 9, 8, 0.9);
   -moz-border-radius-bottomright: 1em;
   -webkit-border-bottom-right-radius: 1em;
-  -o-border-bottom-right-radius: 1em;
-  -ms-border-bottom-right-radius: 1em;
-  -khtml-border-bottom-right-radius: 1em;
   border-bottom-right-radius: 1em;
-  -moz-box-shadow: #080908;
   -webkit-box-shadow: #080908;
-  -o-box-shadow: #080908;
+  -moz-box-shadow: #080908;
   box-shadow: #080908; }
 
 body#landing #content {
@@ -367,24 +362,21 @@ body#page #content {
     body#page #content #body img {
       background-color: rgba(40, 40, 40, 0.5);
       padding: 20px;
-      -moz-box-shadow: #080908;
       -webkit-box-shadow: #080908;
-      -o-box-shadow: #080908;
+      -moz-box-shadow: #080908;
       box-shadow: #080908; }
     body#page #content #body pre {
       margin-bottom: 1.714em;
       background-color: #222222;
       padding: 10px;
       border: 2px solid #333333;
-      -moz-border-radius: 6px;
       -webkit-border-radius: 6px;
-      -o-border-radius: 6px;
+      -moz-border-radius: 6px;
       -ms-border-radius: 6px;
-      -khtml-border-radius: 6px;
+      -o-border-radius: 6px;
       border-radius: 6px;
-      -moz-box-shadow: black 1px 1px 2px 0 inset;
       -webkit-box-shadow: black 1px 1px 2px 0 inset;
-      -o-box-shadow: black 1px 1px 2px 0 inset;
+      -moz-box-shadow: black 1px 1px 2px 0 inset;
       box-shadow: black 1px 1px 2px 0 inset;
       text-shadow: black; }
       body#page #content #body pre code {
@@ -406,15 +398,13 @@ body#page #content {
       font-style: italic;
       background-color: #7f6644;
       border: 2px solid #ffcc88;
-      -moz-border-radius: 12px;
       -webkit-border-radius: 12px;
-      -o-border-radius: 12px;
+      -moz-border-radius: 12px;
       -ms-border-radius: 12px;
-      -khtml-border-radius: 12px;
+      -o-border-radius: 12px;
       border-radius: 12px;
-      -moz-box-shadow: black 2px 2px 2px 0 inset;
       -webkit-box-shadow: black 2px 2px 2px 0 inset;
-      -o-box-shadow: black 2px 2px 2px 0 inset;
+      -moz-box-shadow: black 2px 2px 2px 0 inset;
       box-shadow: black 2px 2px 2px 0 inset;
       text-shadow: black 2px 2px 2px; }
       body#page #content #body blockquote p {
@@ -436,13 +426,9 @@ body#page #sidebar {
   font-size: 13px;
   -moz-border-radius-bottomleft: 1em;
   -webkit-border-bottom-left-radius: 1em;
-  -o-border-bottom-left-radius: 1em;
-  -ms-border-bottom-left-radius: 1em;
-  -khtml-border-bottom-left-radius: 1em;
   border-bottom-left-radius: 1em;
-  -moz-box-shadow: #080908;
   -webkit-box-shadow: #080908;
-  -o-box-shadow: #080908;
+  -moz-box-shadow: #080908;
   box-shadow: #080908; }
   body#page #sidebar a {
     color: #eeeeee;
@@ -477,13 +463,9 @@ body#page #content #comments h2 {
   background-color: rgba(8, 9, 8, 0.9);
   -moz-border-radius-topright: 1em;
   -webkit-border-top-right-radius: 1em;
-  -o-border-top-right-radius: 1em;
-  -ms-border-top-right-radius: 1em;
-  -khtml-border-top-right-radius: 1em;
   border-top-right-radius: 1em;
-  -moz-box-shadow: #080908;
   -webkit-box-shadow: #080908;
-  -o-box-shadow: #080908;
+  -moz-box-shadow: #080908;
   box-shadow: #080908; }
   #social .button {
     display: block;
@@ -593,9 +575,8 @@ body#page #content #comments h2 {
     display: block;
     position: absolute;
     border: 4px solid #999999;
-    -moz-box-shadow: 0px 0px 5px #333333;
     -webkit-box-shadow: 0px 0px 5px #333333;
-    -o-box-shadow: 0px 0px 5px #333333;
+    -moz-box-shadow: 0px 0px 5px #333333;
     box-shadow: 0px 0px 5px #333333;
     background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(255, 255, 255, 0)));
     background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 100%);
@@ -619,33 +600,30 @@ body#page #content #comments h2 {
     background-color: #080908;
     width: 16px;
     height: 16px;
-    -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
-    -o-border-radius: 10px;
+    -moz-border-radius: 10px;
     -ms-border-radius: 10px;
-    -khtml-border-radius: 10px;
+    -o-border-radius: 10px;
     border-radius: 10px; }
   #twitter_bubble .bubble2, #github_bubble .bubble2 {
     border: 3px solid #999999;
     background-color: #080908;
     width: 30px;
     height: 30px;
-    -moz-border-radius: 18px;
     -webkit-border-radius: 18px;
-    -o-border-radius: 18px;
+    -moz-border-radius: 18px;
     -ms-border-radius: 18px;
-    -khtml-border-radius: 18px;
+    -o-border-radius: 18px;
     border-radius: 18px; }
   #twitter_bubble .bubble3, #github_bubble .bubble3 {
     border: 4px solid #999999;
     background-color: #080908;
     width: 50px;
     height: 50px;
-    -moz-border-radius: 29px;
     -webkit-border-radius: 29px;
-    -o-border-radius: 29px;
+    -moz-border-radius: 29px;
     -ms-border-radius: 29px;
-    -khtml-border-radius: 29px;
+    -o-border-radius: 29px;
     border-radius: 29px; }
   #twitter_bubble .main_bubble, #github_bubble .main_bubble {
     border: 6px solid #999999;
@@ -653,11 +631,10 @@ body#page #content #comments h2 {
     padding: 18px 21px;
     width: 300px;
     height: auto;
-    -moz-border-radius: 32px;
     -webkit-border-radius: 32px;
-    -o-border-radius: 32px;
+    -moz-border-radius: 32px;
     -ms-border-radius: 32px;
-    -khtml-border-radius: 32px;
+    -o-border-radius: 32px;
     border-radius: 32px; }
     #twitter_bubble .main_bubble .loading, #github_bubble .main_bubble .loading {
       height: 64px;
