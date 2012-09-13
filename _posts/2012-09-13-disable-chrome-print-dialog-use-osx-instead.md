@@ -40,5 +40,5 @@ well. Open up Terminal and override the setting at the command line:
     $ defaults write com.google.Chrome DisablePrintPreview -boolean true
 
 This works, but also completely disables the Chrome print dialog altogether,
-so there's no way to use it with a different keyboard shortcut in the event
-that you wanted to test the default behavior that most users experience.
+so there's no way to use it with a different keyboard shortcut in case you
+want to test the default behavior that most others experience.
