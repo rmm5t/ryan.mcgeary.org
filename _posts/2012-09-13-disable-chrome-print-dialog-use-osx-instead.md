@@ -16,8 +16,9 @@ the ability to disabled the print dialog.
 
 There are a couple workarounds on the internet like starting Chrome with an
 `--args --disable-print-preview`, but that's not too feasible under normal
-conditions. Other solutions recommend using `⌘⌥P`, but who wants to remember
-to use a different keyboard shortcut for just one application?
+conditions. Other solutions recommend using `⌘⌥P` or hold down Option (`⌥`) when
+accessing the File menu, but who wants to remember to use a different keyboard
+shortcut for just one application?
 
 Fortunately, OS X comes with a relatively simple way to override keyboard
 shortcuts in specific Applications. Go to System Preferences -> Keyboard ->
