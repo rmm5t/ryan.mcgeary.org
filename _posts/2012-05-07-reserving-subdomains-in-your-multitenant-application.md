@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Reserving Subdomains in Your Multi-Tenant Web Application
+subdomains: [admin, api, assets, blog, calendar, demo, developer, developers, docs, files, ftp, git, lab, mail, manage, pages, sites, ssl, staging, status, support, www]
 ---
-
 It's fairly common to segment the accounts in your multi-tenant application with
 subdomains. [GitHub](http://github.com) gives you a subdomain that matches your
 username
@@ -23,8 +23,7 @@ It's a good idea to make a list of subdomains that you don't want your
 customers to use. Here's a list of subdomains that I like to reserve in my
 multi-tenant applications:
 
-`www, manage, admin, assets, files, mail, docs, calendar, sites, ftp, git, ssl,
-support, status, blog, api, staging, demo, lab`
+`{{ page.subdomains | sort | join: ', ' }}`
 
 What subdomains are missing from this list?
 
@@ -32,8 +31,7 @@ In terms of an `ActiveModel` validation in Rails, that looks something like this
 
 {% highlight ruby %}
 RESERVED_SUBDOMAINS = %w(
-  www manage admin assets files mail docs calendar sites
-  ftp git ssl support status blog api staging demo lab
+  {{ page.subdomains | sort | join: ' ' }}
 )
 validates_exclusion_of :subdomain, :in => RESERVED_SUBDOMAINS,
                        :message => "Subdomain %{value} is reserved."
