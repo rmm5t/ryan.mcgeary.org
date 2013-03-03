@@ -17,9 +17,7 @@ automatically prints products only after an order is placed.
 
 Were you there? Please [rate my talk](http://spkr8.com/t/9284).
 
-Here's the montage video that was shown during the presentation. Sorry, it's
-missing the fun audio track that we played at the conference because of
-copyright issues.
+Here's the montage video that was shown during the presentation.
 
 <div class="video">
 <iframe width="420" height="315" src="http://www.youtube.com/embed/iFqf7kCRj5c" frameborder="0" allowfullscreen="true"><!-- empty --></iframe>
