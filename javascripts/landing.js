@@ -13,8 +13,8 @@
       var container = $(this);
       var params = { screen_name: screen_name, count: 20, include_rts: true };
       $.getJSON("http://api.twitter.com/1/statuses/user_timeline.json?callback=?", params, function(data) {
-                  
-        $.each(data, function(i, status) { 
+
+        $.each(data, function(i, status) {
           if (status.text.indexOf("@") === 0) { return; } // Skip replies
           var blockquote = $('<blockquote></blockquote>');
           var message = $('<div class="message"></div>').text(status.text).autolink();
@@ -43,21 +43,20 @@
       var container = $(this);
       $.getJSON("https://github.com/" + username + ".json?callback=?", function(data) {
         var count = 0;
-        $.each(data, function(i, event) { 
-          if ((event.type != "PushEvent") || (count >= 8)) { return; }
+        $.each(data, function(i, event) {
+          if ((event.type != "PushEvent")|| (typeof event.repository === "undefined") || (count >= 16)) { return; }
           count++;
           var payload = event.payload;
           var refs = payload.ref.split("/");
           var branch = refs[refs.length - 1];
-          var repo = payload.repo;
           var text = "pushed to " + branch + " at ";
-          var repoLink = $("<a></a>").attr("href", event.repository.url).text(repo);
+          var repoLink = $("<a></a>").attr("href", event.repository.url).text(event.repository.owner + "/" + event.repository.name);
 
           var blockquote = $('<blockquote></blockquote>');
           var message = $('<div class="message"></div>').text(text).append(repoLink);
           blockquote.append(message);
 
-          $.each(payload.shas, function(i, sha) { 
+          $.each(payload.shas, function(i, sha) {
             if (i > 4) { return; }
             var commit = (i < 4) ? sha[2].split("\n", 1)[0] : "...";
             var info = $('<div class="info"></div>').text(commit);
@@ -113,7 +112,7 @@
           nextSlide().fadeIn(speed);
           index = nextIndex();
           animating = false;
-        }); 
+        });
       });
     };
 
