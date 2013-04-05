@@ -9,13 +9,13 @@ have a DNSimple account, perfect, you already know how useful it is.  If not,
 
 ## 1. Buy an SSL Cert from DNSimple
 
-The first thing to do is to buy an SSL cert from DNSimple (I usually only buy
-wildcard certs nowadays). Go to the manage interface for the domain that you
-want to buy the SSL cert, and click "Buy an SSL Certificate."  The interface
-will walk you through the rest of the steps.  As long as you're not super
-paranoid, you can even let DNSimple generate the private key and certificate
-signing request for you. Don't worry, you can delete the private key from the
-DNSimple servers immediately after you save it to a secure place.
+The first thing to do is to buy an SSL cert from [DNSimple][dnsimple] (I
+usually only buy wildcard certs nowadays). Go to the manage interface for the
+domain that you want to buy the SSL cert, and click "Buy an SSL Certificate."
+The interface will walk you through the rest of the steps.  As long as you're
+not super paranoid, you can even let DNSimple generate the private key and
+certificate signing request for you. Don't worry, you can delete the private
+key from the DNSimple servers immediately after you save it to a secure place.
 
 After a few minutes, you should receive some emails with your new SSL cert (a
 resulting wildcard certificate will actually come from
