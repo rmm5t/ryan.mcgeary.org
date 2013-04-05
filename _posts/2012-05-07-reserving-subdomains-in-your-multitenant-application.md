@@ -6,7 +6,7 @@ subdomains: [admin, api, assets, blog, calendar, demo, developer, developers, do
 It's fairly common to segment the accounts in your multi-tenant application with
 subdomains. [GitHub](http://github.com) gives you a subdomain that matches your
 username
-(e.g. [`rmm5t.github.com`](http://rmm5t.github.com)). [Freshbooks](https://mcgearygroup.freshbooks.com/refer/www
+(e.g. [`rmm5t.github.io`](http://rmm5t.github.io)). [Freshbooks](https://mcgearygroup.freshbooks.com/refer/www
 ) gives you a subdomain that matches your company name
 (e.g. [`busyconf.freshbooks.com`](http://busyconf.freshbooks.com)).  At
 [BusyConf](http://busyconf.com), we give you a subdomain that matches your
