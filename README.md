@@ -10,8 +10,8 @@ I do it on OS X, but there's more info on the
 [jekyll wiki](https://github.com/mojombo/jekyll/wiki/install).
 
     $ brew install python
-    $ easy_install pip
     $ pip install --upgrade distribute
+    $ pip install --upgrade pip
     $ pip install pygments
 
 _Note: Immediately after installing python, be sure to add `/usr/local/share/python` to the `PATH`_
