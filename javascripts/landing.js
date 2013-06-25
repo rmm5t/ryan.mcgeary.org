@@ -12,7 +12,7 @@
     return this.each(function() {
       var container = $(this);
       var params = { url: "statuses/user_timeline.json?screen_name=rmm5t&count=20&include_rts=true&exclude_replies=true" };
-      $.getJSON("http://twitter.mcgeary.org/proxy.php?callback=?", params, function(data) {
+      $.getJSON("http://proxy.mcgeary.org/twitter/?callback=?", params, function(data) {
         $.each(data, function(i, status) {
           if (status.text.indexOf("@") === 0) { return; } // Skip replies
           var blockquote = $('<blockquote></blockquote>');
