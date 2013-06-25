@@ -1,45 +1,40 @@
 <?php
 
-// Borrowed from: https://gist.github.com/MikeRogers0/5033286
-
 /**
- *  Usage:
- *  Send the url you want to access url encoded in the url paramater, for example (This is with JS):
- *  /twitter-proxy.php?url='+encodeURIComponent('statuses/user_timeline.json?screen_name=MikeRogers0&count=2')
-*/
-
-/**** Put these settings in config.php
-// The tokens, keys and secrets from the app you created at https://dev.twitter.com/apps
-$config = array(
-  'oauth_access_token' => 'token-here',
-  'oauth_access_token_secret' => 'token-here',
-  'consumer_key' => 'token-here',
-  'consumer_secret' => 'token-here',
-  'use_whitelist' => true, // If you want to only allow some requests to use this script.
-  'base_url' => 'http://api.twitter.com/1.1/'
-);
-
-// Only allow certain requests to twitter. Stop randoms using your server as a proxy.
-$whitelist = array(
-  'statuses/user_timeline.json?screen_name=MikeRogers0&count=10&include_rts=false&exclude_replies=true'=>true
-);
-****/
+ * Borrowed and modified from: https://gist.github.com/MikeRogers0/5033286
+ *
+ * Usage:
+ *
+ * Send the url you want to access url encoded in the url paramater, for example (This is with JS):
+ * /twitter-proxy.php?url='+encodeURIComponent('statuses/user_timeline.json?screen_name=MikeRogers0&count=2')
+ *
+ * Put the following in config.php:
+ *
+ * // See https://dev.twitter.com/apps
+ * $config = array(
+ *   'oauth_access_token' => 'token-here',
+ *   'oauth_access_token_secret' => 'token-here',
+ *   'consumer_key' => 'token-here',
+ *   'consumer_secret' => 'token-here',
+ *   'use_whitelist' => true, // If you want to only allow some requests to use this script.
+ *   'base_url' => 'http://api.twitter.com/1.1/'
+ * );
+ *
+ * // Only allow certain requests to twitter. Stop randoms using your server as a proxy.
+ * $whitelist = array(
+ *   'statuses/user_timeline.json?screen_name=MikeRogers0&count=10&include_rts=false&exclude_replies=true'=>true
+ * );
+ */
 
 include "config.php";
 
-/*
-* Ok, no more config should really be needed. Yay!
-*/
-
-// We'll get the URL from $_GET[]. Make sure the url is url encoded, for example encodeURIComponent('statuses/user_timeline.json?screen_name=MikeRogers0&count=10&include_rts=false&exclude_replies=true')
 if(!isset($_GET['url'])){
   die('No URL set');
 }
-
 $url = $_GET['url'];
 
 if($config['use_whitelist'] && !isset($whitelist[$url])){
-  die('URL is not authorised');
+  die('URL is not authorized');
 }
 
 // Figure out the URL parmaters
@@ -50,9 +45,9 @@ $full_url = $config['base_url'].$url; // Url with the query on it.
 $base_url = $config['base_url'].$url_parts['path']; // Url without the query.
 
 /**
-* Code below from http://stackoverflow.com/questions/12916539/simplest-php-example-retrieving-user-timeline-with-twitter-api-version-1-1 by Rivers
-* with a few modfications by Mike Rogers to support variables in the URL nicely
-*/
+ * Code below from http://stackoverflow.com/questions/12916539/simplest-php-example-retrieving-user-timeline-with-twitter-api-version-1-1 by Rivers
+ * with a few modfications by Mike Rogers to support variables in the URL nicely
+ */
 
 function buildBaseString($baseURI, $method, $params) {
   $r = array();
@@ -107,17 +102,10 @@ $result = curl_exec($feed);
 $info = curl_getinfo($feed);
 curl_close($feed);
 
-// // Send suitable headers to the end user.
-// if(isset($info['content_type']) && isset($info['size_download'])){
-//   header('Content-Type: '.$info['content_type']);
-//   header('Content-Length: '.$info['size_download']);
-// }
-// echo $result;
-
 if(isset($info['content_type'])){
-  header('Content-Type: '.$info['content_type']);
+  header('Content-Type: ' . $info['content_type']);
 }
-$callback = $_GET['callback']."(".json_encode($result).")";
-header('Content-Length: '.strlen($callback));
+$callback = $_GET['callback'] . "(" . $result . ")";
+header('Content-Length: ' . strlen($callback));
 echo $callback;
 ?>
