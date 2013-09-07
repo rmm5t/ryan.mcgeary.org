@@ -58,4 +58,9 @@ Read more about the
 That's it! You can find more information and instructions on what to do after
  this from the [Heroku Dev Center](https://devcenter.heroku.com/articles/ssl-endpoint).
 
+_If you instead need to update an existing cert, use the `cert:update` command:_
+
+    $ heroku certs:update STAR_yourdomain_com-bundle.pem STAR_yourdomain_com-private.key
+
+
 [dnsimple]: https://dnsimple.com/r/fb212a64f8e1b6
