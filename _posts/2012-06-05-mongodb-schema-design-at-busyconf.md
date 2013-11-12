@@ -29,7 +29,7 @@ formats. We also handle ticket registration and credit card payments.
 ## Why MongoDB?
 
 [MongoDB][mongodb] was a huge win for us while designing our application. The
-goal of this post is to explain why we chose MongoDB, how we use it at Busyconf,
+goal of this post is to explain why we chose MongoDB, how we use it at BusyConf,
 what design decisions we considered, and what the alternatives might have been.
 
 Here's a common myth that I've heard before: _"MongoDB design is easy because
@@ -54,7 +54,7 @@ _"Why MongoDB?"_ we ask, **_"Why NOT MongoDB?"_**
 ## The Logical Model
 
 This post only covers the design of our database that represents a conference
-schedule.  The data model that represents a conference schedule is a roughly
+schedule.  The data model that represents a conference schedule is roughly a
 tree -- very nested. Imagine a typical conference or convention that you
 attended in the past. Events have days, days have tracks, tracks have time
 slots, time slots have activities, and activities have speakers. In addition,
