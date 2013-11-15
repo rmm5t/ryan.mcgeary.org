@@ -9,6 +9,14 @@ duration: 35 minutes
 <script src="http://speakerdeck.com/embed/4f2ef2f30f6f270021003c9a.js">enable javascript to see slides</script>
 </div>
 
+<div class="slides">
+<iframe width="480" height="360" src="//www.youtube.com/embed/eFunq7INsdY" frameborder="0" allowfullscreen="allowfullscreen"><!-- --></iframe>
+</div>
+
+<div class="slides">
+<iframe width="480" height="360" src="//www.youtube.com/embed/SAuiNvUVwtc" frameborder="0" allowfullscreen="allowfullscreen"><!-- --></iframe>
+</div>
+
 MCLEAN, VA &mdash; [MoDevDC][location] &mdash;
 At [BusyConf](http://BusyConf.com/), we leverage offline application caching so
 your schedule is available even after losing an internet connection.
