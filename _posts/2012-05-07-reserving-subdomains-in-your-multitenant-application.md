@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Reserving Subdomains in Your Multi-Tenant Web Application
-subdomains: [admin, api, assets, blog, calendar, demo, developer, developers, docs, files, ftp, git, lab, mail, manage, pages, sites, ssl, staging, status, support, www]
+subdomains: [admin, api, assets, blog, calendar, demo, developer, developers, docs, files, ftp, git, imap, lab, mail, manage, mx, pages, pop, sites, smtp, ssl, staging, status, support, www]
 ---
 It's fairly common to segment the accounts in your multi-tenant application with
 subdomains. [GitHub](http://github.com) gives you a subdomain that matches your
