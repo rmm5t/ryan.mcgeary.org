@@ -30,7 +30,7 @@ _Ruby_ as the language and define your _Setup Commands_ and _Test Commands_.
 
     bundle exec middleman build
 
-Perfect. Now your site will run a test build upon every commit.
+Perfect. Now your site will run a test build upon every code push.
 
 ## Deployment Settings
 
@@ -61,7 +61,7 @@ clones the relevant branch during setup), and runs the `rake publish` task to
 deploy the site to the `gh-pages` branch.
 
 If all went well, your site will automatically deploy to GitHub Pages upon a
-commit and successful build in the master branch.
+push and successful build in the master branch.
 
 ## Extra Credit: Force Codeship to skip builds on the gh-pages branch.
 
