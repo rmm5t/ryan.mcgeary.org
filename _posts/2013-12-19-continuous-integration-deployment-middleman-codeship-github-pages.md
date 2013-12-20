@@ -52,6 +52,7 @@ from the master branch using a _Custom Script_.
     git remote set-branches --add origin gh-pages
     git fetch
     bundle exec rake publish
+    sleep 30
     wget --retry-connrefused --no-check-certificate -T 60 http://yoursite.com/
 
 This configures a git user, removes the `build` directory that was left there
