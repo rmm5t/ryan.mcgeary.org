@@ -79,4 +79,4 @@ point at this branch `bundle`.
 Afterwards, you can add this to the bottom of your project's Rakefile:
 
     # Ensure builds are skipped when pushing to the gh-pages branch
-    ENV["COMMIT_MESSAGE_SUFFIX"] = "--skip-ci"
+    ENV["COMMIT_MESSAGE_SUFFIX"] = "[skip ci]"
