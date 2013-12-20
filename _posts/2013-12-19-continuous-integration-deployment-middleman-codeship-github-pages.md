@@ -67,8 +67,8 @@ push and successful build in the master branch.
 
 Unfortunately, Codeship currently tries to run builds on all branches,
 including the `gh-pages` branch. This is undesirable for this setup, so to
-avoid this, we also need to add "--skip-ci" to the commit message that is
-pushed to the gh-pages branch.
+avoid this, we also need to add "--skip-ci" or "[skip ci]" to the commit
+message that is pushed to the gh-pages branch.
 
 middleman-gh-pages doesn't support that, but I
 [opened a pull-request](https://github.com/neo/middleman-gh-pages/pull/16) to
