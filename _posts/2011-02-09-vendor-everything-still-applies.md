@@ -31,16 +31,15 @@ _Disclaimer: The set of conventions described here apply to Ruby applications
 only.  This includes Rails apps, Sinatra apps, or other Ruby applications that
 aren't deployed in the form of a gem._
 
-## Do Check Your `.rbenv-version`  (or `.rvmrc`) into Version Control
+## Do Check Your `.ruby-version` into Version Control
 
-> Your `.rbenv-version` or `.rvmrc` file is an important piece of documentation.
+> Your `.ruby-version` file is an important piece of documentation.
 
-I see too many teams gitignore their `.rbenv-version` or `.rvmrc` file. This is
-a mistake. For applications, your `.rbenv-version` or `.rvmrc` file is an
-important piece of documentation.  I think this is the best way to communicate
-the Ruby version dependency to other team members. This is especially true given
-that these files at the root of your project will make rbenv or RVM automatically
-use that version of Ruby when you're in that project directory.
+For applications, your `.rbenv-version` file is an important piece of
+documentation.  I think this is the best way to communicate the Ruby version
+dependency to other team members. This is especially true given that these
+files at the root of your project will make rbenv or RVM automatically use
+that version of Ruby when you're in that project directory.
 
 I recently inherited a project that had a test suite with very little coverage
 and no documentation as to which version of Ruby was required. I could tell the
@@ -50,18 +49,6 @@ project that I worked on, we guessed correctly at Ruby 1.8.7, but it wasn't
 until we went to deploy and took a look at the production environment that we
 realized we should have been developing against Ruby Enterprise Edition (REE)
 instead of MRI.
-
-If using RVM, keep your `.rvmrc` file simple by only specifying the Ruby
-version.  For example:
-
-{% highlight bash %}
-rvm ruby-1.8.6  # ZOMG, seriously? We still use this version?
-{% endhighlight %}
-
-Most teams tend to gitignore this file because they also specify a gemset (`rvm
-ruby-1.9.2@myapp`) or other personal configuration, and they don't want to
-impose those personal choices on the rest of the team. With a simpler `.rvmrc`,
-there's little reason not to check it in.
 
 ## Stop Using RVM Gemsets For Your Applications
 
@@ -149,7 +136,7 @@ while also gitignoring the `vendor/ruby` directory.
 
 ## TL;DR
 
-* Check your `.rvmrc` into version control; it's a form of documentation.
+* Check your `.ruby-version` file into version control; it's a form of documentation.
 * Avoid RVM gemsets for your applications; Bundler solves the same problem in a better way (`bundle install --path vendor`).
 * Keep a cache of your gem dependencies in version control using `bundle package`.
 * This only applies to Ruby applications; gem development is a different beast.
