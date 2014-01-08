@@ -70,14 +70,12 @@ including the `gh-pages` branch. This is undesirable for this setup, so to
 avoid this, we also need to add "--skip-ci" or "\[skip ci\]" to the commit
 message that is pushed to the gh-pages branch.
 
-middleman-gh-pages doesn't support that, but I
-[opened a pull-request](https://github.com/neo/middleman-gh-pages/pull/16) to
-add such support. If you're interested in using it, change your Gemfile to
-point at this branch `bundle`.
+Fortunately, after
+[this pull-request](https://github.com/neo/middleman-gh-pages/pull/16) by
+yours truly, middleman-gh-pages can support that.
 
-    gem "middleman-gh-pages", github: "rmm5t/middleman-gh-pages", branch: "commit-message-suffix"
-
-Afterwards, you can add this to the bottom of your project's Rakefile:
+If using version >= 0.0.3 (or the master branch), you can add this to the
+bottom of your project's Rakefile:
 
     # Ensure builds are skipped when pushing to the gh-pages branch
     ENV["COMMIT_MESSAGE_SUFFIX"] = "[skip ci]"
