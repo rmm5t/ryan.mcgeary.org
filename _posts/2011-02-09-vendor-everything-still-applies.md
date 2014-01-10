@@ -35,7 +35,7 @@ aren't deployed in the form of a gem._
 
 > Your `.ruby-version` file is an important piece of documentation.
 
-For applications, your `.rbenv-version` file is an important piece of
+For applications, your `.ruby-version` file is an important piece of
 documentation.  I think this is the best way to communicate the Ruby version
 dependency to other team members. This is especially true given that these
 files at the root of your project will make rbenv or RVM automatically use
