@@ -63,6 +63,16 @@ deploy the site to the `gh-pages` branch.
 If all went well, your site will automatically deploy to GitHub Pages upon a
 push and successful build in the master branch.
 
+**Note:** Make sure the email address that you use for this git user is a
+verified email address in your GitHub account. Otherwise, GitHub will accept
+the commit, but it will not get published to your site. To fully make
+everything work, you will need to do one of two things. 1. Move the Codeship
+deploy key to an SSH key in your own GitHub account (not recommended) OR 2)
+Create a new machine user on GitHub and move the Codeship deploy key to an SSH
+key on that user account, give that machine user push/pull access to the
+repository, and make sure that machine user's email address is fully verified
+by GitHub..
+
 ## Extra Credit: Force Codeship to skip builds on the gh-pages branch.
 
 Unfortunately, Codeship currently tries to run builds on all branches,
