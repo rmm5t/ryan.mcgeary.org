@@ -14,7 +14,7 @@ values used for `autocomplete` and values used for `x-autocompletetype`.
 The
 [best documentation I could find on autocomplete types](http://wiki.whatwg.org/wiki/Autocomplete_Types)
 was on [whatwg.org](http://www.whatwg.org/), but the formatting made it a
-bit difficult to easily see what types were availble and recommended.
+bit difficult to easily see what types were available/recommended.
 
 Hence, this [cheatsheet][cheatsheet] was born. Let me know if it helps.
 
