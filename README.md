@@ -11,6 +11,7 @@ I do it on OS X, but there's more info on the
 
     $ brew install python
     $ pip install --upgrade distribute
+    $ pip install --upgrade distribute
     $ pip install --upgrade pip
     $ pip install pygments
 
