@@ -50,6 +50,13 @@ until we went to deploy and took a look at the production environment that we
 realized we should have been developing against Ruby Enterprise Edition (REE)
 instead of MRI.
 
+_**Note**: When this post was first written, I advocated checking in your
+`.rvmrc` file, because at the time, that was the only way to specify your ruby
+version. That was controversial, because an `.rvmrc` could potentially contain
+personal preferences (that I didn't think belonged in that file). Things have
+changed, and `.ruby-version` is the way to go regardless of your chosen ruby
+version manager._
+
 ## Stop Using RVM Gemsets For Your Applications
 
 Please stop using RVM gemsets for your applications. Seriously. The original title
