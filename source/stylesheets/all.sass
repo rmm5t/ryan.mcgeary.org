@@ -65,14 +65,12 @@ $photo-scale: 2
 #photo
   z-index: 9999
   pointer-events: none
-  +opacity(1.0)
-  +transition(width 0.6s ease-in-out, opacity 0.3s ease-in-out 0.6s)
-#photo img
-  position: absolute
-  bottom: 0
-  right: 0
-  width: 100%
-  max-width: $photo-width / $photo_scale
+  img
+    position: absolute
+    bottom: 0
+    right: 0
+    width: 100%
+    max-width: $photo-width / $photo_scale
 
 #sidebar
   width: $sidebar-width
@@ -176,16 +174,14 @@ article
         background-color: $mcg-accent
         color: white
 
-  #background, #sidebar, #photo
+  #background, #sidebar
     width: 0
     &.expand
       width: $sidebar-aside-width
   #sidebar .container
     top: $padding + $collapsed-masthead-height
   #photo
-    +opacity(0.0)
-    &.expand
-      +opacity(1.0)
+    display: none
   #background
     width: $padding
     +single-box-shadow(0, 0, 6px, 3px, rgba(black, 0.5))

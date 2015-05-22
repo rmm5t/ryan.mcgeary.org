@@ -38,7 +38,7 @@
       = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv-printshiv.min.js"
   %body{ class: page_classes }
     #background
-    #photo.hidden-xs= image_tag "ryan.mcgeary.png"
+    #photo= image_tag "ryan.mcgeary.png"
     %header#masthead{ role: "banner", data: { spy: "affix", offset: { top: "15" } } }
       %p.sr-only= link_to data.site.name, "/", rel: "home"
       .sm-controls
