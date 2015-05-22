@@ -57,7 +57,7 @@ helpers do
         URI.join(data.site.url, src)
       end
     end.compact
-    images << URI.join(data.site.url, "/images/busyconf-stroked-large.png")
+    images << URI.join(data.site.url, "/images/ryan.mcgeary.jpg")
   end
 
   def twitter_share_params(resource)
