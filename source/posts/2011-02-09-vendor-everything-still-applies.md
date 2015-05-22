@@ -1,6 +1,7 @@
 ---
 tags: programming
 title: "“Vendor Everything” Still Applies"
+tweet_id: 35461919355707394
 ---
 
 **UPDATE:** Since writing this post, I have since switched to using

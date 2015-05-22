@@ -26,19 +26,22 @@ helpers do
     content_tag(:time, time.strftime(format), options.merge(datetime: time.iso8601))
   end
 
-  def twitter_share(resource)
-    link_to "Tweet", "https://twitter.com/share",
-            class: "twitter-share-button",
-            data: {
-              url: URI.join(data.site.url, resource.data.alias || resource.url),
-              text: resource.data.title,
-              via: data.site.twitter,
-              related: data.site.twitter,
-              size: "large",
-            }
+  def twitter_share_params(resource)
+    {
+      url: URI.join(data.site.url, resource.data.alias || resource.url),
+      text: resource.data.title,
+      via: data.site.twitter,
+      size: "large",
+      hashtags: resource.data.tags
+    }
   end
 
-  def twitter_follow
+  def twitter_share_button(resource)
+    link_to "Tweet", "https://twitter.com/share", class: "twitter-share-button",
+            data: twitter_share_params(resource).merge(size: "large")
+  end
+
+  def twitter_follow_button
     link_to "Follow @#{data.site.twitter}", URI.join("https://twitter.com/", data.site.twitter),
             class: "twitter-follow-button",
             data: {
@@ -47,7 +50,25 @@ helpers do
             }
   end
 
-  def gplus_share(resource)
+  def twitter_share_link(name, resource)
+    link_to name, "https://twitter.com/intent/tweet", query: twitter_share_params(resource)
+  end
+
+  def twitter_reply_link(name, resource)
+    return if resource.data.tweet_id.blank?
+    link_to name, "https://twitter.com/intent/tweet", query: { in_reply_to: resource.data.tweet_id }
+  end
+
+  def twitter_retweet_link(name, resource)
+    return if resource.data.tweet_id.blank?
+    link_to name, "https://twitter.com/intent/retweet", query: { tweet_id: resource.data.tweet_id }
+  end
+
+  def twitter_follow_link(name)
+    link_to name, "https://twitter.com/intent/follow", query: { screen_name: data.site.twitter }
+  end
+
+  def gplus_share_button(resource)
     content_tag :div, "",
                 class: "g-plus",
                 data: {
@@ -61,7 +82,7 @@ helpers do
   # Refused to display
   # 'https://apis.google.com/u/0/_/widget/render/follow?...'  in a frame
   # because it set 'X-Frame-Options' to 'SAMEORIGIN'
-  def gplus_follow
+  def gplus_follow_button
     # content_tag :div, "",
     #             class: "g-follow",
     #             data: {

@@ -1,6 +1,7 @@
 ---
 tags: tech
 title: How To Add a DNSimple SSL Certificate to Heroku
+tweet_id: 114747141846609921
 ---
 
 [DNSimple][dnsimple] has some of the best prices on SSL certificates. If you

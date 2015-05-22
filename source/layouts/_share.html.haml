@@ -1,11 +1,15 @@
 %hr
-= twitter_share(resource)
-= twitter_follow
-%br
-= gplus_share(resource)
-= gplus_follow
 %p
   %em
-    Please share to comment, or
-    = link_to "follow me", "https://twitter.com/#{data.site.twitter}"
+    Please
+    = succeed "." do
+      = [twitter_share_link("share", resource), twitter_reply_link("reply to comment", resource), twitter_retweet_link("retweet", resource)].compact.to_sentence(last_word_connector: ", or ", two_words_connector: " or ")
+    Also
+    = twitter_follow_link("follow me")
     for more.
+%hr
+= twitter_share_button(resource)
+= twitter_follow_button
+%br
+= gplus_share_button(resource)
+= gplus_follow_button

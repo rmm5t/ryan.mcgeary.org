@@ -2,6 +2,7 @@
 tags: screencasts, tech, programming
 title: Working with OS X and Emacs
 alias: screencasts/2011/01/03/working-with-os-x-and-emacs/
+tweet_id: 22337195020914688
 ---
 <object width="640" height="385"><param name="movie" value="http://www.youtube.com/v/a-jRN_ba41w?fs=1&amp;hl=en_US&amp;color1=0x3a3a3a&amp;color2=0x999999"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/a-jRN_ba41w?fs=1&amp;hl=en_US&amp;color1=0x3a3a3a&amp;color2=0x999999" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="385"></embed></object>
 

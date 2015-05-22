@@ -1,6 +1,7 @@
 ---
 tags: programming
 title: "Continuous Integration and Deployment with Middleman, Codeship, and GitHub Pages"
+tweet_id: 414061931272892416
 ---
 I use [GitHub Pages](http://pages.github.com/) for hosting some of my
 websites, and I use the [Middleman](http://middlemanapp.com/) static site
