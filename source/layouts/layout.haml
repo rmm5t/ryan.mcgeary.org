@@ -39,7 +39,7 @@
   %body{ class: page_classes }
     #background
     #photo.hidden-xs= image_tag "ryan.mcgeary.png"
-    %header#masthead{ role: "banner" }
+    %header#masthead{ role: "banner", data: { spy: "affix", offset: { top: "15" } } }
       %p.sr-only= link_to data.site.name, "/", rel: "home"
       .sm-controls
         = link_to "#", class: "btn", data: { toggle: "class", target: "#sidebar, #background, #photo, #masthead .logo", class: "expand" } do

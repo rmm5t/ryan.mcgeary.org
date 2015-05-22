@@ -15,11 +15,13 @@ $logo-height: 400px
 $logo-scale: 6
 $masthead-height: 100px
 
+$collapsed-masthead-height: 60px
+$collapsed-logo-scale: 10
+
 #masthead
   background-color: rgba(black, 0.8)
-  margin-top: 15px
   position: absolute
-  top: 0
+  top: $padding
   left: 0
   width: 100%
   height: $masthead-height
@@ -41,6 +43,10 @@ $masthead-height: 100px
       background-size: 100%
   .sm-controls
     display: none
+
+#masthead.affix
+  // Don't go fixed on wider windows
+  position: absolute
 
 $photo-width: 411px
 $photo-height: 486px
@@ -144,27 +150,23 @@ article
     &:before
       content: "Footnotes:"
 
-$collapsed-masthead-height: 60px
-$collapsed-logo-scale: 10
 @media (max-width: 768px)
+  #masthead.affix
+    position: fixed
+    top: 0
   #masthead
     height: $collapsed-masthead-height
     .logo
       position: absolute
-      display: inline-block
       top: ($collapsed-masthead-height - ($logo-height / $collapsed-logo-scale))  / 2
       left: $padding * 2
       +transition(left 0.6s ease-in-out)
       &.expand
         left: $padding
       a
-        display: inline-block
-        +replace-text("mcgeary-logo-dark.png")
-        position: absolute
         right: auto
         width: $logo-width / $collapsed-logo-scale
         height: $logo-height / $collapsed-logo-scale
-        background-size: 100%
     .sm-controls
       display: block
       position: absolute
