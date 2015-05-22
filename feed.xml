@@ -15,7 +15,7 @@
     <link rel="alternate" href="http://ryan.mcgeary.org/2015/05/22/rejuvenating-my-piece-of-the-interwebs/"/>
     <id>http://ryan.mcgeary.org/2015/05/22/rejuvenating-my-piece-of-the-interwebs/</id>
     <published>2015-05-21T18:00:00-06:00</published>
-    <updated>2015-05-22T15:14:50-06:00</updated>
+    <updated>2015-05-22T17:03:58-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -65,6 +65,10 @@ and I’m sure Jekyll 3 will continue that trend, but
 to me; it’s organized in a way that I like to work. Plus, it’s easier for me
 to standardize on one static site generator across the sites that I
 maintain, and I honed in on Middleman well before Jekyll v2 launched.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Twitter Card and Open Graph Support&lt;/strong&gt;: You know those nice catchy pictures
+you get when you share a website on social media? Yeah, I got that. Learn
+more about &lt;a href="https://dev.twitter.com/cards/overview"&gt;Twitter Cards&lt;/a&gt; and
+&lt;a href="http://ogp.me/"&gt;Open Graph&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id="whats-next"&gt;What’s Next?&lt;/h3&gt;
