@@ -1,8 +1,0 @@
-= wrap_layout :layout do
-  %article
-    %h1
-      = current_page.data.title || yield_content(:title)
-      %small.text-nowrap= current_page.date.strftime('%b %e, %Y') if is_blog_article?
-    = yield
-    = partial "layouts/audio", locals: current_page.data.slice(:mp3, :ogg) if current_page.data.mp3
-    = partial "layouts/share", locals: { resource: current_page }
