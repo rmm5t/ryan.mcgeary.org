@@ -17,7 +17,7 @@ set :images_dir, 'images'
 
 helpers do
   def blog_asset(filename)
-    relative_blog_dir = File.basename caller[0].split(":").first.split(".").first
+    relative_blog_dir = File.basename(caller[0].split(":").first).split(".").first
     File.join "/posts", relative_blog_dir, filename
   end
 
