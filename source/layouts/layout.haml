@@ -1,0 +1,86 @@
+!!!
+%html
+  %head
+    %meta{ charset: "utf-8" }
+    %meta{ content: "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible" }
+    %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" }
+
+    %link{ href: "/favicon.ico", rel: "icon", type: "image/x-icon" }
+    %link{ href: data.site.feed_url, rel: "alternate", title: "", type: "application/atom+xml" }
+    %title
+      = [current_page.data.title || yield_content(:title), data.site.name].compact.join(" - ")
+    = stylesheet_link_tag "//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+    = stylesheet_link_tag "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    = stylesheet_link_tag "all"
+
+    /[if lt IE 9]
+      = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv-printshiv.min.js"
+  %body{ class: page_classes }
+    #background
+    #photo= image_tag "ryan.mcgeary.png"
+    %header#masthead{ role: "banner" }
+      %p.sr-only= link_to data.site.name, "/", rel: "home"
+      .sm-controls
+        = link_to "#", class: "btn", data: { toggle: "class", target: "#sidebar, #background, #photo, #masthead .logo", class: "expand" } do
+          %i.fa.fa-bars.fa-2x
+      .logo= link_to data.site.name, "/"
+
+    %section#sidebar
+      .container
+        %aside
+          :markdown
+            ## About Me
+
+            [Ryan McGeary](/) is a software consultant, business starter,
+            rubyist, web guru, CrossFit enthusiast, and amateur
+            triathlete. Ryan owns [McGeary Consulting
+            Group](http://mcgearygroup.com) and is the founder of
+            [BusyConf](http://busyconf.com) and
+            [ChargeStack](http://chargestack.com). He lives near Boulder,
+            Colorado.
+
+            [Follow me](http://twitter.com/rmm5t), [view my
+            résumé](https://www.linkedin.com/in/ryanmcgeary), or
+            [subscribe](#{data.site.feed_url}).
+
+        %nav
+          %h2= link_to "Recent", "/blog/"
+          %ul.list-unstyled
+            - blog.articles[0..5].each do |article|
+              %li
+                = link_to article.title, article
+
+          %h2= link_to "Topics", "/blog/"
+          %ul.list-unstyled
+            - blog.tags.each do |tag, articles|
+              %li
+                = link_to tag, tag_path(tag)
+                -# %small (#{articles.size})
+
+          %h2= link_to "Archive", "/blog/"
+          %ul.list-unstyled
+            - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
+              %li
+                = link_to year, blog_year_path(year)
+                -# (#{articles.size})
+
+        %aside
+          %h2= link_to "RSS", data.site.feed_url
+
+        %footer
+          Copyright &copy; #{Time.now.year}
+          %br
+          = data.site.name
+          %br
+          All rights reserved.
+
+
+      %footer
+    .content-wrapper
+      %section#content
+        .container= yield
+    = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"
+    = javascript_include_tag "//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"
+    = javascript_include_tag "all"
+    = google_analytics_universal_tag
+    = javascript_include_tag "https://apis.google.com/js/platform.js", async: true, defer: true
