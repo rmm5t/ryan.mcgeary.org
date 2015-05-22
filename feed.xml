@@ -1,0 +1,1185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ryan McGeary</title>
+  <subtitle>Brain Dumps by Ryan</subtitle>
+  <id>http://ryan.mcgeary.org/</id>
+  <link href="http://ryan.mcgeary.org/"/>
+  <link href="http://ryan.mcgeary.org/feed.xml" rel="self"/>
+  <updated>2015-05-11T18:00:00-06:00</updated>
+  <author>
+    <name>Ryan McGeary</name>
+    <email>ryan@mcgeary.org</email>
+  </author>
+  <entry>
+    <title>Talk: Cloud Services You Should Be Using To Build Your Startup</title>
+    <link rel="alternate" href="http://ryan.mcgeary.org/2015/05/12/cloud-services-you-should-be-using-to-build-your-startup/"/>
+    <id>http://ryan.mcgeary.org/2015/05/12/cloud-services-you-should-be-using-to-build-your-startup/</id>
+    <published>2015-05-11T18:00:00-06:00</published>
+    <updated>2015-05-19T19:23:11-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;script async="" class="speakerdeck-embed" data-id="2e1d1a7e4b0e43128fe0e9d0475c5320" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;BOULDER, CO — &lt;a href="http://www.meetup.com/boulder_ruby_group/events/221392650/"&gt;Boulder Ruby&lt;/a&gt; — I had the opportunity to present at Boulder Ruby during &lt;a href="http://boulder.startupweek.co/"&gt;Boulder Startup Week 2015&lt;/a&gt;. I covered several online services that not only have excellent Ruby support, but also can help accelerate your MVP and/or product launch. The finale included a live demo of &lt;a href="http://cloudinary.com/"&gt;Cloudinary&lt;/a&gt;, &lt;a href="https://pusher.com/"&gt;Pusher&lt;/a&gt;, and &lt;a href="http://embed.ly/"&gt;Embed.ly&lt;/a&gt; services.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rmm5t/boulderruby-startupweek"&gt;GitHub Repository of Demos&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://boulderruby-startupweek.herokuapp.com/"&gt;Slack Clone Demo Using Pusher and Embed.ly&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="recommended-services-to-boost-development"&gt;Recommended Services to Boost Development&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://keen.io/"&gt;Keen.io&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://segment.com/"&gt;Segment&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://mandrillapp.com/"&gt;Mandril&lt;/a&gt; / &lt;a href="https://sendgrid.com/"&gt;SendGrid&lt;/a&gt; / &lt;a href="http://www.mailgun.com/"&gt;Mailgun&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://stripe.com/"&gt;Stripe&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://recurly.com/"&gt;Recurly&lt;/a&gt; / &lt;a href="https://spreedly.com/"&gt;Spreedly&lt;/a&gt; / &lt;a href="https://www.chargify.com/"&gt;Chargify&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://codeship.com/"&gt;Codeship&lt;/a&gt; / &lt;a href="https://travis-ci.com/"&gt;Travis CI&lt;/a&gt; / &lt;a href="https://semaphoreci.com/"&gt;Semaphore&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://cloudinary.com/"&gt;Cloudinary&lt;/a&gt; (with demo)&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://pusher.com/"&gt;Pusher&lt;/a&gt; (with demo)&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://embed.ly/"&gt;Embed.ly&lt;/a&gt; (with demo)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="recommended-services-to-boost-ops"&gt;Recommended Services to Boost Ops&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://www.heroku.com/"&gt;Heroku&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://newrelic.com/"&gt;New Relic&lt;/a&gt; / &lt;a href="https://appsignal.com/"&gt;AppSignal&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://rollbar.com/"&gt;Rollbar&lt;/a&gt; / &lt;a href="https://www.honeybadger.io/"&gt;Honeybadger&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://papertrailapp.com/"&gt;Papertrail&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.statuspage.io/"&gt;StatusPage.io&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.pingdom.com/"&gt;Pingdom&lt;/a&gt; / &lt;a href="https://www.statuscake.com/"&gt;StatusCake&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://dnsimple.com/r/fb212a64f8e1b6"&gt;DNSimple&lt;/a&gt; / &lt;a href="http://www.dnsmadeeasy.com/"&gt;DNS Made Easy&lt;/a&gt; / &lt;a href="http://dyn.com/"&gt;Dyn&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>HTML5 Autocomplete Cheatsheet</title>
+    <link rel="alternate" href="http://ryan.mcgeary.org/2014/08/20/html5-autocomplete-cheatsheet/"/>
+    <id>http://ryan.mcgeary.org/2014/08/20/html5-autocomplete-cheatsheet/</id>
+    <published>2014-08-19T18:00:00-06:00</published>
+    <updated>2015-05-18T14:17:41-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;I was recently frustrated with the documentation on the HTML5 &lt;code&gt;autocomplete&lt;/code&gt;
+attributes and Chrome’s response with the &lt;code&gt;x-autocompletetype&lt;/code&gt; vendor specific
+attribute.&lt;/p&gt;
+
+&lt;p&gt;These attributes are typically used on &lt;code&gt;&amp;lt;input&amp;gt;&lt;/code&gt; elements to better signal to
+the browser the best way to “autofill” a form. The problem, however, is that
+there is no official standard yet, and there are mild differences between
+values used for &lt;code&gt;autocomplete&lt;/code&gt; and values used for &lt;code&gt;x-autocompletetype&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The
+&lt;a href="http://wiki.whatwg.org/wiki/Autocomplete_Types"&gt;best documentation I could find on autocomplete types&lt;/a&gt;
+was on &lt;a href="http://www.whatwg.org/"&gt;whatwg.org&lt;/a&gt;, but the formatting made it a
+bit difficult to easily see what types were available/recommended.&lt;/p&gt;
+
+&lt;p&gt;Hence, this &lt;a href="/files/autocomplete-types.pdf"&gt;cheatsheet&lt;/a&gt; was born. Let me know if it helps.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="/files/autocomplete-types.pdf"&gt;&lt;img alt="Autocomplete Types Cheatsheet" src="/2014/08/20/html5-autocomplete-cheatsheet/autocomplete-types.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+</content>
+  </entry>
+  <entry>
+    <title>Talk: The BusyConf Story</title>
+    <link rel="alternate" href="http://ryan.mcgeary.org/2014/02/19/busyconf-1-million-cups-st-pete/"/>
+    <id>http://ryan.mcgeary.org/2014/02/19/busyconf-1-million-cups-st-pete/</id>
+    <published>2014-02-18T17:00:00-07:00</published>
+    <updated>2015-05-18T14:21:10-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/yoM_kRA5hjM?start=104" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+&lt;p&gt;ST PETERSBURG, FL — &lt;a href="http://www.1millioncups.com/stpete"&gt;1 Million Cups - STP&lt;/a&gt; — I had the chance to tell a bit of the story behind &lt;a href="http://busyconf.com"&gt;BusyConf&lt;/a&gt; while also gleaning some advice from fellow entrepreneurs.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.1millioncups.com/"&gt;More about 1 Millions Cups&lt;/a&gt;&lt;/p&gt;
+
+</content>
+  </entry>
+  <entry>
+    <title>Interview with #EventTech Podcast</title>
+    <link rel="alternate" href="http://ryan.mcgeary.org/2013/12/20/interview-with-eventtech-podcast/"/>
+    <id>http://ryan.mcgeary.org/2013/12/20/interview-with-eventtech-podcast/</id>
+    <published>2013-12-19T17:00:00-07:00</published>
+    <updated>2015-05-21T20:27:35-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/HBGQbvTPrCY" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;In this episode, we talk with Ryan McGeary CEO &amp;amp; Founder of &lt;a href="http://busyconf.com"&gt;BusyConf&lt;/a&gt; about conference registration, mobile event apps, HTML vs. native event apps and more.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href="http://eventtech.co/2014/01/17/ryan-mcgeary-ceo-founder-busyconf/"&gt;Ryan McGeary, CEO &amp;amp; Founder, BusyConf&lt;/a&gt;&lt;/p&gt;
+
+</content>
+  </entry>
+  <entry>
+    <title>Continuous Integration and Deployment with Middleman, Codeship, and GitHub Pages</title>
+    <link rel="alternate" href="http://ryan.mcgeary.org/2013/12/19/continuous-integration-deployment-middleman-codeship-github-pages/"/>
+    <id>http://ryan.mcgeary.org/2013/12/19/continuous-integration-deployment-middleman-codeship-github-pages/</id>
+    <published>2013-12-18T17:00:00-07:00</published>
+    <updated>2015-05-18T14:17:29-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;I use &lt;a href="http://pages.github.com/"&gt;GitHub Pages&lt;/a&gt; for hosting some of my
+websites, and I use the &lt;a href="http://middlemanapp.com/"&gt;Middleman&lt;/a&gt; static site
+generator as my content management system for some of these sites.&lt;/p&gt;
+
+&lt;p&gt;I like to run continuous integration for my projects whenever possible, and
+this goes for static site repositories as much as regular code repositories.&lt;/p&gt;
+
+&lt;p&gt;Recently, I started playing with
+&lt;a href="https://www.codeship.io/?referral_token=suhjnfd0sdye885fstjjsfyo0"&gt;Codeship&lt;/a&gt;. It’s
+a well-priced continuous integration and deployment service, and I wanted to
+be able to automatically deploy my middleman site upon successful builds to
+the master branch. It took a bit of trial and error, but I finally got
+something that works well.&lt;/p&gt;
+
+&lt;h2 id="test-settings"&gt;Test Settings&lt;/h2&gt;
+
+&lt;p&gt;After initializing a new GitHub repository in Codeship, you’ll need to define
+how tests are run. Under the &lt;em&gt;Test&lt;/em&gt; project settings in Codeship, select
+&lt;em&gt;Ruby&lt;/em&gt; as the language and define your &lt;em&gt;Setup Commands&lt;/em&gt; and &lt;em&gt;Test Commands&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id="setup-commands"&gt;Setup Commands:&lt;/h3&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;bundle install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id="test-commands"&gt;Test Commands:&lt;/h3&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;bundle &lt;span class="nb"&gt;exec &lt;/span&gt;middleman build
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Perfect. Now your site will run a test build upon every code push.&lt;/p&gt;
+
+&lt;h2 id="deployment-settings"&gt;Deployment Settings&lt;/h2&gt;
+
+&lt;p&gt;This is where I had some trouble, but I finally found a set of commands that
+correctly deloyed to our &lt;code&gt;gh-pages&lt;/code&gt; branch in the repository. First, it’s
+worth mentioning that I use the
+&lt;a href="https://github.com/neo/middleman-gh-pages"&gt;middleman-gh-pages&lt;/a&gt; gem for
+deploying to the &lt;code&gt;gh-pages&lt;/code&gt; branch. This gem gives you a &lt;code&gt;rake publish&lt;/code&gt; task
+that handles most of the dirty work.&lt;/p&gt;
+
+&lt;p&gt;Under the &lt;em&gt;Deployment&lt;/em&gt; project settings in Codeship, configure a deployment
+from the master branch using a &lt;em&gt;Custom Script&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id="custom-script"&gt;Custom Script:&lt;/h3&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;git config --global user.email &lt;span class="s2"&gt;"robot@example.com"&lt;/span&gt;
+git config --global user.name &lt;span class="s2"&gt;"Codeship Robot"&lt;/span&gt;
+rm -rf build
+git remote &lt;span class="nb"&gt;set&lt;/span&gt;-branches --add origin gh-pages
+git fetch
+bundle &lt;span class="nb"&gt;exec &lt;/span&gt;rake publish
+sleep 30
+wget --retry-connrefused --no-check-certificate -T 60 http://yoursite.com/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This configures a git user, removes the &lt;code&gt;build&lt;/code&gt; directory that was left there
+from the test steps, adds a &lt;code&gt;gh-pages&lt;/code&gt; remote branch (because Codeship only
+clones the relevant branch during setup), and runs the &lt;code&gt;rake publish&lt;/code&gt; task to
+deploy the site to the &lt;code&gt;gh-pages&lt;/code&gt; branch.&lt;/p&gt;
+
+&lt;p&gt;If all went well, your site will automatically deploy to GitHub Pages upon a
+push and successful build in the master branch.&lt;/p&gt;
+
+&lt;h3 id="github-publishing-caveat"&gt;GitHub Publishing Caveat&lt;/h3&gt;
+
+&lt;p&gt;Make sure the email address that you use for this git user is a verified email
+address in your GitHub account. Otherwise, GitHub will accept the commit, but
+it will not publish the changes to your site. To fully make everything work,
+you will need to do one of two things: 1) Move the Codeship deploy key to an
+SSH key in your own GitHub account OR 2) Create a new machine user on GitHub
+and move the Codeship deploy key to an SSH key on that user account, give that
+machine user push/pull access to the repository, and make sure that machine
+user’s email address is fully verified by GitHub. I highly recommend going
+with option #2.&lt;/p&gt;
+
+&lt;h2 id="extra-credit-force-codeship-to-skip-builds-on-the-gh-pages-branch"&gt;Extra Credit: Force Codeship to skip builds on the gh-pages branch.&lt;/h2&gt;
+
+&lt;p&gt;Unfortunately, Codeship currently tries to run builds on all branches,
+including the &lt;code&gt;gh-pages&lt;/code&gt; branch. This is undesirable for this setup, so to
+avoid this, we also need to add “–skip-ci” or “[skip ci]” to the commit
+message that is pushed to the gh-pages branch.&lt;/p&gt;
+
+&lt;p&gt;Fortunately, after
+&lt;a href="https://github.com/neo/middleman-gh-pages/pull/16"&gt;this pull-request&lt;/a&gt; by
+yours truly, middleman-gh-pages can support that.&lt;/p&gt;
+
+&lt;p&gt;If using version &amp;gt;= 0.0.3 (or the master branch), you can add this to the
+bottom of your project’s Rakefile:&lt;/p&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;&lt;span class="c"&gt;# Ensure builds are skipped when pushing to the gh-pages branch&lt;/span&gt;
+ENV[&lt;span class="s2"&gt;"COMMIT_MESSAGE_SUFFIX"&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"[skip ci]"&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+  </entry>
+  <entry>
+    <title>TEDx Talk: What makes someone Successful?</title>
+    <link rel="alternate" href="http://ryan.mcgeary.org/2013/12/05/what-makes-someone-successful-tedx/"/>
+    <id>http://ryan.mcgeary.org/2013/12/05/what-makes-someone-successful-tedx/</id>
+    <published>2013-12-04T17:00:00-07:00</published>
+    <updated>2015-05-18T14:20:52-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/18QpRK53jj0" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+&lt;p&gt;LEESBERG, VA — &lt;a href="http://www.ted.com/tedx/events/10695"&gt;TEDxBalchDriveWomen 2013&lt;/a&gt; — Software — “Luck” is too often attributed to one’s success. Let’s cut the modesty and tell better stories about the good and bad decisions that got us where we are. No one can learn from your success if you merely attribute it to “luck.”&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Disclaimer: I was asked to give this talk at the very last minute. I’m happy with the message, but I’m a little disappointed in the delivery. I wish I had more time to prep for my first TEDx presentation.&lt;/em&gt;&lt;/p&gt;
+
+</content>
+  </entry>
+  <entry>
+    <title>Talk: Asynchronous Collaboration</title>
+    <link rel="alternate" href="http://ryan.mcgeary.org/2012/11/09/async-collaboration-oredev/"/>
+    <id>http://ryan.mcgeary.org/2012/11/09/async-collaboration-oredev/</id>
+    <published>2012-11-08T17:00:00-07:00</published>
+    <updated>2015-05-18T20:55:56-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;iframe src="http://player.vimeo.com/video/53061504" width="550" height="309" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen="true"&gt;(video)&lt;/iframe&gt;
+
+&lt;script async="" class="speakerdeck-embed" data-id="509a5f4d1eeb97000204517d" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;MALMÖ, SWEDEN — &lt;a href="http://oredev.org/2012/"&gt;Øredev Developer Conference 2012&lt;/a&gt; —
+Communicating Through Our Source Code. We hear a lot about how strong
+communication and collaboration are key to a successful project. We spend a
+lot of time focusing on stand-up meetings and pair programming, but there are
+potentially other very effective means of keeping the team on the same page
+that not only avoid daily interruptions but also provide long-term benefit.&lt;/p&gt;
+
+&lt;p&gt;The goal of this talk is to help your team improve its own collaboration and
+productivity with just a bit of discipline and relatively low overhead.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://vimeo.com/53061504"&gt;Watch the Video&lt;/a&gt; [vimeo]&lt;/p&gt;
+
+</content>
+  </entry>
+  <entry>
+    <title>Disable Chrome's Print Dialog and Use the OS X System Dialog Instead</title>
+    <link rel="alternate" href="http://ryan.mcgeary.org/2012/09/13/disable-chrome-print-dialog-use-osx-instead/"/>
+    <id>http://ryan.mcgeary.org/2012/09/13/disable-chrome-print-dialog-use-osx-instead/</id>
+    <published>2012-09-12T18:00:00-06:00</published>
+    <updated>2015-05-18T14:17:16-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;I really dislike the custom print dialog that ships with Google Chrome
+nowadays (Chrome is currently at v21 at the time of writing). By itself, it’s
+not terrible, but I want my print dialog to look like every other darn print
+dialong on OS X, gosh dammit.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="Google Chrome's Print Dialog" title="Google Chrome's Print Dialog" src="/2012/09/13/disable-chrome-print-dialog-use-osx-instead/chrome-print-dialog.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;When Google first introduced the new print dialog, Chrome also included a
+custom setting to disable it under &lt;code&gt;about:flags&lt;/code&gt;, but in v20, Chrome removed
+the ability to disabled the print dialog.&lt;/p&gt;
+
+&lt;p&gt;There are a couple workarounds on the internet like starting Chrome with an
+&lt;code&gt;--args --disable-print-preview&lt;/code&gt;, but that’s not too feasible under normal
+conditions. Other solutions recommend using &lt;code&gt;⌘⌥P&lt;/code&gt; or hold down Option (&lt;code&gt;⌥&lt;/code&gt;) when
+accessing the File menu, but who wants to remember to use a different keyboard
+shortcut for just one application?&lt;/p&gt;
+
+&lt;p&gt;Fortunately, OS X comes with a relatively simple way to override keyboard
+shortcuts in specific Applications. Go to System Preferences -&amp;gt; Keyboard -&amp;gt;
+Keyboard Shortcuts. Once there, select Application Shortcuts and add a new
+shortcut for Google Chrome.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="Override for Chrome's Print Shortcut" title="Override for Chrome's Print Shortcut" src="/2012/09/13/disable-chrome-print-dialog-use-osx-instead/chrome-print-shortcut-override.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Make sure the Menu Title reads &lt;code&gt;Print Using System Dialog...&lt;/code&gt; exactly, and
+give it the standard print shortcut (&lt;code&gt;⌘P&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="New Chrome Print Shortcuts" title="New Chrome Print Shortcuts" src="/2012/09/13/disable-chrome-print-dialog-use-osx-instead/chrome-print-shortcuts.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Enjoy! Happy Printing!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt; There’s another workaround that’s relatively painless and works
+well. Open up Terminal and override the setting at the command line:&lt;/p&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;defaults write com.google.Chrome DisablePrintPreview -boolean &lt;span class="nb"&gt;true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This works, but also completely disables the Chrome print dialog altogether,
+so there’s no way to use it with a different keyboard shortcut in case you
+want to test the default behavior that most others experience.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>MongoDB Schema Design at BusyConf</title>
+    <link rel="alternate" href="http://ryan.mcgeary.org/2012/06/05/mongodb-schema-design-at-busyconf/"/>
+    <id>http://ryan.mcgeary.org/2012/06/05/mongodb-schema-design-at-busyconf/</id>
+    <published>2012-06-04T18:00:00-06:00</published>
+    <updated>2015-05-18T14:20:27-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;This post is in response to the
+&lt;a href="http://blog.10gen.com/post/23237721457/blogging-contest-mongodb-schema-design"&gt;10gen MongoDB Schema Design Contest&lt;/a&gt;. It
+was also extracted from
+&lt;a href="http://ryan.mcgeary.org/talks/2010/12/14/busyconf-mongodc/"&gt;talks&lt;/a&gt; that I’ve
+given on the subject.&lt;/p&gt;
+
+&lt;h2 id="obligatory-plug"&gt;Obligatory Plug&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="http://busyconf.com/"&gt;BusyConf&lt;/a&gt; currently handles 4 major pieces of conference planning –
+it collects speaker proposals, allows the review committee to rate speaker
+proposals, builds an offline-enabled and archived HTML5 schedule (iPhone,
+Android, iPad, Desktop), and handles attendee ticket registration including
+payments, refunds, etc.&lt;/p&gt;
+
+&lt;p&gt;We attend conferences, and as attendees, the schedule at the conference is often
+lacking.  It’s poorly organized, lacks information, and requires Internet
+access. This makes it hard as an attendee to choose the talks that you want to go
+to. &lt;a href="http://busyconf.com/"&gt;BusyConf&lt;/a&gt; is an attempt to solve that problem while also making
+it easier for conference organizers to run a conference.  We handle the calls
+for proposal, we allow organizers to rate proposals, we give them an interface
+to turn activities into a schedule, and we publish that schedule in many
+formats. We also handle ticket registration and credit card payments.&lt;/p&gt;
+
+&lt;h2 id="why-mongodb"&gt;Why MongoDB?&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="http://www.mongodb.org/"&gt;MongoDB&lt;/a&gt; was a huge win for us while designing our application. The
+goal of this post is to explain why we chose MongoDB, how we use it at BusyConf,
+what design decisions we considered, and what the alternatives might have been.&lt;/p&gt;
+
+&lt;p&gt;Here’s a common myth that I’ve heard before: &lt;em&gt;“MongoDB design is easy because
+its schema-less.”&lt;/em&gt; I disagree with this. It’s true that a thoughtful design will
+yield a longer term gain in easier development, but it can be tricky to conjure
+up with such a design. I find it much easier to get a relational design right
+the first time, but the costs of maintaining a relational design can sometimes
+be higher.&lt;/p&gt;
+
+&lt;blockquote class="blockquote-reverse"&gt;
+  &lt;p&gt;“You could use a relational database for that! Why use a document store?”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;MongoDB’s speed and scalability are wins, but for us, it’s not as important as
+the win we get from rapid development. Rapid development comes from the ability
+to represent richer data models that more closely match the business problems
+and the patterns of access.&lt;/p&gt;
+
+&lt;p&gt;Many people say things like: &lt;em&gt;“You could use a relational database for that! Why
+use a document store?”&lt;/em&gt;  MongoDB has become our default database for greenfield
+development. We now make ourselves justify the use of relational. Instead of,
+&lt;em&gt;“Why MongoDB?”&lt;/em&gt; we ask, &lt;strong&gt;&lt;em&gt;“Why NOT MongoDB?”&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id="the-logical-model"&gt;The Logical Model&lt;/h2&gt;
+
+&lt;p&gt;This post only covers the design of our database that represents a conference
+schedule.  The data model that represents a conference schedule is roughly a
+tree – very nested. Imagine a typical conference or convention that you
+attended in the past. Events have days, days have tracks, tracks have time
+slots, time slots have activities, and activities have speakers. In addition,
+days can also have global time slots (like Lunches, Breaks, and Keynotes).&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="BusyConf Logical Model" title="BusyConf Logical Model" src="/2012/06/05/mongodb-schema-design-at-busyconf/logical-model.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;When we access our data for rendering a schedule, we need to pull all of this at
+once, because we want a seamless, cached experience for the conference attendee.&lt;/p&gt;
+
+&lt;h2 id="the-relational-option"&gt;The Relational Option&lt;/h2&gt;
+
+&lt;p&gt;What might the above logical model look like in a relational database?  The nice
+thing about a relational model is that they are fairly easy to design.  This is
+how we might have modeled our data given a relational database.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="BusyConf Relational Model" title="BusyConf Relational Model" src="/2012/06/05/mongodb-schema-design-at-busyconf/relational-model.png" /&gt;&lt;/p&gt;
+
+&lt;blockquote class="blockquote-reverse"&gt;
+  &lt;p&gt;What kind of queries would be required to pull all the data from this design?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It looks pretty straight forward until you imagine having to pull all this data
+at once to render a full schedule. What kind of query or queries would be
+required from a relational database? Would you use one big nasty join, or lots
+of individual queries? Neither seem like a great option.&lt;/p&gt;
+
+&lt;p&gt;To add to the problem, little things like the position of tracks are not easily
+represented.  Neither is the potential explosion of meta data that could come
+from each object.&lt;/p&gt;
+
+&lt;h2 id="first-attempt-with-mongodb"&gt;First Attempt with MongoDB&lt;/h2&gt;
+
+&lt;p&gt;Representing our logical model directly within MongoDB was our first instinct,
+BUT putting this into practice actually led us down a road of unnecessary
+complexities:&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="BusyConf MongoDB Model - First Attempt" title="BusyConf MongoDB Model - First Attempt" src="/2012/06/05/mongodb-schema-design-at-busyconf/mongodb-option1.png" /&gt;&lt;/p&gt;
+
+&lt;blockquote class="blockquote-reverse"&gt;
+  &lt;p&gt;This first attempt was a mistake.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;While we solved the problem of quickly accessing the entire event, we no longer
+have an easy way of accessing an individual activity or speaker.  We can quickly
+see the complexities in the drawing above.&lt;/p&gt;
+
+&lt;h2 id="current-design-with-mongodb"&gt;Current Design with MongoDB&lt;/h2&gt;
+
+&lt;p&gt;We iterated on the design many times, but in the end, we took a fairly unique
+approach.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="BusyConf MongoDB Model - Current Design" title="BusyConf MongoDB Model - Current Design" src="/2012/06/05/mongodb-schema-design-at-busyconf/mongodb-option2.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Instead of one collection, we broke out Activities and Speakers.&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; This
+matched our patterns of access much better. Instead of deeply nesting every
+object, we chose to embed arrays of days, tracks, and time slots immediately
+under the event document.&lt;/p&gt;
+
+&lt;p&gt;Each object has a unique ID. Everything is more easily addressable, because we
+have less nesting. The logical model is represented with pointers from one
+nested document to another. Of course, we don’t actually see our logical model
+until we piece it together on the client side, but that is okay because we don’t
+need the full logical model until until we put the leg work in to render the
+schedules in the browser.&lt;/p&gt;
+
+&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;MongoDB can be somewhat tricky when it comes to the up front design, but if done
+right, it has some great benefits both in defining and matching your unique
+access patterns along with fairly decent long-term maintenance benefits.&lt;/p&gt;
+
+&lt;p&gt;patterns of access, but ironically, we plan to switch Speakers back out to their
+own collection again to provide cleaner normalization.&lt;/p&gt;
+
+&lt;div class="footnotes"&gt;
+  &lt;ol&gt;
+    &lt;li id="fn:1"&gt;
+      &lt;p&gt;Later, we decided to embed Speakers under Activities to improve our &lt;a href="#fnref:1" class="reversefootnote"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Reserving Subdomains in Your Multi-Tenant Web Application</title>
+    <link rel="alternate" href="http://ryan.mcgeary.org/2012/05/07/reserving-subdomains-in-your-multitenant-application/"/>
+    <id>http://ryan.mcgeary.org/2012/05/07/reserving-subdomains-in-your-multitenant-application/</id>
+    <published>2012-05-06T18:00:00-06:00</published>
+    <updated>2015-05-18T14:20:23-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">
+&lt;p&gt;It’s fairly common to segment the accounts in your multi-tenant application with
+subdomains. &lt;a href="http://github.com"&gt;GitHub&lt;/a&gt; gives you a subdomain that matches your
+username
+(e.g. &lt;a href="http://rmm5t.github.io"&gt;&lt;strong&gt;rmm5t&lt;/strong&gt;.github.io&lt;/a&gt;). &lt;a href="https://mcgearygroup.freshbooks.com/refer/www"&gt;Freshbooks&lt;/a&gt; gives you a subdomain that matches your company name
+(e.g. &lt;a href="http://busyconf.freshbooks.com"&gt;&lt;strong&gt;busyconf&lt;/strong&gt;.freshbooks.com&lt;/a&gt;).  At
+&lt;a href="http://busyconf.com"&gt;BusyConf&lt;/a&gt;, we give you a subdomain that matches your
+conference name
+(e.g. &lt;a href="http://railsconf2012.busyconf.com"&gt;&lt;strong&gt;railsconf2012&lt;/strong&gt;.busyconf.com&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;Your customers usually get to choose their own subdomain during account sign-up,
+and when developing a subdomain-based multi-tenant application, it easy to
+forget to reserve some common subdomains for your own use and future
+growth. There’s nothing like trying to register a new service only to realize
+that one of your customers already has the subdomain that you had hoped to use.&lt;/p&gt;
+
+&lt;p&gt;It’s a good idea to make a list of subdomains that you don’t want your
+customers to use. Here’s a list of subdomains that I like to reserve in my
+multi-tenant applications:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;admin, api, assets, blog, calendar, camo, dashboard, demo, developer, developers, docs, files, ftp, git, imap, lab, m, mail, manage, mx, pages, pop, sites, smtp, ssl, staging, status, support, www&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;What subdomains are missing from this list?&lt;/p&gt;
+
+&lt;p&gt;In terms of an &lt;code&gt;ActiveModel&lt;/code&gt; validation in Rails, that looks something like this:&lt;/p&gt;
+
+&lt;pre class="highlight ruby"&gt;&lt;code&gt;&lt;span class="no"&gt;RESERVED_SUBDOMAINS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="sx"&gt;%w(
+  admin api assets blog calendar camo dashboard demo developer developers docs files ftp git imap lab m mail manage mx pages pop sites smtp ssl staging status support www
+)&lt;/span&gt;
+&lt;span class="n"&gt;validates_exclusion_of&lt;/span&gt; &lt;span class="ss"&gt;:subdomain&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:in&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="no"&gt;RESERVED_SUBDOMAINS&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                       &lt;span class="ss"&gt;:message&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="s2"&gt;"Subdomain %{value} is reserved."&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Talk: Just In Time Inventory with Spree</title>
+    <link rel="alternate" href="http://ryan.mcgeary.org/2012/02/16/just-in-time-inventory-with-spree/"/>
+    <id>http://ryan.mcgeary.org/2012/02/16/just-in-time-inventory-with-spree/</id>
+    <published>2012-02-15T17:00:00-07:00</published>
+    <updated>2015-05-18T21:01:39-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;script async="" class="speakerdeck-embed" data-id="4f3d969edf5d290022000228" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;New York, NY — &lt;a href="http://spreeconf.com/"&gt;SpreeConf 2012&lt;/a&gt; — In this talk, we will
+not only explore what it takes to extend Spree, but we will also experiment with
+the notion of using it to build our products on demand. We will take Spree, slap
+a MakerBot on the backend, build some extensions, and build a store that
+automatically prints products only after an order is placed.&lt;/p&gt;
+
+&lt;p&gt;Were you there? Please &lt;a href="http://spkr8.com/t/9284"&gt;rate my talk&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here’s the montage video that was shown during the presentation.&lt;/p&gt;
+
+&lt;div class="video"&gt;
+&lt;iframe width="420" height="315" src="http://www.youtube.com/embed/iFqf7kCRj5c" frameborder="0" allowfullscreen="true"&gt;&lt;!-- empty --&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+</content>
+  </entry>
+  <entry>
+    <title>Talk: HTML5 Application Caching</title>
+    <link rel="alternate" href="http://ryan.mcgeary.org/2012/02/02/html5-application-caching/"/>
+    <id>http://ryan.mcgeary.org/2012/02/02/html5-application-caching/</id>
+    <published>2012-02-01T17:00:00-07:00</published>
+    <updated>2015-05-18T21:01:22-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;iframe width="420" height="315" src="https://www.youtube.com/embed/eFunq7INsdY" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+&lt;iframe width="420" height="315" src="https://www.youtube.com/embed/SAuiNvUVwtc" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+&lt;iframe width="420" height="315" src="https://www.youtube.com/embed/NGZz8-a5N50" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+&lt;script async="" class="speakerdeck-embed" data-id="4f2ef2f30f6f270021003c9a" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;MCLEAN, VA — &lt;a href="http://www.meetup.com/modevdc/events/48923902/"&gt;MoDevDC&lt;/a&gt; —
+At &lt;a href="http://BusyConf.com/"&gt;BusyConf&lt;/a&gt;, we leverage offline application caching so
+your schedule is available even after losing an internet connection.&lt;/p&gt;
+
+&lt;p&gt;Caching can be hard, and the application cache can be a bit confusing to wrap your head around.  This talk tries to bring a little bit of sanity to that area.&lt;/p&gt;
+
+&lt;!-- Were you there? Please [rate my talk](). --&gt;
+
+</content>
+  </entry>
+  <entry>
+    <title>How To Add a DNSimple SSL Certificate to Heroku</title>
+    <link rel="alternate" href="http://ryan.mcgeary.org/2011/09/16/how-to-add-a-dnsimple-ssl-certificate-to-heroku/"/>
+    <id>http://ryan.mcgeary.org/2011/09/16/how-to-add-a-dnsimple-ssl-certificate-to-heroku/</id>
+    <published>2011-09-15T18:00:00-06:00</published>
+    <updated>2015-05-18T14:20:06-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a href="https://dnsimple.com/r/fb212a64f8e1b6"&gt;DNSimple&lt;/a&gt; has some of the best prices on SSL certificates. If you
+have a DNSimple account, perfect, you already know how useful it is.  If not,
+&lt;a href="https://dnsimple.com/r/fb212a64f8e1b6"&gt;go sign up now&lt;/a&gt;, and then come back.&lt;/p&gt;
+
+&lt;h2 id="buy-an-ssl-cert-from-dnsimple"&gt;1. Buy an SSL Cert from DNSimple&lt;/h2&gt;
+
+&lt;p&gt;The first thing to do is to buy an SSL cert from &lt;a href="https://dnsimple.com/r/fb212a64f8e1b6"&gt;DNSimple&lt;/a&gt; (I
+usually only buy wildcard certs nowadays). Go to the manage interface for the
+domain that you want to buy the SSL cert, and click “Buy an SSL Certificate.”
+The interface will walk you through the rest of the steps.  As long as you’re
+not super paranoid, you can even let DNSimple generate the private key and
+certificate signing request for you. Don’t worry, you can delete the private
+key from the DNSimple servers immediately after you save it to a secure place.&lt;/p&gt;
+
+&lt;p&gt;After a few minutes, you should receive some emails with your new SSL cert (a
+resulting wildcard certificate will actually come from
+&lt;a href="http://www.comodo.com/"&gt;Comodo&lt;/a&gt;).&lt;/p&gt;
+
+&lt;h2 id="build-the-public-certificate-chain-pem-file"&gt;2. Build the Public Certificate Chain PEM file&lt;/h2&gt;
+
+&lt;p&gt;Along with your SSL certificate, Comodo will send a zip file containing the Root
+CA Certificate and some Intermediate CA Certificates.  Before we can upload our
+certificate to Heroku, we need to concatenate these files together to form the
+certificate chain.&lt;/p&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;cat STAR_yourdomain_com.crt EssentialSSLCA_2.crt   &lt;span class="se"&gt;\&lt;/span&gt;
+    ComodoUTNSGCCA.crt UTNAddTrustSGCCA.crt        &lt;span class="se"&gt;\&lt;/span&gt;
+    AddTrustExternalCARoot.crt &amp;gt; STAR_yourdomain_com-bundle.pem
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Make sure you concatenate these files in the correct order, starting with your
+cert and ending at the root cert; otherwise, Heroku will not be able to
+recognize the result as a public key certificate.&lt;/p&gt;
+
+&lt;p&gt;This example shows the chain for a wildcard certificate (from Comodo). Your
+chain might be different if you purchased a single subdomain certificate from
+DNSimple (I think those come from RapidSSL, which might deliver root certs).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note: To make sure Heroku can automatically start your server, you must not
+have a passphrase assigned to the certficate.  If you let DNSimple do all the
+work for you, you should already have a passphrase-free cert.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id="add-the-ssl-endpoint-add-on-to-your-app"&gt;3. Add the SSL Endpoint Add-on to Your App&lt;/h2&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;heroku addons:add ssl:endpoint
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Read more about the
+&lt;a href="https://devcenter.heroku.com/articles/ssl-endpoint#add_the_ssl_endpoint_addon_to_your_app"&gt;SSL Endpoint Add-on&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id="upload-your-ssl-cert-and-private-key-to-heroku"&gt;4. Upload your SSL Cert and Private Key to Heroku&lt;/h2&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;heroku certs:add STAR_yourdomain_com-bundle.pem STAR_yourdomain_com-private.key
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That’s it! You can find more information and instructions on what to do after
+ this from the &lt;a href="https://devcenter.heroku.com/articles/ssl-endpoint"&gt;Heroku Dev Center&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;If you instead need to update an existing cert, use the &lt;code&gt;cert:update&lt;/code&gt;
+command. This prevents you from having to update your DNS settings:&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;heroku certs:update STAR_yourdomain_com-bundle.pem STAR_yourdomain_com-private.key
+&lt;/code&gt;&lt;/pre&gt;
+
+</content>
+  </entry>
+  <entry>
+    <title>Lightning Talk: Do Your Commit Messages Suck?</title>
+    <link rel="alternate" href="http://ryan.mcgeary.org/2011/09/02/do-your-commit-messages-suck-rockymtnruby/"/>
+    <id>http://ryan.mcgeary.org/2011/09/02/do-your-commit-messages-suck-rockymtnruby/</id>
+    <published>2011-09-01T18:00:00-06:00</published>
+    <updated>2015-05-18T21:00:40-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/8YjSty6bfog" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+&lt;script async="" class="speakerdeck-embed" data-id="4e68d6c47fbf030001006581" data-ratio="1.2994923857868" src="//speakerdeck.com/assets/embed.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;BOULDER, CO — &lt;a href="http://www.rockymtnruby.com/"&gt;Rocky Mountain Ruby 2011&lt;/a&gt; — Software
+projects are collaborative.  They usually encompass many months or years and are
+touched by several developers along the way.&lt;/p&gt;
+
+&lt;p&gt;Communication is key to any good software project.  Strong, well written, commit
+messages are one way to increase communication and documentation with very
+little overhead.&lt;/p&gt;
+
+&lt;p&gt;The project history plus a strong blame engine give us the power to answer
+future questions about what we were thinking at the time something was added or
+changed.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.confreaks.com/videos/744-rockymtnruby2011-lightning-talk-do-your-commit-messages-suck"&gt;Watch the Talk&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a title="Download the Slides" href="http://files.mcgeary.org/presentations/commit-messages-rockymtnruby.pdf"&gt;Download the Slides&lt;/a&gt; [PDF 7.8 MB]&lt;/p&gt;
+
+&lt;p&gt;Were you there? Please &lt;a href="http://spkr8.com/t/8263"&gt;rate my talk&lt;/a&gt;.&lt;/p&gt;
+
+</content>
+  </entry>
+  <entry>
+    <title>Co-Hosting Ruby5</title>
+    <link rel="alternate" href="http://ryan.mcgeary.org/2011/06/24/co-hosting-ruby5/"/>
+    <link rel="enclosure" type="audio/mpeg" href="http://files.mcgeary.org/podcasts/ruby5-186.mp3"/>
+    <link rel="enclosure" type="audio/ogg" href="http://files.mcgeary.org/podcasts/ruby5-186.ogg"/>
+    <id>http://ryan.mcgeary.org/2011/06/24/co-hosting-ruby5/</id>
+    <published>2011-06-23T18:00:00-06:00</published>
+    <updated>2015-05-18T14:19:55-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;I had the opportunity to co-host &lt;a href="http://ruby5.envylabs.com/"&gt;Ruby5&lt;/a&gt; with &lt;a href="http://codesherpas.com/"&gt;David Bock&lt;/a&gt; this week.  It was a fun time.&lt;/p&gt;
+
+&lt;p&gt;Check out &lt;a href="http://ruby5.envylabs.com/episodes/189-episode-186-june-24-2011"&gt;episode #186&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Keep Your Hostname on Public WiFi Networks</title>
+    <link rel="alternate" href="http://ryan.mcgeary.org/2011/04/22/keep-your-hostname-on-public-wifi-networks/"/>
+    <id>http://ryan.mcgeary.org/2011/04/22/keep-your-hostname-on-public-wifi-networks/</id>
+    <published>2011-04-21T18:00:00-06:00</published>
+    <updated>2015-05-18T14:16:38-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;Have you ever joined a public WiFi network only to have your hostname change to
+something seemingly random?  While hacking with
+&lt;a href="http://twitter.com/wayneeseguin"&gt;Wayne Seguin&lt;/a&gt; last night on a hotel network,
+he ran into this exact problem on OS X, and it reminded me of a workaround that
+I learned about a few years ago.&lt;/p&gt;
+
+&lt;p&gt;Some networks have their DHCP server configured to assign hostnames for all
+machines that connect to it. OS X respects this and will reassign your hostname
+automatically. I suspect this is to help avoid name collisions on the network,
+but if you want to prevent OS X from doing this, there is a workaround.&lt;/p&gt;
+
+&lt;p&gt;Open &lt;code&gt;/etc/hostconfig&lt;/code&gt; and add the following line:&lt;/p&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;&lt;span class="nv"&gt;HOSTNAME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&amp;lt;your-preferred-hostname&amp;gt;.local
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Afterwards, OS X will no longer respect the DHCP command to reassign the
+hostname.  This is especially helpful if you have scripts that rely on your
+hostname being set to something specific.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Talk: Introduction to CoffeeScript at Red Dirt RubyConf</title>
+    <link rel="alternate" href="http://ryan.mcgeary.org/2011/04/21/coffeescript-reddirt/"/>
+    <id>http://ryan.mcgeary.org/2011/04/21/coffeescript-reddirt/</id>
+    <published>2011-04-20T18:00:00-06:00</published>
+    <updated>2015-05-18T20:57:42-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;script async="" class="speakerdeck-embed" data-id="4e78ef68e604d6003f0089f3" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;OKLAHOMA CITY — &lt;a href="http://reddirtrubyconf.com/videos/2011"&gt;Red Dirt RubyConf&lt;/a&gt; — I discovered
+&lt;a href="http://coffeescript.org/"&gt;CoffeeScript&lt;/a&gt; during a recent project that &lt;a href="http://thegarvin.com"&gt;Jim Garvin&lt;/a&gt;
+and I were working on.  We knew the app was going to be heavy on the JavaScript,
+and that’s how we started – writing straight JavaScript.  Even though I
+have written JavaScript for years, this time, the JavaScript syntax itself got
+in the way.  CoffeeScript’s elegant syntax relieved the burden.&lt;/p&gt;
+
+&lt;p&gt;I quickly fell so in love with CoffeeScript that I have since sworn off writing
+raw JavaScript directly ever again.  The goal of this talk is to convince the
+audience to try CoffeeScript in hopes that they too will find it as valuable as
+I did.&lt;/p&gt;
+
+&lt;p&gt;&lt;a title="Download the Slides" href="http://files.mcgeary.org/presentations/coffeescript-redirt.pdf"&gt;Download the Slides&lt;/a&gt; [PDF 29.0 MB]&lt;/p&gt;
+
+&lt;p&gt;Were you there? Please &lt;a href="http://spkr8.com/t/7289"&gt;rate my talk&lt;/a&gt;.&lt;/p&gt;
+
+</content>
+  </entry>
+  <entry>
+    <title>Talk: One Man Lightning Talks</title>
+    <link rel="alternate" href="http://ryan.mcgeary.org/2011/04/02/one-man-lightning-rubynation/"/>
+    <id>http://ryan.mcgeary.org/2011/04/02/one-man-lightning-rubynation/</id>
+    <published>2011-04-01T18:00:00-06:00</published>
+    <updated>2015-05-18T20:59:49-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;!-- &lt;embed src="http://blip.tv/play/AYK%2B808C" type="application/x-shockwave-flash" width="550" height="339" wmode="transparent" allowscriptaccess="always" allowfullscreen="true" &gt;&lt;/embed&gt; --&gt;
+
+&lt;script async="" class="speakerdeck-embed" data-id="4e78eef960cf9e003c006d1c" data-ratio="1.2994923857868" src="//speakerdeck.com/assets/embed.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;RESTON, VA — &lt;a href="http://www.rubynation.org//"&gt;RubyNation 2011&lt;/a&gt; — To celebrate the
+NovaRUG’s 50th meeting, they opened the floor to lightning talks. As an added
+incentive, the highest voted lightning talk was to be given a speaking slot at
+RubyNation 2011. I guess bringing my friends and family paid off that day. In
+the spirit of that event, I gave back-to-back lightning talks on a wide range of
+topics, including:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Do Your Commit Messages Suck?&lt;/li&gt;
+  &lt;li&gt;“Vendor Everything” Still Applies&lt;/li&gt;
+  &lt;li&gt;CoffeeScript: Exposing the Good Parts of JavaScript with Better Syntax&lt;/li&gt;
+  &lt;li&gt;How We Use MongoDB at BusyConf&lt;/li&gt;
+  &lt;li&gt;HTML5 Application Caching&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a title="Download the Slides" href="http://files.mcgeary.org/presentations/one-man-lightning-rubynation.pdf"&gt;Download the Slides&lt;/a&gt; [PDF 25 MB]&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://blip.tv/rubynation/one-man-lightning-talks-5224811"&gt;Watch the Video&lt;/a&gt; [blip.tv]&lt;/p&gt;
+
+&lt;p&gt;Were you there? Please &lt;a href="http://spkr8.com/t/7045"&gt;rate my talk&lt;/a&gt;.&lt;/p&gt;
+
+</content>
+  </entry>
+  <entry>
+    <title>Interview with IBM developerWorks</title>
+    <link rel="alternate" href="http://ryan.mcgeary.org/2011/02/24/interview-with-ibm-developer-works/"/>
+    <link rel="enclosure" type="audio/mpeg" href="http://files.mcgeary.org/interviews/gloverseries-mcgeary.mp3"/>
+    <link rel="enclosure" type="audio/ogg" href="http://files.mcgeary.org/interviews/gloverseries-mcgeary.ogg"/>
+    <id>http://ryan.mcgeary.org/2011/02/24/interview-with-ibm-developer-works/</id>
+    <published>2011-02-23T17:00:00-07:00</published>
+    <updated>2015-05-21T20:25:55-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;In December, I was interviewed by &lt;a href="http://thediscoblog.com/"&gt;Andy Glover&lt;/a&gt; for
+the &lt;a href="http://www.ibm.com/developerworks/java/library/j-gloverpodcast2/index.html#mcgeary"&gt;IBM developerWorks podcast&lt;/a&gt;.
+Today, that interview was published.&lt;/p&gt;
+
+&lt;p&gt;I talked about &lt;a href="http://coffeescript.org/"&gt;CoffeeScript&lt;/a&gt;,
+&lt;a href="http://www.amazon.com/gp/product/0596517742?ie=UTF8&amp;amp;tag=rmm5t-20&amp;amp;linkCode=as2&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0596517742"&gt;JavaScript&lt;/a&gt;,
+&lt;a href="http://jquery.com/"&gt;jQuery&lt;/a&gt;,
+&lt;a href="http://www.sencha.com/products/touch/"&gt;Sencha Touch&lt;/a&gt;,
+&lt;a href="http://docs.jquery.com/Qunit"&gt;QUnit&lt;/a&gt;,
+&lt;a href="http://pivotal.github.com/jasmine/"&gt;Jasmine&lt;/a&gt;, &lt;a href="http://nodejs.org/"&gt;node.js&lt;/a&gt;,
+&lt;a href="http://www.mongodb.org/"&gt;MongoDB&lt;/a&gt;, and my new venture
+&lt;a href="http://busyconf.com/"&gt;BusyConf&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.ibm.com/developerworks/java/library/j-gloverpodcast2/index.html#mcgeary"&gt;Ryan McGeary on CoffeeScript&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>“Vendor Everything” Still Applies</title>
+    <link rel="alternate" href="http://ryan.mcgeary.org/2011/02/09/vendor-everything-still-applies/"/>
+    <id>http://ryan.mcgeary.org/2011/02/09/vendor-everything-still-applies/</id>
+    <published>2011-02-08T17:00:00-07:00</published>
+    <updated>2015-05-18T14:16:16-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt; Since writing this post, I have since switched to using
+&lt;a href="https://github.com/sstephenson/rbenv"&gt;rbenv&lt;/a&gt; for my ruby version management.  I
+no longer use RVM. Rbenv lends itself nicely to the workflow described here, and
+some of the workflow below has been modified to reflect that. RVM instructions
+are still included though.&lt;/p&gt;
+
+&lt;p&gt;That’s right. The title is a homage to the (now
+&lt;a href="http://twitter.com/defunkt"&gt;&lt;em&gt;defunkt&lt;/em&gt;&lt;/a&gt;)
+&lt;a href="http://errtheblog.com/posts/50-vendor-everything"&gt;err the blog&lt;/a&gt;, and keeping
+your application dependencies with your application is &lt;em&gt;still&lt;/em&gt; a very good
+thing.&lt;/p&gt;
+
+&lt;p&gt;As a consultant, I jump between a lot of different Ruby projects from day to
+day.  Some are my own; some are owned by others. Some are greenfield; some are
+legacy. Sometimes, I’m the sole developer; sometimes, I’m working with a team.&lt;/p&gt;
+
+&lt;p&gt;There’s nothing more frustrating than jumping on an existing project only to
+fall into dependency hell when your first goal is just a passing test suite.
+Dependencies can be quite difficult to manage, and fortunately, we have some
+great tools like &lt;a href="http://gembundler.com/"&gt;Bundler&lt;/a&gt; and
+&lt;a href="https://github.com/sstephenson/rbenv"&gt;rbenv&lt;/a&gt; to help out. The problem, however,
+is that we as a community have not fully standardized on the best set of
+conventions surrounding these tools.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Disclaimer: The set of conventions described here apply to Ruby applications
+only.  This includes Rails apps, Sinatra apps, or other Ruby applications that
+aren’t deployed in the form of a gem.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id="do-check-your-ruby-version-into-version-control"&gt;Do Check Your &lt;code&gt;.ruby-version&lt;/code&gt; into Version Control&lt;/h2&gt;
+
+&lt;blockquote class="blockquote-reverse"&gt;
+  &lt;p&gt;Your &lt;code&gt;.ruby-version&lt;/code&gt; file is an important piece of documentation.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;For applications, your &lt;code&gt;.ruby-version&lt;/code&gt; file is an important piece of
+documentation.  I think this is the best way to communicate the Ruby version
+dependency to other team members. This is especially true given that these
+files at the root of your project will make rbenv or RVM automatically use
+that version of Ruby when you’re in that project directory.&lt;/p&gt;
+
+&lt;p&gt;I recently inherited a project that had a test suite with very little coverage
+and no documentation as to which version of Ruby was required. I could tell the
+project wasn’t on Ruby 1.9 yet, so I guessed at Ruby 1.8.7. It wasn’t until much
+later that I realized Ruby 1.8.6 was actually required.  For another legacy
+project that I worked on, we guessed correctly at Ruby 1.8.7, but it wasn’t
+until we went to deploy and took a look at the production environment that we
+realized we should have been developing against Ruby Enterprise Edition (REE)
+instead of MRI.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Note&lt;/strong&gt;: When this post was first written, I advocated checking in your
+&lt;code&gt;.rvmrc&lt;/code&gt; file, because at the time, that was the only way to specify your ruby
+version. That was controversial, because an &lt;code&gt;.rvmrc&lt;/code&gt; could potentially contain
+personal preferences (that I didn’t think belonged in that file). Things have
+changed, and &lt;code&gt;.ruby-version&lt;/code&gt; is the way to go regardless of your chosen ruby
+version manager.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id="stop-using-rvm-gemsets-for-your-applications"&gt;Stop Using RVM Gemsets For Your Applications&lt;/h2&gt;
+
+&lt;p&gt;Please stop using RVM gemsets for your applications. Seriously. The original title
+of this post was going to be, “RVM Gemsets are overrated,” but that seemed too
+much like flamebait, and I didn’t want anyone to miscontrue my overall point.&lt;/p&gt;
+
+&lt;p&gt;RVM is absolutely one of the best things that has hit the Ruby community in
+recent history, and &lt;a href="http://rvm.beginrescueend.com/gemsets/basics/"&gt;RVM gemsets&lt;/a&gt;
+are a great tool. It’s just that I see too many applications rely on the use of
+gemsets when it yields no added benefit.  I understand why people do it; they
+don’t want to pollute their default gemset, but this reliance on gemsets for
+applications is totally unnecessary.  It also seems to be a common point of
+confusion amongst teams.&lt;/p&gt;
+
+&lt;p&gt;There is a better way, that still doesn’t pollute the default gemset, and it
+includes a lesser known feature of Bundler.&lt;/p&gt;
+
+&lt;h2 id="let-bundler-follow-the---path"&gt;Let Bundler Follow the &lt;code&gt;--path&lt;/code&gt;&lt;/h2&gt;
+
+&lt;blockquote class="blockquote-reverse"&gt;
+  &lt;p&gt;Bundler alleviates the need for different gemsets per project.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It is possible to install application dependencies cleanly without relying on an
+RVM gemset. I like to install all application dependencies into a gitignored
+directory within the application itself.  This not only alleviates the need for
+different gemsets per project, but it also gives us a quick and easy way to jump
+into the source code of any one of our gem dependencies.  We can do this with
+the &lt;code&gt;--path&lt;/code&gt; option passed to
+&lt;a href="http://gembundler.com/bundle_install.html"&gt;&lt;code&gt;bundle install&lt;/code&gt;&lt;/a&gt;.  Here’s the
+convention I like to use:&lt;/p&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;bundle install --path vendor
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;'vendor/ruby'&lt;/span&gt; &amp;gt;&amp;gt; .gitignore
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After running this, all gems (and gems pulled directly from git repositories)
+will be unpacked into the &lt;code&gt;vendor/ruby&lt;/code&gt; directory of your project.  It’s a good
+idea to ignore this directory from version control.&lt;/p&gt;
+
+&lt;p&gt;This one step removes the need to create a custom RVM gemset for any of your
+applications, and it ensures that your default gemset is never polluted by
+application dependencies. This way, Bundler completely isolates the gems from
+the system, guaranteeing a clear set of dependencies.&lt;/p&gt;
+
+&lt;h2 id="package-your-gems-in-vendorcache"&gt;Package Your Gems in &lt;code&gt;vendor/cache&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;For applications, I cannot emphasize enough how beneficial it is to keep all of
+your gem dependencies with your application.  I’m not just talking about a
+&lt;code&gt;Gemfile&lt;/code&gt; and &lt;code&gt;Gemfile.lock&lt;/code&gt;&lt;sup id="fnref:gemfile-lock"&gt;&lt;a href="#fn:gemfile-lock" class="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;, but I’m also talking about the gems
+themselves. Bundler allows you to save all of your gems in a &lt;code&gt;vendor/cache&lt;/code&gt;
+directory after running
+&lt;a href="http://gembundler.com/bundle_package.html"&gt;&lt;code&gt;bundle package&lt;/code&gt;&lt;/a&gt;.  It ensures the
+gems are available without having to sync with a gem server.&lt;/p&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;bundle package
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I’ve seen resistance to this practice, but the only arguments against it usually
+refer to taking up too much space in version control. That argument is
+poppycock. Storage is cheap. You’ll thank me later when your deployments run
+smoothly, and when several years from now, an otherwise missing gem is at your
+fingertips. Not to mention, having all your gems in &lt;code&gt;vendor/cache&lt;/code&gt; makes &lt;code&gt;bundle
+install&lt;/code&gt; run faster both for new team members and in your continuous integration
+environment. Deployment environments like &lt;a href="http://heroku.com/"&gt;Heroku&lt;/a&gt; really
+benefit from this practice too.&lt;/p&gt;
+
+&lt;h2 id="how-can-i-remember-all-of-this"&gt;How Can I Remember All of This?&lt;/h2&gt;
+
+&lt;p&gt;Here are some command line aliases that help me:&lt;/p&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;b&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"bundle"&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;bi&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"b install --path vendor"&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;bil&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"bi --local"&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;bu&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"b update"&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;be&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"b exec"&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;binit&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"bi &amp;amp;&amp;amp; b package &amp;amp;&amp;amp; echo 'vendor/ruby' &amp;gt;&amp;gt; .gitignore"&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Any time I jump into a new project that already has a Gemfile, I merely need to
+run &lt;code&gt;bi&lt;/code&gt; and the gems are installed in an application specific location
+(&lt;code&gt;vendor/ruby&lt;/code&gt;) without the need for a custom RVM gemset.  Anytime I’m starting
+a new project or trying to convert an old project to these new conventions, I
+just run &lt;code&gt;binit&lt;/code&gt;, which installs and packages the gems within the application
+while also gitignoring the &lt;code&gt;vendor/ruby&lt;/code&gt; directory.&lt;/p&gt;
+
+&lt;h2 id="tldr"&gt;TL;DR&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Check your &lt;code&gt;.ruby-version&lt;/code&gt; file into version control; it’s a form of documentation.&lt;/li&gt;
+  &lt;li&gt;Avoid RVM gemsets for your applications; Bundler solves the same problem in a better way (&lt;code&gt;bundle install --path vendor&lt;/code&gt;).&lt;/li&gt;
+  &lt;li&gt;Keep a cache of your gem dependencies in version control using &lt;code&gt;bundle package&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;This only applies to Ruby applications; gem development is a different beast.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;bundle install --path vendor
+bundle package
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;'vendor/ruby'&lt;/span&gt; &amp;gt;&amp;gt; .gitignore
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class="footnotes"&gt;
+  &lt;ol&gt;
+    &lt;li id="fn:gemfile-lock"&gt;
+      &lt;p&gt;By the way, for applications, please do &lt;a href="http://yehudakatz.com/2010/12/16/clarifying-the-roles-of-the-gemspec-and-gemfile/"&gt;check your &lt;code&gt;Gemfile.lock&lt;/code&gt; into version control&lt;/a&gt;. &lt;a href="#fnref:gemfile-lock" class="reversefootnote"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Interview with Life of the Freelancer</title>
+    <link rel="alternate" href="http://ryan.mcgeary.org/2011/01/04/interview-with-life-of-the-freelancer/"/>
+    <link rel="enclosure" type="audio/mpeg" href="http://files.mcgeary.org/interviews/lifeofthefree-mcgeary.mp3"/>
+    <link rel="enclosure" type="audio/ogg" href="http://files.mcgeary.org/interviews/lifeofthefree-mcgeary.ogg"/>
+    <id>http://ryan.mcgeary.org/2011/01/04/interview-with-life-of-the-freelancer/</id>
+    <published>2011-01-03T17:00:00-07:00</published>
+    <updated>2015-05-18T14:19:15-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a title="Transform Ideas into Software Reality" href="http://lifeofthefreelancer.com/software-development-consulting-with-ryan-mcgeary/"&gt;&lt;img alt="Video" src="/2011/01/04/interview-with-life-of-the-freelancer/lifeofthefreelancer.jpg" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;A couple months ago, I was interviewed by
+&lt;a href="http://twitter.com/rdempsey"&gt;Robert Dempsey&lt;/a&gt; at
+&lt;a href="http://lifeofthefreelancer.com/"&gt;LifeOfTheFreelancer.com&lt;/a&gt;.  I almost missed it,
+but that interview was published last week.&lt;/p&gt;
+
+&lt;p&gt;I talk about my past experiences, lessons learned, successes, failures, and
+things I’m focussing on now.&lt;/p&gt;
+
+&lt;p&gt;&lt;a title="Transform Ideas into Software Reality" href="http://lifeofthefreelancer.com/software-development-consulting-with-ryan-mcgeary/"&gt;Transform Ideas into Software Reality&lt;/a&gt;&lt;/p&gt;
+
+</content>
+  </entry>
+  <entry>
+    <title>Working with OS X and Emacs</title>
+    <link rel="alternate" href="http://ryan.mcgeary.org/2011/01/03/working-with-os-x-and-emacs/"/>
+    <id>http://ryan.mcgeary.org/2011/01/03/working-with-os-x-and-emacs/</id>
+    <published>2011-01-02T17:00:00-07:00</published>
+    <updated>2015-05-18T14:19:08-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;object width="640" height="385"&gt;&lt;param name="movie" value="http://www.youtube.com/v/a-jRN_ba41w?fs=1&amp;amp;hl=en_US&amp;amp;color1=0x3a3a3a&amp;amp;color2=0x999999" /&gt;&lt;param name="allowFullScreen" value="true" /&gt;&lt;param name="allowscriptaccess" value="always" /&gt;&lt;embed src="http://www.youtube.com/v/a-jRN_ba41w?fs=1&amp;amp;hl=en_US&amp;amp;color1=0x3a3a3a&amp;amp;color2=0x999999" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="385" /&gt;&lt;/object&gt;
+
+&lt;p&gt;I’m being featured this week on a new site called
+&lt;a href="http://how-i-work.com"&gt;How I Work&lt;/a&gt;.  The site is about letting developers watch
+screencasts to see how other people work and improve their productivity by
+learning about new tools and practices.  Given the interest in how focused work
+in an all inclusive environment can help productivity, they contacted me about
+putting up a
+&lt;a href="http://how-i-work.com/workbenches/30-working-with-os-x-and-emacs"&gt;workbench on how I use Emacs&lt;/a&gt;
+and how it fits into my overall OS X workflow.&lt;/p&gt;
+
+&lt;p&gt;They’ve also got some other cool featured content.
+&lt;a href="http://zachholman.com/"&gt;Zach Holman&lt;/a&gt; who works at github and is known for lots
+of cool hacks like &lt;a href="http://facelette.com/"&gt;facelette&lt;/a&gt;, boom, etc talks about
+&lt;a href="http://how-i-work.com/workbenches/29-automating-inefficiencies"&gt;Automating Inefficiencies&lt;/a&gt;.
+The guys from &lt;a href="http://thoughtbot.com/"&gt;thoughtbot&lt;/a&gt;
+&lt;a href="http://how-i-work.com/workbenches/7-using-hoptoad-to-manage-app-errors"&gt;demo Hoptoad&lt;/a&gt;
+and explain how it can help your development team stay on top of production
+problems.&lt;/p&gt;
+
+&lt;p&gt;Please
+&lt;a href="http://how-i-work.com/workbenches/30-working-with-os-x-and-emacs"&gt;check it out&lt;/a&gt;
+and vote up my video so other people learn about me and
+&lt;a href="http://mcgearygroup.com"&gt;McGeary Consulting Group&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Talk: How we use MongoDB at BusyConf</title>
+    <link rel="alternate" href="http://ryan.mcgeary.org/2010/12/14/busyconf-mongodc/"/>
+    <id>http://ryan.mcgeary.org/2010/12/14/busyconf-mongodc/</id>
+    <published>2010-12-13T17:00:00-07:00</published>
+    <updated>2015-05-18T20:57:03-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;script async="" class="speakerdeck-embed" data-id="4e7a84530ac8a4003c009d00" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;WASHINGTON, DC — &lt;a href="http://www.meetup.com/Washington-DC-MongoDB-Users-Group/calendar/15584661/"&gt;MongoDB Users Group&lt;/a&gt; — &lt;a href="http://thegarvin.com/"&gt;Jim Garvin&lt;/a&gt; and I
+attend conferences, and as attendees, the schedule at the conference is often
+lacking.  It’s poorly organized, lacks information, and requires Internet
+access. This makes it hard as an attendee to choose the talks you want to go
+to. &lt;a href="http://busyconf.com/"&gt;BusyConf&lt;/a&gt; is an attempt to solve that problem while also making
+it easier for conference organizers to run a conference.  We handle the calls
+for proposal, we allow organizers to rate proposals, we give them an interface
+to drag-n-drop activities onto a schedule, and we publish that schedule in many
+formats.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.mongodb.org/"&gt;MongoDB&lt;/a&gt; was a huge win for us while designing our application. The
+goal of this talk is to explain why we chose MongoDB, how we use it at Busyconf,
+what design decisions we considered, and what the alternatives might have been.&lt;/p&gt;
+
+&lt;p&gt;&lt;a title="Download the Slides" href="http://files.mcgeary.org/presentations/busyconf-mongodc.pdf"&gt;&lt;img alt="BusyConf and MongoDB" src="/2010/12/14/busyconf-mongodc/busyconf-mongodc.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a title="Download the Slides" href="http://files.mcgeary.org/presentations/busyconf-mongodc.pdf"&gt;Download the Slides&lt;/a&gt; [PDF 2.2 MB]&lt;/p&gt;
+
+&lt;p&gt;Were you there? Please &lt;a href="http://spkr8.com/t/5230"&gt;rate my talk&lt;/a&gt;.&lt;/p&gt;
+
+</content>
+  </entry>
+  <entry>
+    <title>Talk: CoffeeScript at DCRUG</title>
+    <link rel="alternate" href="http://ryan.mcgeary.org/2010/12/09/coffeescript-dcrug/"/>
+    <id>http://ryan.mcgeary.org/2010/12/09/coffeescript-dcrug/</id>
+    <published>2010-12-08T17:00:00-07:00</published>
+    <updated>2015-05-18T17:01:22-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a title="Download the Slides" href="http://files.mcgeary.org/presentations/coffeescript-dcrug.pdf"&gt;&lt;img alt="CoffeeScript" src="/2010/12/09/coffeescript-dcrug/coffeescript-dcrug.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;WASHINGTON, DC — &lt;a href="http://www.meetup.com/dcruby/calendar/15339405/"&gt;DCRUG&lt;/a&gt; — I discovered
+&lt;a href="http://coffeescript.org/"&gt;CoffeeScript&lt;/a&gt; during a recent project that &lt;a href="http://thegarvin.com"&gt;Jim Garvin&lt;/a&gt;
+and I were working on.  We knew the app was going to be heavy on the JavaScript,
+and that’s how we started – writing straight JavaScript.  Even though I
+have written JavaScript for years, this time, the JavaScript syntax itself got
+in the way.  CoffeeScript’s elegant syntax relieved the burden.&lt;/p&gt;
+
+&lt;p&gt;I quickly fell so in love with CoffeeScript that I have since sworn off writing
+raw JavaScript directly ever again.  The goal of this talk is to convince the
+audience to try CoffeeScript in hopes that they too will find it as valuable as
+I did.&lt;/p&gt;
+
+&lt;p&gt;&lt;a title="Download the Slides" href="http://files.mcgeary.org/presentations/coffeescript-dcrug.pdf"&gt;Download the Slides&lt;/a&gt; [PDF 23.0 MB]&lt;/p&gt;
+
+&lt;p&gt;Were you there? Please &lt;a href="http://spkr8.com/t/5216"&gt;rate my talk&lt;/a&gt;.&lt;/p&gt;
+
+</content>
+  </entry>
+  <entry>
+    <title>Talk: CoffeeScript at 757rb</title>
+    <link rel="alternate" href="http://ryan.mcgeary.org/2010/11/01/coffeescript-757rb/"/>
+    <id>http://ryan.mcgeary.org/2010/11/01/coffeescript-757rb/</id>
+    <published>2010-10-31T18:00:00-06:00</published>
+    <updated>2015-05-18T17:01:18-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a title="Download the Slides" href="http://files.mcgeary.org/presentations/coffeescript-757rb.pdf"&gt;&lt;img alt="CoffeeScript" src="/2010/11/01/coffeescript-757rb/coffeescript-757rb.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;NORFOLK, VIRGINIA — &lt;a href="http://www.meetup.com/ruby-130/calendar/14404872/"&gt;757rb&lt;/a&gt; — I discovered
+&lt;a href="http://coffeescript.org/"&gt;CoffeeScript&lt;/a&gt; during a recent project that &lt;a href="http://thegarvin.com"&gt;Jim Garvin&lt;/a&gt;
+and I were working on.  We knew the app was going to be heavy on the JavaScript,
+and that’s how we started – writing straight JavaScript.  Even though I
+have written JavaScript for years, this time, the JavaScript syntax itself got
+in the way.  CoffeeScript’s elegant syntax relieved the burden.&lt;/p&gt;
+
+&lt;p&gt;I quickly fell so in love with CoffeeScript that I have since sworn off writing
+raw JavaScript directly ever again.  The goal of this talk is to convince the
+audience to try CoffeeScript in hopes that they too will find it as valuable as
+I did.&lt;/p&gt;
+
+&lt;p&gt;&lt;a title="Download the Slides" href="http://files.mcgeary.org/presentations/coffeescript-757rb.pdf"&gt;Download the Slides&lt;/a&gt; [PDF 24.6 MB]&lt;/p&gt;
+
+&lt;p&gt;Were you there? Please &lt;a href="http://spkr8.com/t/4988"&gt;rate my talk&lt;/a&gt;.&lt;/p&gt;
+
+</content>
+  </entry>
+  <entry>
+    <title>Lightning Talk: CoffeeScript at NovaRUG</title>
+    <link rel="alternate" href="http://ryan.mcgeary.org/2010/10/21/coffeescript-novarug/"/>
+    <id>http://ryan.mcgeary.org/2010/10/21/coffeescript-novarug/</id>
+    <published>2010-10-20T18:00:00-06:00</published>
+    <updated>2015-05-18T17:01:10-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a title="Download the Slides" href="http://files.mcgeary.org/presentations/coffeescript-navarug-short.pdf"&gt;&lt;img alt="CoffeeScript" src="/2010/10/21/coffeescript-novarug/coffeescript-novarug.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;RESTON, VIRGINIA — &lt;a href="http://novarug.org/articles/2010/09/29/oct-21-lightning-talks"&gt;NovaRUG&lt;/a&gt; — I discovered
+&lt;a href="http://coffeescript.org/"&gt;CoffeeScript&lt;/a&gt; during a recent project that &lt;a href="http://thegarvin.com"&gt;Jim Garvin&lt;/a&gt;
+and I were working on.  We knew the app was going to be heavy on the JavaScript,
+and that’s how we started – writing straight JavaScript.  Even though I
+have written JavaScript for years, this time, the JavaScript syntax itself got
+in the way.  CoffeeScript’s elegant syntax relieved the burden.&lt;/p&gt;
+
+&lt;p&gt;I quickly fell so in love with CoffeeScript that I have since sworn off writing
+raw JavaScript directly ever again.  The goal of this talk is to convince the
+audience to try CoffeeScript in hopes that they too will find it as valuable as
+I did.&lt;/p&gt;
+
+&lt;p&gt;&lt;a title="Download the Slides" href="http://files.mcgeary.org/presentations/coffeescript-navarug-short.pdf"&gt;Download the Slides&lt;/a&gt; [PDF 17.8 MB]&lt;/p&gt;
+
+&lt;p&gt;Were you there? Please &lt;a href="http://spkr8.com/t/4985"&gt;rate my talk&lt;/a&gt;.&lt;/p&gt;
+
+</content>
+  </entry>
+  <entry>
+    <title>My Remember The Milk Conventions</title>
+    <link rel="alternate" href="http://ryan.mcgeary.org/2008/01/02/remember-the-milk-conventions/"/>
+    <id>http://ryan.mcgeary.org/2008/01/02/remember-the-milk-conventions/</id>
+    <published>2008-01-01T17:00:00-07:00</published>
+    <updated>2015-05-18T14:15:57-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p class="edit"&gt;UPDATE (late 2008): I no longer use Remember The Milk as my GTD tool, but I still recommend similar types of conventions that were applied here.  I leave this screencast here in hopes that others still find it valuable.&lt;/p&gt;
+
+&lt;object width="480" height="342"&gt;&lt;param name="movie" value="http://www.youtube.com/v/Lb9trtwhwY0?fs=1&amp;amp;hl=en_US&amp;amp;color1=0x3a3a3a&amp;amp;color2=0x999999"&gt;&lt;/param&gt;&lt;param name="allowFullScreen" value="true"&gt;&lt;/param&gt;&lt;param name="allowscriptaccess" value="always"&gt;&lt;/param&gt;&lt;embed src="http://www.youtube.com/v/Lb9trtwhwY0?fs=1&amp;amp;hl=en_US&amp;amp;color1=0x3a3a3a&amp;amp;color2=0x999999" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="342"&gt;&lt;/embed&gt;&lt;/object&gt;
+
+&lt;p&gt;I'm often asked about the conventions I use to Get Things Done with &lt;a href="http://www.rememberthemilk.com"&gt;RememberTheMilk.com&lt;/a&gt;. I found it a little too difficult to &lt;a href="http://www.rememberthemilk.com/forums/tips/3524/"&gt;put into words&lt;/a&gt;, so I took a stab at this screencast instead. &lt;/p&gt;
+
+&lt;p&gt;Follow &lt;a href="http://twitter.com/rmm5t"&gt;@rmm5t&lt;/a&gt; on twitter.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://files.mcgeary.org/screencasts/RTM-GTD-Conventions.mov"&gt;Watch the full res version&lt;/a&gt; instead.&lt;/p&gt;
+</content>
+  </entry>
+</feed>

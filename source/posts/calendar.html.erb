@@ -1,0 +1,37 @@
+---
+layout: post
+pageable: true
+per_page: 100
+priority: 0.2
+---
+<% content_for(:title) do %>
+  <% case page_type
+     when 'day' %>
+    <%= Date.new(year, month, day).strftime('%b %e %Y') %>
+  <% when 'month' %>
+    <%= Date.new(year, month, 1).strftime('%b %Y') %>
+  <% when 'year' %>
+    <%= year %>
+  <% end %>
+  Archive
+<% end %>
+
+<% if paginate && num_pages > 1 %>
+  <p>Page <%= page_number %> of <%= num_pages %></p>
+
+  <% if prev_page %>
+    <p><%= link_to 'Previous page', prev_page %></p>
+  <% end %>
+<% end %>
+
+<dl class="dl-horizontal">
+  <% page_articles.each_with_index do |article, i| %>
+    <dt class="text-muted"><%= time_tag(article.date) %></dt> <dd><%= link_to article.title, article %></dd>
+  <% end %>
+</dl>
+
+<% if paginate %>
+  <% if next_page %>
+    <p><%= link_to 'Next page', next_page %></p>
+  <% end %>
+<% end %>

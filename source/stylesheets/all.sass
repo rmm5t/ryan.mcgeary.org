@@ -1,0 +1,215 @@
+@import compass
+@import syntax
+
+$padding: 15px
+
+$mcg-dark: #333
+$mcg-accent: #0facdc
+$mcg-subdued: #b2b2b2
+
+$sidebar-width: 33%
+$sidebar-aside-width: 230px
+
+$logo-width: 1200px
+$logo-height: 400px
+$logo-scale: 6
+$masthead-height: 100px
+
+#masthead
+  background-color: rgba(black, 0.8)
+  height: $masthead-height
+  position: relative
+  margin-top: 15px
+  z-index: 9999
+  +transition(height 0.6s ease-in-out)
+  .logo
+    position: relative
+    width: $sidebar-width
+    top: ($masthead-height - ($logo-height / $logo-scale))  / 2
+    +transition(top 0.6s ease-in-out)
+    a
+      +replace-text("mcgeary-logo-dark.png")
+      +transition(width 0.5s ease-in-out, height 0.6s ease-in-out)
+      display: block
+      position: absolute
+      right: $padding
+      width: $logo-width / $logo-scale
+      height: $logo-height / $logo-scale
+      background-size: 100%
+  .sm-controls
+    display: none
+
+$photo-width: 411px
+$photo-height: 486px
+$photo-scale: 2
+
+#background
+  top: 0
+  background-color: lighten($mcg-accent, 40%)
+#background, #sidebar
+  +transition(width 0.6s ease-in-out)
+#background, #photo
+  position: fixed
+  left: 0
+  bottom: 0
+  width: $sidebar-width
+#photo
+  z-index: 9999
+  pointer-events: none
+  +opacity(1.0)
+  +transition(width 0.6s ease-in-out, opacity 0.3s ease-in-out 0.6s)
+#photo img
+  position: absolute
+  bottom: 0
+  right: 0
+  width: 100%
+  max-width: $photo-width / $photo_scale
+
+#sidebar
+  width: $sidebar-width
+  position: relative
+  .container
+    position: absolute
+    right: 0
+    width: $sidebar-aside-width
+    padding-bottom: $photo-height / $photo_scale
+  aside, nav, footer
+    &, a
+      color: darken($mcg-accent, 20%)
+    h1, h2
+      font-size: 16px
+      font-weight: bold
+      text-transform: uppercase
+  aside a
+    font-weight: bold
+  nav li a:visited
+    color: lighten(desaturate($mcg-accent, 50%), 10%)
+  nav
+    li
+      margin-bottom: 0.75em
+    li:last-child
+      margin-bottom: 0
+
+.content-wrapper
+  overflow-x: hidden
+
+#content
+  margin-left: $sidebar-width
+  max-width: 600px
+  .container
+    width: 100%
+  h1
+    margin-right: -9999px
+    margin-left: -$padding
+    padding: $padding 9999px $padding $padding
+    background-color: rgba($mcg-dark, 0.05)
+
+code
+  color: #343
+  background-color: rgba(#343, 0.05)
+
+pre
+  font-size: 14px
+pre code
+  overflow: auto
+  word-wrap: normal
+  white-space: pre
+
+article
+  font-family: Palatino Linotype, Palatino, Georgia, serif
+  font-size: percentage(18/14)
+  line-height: 1.555
+  margin-bottom: 6em
+  blockquote
+    font-size: percentage(16/14)
+  img
+    max-width: 100%
+  a
+    font-weight: bold
+  .footnote
+    &:before
+      content: "["
+    &:after
+      content: "]"
+  .footnotes
+    margin-top: 2em
+    font-size: 14px
+    &:before
+      content: "Footnotes:"
+
+$collapsed-masthead-height: 60px
+$collapsed-logo-scale: 10
+@media (max-width: 768px)
+  #masthead
+    height: $collapsed-masthead-height
+    .logo
+      position: absolute
+      display: inline-block
+      top: ($collapsed-masthead-height - ($logo-height / $collapsed-logo-scale))  / 2
+      left: $padding * 2
+      +transition(left 0.6s ease-in-out)
+      &.expand
+        left: $padding
+      a
+        display: inline-block
+        +replace-text("mcgeary-logo-dark.png")
+        position: absolute
+        right: auto
+        width: $logo-width / $collapsed-logo-scale
+        height: $logo-height / $collapsed-logo-scale
+        background-size: 100%
+    .sm-controls
+      display: block
+      position: absolute
+      right: $padding
+      top: 8px
+      .btn
+        background-color: $mcg-accent
+        color: white
+
+  #background, #sidebar, #photo
+    width: 0
+    &.expand
+      width: $sidebar-aside-width
+  #photo
+    +opacity(0.0)
+    &.expand
+      +opacity(1.0)
+  #background
+    width: $padding
+    +single-box-shadow(0, 0, 6px, 3px, rgba(black, 0.5))
+  #content
+    margin-left: $padding
+    max-width: 100%
+
+  article
+    font-size: percentage(20/14)
+    pre
+      font-size: 16px
+    .footnotes
+      font-size: 16px
+
+
+dl time
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace
+  font-weight: normal
+  text-transform: uppercase
+  font-size: 80%
+  &:after
+    content: " \00BB"
+dl a
+  font-weight: normal
+dd
+  margin-bottom: 1em
+
+@media (max-width: 768px)
+  .dl-horizontal dt
+    float: left
+    width: 160px
+    clear: left
+    white-space: no-wrap
+    text-overflow: ellipsis
+    overflow: hidden
+    text-align: right
+  .dl-horizontal dd
+    margin-left: 180px
