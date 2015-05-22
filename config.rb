@@ -57,14 +57,18 @@ helpers do
                 }
   end
 
+  # TODO: Investigate why this is raising the following error:
+  # Refused to display
+  # 'https://apis.google.com/u/0/_/widget/render/follow?...'  in a frame
+  # because it set 'X-Frame-Options' to 'SAMEORIGIN'
   def gplus_follow
-    content_tag :div, "",
-                class: "g-follow",
-                data: {
-                  rel: "author", annotation: "bubble",
-                  href: "https://plus.google.com/#{data.site.gplus}",
-                  height: 28,
-                }
+    # content_tag :div, "",
+    #             class: "g-follow",
+    #             data: {
+    #               rel: "author", annotation: "bubble",
+    #               href: "https://plus.google.com/#{data.site.gplus}",
+    #               height: 28,
+    #             }
   end
 end
 
