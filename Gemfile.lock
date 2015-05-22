@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/rmm5t/middleman-alias.git
+  revision: 9ae68a0a3072ca88f487fdfc11aa8da1a2f5a533
+  branch: rel-canonical
+  specs:
+    middleman-alias (0.0.9)
+      middleman-core (~> 3.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -60,8 +68,6 @@ GEM
       middleman-sprockets (>= 3.1.2)
       sass (>= 3.4.0, < 4.0)
       uglifier (~> 2.5)
-    middleman-alias (0.0.9)
-      middleman-core (~> 3.2)
     middleman-blog (3.5.3)
       addressable (~> 2.3.5)
       middleman-core (~> 3.2)
@@ -148,7 +154,7 @@ PLATFORMS
 DEPENDENCIES
   builder
   middleman
-  middleman-alias
+  middleman-alias!
   middleman-blog
   middleman-blog-drafts
   middleman-gh-pages
