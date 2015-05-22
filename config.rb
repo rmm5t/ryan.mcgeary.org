@@ -30,7 +30,7 @@ helpers do
     link_to "Tweet", "https://twitter.com/share",
             class: "twitter-share-button",
             data: {
-              url: URI.join(data.site.url, resource.url),
+              url: URI.join(data.site.url, resource.data.alias || resource.url),
               text: resource.data.title,
               via: data.site.twitter,
               related: data.site.twitter,
@@ -52,7 +52,7 @@ helpers do
                 class: "g-plus",
                 data: {
                   action: "share", annotation: "bubble",
-                  href: URI.join(data.site.url, resource.url),
+                  href: URI.join(data.site.url, resource.data.alias || resource.url),
                   height: 28,
                 }
   end
