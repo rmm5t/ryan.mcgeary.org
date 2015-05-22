@@ -195,7 +195,7 @@ attended in the past. Events have days, days have tracks, tracks have time
 slots, time slots have activities, and activities have speakers. In addition,
 days can also have global time slots (like Lunches, Breaks, and Keynotes).</p>
 
-<p><img alt="BusyConf Logical Model" title="BusyConf Logical Model" src="/posts/ryan/logical-model.png" /></p>
+<p><img alt="BusyConf Logical Model" title="BusyConf Logical Model" src="/2012/06/05/mongodb-schema-design-at-busyconf/logical-model.png" /></p>
 
 <p>When we access our data for rendering a schedule, we need to pull all of this at
 once, because we want a seamless, cached experience for the conference attendee.</p>
@@ -206,7 +206,7 @@ once, because we want a seamless, cached experience for the conference attendee.
 thing about a relational model is that they are fairly easy to design.  This is
 how we might have modeled our data given a relational database.</p>
 
-<p><img alt="BusyConf Relational Model" title="BusyConf Relational Model" src="/posts/ryan/relational-model.png" /></p>
+<p><img alt="BusyConf Relational Model" title="BusyConf Relational Model" src="/2012/06/05/mongodb-schema-design-at-busyconf/relational-model.png" /></p>
 
 <blockquote class="blockquote-reverse">
   <p>What kind of queries would be required to pull all the data from this design?</p>
@@ -227,7 +227,7 @@ from each object.</p>
 BUT putting this into practice actually led us down a road of unnecessary
 complexities:</p>
 
-<p><img alt="BusyConf MongoDB Model - First Attempt" title="BusyConf MongoDB Model - First Attempt" src="/posts/ryan/mongodb-option1.png" /></p>
+<p><img alt="BusyConf MongoDB Model - First Attempt" title="BusyConf MongoDB Model - First Attempt" src="/2012/06/05/mongodb-schema-design-at-busyconf/mongodb-option1.png" /></p>
 
 <blockquote class="blockquote-reverse">
   <p>This first attempt was a mistake.</p>
@@ -242,7 +242,7 @@ see the complexities in the drawing above.</p>
 <p>We iterated on the design many times, but in the end, we took a fairly unique
 approach.</p>
 
-<p><img alt="BusyConf MongoDB Model - Current Design" title="BusyConf MongoDB Model - Current Design" src="/posts/ryan/mongodb-option2.png" /></p>
+<p><img alt="BusyConf MongoDB Model - Current Design" title="BusyConf MongoDB Model - Current Design" src="/2012/06/05/mongodb-schema-design-at-busyconf/mongodb-option2.png" /></p>
 
 <p>Instead of one collection, we broke out Activities and Speakers.<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> This
 matched our patterns of access much better. Instead of deeply nesting every

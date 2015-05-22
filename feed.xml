@@ -80,7 +80,7 @@ bit difficult to easily see what types were available/recommended.&lt;/p&gt;
 
 &lt;p&gt;Hence, this &lt;a href="/files/autocomplete-types.pdf"&gt;cheatsheet&lt;/a&gt; was born. Let me know if it helps.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href="/files/autocomplete-types.pdf"&gt;&lt;img alt="Autocomplete Types Cheatsheet" src="/posts/ryan/autocomplete-types.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="/files/autocomplete-types.pdf"&gt;&lt;img alt="Autocomplete Types Cheatsheet" src="/2014/08/20/html5-autocomplete-cheatsheet/autocomplete-types.png" /&gt;&lt;/a&gt;&lt;/p&gt;
 
 </content>
   </entry>
@@ -282,7 +282,7 @@ nowadays (Chrome is currently at v21 at the time of writing). By itself, it’s
 not terrible, but I want my print dialog to look like every other darn print
 dialong on OS X, gosh dammit.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt="Google Chrome's Print Dialog" title="Google Chrome's Print Dialog" src="/posts/ryan/chrome-print-dialog.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Google Chrome's Print Dialog" title="Google Chrome's Print Dialog" src="/2012/09/13/disable-chrome-print-dialog-use-osx-instead/chrome-print-dialog.png" /&gt;&lt;/p&gt;
 
 &lt;p&gt;When Google first introduced the new print dialog, Chrome also included a
 custom setting to disable it under &lt;code&gt;about:flags&lt;/code&gt;, but in v20, Chrome removed
@@ -299,12 +299,12 @@ shortcuts in specific Applications. Go to System Preferences -&amp;gt; Keyboard 
 Keyboard Shortcuts. Once there, select Application Shortcuts and add a new
 shortcut for Google Chrome.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt="Override for Chrome's Print Shortcut" title="Override for Chrome's Print Shortcut" src="/posts/ryan/chrome-print-shortcut-override.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Override for Chrome's Print Shortcut" title="Override for Chrome's Print Shortcut" src="/2012/09/13/disable-chrome-print-dialog-use-osx-instead/chrome-print-shortcut-override.png" /&gt;&lt;/p&gt;
 
 &lt;p&gt;Make sure the Menu Title reads &lt;code&gt;Print Using System Dialog...&lt;/code&gt; exactly, and
 give it the standard print shortcut (&lt;code&gt;⌘P&lt;/code&gt;).&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt="New Chrome Print Shortcuts" title="New Chrome Print Shortcuts" src="/posts/ryan/chrome-print-shortcuts.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="New Chrome Print Shortcuts" title="New Chrome Print Shortcuts" src="/2012/09/13/disable-chrome-print-dialog-use-osx-instead/chrome-print-shortcuts.png" /&gt;&lt;/p&gt;
 
 &lt;p&gt;Enjoy! Happy Printing!&lt;/p&gt;
 
@@ -387,7 +387,7 @@ attended in the past. Events have days, days have tracks, tracks have time
 slots, time slots have activities, and activities have speakers. In addition,
 days can also have global time slots (like Lunches, Breaks, and Keynotes).&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt="BusyConf Logical Model" title="BusyConf Logical Model" src="/posts/ryan/logical-model.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="BusyConf Logical Model" title="BusyConf Logical Model" src="/2012/06/05/mongodb-schema-design-at-busyconf/logical-model.png" /&gt;&lt;/p&gt;
 
 &lt;p&gt;When we access our data for rendering a schedule, we need to pull all of this at
 once, because we want a seamless, cached experience for the conference attendee.&lt;/p&gt;
@@ -398,7 +398,7 @@ once, because we want a seamless, cached experience for the conference attendee.
 thing about a relational model is that they are fairly easy to design.  This is
 how we might have modeled our data given a relational database.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt="BusyConf Relational Model" title="BusyConf Relational Model" src="/posts/ryan/relational-model.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="BusyConf Relational Model" title="BusyConf Relational Model" src="/2012/06/05/mongodb-schema-design-at-busyconf/relational-model.png" /&gt;&lt;/p&gt;
 
 &lt;blockquote class="blockquote-reverse"&gt;
   &lt;p&gt;What kind of queries would be required to pull all the data from this design?&lt;/p&gt;
@@ -419,7 +419,7 @@ from each object.&lt;/p&gt;
 BUT putting this into practice actually led us down a road of unnecessary
 complexities:&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt="BusyConf MongoDB Model - First Attempt" title="BusyConf MongoDB Model - First Attempt" src="/posts/ryan/mongodb-option1.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="BusyConf MongoDB Model - First Attempt" title="BusyConf MongoDB Model - First Attempt" src="/2012/06/05/mongodb-schema-design-at-busyconf/mongodb-option1.png" /&gt;&lt;/p&gt;
 
 &lt;blockquote class="blockquote-reverse"&gt;
   &lt;p&gt;This first attempt was a mistake.&lt;/p&gt;
@@ -434,7 +434,7 @@ see the complexities in the drawing above.&lt;/p&gt;
 &lt;p&gt;We iterated on the design many times, but in the end, we took a fairly unique
 approach.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt="BusyConf MongoDB Model - Current Design" title="BusyConf MongoDB Model - Current Design" src="/posts/ryan/mongodb-option2.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="BusyConf MongoDB Model - Current Design" title="BusyConf MongoDB Model - Current Design" src="/2012/06/05/mongodb-schema-design-at-busyconf/mongodb-option2.png" /&gt;&lt;/p&gt;
 
 &lt;p&gt;Instead of one collection, we broke out Activities and Speakers.&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; This
 matched our patterns of access much better. Instead of deeply nesting every
@@ -993,7 +993,7 @@ bundle package
     <author>
       <name>Article Author</name>
     </author>
-    <content type="html">&lt;p&gt;&lt;a title="Transform Ideas into Software Reality" href="http://lifeofthefreelancer.com/software-development-consulting-with-ryan-mcgeary/"&gt;&lt;img alt="Video" src="/posts/ryan/lifeofthefreelancer.jpg" /&gt;&lt;/a&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;a title="Transform Ideas into Software Reality" href="http://lifeofthefreelancer.com/software-development-consulting-with-ryan-mcgeary/"&gt;&lt;img alt="Video" src="/2011/01/04/interview-with-life-of-the-freelancer/lifeofthefreelancer.jpg" /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;A couple months ago, I was interviewed by
 &lt;a href="http://twitter.com/rdempsey"&gt;Robert Dempsey&lt;/a&gt; at
@@ -1067,7 +1067,7 @@ formats.&lt;/p&gt;
 goal of this talk is to explain why we chose MongoDB, how we use it at Busyconf,
 what design decisions we considered, and what the alternatives might have been.&lt;/p&gt;
 
-&lt;p&gt;&lt;a title="Download the Slides" href="http://files.mcgeary.org/presentations/busyconf-mongodc.pdf"&gt;&lt;img alt="BusyConf and MongoDB" src="/posts/ryan/busyconf-mongodc.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a title="Download the Slides" href="http://files.mcgeary.org/presentations/busyconf-mongodc.pdf"&gt;&lt;img alt="BusyConf and MongoDB" src="/2010/12/14/busyconf-mongodc/busyconf-mongodc.png" /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a title="Download the Slides" href="http://files.mcgeary.org/presentations/busyconf-mongodc.pdf"&gt;Download the Slides&lt;/a&gt; [PDF 2.2 MB]&lt;/p&gt;
 
@@ -1084,7 +1084,7 @@ what design decisions we considered, and what the alternatives might have been.&
     <author>
       <name>Article Author</name>
     </author>
-    <content type="html">&lt;p&gt;&lt;a title="Download the Slides" href="http://files.mcgeary.org/presentations/coffeescript-dcrug.pdf"&gt;&lt;img alt="CoffeeScript" src="/posts/ryan/coffeescript-dcrug.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;a title="Download the Slides" href="http://files.mcgeary.org/presentations/coffeescript-dcrug.pdf"&gt;&lt;img alt="CoffeeScript" src="/2010/12/09/coffeescript-dcrug/coffeescript-dcrug.png" /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;WASHINGTON, DC — &lt;a href="http://www.meetup.com/dcruby/calendar/15339405/"&gt;DCRUG&lt;/a&gt; — I discovered
 &lt;a href="http://coffeescript.org/"&gt;CoffeeScript&lt;/a&gt; during a recent project that &lt;a href="http://thegarvin.com"&gt;Jim Garvin&lt;/a&gt;
@@ -1113,7 +1113,7 @@ I did.&lt;/p&gt;
     <author>
       <name>Article Author</name>
     </author>
-    <content type="html">&lt;p&gt;&lt;a title="Download the Slides" href="http://files.mcgeary.org/presentations/coffeescript-757rb.pdf"&gt;&lt;img alt="CoffeeScript" src="/posts/ryan/coffeescript-757rb.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;a title="Download the Slides" href="http://files.mcgeary.org/presentations/coffeescript-757rb.pdf"&gt;&lt;img alt="CoffeeScript" src="/2010/11/01/coffeescript-757rb/coffeescript-757rb.png" /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;NORFOLK, VIRGINIA — &lt;a href="http://www.meetup.com/ruby-130/calendar/14404872/"&gt;757rb&lt;/a&gt; — I discovered
 &lt;a href="http://coffeescript.org/"&gt;CoffeeScript&lt;/a&gt; during a recent project that &lt;a href="http://thegarvin.com"&gt;Jim Garvin&lt;/a&gt;
@@ -1142,7 +1142,7 @@ I did.&lt;/p&gt;
     <author>
       <name>Article Author</name>
     </author>
-    <content type="html">&lt;p&gt;&lt;a title="Download the Slides" href="http://files.mcgeary.org/presentations/coffeescript-navarug-short.pdf"&gt;&lt;img alt="CoffeeScript" src="/posts/ryan/coffeescript-novarug.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;a title="Download the Slides" href="http://files.mcgeary.org/presentations/coffeescript-navarug-short.pdf"&gt;&lt;img alt="CoffeeScript" src="/2010/10/21/coffeescript-novarug/coffeescript-novarug.png" /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;RESTON, VIRGINIA — &lt;a href="http://novarug.org/articles/2010/09/29/oct-21-lightning-talks"&gt;NovaRUG&lt;/a&gt; — I discovered
 &lt;a href="http://coffeescript.org/"&gt;CoffeeScript&lt;/a&gt; during a recent project that &lt;a href="http://thegarvin.com"&gt;Jim Garvin&lt;/a&gt;
