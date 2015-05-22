@@ -3,11 +3,9 @@ tags: talks, programming
 title: "Talk: Just In Time Inventory with Spree"
 duration: 40 minutes
 alias: talks/2012/02/16/just-in-time-inventory-with-spree/
+speakerdeck_id: 4f3d969edf5d290022000228
 ---
-
-<script async class="speakerdeck-embed" data-id="4f3d969edf5d290022000228" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
-
-New York, NY &mdash; [SpreeConf 2012][location] &mdash; In this talk, we will
+NEW YORK, NY &mdash; [SpreeConf 2012][location] &mdash; In this talk, we will
 not only explore what it takes to extend Spree, but we will also experiment with
 the notion of using it to build our products on demand. We will take Spree, slap
 a MakerBot on the backend, build some extensions, and build a store that

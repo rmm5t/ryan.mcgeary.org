@@ -37,7 +37,7 @@ helpers do
   require "active_support/core_ext/string"
   def description(resource = current_page, length = 200)
     resource.data.description || begin
-      doc = Nokogiri::HTML::DocumentFragment.parse(resource.render(:layout => false))
+      doc = Nokogiri::HTML::DocumentFragment.parse(resource.render(layout: false))
       paragraphs = doc.css("p")
       if paragraphs.length > 0
         paragraphs
@@ -48,16 +48,30 @@ helpers do
   end
 
   def body_images(resource = current_page)
-    doc = Nokogiri::HTML::DocumentFragment.parse(resource.render(:layout => false))
-    images = doc.css("img").map do |i|
-      src = i["src"]
+    doc = Nokogiri::HTML::DocumentFragment.parse(resource.render(layout: false))
+    images = doc.css("img").map { |i| i["src"] }
+    images.unshift speakerdeck_image(resource.data.speakerdeck_id)
+    images.unshift resource.data.image
+    images.push "/images/ryan.mcgeary.jpg"
+    images.compact.map do |src|
       if src.starts_with?("http")
         src
       elsif src.starts_with?("/")
         URI.join(data.site.url, src)
       end
     end.compact
-    images << URI.join(data.site.url, "/images/ryan.mcgeary.jpg")
+  end
+
+  def speakerdeck_embed(id)
+    return if id.blank?
+    javascript_include_tag "//speakerdeck.com/assets/embed.js", async: true,
+                           class: "speakerdeck-embed",
+                           data: { ratio: "1.33333333333333", id: id }
+  end
+
+  def speakerdeck_image(id)
+    return if id.blank?
+    "https://speakerd.s3.amazonaws.com/presentations/#{id}/slide_0.jpg"
   end
 
   def twitter_share_params(resource)

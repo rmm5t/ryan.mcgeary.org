@@ -2,10 +2,8 @@
 title: "Talk: Cloud Services You Should Be Using To Build Your Startup"
 tags: talks, programming, business
 duration: 25 minutes
+speakerdeck_id: 2e1d1a7e4b0e43128fe0e9d0475c5320
 ---
-
-<script async class="speakerdeck-embed" data-id="2e1d1a7e4b0e43128fe0e9d0475c5320" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
-
 BOULDER, CO &mdash; [Boulder Ruby][location] &mdash; I had the opportunity to present at Boulder Ruby during [Boulder Startup Week 2015](http://boulder.startupweek.co/). I covered several online services that not only have excellent Ruby support, but also can help accelerate your MVP and/or product launch. The finale included a live demo of [Cloudinary](http://cloudinary.com/), [Pusher](https://pusher.com/), and [Embed.ly](http://embed.ly/) services.
 
 * [GitHub Repository of Demos](https://github.com/rmm5t/boulderruby-startupweek)

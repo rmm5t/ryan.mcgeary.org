@@ -3,10 +3,8 @@ tags: talks, programming
 title: "Talk: Introduction to CoffeeScript at Red Dirt RubyConf"
 duration: 20 minutes
 alias: talks/2011/04/21/coffeescript-reddirt/
+speakerdeck_id: 4e78ef68e604d6003f0089f3
 ---
-
-<script async class="speakerdeck-embed" data-id="4e78ef68e604d6003f0089f3" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
-
 OKLAHOMA CITY &mdash; [Red Dirt RubyConf][location] &mdash; I discovered
 [CoffeeScript][coffeescript] during a recent project that [Jim Garvin][garvin]
 and I were working on.  We knew the app was going to be heavy on the JavaScript,

@@ -3,13 +3,11 @@ tags: talks, programming
 title: "Talk: HTML5 Application Caching"
 duration: 35 minutes
 alias: talks/2012/02/02/html5-application-caching/
+speakerdeck_id: 4f2ef2f30f6f270021003c9a
 ---
-
 <iframe width="420" height="315" src="https://www.youtube.com/embed/eFunq7INsdY" frameborder="0" allowfullscreen></iframe>
 <iframe width="420" height="315" src="https://www.youtube.com/embed/SAuiNvUVwtc" frameborder="0" allowfullscreen></iframe>
 <iframe width="420" height="315" src="https://www.youtube.com/embed/NGZz8-a5N50" frameborder="0" allowfullscreen></iframe>
-
-<script async class="speakerdeck-embed" data-id="4f2ef2f30f6f270021003c9a" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 
 MCLEAN, VA &mdash; [MoDevDC][location] &mdash;
 At [BusyConf](http://BusyConf.com/), we leverage offline application caching so
