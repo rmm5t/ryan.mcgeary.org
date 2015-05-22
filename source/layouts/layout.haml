@@ -2,13 +2,34 @@
 %html
   %head
     %meta{ charset: "utf-8" }
-    %meta{ content: "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible" }
-    %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" }
+    - title = current_page.data.title || yield_content(:title)
+    = meta_tag "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"
+    = meta_tag "width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no", name: "viewport"
+    = meta_tag author,                                  name: "author"
 
-    %link{ href: "/favicon.ico", rel: "icon", type: "image/x-icon" }
-    %link{ href: data.site.feed_url, rel: "alternate", title: "", type: "application/atom+xml" }
-    %title
-      = [current_page.data.title || yield_content(:title), data.site.name].compact.join(" - ")
+    = meta_tag description.truncate(200),               name: "description"
+    = meta_tag title,                                   name: "og:title"
+    = meta_tag description.truncate(200),               name: "og:description"
+    = meta_tag data.site.name,                          name: "og:site_name"
+    - body_images.each_with_index do |url, i|
+      = meta_tag url,                                   name: "og:image"
+      = meta_tag url,                                   name: "twitter:image" if i == 0
+    = meta_tag "@#{data.site.twitter}",                 name: "twitter:site"
+    = meta_tag "@#{data.site.twitter}",                 name: "twitter:creator"
+    - if is_blog_article?
+      = meta_tag "article",                             name: "og:type"
+      = meta_tag current_page.date.to_time.iso8601,     name: "article:published_time"
+      - current_page.tags.each do |tag|
+        = meta_tag tag,                                 name: "article:tag"
+      = meta_tag current_page.tags.join(","),           name: "keywords"
+      = meta_tag "summary_large_image",                 name: "twitter:card"
+    - else
+      = meta_tag "website",                             name: "og:type"
+      = meta_tag "summary",                             name: "twitter:card"
+
+    %title= [title, data.site.name].compact.join(" - ")
+    = feed_tag :atom, data.site.feed_url, title: "#{data.site.name} Blog Posts"
+    = favicon_tag "/favicon.ico", type: "image/x-icon"
     = stylesheet_link_tag "//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
     = stylesheet_link_tag "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
     = stylesheet_link_tag "all"

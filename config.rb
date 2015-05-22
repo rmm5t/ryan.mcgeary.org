@@ -21,9 +21,43 @@ helpers do
     File.join "/posts", relative_blog_dir, filename
   end
 
+  def author(resource = current_page)
+    # key = resource.respond_to?(:data) ? resource.data.author : resource
+    # data.authors[key] || data.authors["default"]
+    data.site.name
+  end
+
   def time_tag(time, options = {})
     format = options.delete(:format) || "%d %b %Y"
     content_tag(:time, time.strftime(format), options.merge(datetime: time.iso8601))
+  end
+
+  # Consider getting something like this worked into the middleman-blog
+  # BlogArticle implementation
+  require "active_support/core_ext/string"
+  def description(resource = current_page, length = 200)
+    resource.data.description || begin
+      doc = Nokogiri::HTML::DocumentFragment.parse(resource.render(:layout => false))
+      paragraphs = doc.css("p")
+      if paragraphs.length > 0
+        paragraphs
+      else
+        doc
+      end.inner_text.squish
+    end
+  end
+
+  def body_images(resource = current_page)
+    doc = Nokogiri::HTML::DocumentFragment.parse(resource.render(:layout => false))
+    images = doc.css("img").map do |i|
+      src = i["src"]
+      if src.starts_with?("http")
+        src
+      elsif src.starts_with?("/")
+        URI.join(data.site.url, src)
+      end
+    end.compact
+    images << URI.join(data.site.url, "/images/busyconf-stroked-large.png")
   end
 
   def twitter_share_params(resource)
