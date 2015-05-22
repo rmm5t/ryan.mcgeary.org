@@ -83,13 +83,11 @@ that’s the goal.&lt;/p&gt;
     <link rel="alternate" href="http://ryan.mcgeary.org/2015/05/12/cloud-services-you-should-be-using-to-build-your-startup/"/>
     <id>http://ryan.mcgeary.org/2015/05/12/cloud-services-you-should-be-using-to-build-your-startup/</id>
     <published>2015-05-11T18:00:00-06:00</published>
-    <updated>2015-05-22T15:14:50-06:00</updated>
+    <updated>2015-05-22T16:06:36-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
-    <content type="html">&lt;script async="" class="speakerdeck-embed" data-id="2e1d1a7e4b0e43128fe0e9d0475c5320" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"&gt;&lt;/script&gt;
-
-&lt;p&gt;BOULDER, CO — &lt;a href="http://www.meetup.com/boulder_ruby_group/events/221392650/"&gt;Boulder Ruby&lt;/a&gt; — I had the opportunity to present at Boulder Ruby during &lt;a href="http://boulder.startupweek.co/"&gt;Boulder Startup Week 2015&lt;/a&gt;. I covered several online services that not only have excellent Ruby support, but also can help accelerate your MVP and/or product launch. The finale included a live demo of &lt;a href="http://cloudinary.com/"&gt;Cloudinary&lt;/a&gt;, &lt;a href="https://pusher.com/"&gt;Pusher&lt;/a&gt;, and &lt;a href="http://embed.ly/"&gt;Embed.ly&lt;/a&gt; services.&lt;/p&gt;
+    <content type="html">&lt;p&gt;BOULDER, CO — &lt;a href="http://www.meetup.com/boulder_ruby_group/events/221392650/"&gt;Boulder Ruby&lt;/a&gt; — I had the opportunity to present at Boulder Ruby during &lt;a href="http://boulder.startupweek.co/"&gt;Boulder Startup Week 2015&lt;/a&gt;. I covered several online services that not only have excellent Ruby support, but also can help accelerate your MVP and/or product launch. The finale included a live demo of &lt;a href="http://cloudinary.com/"&gt;Cloudinary&lt;/a&gt;, &lt;a href="https://pusher.com/"&gt;Pusher&lt;/a&gt;, and &lt;a href="http://embed.ly/"&gt;Embed.ly&lt;/a&gt; services.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href="https://github.com/rmm5t/boulderruby-startupweek"&gt;GitHub Repository of Demos&lt;/a&gt;&lt;/li&gt;
@@ -314,13 +312,11 @@ ENV[&lt;span class="s2"&gt;"COMMIT_MESSAGE_SUFFIX"&lt;/span&gt;&lt;span class="o
     <link rel="alternate" href="http://ryan.mcgeary.org/2012/11/09/async-collaboration-oredev/"/>
     <id>http://ryan.mcgeary.org/2012/11/09/async-collaboration-oredev/</id>
     <published>2012-11-08T17:00:00-07:00</published>
-    <updated>2015-05-22T15:14:50-06:00</updated>
+    <updated>2015-05-22T16:18:16-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
     <content type="html">&lt;iframe src="http://player.vimeo.com/video/53061504" width="550" height="309" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen="true"&gt;(video)&lt;/iframe&gt;
-
-&lt;script async="" class="speakerdeck-embed" data-id="509a5f4d1eeb97000204517d" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"&gt;&lt;/script&gt;
 
 &lt;p&gt;MALMÖ, SWEDEN — &lt;a href="http://oredev.org/2012/"&gt;Øredev Developer Conference 2012&lt;/a&gt; —
 Communicating Through Our Source Code. We hear a lot about how strong
@@ -584,13 +580,11 @@ multi-tenant applications:&lt;/p&gt;
     <link rel="alternate" href="http://ryan.mcgeary.org/2012/02/16/just-in-time-inventory-with-spree/"/>
     <id>http://ryan.mcgeary.org/2012/02/16/just-in-time-inventory-with-spree/</id>
     <published>2012-02-15T17:00:00-07:00</published>
-    <updated>2015-05-22T15:14:50-06:00</updated>
+    <updated>2015-05-22T16:17:03-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
-    <content type="html">&lt;script async="" class="speakerdeck-embed" data-id="4f3d969edf5d290022000228" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"&gt;&lt;/script&gt;
-
-&lt;p&gt;New York, NY — &lt;a href="http://spreeconf.com/"&gt;SpreeConf 2012&lt;/a&gt; — In this talk, we will
+    <content type="html">&lt;p&gt;NEW YORK, NY — &lt;a href="http://spreeconf.com/"&gt;SpreeConf 2012&lt;/a&gt; — In this talk, we will
 not only explore what it takes to extend Spree, but we will also experiment with
 the notion of using it to build our products on demand. We will take Spree, slap
 a MakerBot on the backend, build some extensions, and build a store that
@@ -611,15 +605,13 @@ automatically prints products only after an order is placed.&lt;/p&gt;
     <link rel="alternate" href="http://ryan.mcgeary.org/2012/02/02/html5-application-caching/"/>
     <id>http://ryan.mcgeary.org/2012/02/02/html5-application-caching/</id>
     <published>2012-02-01T17:00:00-07:00</published>
-    <updated>2015-05-22T15:14:50-06:00</updated>
+    <updated>2015-05-22T16:17:20-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
     <content type="html">&lt;iframe width="420" height="315" src="https://www.youtube.com/embed/eFunq7INsdY" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
 &lt;iframe width="420" height="315" src="https://www.youtube.com/embed/SAuiNvUVwtc" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
 &lt;iframe width="420" height="315" src="https://www.youtube.com/embed/NGZz8-a5N50" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
-
-&lt;script async="" class="speakerdeck-embed" data-id="4f2ef2f30f6f270021003c9a" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"&gt;&lt;/script&gt;
 
 &lt;p&gt;MCLEAN, VA — &lt;a href="http://www.meetup.com/modevdc/events/48923902/"&gt;MoDevDC&lt;/a&gt; —
 At &lt;a href="http://BusyConf.com/"&gt;BusyConf&lt;/a&gt;, we leverage offline application caching so
@@ -711,13 +703,11 @@ command. This prevents you from having to update your DNS settings:&lt;/em&gt;&l
     <link rel="alternate" href="http://ryan.mcgeary.org/2011/09/02/do-your-commit-messages-suck-rockymtnruby/"/>
     <id>http://ryan.mcgeary.org/2011/09/02/do-your-commit-messages-suck-rockymtnruby/</id>
     <published>2011-09-01T18:00:00-06:00</published>
-    <updated>2015-05-22T15:14:50-06:00</updated>
+    <updated>2015-05-22T16:19:19-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
     <content type="html">&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/8YjSty6bfog" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
-
-&lt;script async="" class="speakerdeck-embed" data-id="4e68d6c47fbf030001006581" data-ratio="1.2994923857868" src="//speakerdeck.com/assets/embed.js"&gt;&lt;/script&gt;
 
 &lt;p&gt;BOULDER, CO — &lt;a href="http://www.rockymtnruby.com/"&gt;Rocky Mountain Ruby 2011&lt;/a&gt; — Software
 projects are collaborative.  They usually encompass many months or years and are
@@ -790,13 +780,11 @@ hostname being set to something specific.&lt;/p&gt;
     <link rel="alternate" href="http://ryan.mcgeary.org/2011/04/21/coffeescript-reddirt/"/>
     <id>http://ryan.mcgeary.org/2011/04/21/coffeescript-reddirt/</id>
     <published>2011-04-20T18:00:00-06:00</published>
-    <updated>2015-05-22T15:14:50-06:00</updated>
+    <updated>2015-05-22T16:16:11-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
-    <content type="html">&lt;script async="" class="speakerdeck-embed" data-id="4e78ef68e604d6003f0089f3" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"&gt;&lt;/script&gt;
-
-&lt;p&gt;OKLAHOMA CITY — &lt;a href="http://reddirtrubyconf.com/videos/2011"&gt;Red Dirt RubyConf&lt;/a&gt; — I discovered
+    <content type="html">&lt;p&gt;OKLAHOMA CITY — &lt;a href="http://reddirtrubyconf.com/videos/2011"&gt;Red Dirt RubyConf&lt;/a&gt; — I discovered
 &lt;a href="http://coffeescript.org/"&gt;CoffeeScript&lt;/a&gt; during a recent project that &lt;a href="http://thegarvin.com"&gt;Jim Garvin&lt;/a&gt;
 and I were working on.  We knew the app was going to be heavy on the JavaScript,
 and that’s how we started – writing straight JavaScript.  Even though I
@@ -819,13 +807,11 @@ I did.&lt;/p&gt;
     <link rel="alternate" href="http://ryan.mcgeary.org/2011/04/02/one-man-lightning-rubynation/"/>
     <id>http://ryan.mcgeary.org/2011/04/02/one-man-lightning-rubynation/</id>
     <published>2011-04-01T18:00:00-06:00</published>
-    <updated>2015-05-22T15:14:50-06:00</updated>
+    <updated>2015-05-22T16:15:22-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
     <content type="html">&lt;!-- &lt;embed src="http://blip.tv/play/AYK%2B808C" type="application/x-shockwave-flash" width="550" height="339" wmode="transparent" allowscriptaccess="always" allowfullscreen="true" &gt;&lt;/embed&gt; --&gt;
-
-&lt;script async="" class="speakerdeck-embed" data-id="4e78eef960cf9e003c006d1c" data-ratio="1.2994923857868" src="//speakerdeck.com/assets/embed.js"&gt;&lt;/script&gt;
 
 &lt;p&gt;RESTON, VA — &lt;a href="http://www.rubynation.org//"&gt;RubyNation 2011&lt;/a&gt; — To celebrate the
 NovaRUG’s 50th meeting, they opened the floor to lightning talks. As an added
@@ -1115,13 +1101,11 @@ and vote up my video so other people learn about me and
     <link rel="alternate" href="http://ryan.mcgeary.org/2010/12/14/busyconf-mongodc/"/>
     <id>http://ryan.mcgeary.org/2010/12/14/busyconf-mongodc/</id>
     <published>2010-12-13T17:00:00-07:00</published>
-    <updated>2015-05-22T15:14:50-06:00</updated>
+    <updated>2015-05-22T16:15:01-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
-    <content type="html">&lt;script async="" class="speakerdeck-embed" data-id="4e7a84530ac8a4003c009d00" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"&gt;&lt;/script&gt;
-
-&lt;p&gt;WASHINGTON, DC — &lt;a href="http://www.meetup.com/Washington-DC-MongoDB-Users-Group/calendar/15584661/"&gt;MongoDB Users Group&lt;/a&gt; — &lt;a href="http://thegarvin.com/"&gt;Jim Garvin&lt;/a&gt; and I
+    <content type="html">&lt;p&gt;WASHINGTON, DC — &lt;a href="http://www.meetup.com/Washington-DC-MongoDB-Users-Group/calendar/15584661/"&gt;MongoDB Users Group&lt;/a&gt; — &lt;a href="http://thegarvin.com/"&gt;Jim Garvin&lt;/a&gt; and I
 attend conferences, and as attendees, the schedule at the conference is often
 lacking.  It’s poorly organized, lacks information, and requires Internet
 access. This makes it hard as an attendee to choose the talks you want to go
