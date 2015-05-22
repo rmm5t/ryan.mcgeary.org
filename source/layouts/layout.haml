@@ -8,7 +8,7 @@
     = meta_tag author,                                  name: "author"
 
     = meta_tag description.truncate(200),               name: "description"
-    = meta_tag title,                                   name: "og:title"
+    = meta_tag title || data.site.name,                 name: "og:title"
     = meta_tag description.truncate(200),               name: "og:description"
     = meta_tag data.site.name,                          name: "og:site_name"
     - body_images.each_with_index do |url, i|
