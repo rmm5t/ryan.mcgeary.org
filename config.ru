@@ -1,5 +1,3 @@
-ENV["SHOW_DRAFTS"] = "true"
-
 require "bundler/setup"
 require "middleman-core/load_paths"
 
