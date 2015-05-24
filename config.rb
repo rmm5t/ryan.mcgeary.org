@@ -237,3 +237,5 @@ page "/feed.xml", layout: false
 page "/sitemap.xml", layout: false, directory_index: false
 
 ignore "/posts/article.tt"
+
+redirect "wp-syntax/index.html", to: "http://wp-syntax.com"
