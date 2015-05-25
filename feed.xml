@@ -392,7 +392,7 @@ want to test the default behavior that most others experience.&lt;/p&gt;
     <link rel="alternate" href="http://ryan.mcgeary.org/2012/06/05/mongodb-schema-design-at-busyconf/"/>
     <id>http://ryan.mcgeary.org/2012/06/05/mongodb-schema-design-at-busyconf/</id>
     <published>2012-06-04T18:00:00-06:00</published>
-    <updated>2015-05-22T15:14:50-06:00</updated>
+    <updated>2015-05-24T22:19:20-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -504,7 +504,7 @@ approach.&lt;/p&gt;
 
 &lt;p&gt;&lt;img alt="BusyConf MongoDB Model - Current Design" title="BusyConf MongoDB Model - Current Design" src="/2012/06/05/mongodb-schema-design-at-busyconf/mongodb-option2.png" /&gt;&lt;/p&gt;
 
-&lt;p&gt;Instead of one collection, we broke out Activities and Speakers.&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; This
+&lt;p&gt;Instead of one collection, we broke out Activities and Speakers.&lt;sup id="fnref:embed"&gt;&lt;a href="#fn:embed" class="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; This
 matched our patterns of access much better. Instead of deeply nesting every
 object, we chose to embed arrays of days, tracks, and time slots immediately
 under the event document.&lt;/p&gt;
@@ -522,13 +522,10 @@ schedules in the browser.&lt;/p&gt;
 right, it has some great benefits both in defining and matching your unique
 access patterns along with fairly decent long-term maintenance benefits.&lt;/p&gt;
 
-&lt;p&gt;patterns of access, but ironically, we plan to switch Speakers back out to their
-own collection again to provide cleaner normalization.&lt;/p&gt;
-
 &lt;div class="footnotes"&gt;
   &lt;ol&gt;
-    &lt;li id="fn:1"&gt;
-      &lt;p&gt;Later, we decided to embed Speakers under Activities to improve our &lt;a href="#fnref:1" class="reversefootnote"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;li id="fn:embed"&gt;
+      &lt;p&gt;Later, we decided to embed Speakers under Activities to improve our patterns of access, but ironically, we plan to switch Speakers back out to their own collection again to provide cleaner normalization. &lt;a href="#fnref:embed" class="reversefootnote"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
@@ -872,7 +869,7 @@ Today, that interview was published.&lt;/p&gt;
     <link rel="alternate" href="http://ryan.mcgeary.org/2011/02/09/vendor-everything-still-applies/"/>
     <id>http://ryan.mcgeary.org/2011/02/09/vendor-everything-still-applies/</id>
     <published>2011-02-08T17:00:00-07:00</published>
-    <updated>2015-05-22T15:14:50-06:00</updated>
+    <updated>2015-05-24T22:18:48-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
