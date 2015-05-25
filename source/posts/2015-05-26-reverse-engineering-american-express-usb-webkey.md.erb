@@ -1,0 +1,163 @@
+---
+title: Reverse Engineering an American Express USB WebKey
+tags: tech
+date: 2015-05-26
+---
+I received an interesting piece of hardware in the mail the other
+day. American Express is piggy-backing on LegalZoom document deliveries with
+an interesting piece of marketing -- a USB key-like devices in the shape of a
+credit card.
+
+![American Express Fake USB Keyboard](<%= blog_asset "amex-usb-card.jpg"  %>)
+
+Thinking it was a USB drive and one that I might be able to format and reuse
+for something else, I plugged it in to my Mac. To my surprise, it immediately
+opened Safari and a website pointing to an American Express credit card
+offer. Huh? I thought OS X didn't have Autorun support. So, of course, I tried
+it again. This time, I noticed that the address bar in Safari scrolled as if
+someone was typing really fast.
+
+**_Holy trickery, Batman. It's mimicking a USB keyboard!_**
+
+Here are the steps that it takes:
+
+* <kbd>⌃F3</kbd> to focus the Dock
+* Types: `Safari`
+* <kbd>return</kbd> to launch Safari
+* <kbd>⌘L</kbd> to focus the address bar
+* Types: `http://www262.americanexpress.com/landing-page/business-cards/sclp/bgold/aff0022/44460?PID=15&BUID=SBS&PSKU=BGR&CRTV=LZBGRLTOWBKYREF15`
+* <kbd>return</kbd> to launch site
+
+NOTE: If Safari isn't running or pinned to your Dock, the entire process
+fails. They probably would have been better served to start with
+<kbd>⌘-space</kbd> and a Spotlight search instead.
+
+## Digging In
+
+My curiosity was piqued, and this reminded me of the
+[USBdriveby](http://samy.pl/usbdriveby/) project that
+[Samy Kamkar](http://samy.pl/) discussed on a recent
+[Tim Ferriss podcast](http://fourhourworkweek.com/2015/05/02/samy-kamkar/).
+
+I wondered if I could reprogram this American Express USB device to behave in a
+similar way as the [Teensy USB Microcontroller](https://www.pjrc.com/teensy/)
+that Samy used.
+
+<figure>
+<%= image_tag(blog_asset("amex-usb-key.jpg")) %>
+<figcaption>"AmEx USB Chip" torn from it's plastic enclosure.</figcaption>
+</figure>
+
+<figure>
+<%= image_tag(blog_asset("teensy.jpg")) %>
+<figcaption>Teensy 3.1</figcaption>
+</figure>
+
+### Find the USB Device
+
+First, let's see what OS X thinks about this USB device. We'll do that by
+inspecting all USB devices both before and after plugging in the USB key. The
+difference will help us find the device itself.
+
+```bash
+system_profiler SPUSBDataType > ~/usbout.txt
+system_profiler SPUSBDataType > ~/usbin.txt
+diff ~/usbout.txt ~/usbin.txt
+```
+
+This should yield a result like the following:
+
+```diff
+33a34,44
+>         WEBKEY:
+>
+>           Product ID: 0x6662
+>           Vendor ID: 0x05ac  (Apple Inc.)
+>           Version: 8.15
+>           Speed: Up to 12 Mb/sec
+>           Manufacturer: TP6662
+>           Location ID: 0x14500000 / 27
+>           Current Available (mA): 500
+>           Current Required (mA): 100
+```
+
+Note the `Product ID` and `Vendor ID` values. We'll need those later.
+
+**I find it fairly suspicious that it mimics hardware from "Apple Inc." Kinda sketchy.**
+
+### Now What?
+
+At this point, I was immediately stuck, but after some research, I found a
+superuser question on Stack Exchange titled
+_[Can I "reprogram" an American Express USB drive](http://superuser.com/questions/131897/can-i-reprogram-an-american-express-usb-drive)?_
+No direct answers, but this answer gave me hope:
+
+> _It consists of a Cypress PSoC controller, combined with a 24c02 serial
+> eeprom ... With a simple program called PonyProg you can read and modify the
+> contents of the eeprom._
+> <http://superuser.com/a/216810/8424>
+
+I spun my wheels for a long while with no luck, but later, I found an article
+titled
+_[Hacking USB Webkeys](http://blog.opensecurityresearch.com/2012/10/hacking-usb-webkeys.html)_. This
+looked promising.
+
+### Hardware Surgery (_**and Failure**_)
+
+I slowly pried the chip from it's plastic enclosure. It was attached with some glue.
+
+<figure>
+<%= image_tag(blog_asset("amex-usb-chip.jpg")) %>
+<figcaption>"AmEx USB Stick" snapped from it's marketing enclosure.</figcaption>
+</figure>
+
+Sweet. Contact points that I should be able to use to access the EEPROM.
+
+All seemed well, _until_ I tested the webkey again. I must have damaged
+something, because it now skips every 5th to 8th character as it emulates a
+keyboard. Shoot. Maybe next time.
+
+### Let's \[_Pretend to_\] Read all the EEPROM
+
+> _**Disclaimer**: I wasn't able to test any of this, because I damaged my
+> hardware, but I encourage others to carry on where I left off and let me
+> know if you have any success!_
+
+As it turns out, [PonyProg](http://www.lancos.com/prog.html) (the program
+mentioned on the Stack Exchange post) doesn't work on OS X, but I found a
+program called [ch341eeprom](https://github.com/commandtab/ch341eeprom) that
+claimed to perform a similar task.
+
+It depends on the [WinChipHead CH341A][ch341a].
+
+<figure>
+<%= image_tag(blog_asset("winchiphead-ch341a-ic.jpg")) %>
+<figcaption>WinChipHead CH341A</figcaption>
+</figure>
+
+It also depends on `libusb`, so let's install that using
+[Homebrew](http://brew.sh/) and then clone the repository so we can compile
+`ch341eeprom`.
+
+```bash
+brew install libusb
+git clone https://github.com/commandtab/ch341eeprom.git
+cd ch341eeprom
+```
+
+Compile, and try to read the eeprom:
+
+```bash
+make
+ch341eeprom -v -s 24c02 -r ~/eeprom.bin
+```
+
+## Conclusion
+
+While my attempt at hacking this hardware resulted in catastrophic failure,
+don't let that stop you from trying something new or breaking down an unknown
+piece of tech. I learned a lot during this little investigative project, and if I find
+another free marketing webkey in the mail, I just might pick-up where I left
+off.
+
+[ch341a]: http://www.amazon.com/s/ref=as_li_ss_tl?_encoding=UTF8&camp=1789&creative=390957&field-keywords=CH341A&linkCode=ur2&rh=i%3Aaps%2Ck%3ACH341A&tag=rmm5t-20&url=search-alias%3Daps&linkId=FO43SQPQTVQ5OK43
