@@ -109,7 +109,7 @@ approach.
 
 ![BusyConf MongoDB Model - Current Design](<%= blog_asset "mongodb-option2.png" %> "BusyConf MongoDB Model - Current Design")
 
-Instead of one collection, we broke out Activities and Speakers.[^1] This
+Instead of one collection, we broke out Activities and Speakers.[^embed] This
 matched our patterns of access much better. Instead of deeply nesting every
 object, we chose to embed arrays of days, tracks, and time slots immediately
 under the event document.
@@ -127,9 +127,7 @@ MongoDB can be somewhat tricky when it comes to the up front design, but if done
 right, it has some great benefits both in defining and matching your unique
 access patterns along with fairly decent long-term maintenance benefits.
 
-[^1]: Later, we decided to embed Speakers under Activities to improve our
-patterns of access, but ironically, we plan to switch Speakers back out to their
-own collection again to provide cleaner normalization.
+[^embed]: Later, we decided to embed Speakers under Activities to improve our patterns of access, but ironically, we plan to switch Speakers back out to their own collection again to provide cleaner normalization.
 
 [busyconf]: http://busyconf.com/
 [mongodb]: http://www.mongodb.org/
