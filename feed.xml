@@ -341,7 +341,7 @@ productivity with just a bit of discipline and relatively low overhead.&lt;/p&gt
     <link rel="alternate" href="http://ryan.mcgeary.org/2012/09/13/disable-chrome-print-dialog-use-osx-instead/"/>
     <id>http://ryan.mcgeary.org/2012/09/13/disable-chrome-print-dialog-use-osx-instead/</id>
     <published>2012-09-12T18:00:00-06:00</published>
-    <updated>2015-05-22T15:14:50-06:00</updated>
+    <updated>2015-05-24T22:14:36-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -358,9 +358,9 @@ the ability to disabled the print dialog.&lt;/p&gt;
 
 &lt;p&gt;There are a couple workarounds on the internet like starting Chrome with an
 &lt;code&gt;--args --disable-print-preview&lt;/code&gt;, but that’s not too feasible under normal
-conditions. Other solutions recommend using &lt;code&gt;⌘⌥P&lt;/code&gt; or hold down Option (&lt;code&gt;⌥&lt;/code&gt;) when
-accessing the File menu, but who wants to remember to use a different keyboard
-shortcut for just one application?&lt;/p&gt;
+conditions. Other solutions recommend using &lt;kbd&gt;⌘⌥P&lt;/kbd&gt; or hold down Option
+(&lt;kbd&gt;⌥&lt;/kbd&gt;) when accessing the File menu, but who wants to remember to use
+a different keyboard shortcut for just one application?&lt;/p&gt;
 
 &lt;p&gt;Fortunately, OS X comes with a relatively simple way to override keyboard
 shortcuts in specific Applications. Go to System Preferences -&amp;gt; Keyboard -&amp;gt;
@@ -370,7 +370,7 @@ shortcut for Google Chrome.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Override for Chrome's Print Shortcut" title="Override for Chrome's Print Shortcut" src="/2012/09/13/disable-chrome-print-dialog-use-osx-instead/chrome-print-shortcut-override.png" /&gt;&lt;/p&gt;
 
 &lt;p&gt;Make sure the Menu Title reads &lt;code&gt;Print Using System Dialog...&lt;/code&gt; exactly, and
-give it the standard print shortcut (&lt;code&gt;⌘P&lt;/code&gt;).&lt;/p&gt;
+give it the standard print shortcut (&lt;kbd&gt;⌘P&lt;/kbd&gt;).&lt;/p&gt;
 
 &lt;p&gt;&lt;img alt="New Chrome Print Shortcuts" title="New Chrome Print Shortcuts" src="/2012/09/13/disable-chrome-print-dialog-use-osx-instead/chrome-print-shortcuts.png" /&gt;&lt;/p&gt;
 
