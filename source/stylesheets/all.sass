@@ -114,9 +114,11 @@ $photo-scale: 2
     margin-left: -$padding
     padding: $padding 9999px $padding $padding
     background-color: rgba($mcg-dark, 0.05)
+  h4
+    font-size: 22px
 
 code
-  color: #343
+  color: #933
   background-color: rgba(#343, 0.05)
 
 pre
@@ -211,6 +213,18 @@ dl a
   font-weight: normal
 dd
   margin-bottom: 1em
+
+figure
+  figcaption
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+    font-size: 80%
+    text-align: center
+article
+  counter-reset: figures
+  figure
+    counter-increment: figures
+    figcaption:before
+      content: 'Figure ' counter(figures) ': '
 
 @media (max-width: 768px)
   .dl-horizontal dt
