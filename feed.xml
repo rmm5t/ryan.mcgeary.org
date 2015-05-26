@@ -15,7 +15,7 @@
     <link rel="alternate" href="http://ryan.mcgeary.org/2015/05/26/reverse-engineering-american-express-usb-webkey/"/>
     <id>http://ryan.mcgeary.org/2015/05/26/reverse-engineering-american-express-usb-webkey/</id>
     <published>2015-05-25T18:00:00-06:00</published>
-    <updated>2015-05-26T13:01:34-06:00</updated>
+    <updated>2015-05-26T13:16:06-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -63,7 +63,7 @@ that Samy used.&lt;/p&gt;
 
 &lt;figure&gt;
 &lt;img src="/2015/05/26/reverse-engineering-american-express-usb-webkey/amex-usb-key.jpg" /&gt;
-&lt;figcaption&gt;"AmEx USB Chip" torn from it's plastic enclosure.&lt;/figcaption&gt;
+&lt;figcaption&gt;"AmEx USB Stick" snapped from it's marketing enclosure.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;figure&gt;
@@ -126,7 +126,7 @@ looked promising.&lt;/p&gt;
 
 &lt;figure&gt;
 &lt;img src="/2015/05/26/reverse-engineering-american-express-usb-webkey/amex-usb-chip.jpg" /&gt;
-&lt;figcaption&gt;"AmEx USB Stick" snapped from it's marketing enclosure.&lt;/figcaption&gt;
+&lt;figcaption&gt;"AmEx USB Chip" torn from it's plastic enclosure.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Sweet. Contact points that I should be able to use to access the EEPROM.&lt;/p&gt;
@@ -185,7 +185,7 @@ off.&lt;/p&gt;
     <link rel="alternate" href="http://ryan.mcgeary.org/2015/05/22/rejuvenating-my-piece-of-the-interwebs/"/>
     <id>http://ryan.mcgeary.org/2015/05/22/rejuvenating-my-piece-of-the-interwebs/</id>
     <published>2015-05-21T18:00:00-06:00</published>
-    <updated>2015-05-22T17:03:58-06:00</updated>
+    <updated>2015-05-26T13:06:55-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -257,7 +257,7 @@ that’s the goal.&lt;/p&gt;
     <link rel="alternate" href="http://ryan.mcgeary.org/2015/05/12/cloud-services-you-should-be-using-to-build-your-startup/"/>
     <id>http://ryan.mcgeary.org/2015/05/12/cloud-services-you-should-be-using-to-build-your-startup/</id>
     <published>2015-05-11T18:00:00-06:00</published>
-    <updated>2015-05-22T16:06:36-06:00</updated>
+    <updated>2015-05-26T13:06:55-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -300,7 +300,7 @@ that’s the goal.&lt;/p&gt;
     <link rel="alternate" href="http://ryan.mcgeary.org/2014/08/20/html5-autocomplete-cheatsheet/"/>
     <id>http://ryan.mcgeary.org/2014/08/20/html5-autocomplete-cheatsheet/</id>
     <published>2014-08-19T18:00:00-06:00</published>
-    <updated>2015-05-22T15:14:50-06:00</updated>
+    <updated>2015-05-26T13:06:55-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -329,7 +329,7 @@ bit difficult to easily see what types were available/recommended.&lt;/p&gt;
     <link rel="alternate" href="http://ryan.mcgeary.org/2014/02/19/busyconf-1-million-cups-st-pete/"/>
     <id>http://ryan.mcgeary.org/2014/02/19/busyconf-1-million-cups-st-pete/</id>
     <published>2014-02-18T17:00:00-07:00</published>
-    <updated>2015-05-22T15:14:50-06:00</updated>
+    <updated>2015-05-26T13:06:55-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -346,7 +346,7 @@ bit difficult to easily see what types were available/recommended.&lt;/p&gt;
     <link rel="alternate" href="http://ryan.mcgeary.org/2013/12/20/interview-with-eventtech-podcast/"/>
     <id>http://ryan.mcgeary.org/2013/12/20/interview-with-eventtech-podcast/</id>
     <published>2013-12-19T17:00:00-07:00</published>
-    <updated>2015-05-22T15:14:50-06:00</updated>
+    <updated>2015-05-26T13:06:55-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -365,7 +365,7 @@ bit difficult to easily see what types were available/recommended.&lt;/p&gt;
     <link rel="alternate" href="http://ryan.mcgeary.org/2013/12/19/continuous-integration-deployment-middleman-codeship-github-pages/"/>
     <id>http://ryan.mcgeary.org/2013/12/19/continuous-integration-deployment-middleman-codeship-github-pages/</id>
     <published>2013-12-18T17:00:00-07:00</published>
-    <updated>2015-05-22T15:14:50-06:00</updated>
+    <updated>2015-05-26T13:06:55-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -469,7 +469,7 @@ ENV[&lt;span class="s2"&gt;"COMMIT_MESSAGE_SUFFIX"&lt;/span&gt;&lt;span class="o
     <link rel="alternate" href="http://ryan.mcgeary.org/2013/12/05/what-makes-someone-successful-tedx/"/>
     <id>http://ryan.mcgeary.org/2013/12/05/what-makes-someone-successful-tedx/</id>
     <published>2013-12-04T17:00:00-07:00</published>
-    <updated>2015-05-22T15:14:50-06:00</updated>
+    <updated>2015-05-26T13:06:55-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -486,7 +486,7 @@ ENV[&lt;span class="s2"&gt;"COMMIT_MESSAGE_SUFFIX"&lt;/span&gt;&lt;span class="o
     <link rel="alternate" href="http://ryan.mcgeary.org/2012/11/09/async-collaboration-oredev/"/>
     <id>http://ryan.mcgeary.org/2012/11/09/async-collaboration-oredev/</id>
     <published>2012-11-08T17:00:00-07:00</published>
-    <updated>2015-05-22T16:18:16-06:00</updated>
+    <updated>2015-05-26T13:06:55-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -511,7 +511,7 @@ productivity with just a bit of discipline and relatively low overhead.&lt;/p&gt
     <link rel="alternate" href="http://ryan.mcgeary.org/2012/09/13/disable-chrome-print-dialog-use-osx-instead/"/>
     <id>http://ryan.mcgeary.org/2012/09/13/disable-chrome-print-dialog-use-osx-instead/</id>
     <published>2012-09-12T18:00:00-06:00</published>
-    <updated>2015-05-26T13:01:32-06:00</updated>
+    <updated>2015-05-26T13:06:55-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -562,7 +562,7 @@ want to test the default behavior that most others experience.&lt;/p&gt;
     <link rel="alternate" href="http://ryan.mcgeary.org/2012/06/05/mongodb-schema-design-at-busyconf/"/>
     <id>http://ryan.mcgeary.org/2012/06/05/mongodb-schema-design-at-busyconf/</id>
     <published>2012-06-04T18:00:00-06:00</published>
-    <updated>2015-05-26T13:01:32-06:00</updated>
+    <updated>2015-05-26T13:06:55-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -706,7 +706,7 @@ access patterns along with fairly decent long-term maintenance benefits.&lt;/p&g
     <link rel="alternate" href="http://ryan.mcgeary.org/2012/05/07/reserving-subdomains-in-your-multitenant-application/"/>
     <id>http://ryan.mcgeary.org/2012/05/07/reserving-subdomains-in-your-multitenant-application/</id>
     <published>2012-05-06T18:00:00-06:00</published>
-    <updated>2015-05-22T15:14:50-06:00</updated>
+    <updated>2015-05-26T13:06:55-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -751,7 +751,7 @@ multi-tenant applications:&lt;/p&gt;
     <link rel="alternate" href="http://ryan.mcgeary.org/2012/02/16/just-in-time-inventory-with-spree/"/>
     <id>http://ryan.mcgeary.org/2012/02/16/just-in-time-inventory-with-spree/</id>
     <published>2012-02-15T17:00:00-07:00</published>
-    <updated>2015-05-22T16:17:03-06:00</updated>
+    <updated>2015-05-26T13:06:55-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -776,7 +776,7 @@ automatically prints products only after an order is placed.&lt;/p&gt;
     <link rel="alternate" href="http://ryan.mcgeary.org/2012/02/02/html5-application-caching/"/>
     <id>http://ryan.mcgeary.org/2012/02/02/html5-application-caching/</id>
     <published>2012-02-01T17:00:00-07:00</published>
-    <updated>2015-05-22T16:17:20-06:00</updated>
+    <updated>2015-05-26T13:06:55-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -799,7 +799,7 @@ your schedule is available even after losing an internet connection.&lt;/p&gt;
     <link rel="alternate" href="http://ryan.mcgeary.org/2011/09/16/how-to-add-a-dnsimple-ssl-certificate-to-heroku/"/>
     <id>http://ryan.mcgeary.org/2011/09/16/how-to-add-a-dnsimple-ssl-certificate-to-heroku/</id>
     <published>2011-09-15T18:00:00-06:00</published>
-    <updated>2015-05-22T15:14:50-06:00</updated>
+    <updated>2015-05-26T13:06:55-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -874,7 +874,7 @@ command. This prevents you from having to update your DNS settings:&lt;/em&gt;&l
     <link rel="alternate" href="http://ryan.mcgeary.org/2011/09/02/do-your-commit-messages-suck-rockymtnruby/"/>
     <id>http://ryan.mcgeary.org/2011/09/02/do-your-commit-messages-suck-rockymtnruby/</id>
     <published>2011-09-01T18:00:00-06:00</published>
-    <updated>2015-05-22T16:19:19-06:00</updated>
+    <updated>2015-05-26T13:06:55-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -907,7 +907,7 @@ changed.&lt;/p&gt;
     <link rel="enclosure" type="audio/ogg" href="http://files.mcgeary.org/podcasts/ruby5-186.ogg"/>
     <id>http://ryan.mcgeary.org/2011/06/24/co-hosting-ruby5/</id>
     <published>2011-06-23T18:00:00-06:00</published>
-    <updated>2015-05-22T15:14:50-06:00</updated>
+    <updated>2015-05-26T13:06:55-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -921,7 +921,7 @@ changed.&lt;/p&gt;
     <link rel="alternate" href="http://ryan.mcgeary.org/2011/04/22/keep-your-hostname-on-public-wifi-networks/"/>
     <id>http://ryan.mcgeary.org/2011/04/22/keep-your-hostname-on-public-wifi-networks/</id>
     <published>2011-04-21T18:00:00-06:00</published>
-    <updated>2015-05-22T15:14:50-06:00</updated>
+    <updated>2015-05-26T13:06:55-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -951,7 +951,7 @@ hostname being set to something specific.&lt;/p&gt;
     <link rel="alternate" href="http://ryan.mcgeary.org/2011/04/21/coffeescript-reddirt/"/>
     <id>http://ryan.mcgeary.org/2011/04/21/coffeescript-reddirt/</id>
     <published>2011-04-20T18:00:00-06:00</published>
-    <updated>2015-05-22T16:16:11-06:00</updated>
+    <updated>2015-05-26T13:06:55-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -978,7 +978,7 @@ I did.&lt;/p&gt;
     <link rel="alternate" href="http://ryan.mcgeary.org/2011/04/02/one-man-lightning-rubynation/"/>
     <id>http://ryan.mcgeary.org/2011/04/02/one-man-lightning-rubynation/</id>
     <published>2011-04-01T18:00:00-06:00</published>
-    <updated>2015-05-22T16:15:22-06:00</updated>
+    <updated>2015-05-26T13:06:55-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -1014,7 +1014,7 @@ topics, including:&lt;/p&gt;
     <link rel="enclosure" type="audio/ogg" href="http://files.mcgeary.org/interviews/gloverseries-mcgeary.ogg"/>
     <id>http://ryan.mcgeary.org/2011/02/24/interview-with-ibm-developer-works/</id>
     <published>2011-02-23T17:00:00-07:00</published>
-    <updated>2015-05-22T15:14:50-06:00</updated>
+    <updated>2015-05-26T13:06:55-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -1039,7 +1039,7 @@ Today, that interview was published.&lt;/p&gt;
     <link rel="alternate" href="http://ryan.mcgeary.org/2011/02/09/vendor-everything-still-applies/"/>
     <id>http://ryan.mcgeary.org/2011/02/09/vendor-everything-still-applies/</id>
     <published>2011-02-08T17:00:00-07:00</published>
-    <updated>2015-05-24T22:18:48-06:00</updated>
+    <updated>2015-05-26T13:06:55-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -1214,7 +1214,7 @@ bundle package
     <link rel="enclosure" type="audio/ogg" href="http://files.mcgeary.org/interviews/lifeofthefree-mcgeary.ogg"/>
     <id>http://ryan.mcgeary.org/2011/01/04/interview-with-life-of-the-freelancer/</id>
     <published>2011-01-03T17:00:00-07:00</published>
-    <updated>2015-05-22T15:14:50-06:00</updated>
+    <updated>2015-05-26T13:06:55-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -1237,7 +1237,7 @@ things I’m focussing on now.&lt;/p&gt;
     <link rel="alternate" href="http://ryan.mcgeary.org/2011/01/03/working-with-os-x-and-emacs/"/>
     <id>http://ryan.mcgeary.org/2011/01/03/working-with-os-x-and-emacs/</id>
     <published>2011-01-02T17:00:00-07:00</published>
-    <updated>2015-05-22T15:14:50-06:00</updated>
+    <updated>2015-05-26T13:06:55-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -1272,7 +1272,7 @@ and vote up my video so other people learn about me and
     <link rel="alternate" href="http://ryan.mcgeary.org/2010/12/14/busyconf-mongodc/"/>
     <id>http://ryan.mcgeary.org/2010/12/14/busyconf-mongodc/</id>
     <published>2010-12-13T17:00:00-07:00</published>
-    <updated>2015-05-22T16:15:01-06:00</updated>
+    <updated>2015-05-26T13:06:55-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -1303,7 +1303,7 @@ what design decisions we considered, and what the alternatives might have been.&
     <link rel="alternate" href="http://ryan.mcgeary.org/2010/12/09/coffeescript-dcrug/"/>
     <id>http://ryan.mcgeary.org/2010/12/09/coffeescript-dcrug/</id>
     <published>2010-12-08T17:00:00-07:00</published>
-    <updated>2015-05-22T15:14:50-06:00</updated>
+    <updated>2015-05-26T13:06:55-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -1332,7 +1332,7 @@ I did.&lt;/p&gt;
     <link rel="alternate" href="http://ryan.mcgeary.org/2010/11/01/coffeescript-757rb/"/>
     <id>http://ryan.mcgeary.org/2010/11/01/coffeescript-757rb/</id>
     <published>2010-10-31T18:00:00-06:00</published>
-    <updated>2015-05-22T15:14:50-06:00</updated>
+    <updated>2015-05-26T13:06:55-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -1361,7 +1361,7 @@ I did.&lt;/p&gt;
     <link rel="alternate" href="http://ryan.mcgeary.org/2010/10/21/coffeescript-novarug/"/>
     <id>http://ryan.mcgeary.org/2010/10/21/coffeescript-novarug/</id>
     <published>2010-10-20T18:00:00-06:00</published>
-    <updated>2015-05-22T15:14:50-06:00</updated>
+    <updated>2015-05-26T13:06:55-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -1390,7 +1390,7 @@ I did.&lt;/p&gt;
     <link rel="alternate" href="http://ryan.mcgeary.org/2008/01/02/remember-the-milk-conventions/"/>
     <id>http://ryan.mcgeary.org/2008/01/02/remember-the-milk-conventions/</id>
     <published>2008-01-01T17:00:00-07:00</published>
-    <updated>2015-05-22T15:14:50-06:00</updated>
+    <updated>2015-05-26T13:06:55-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
