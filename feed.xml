@@ -185,7 +185,7 @@ off.&lt;/p&gt;
     <link rel="alternate" href="http://ryan.mcgeary.org/2015/05/22/rejuvenating-my-piece-of-the-interwebs/"/>
     <id>http://ryan.mcgeary.org/2015/05/22/rejuvenating-my-piece-of-the-interwebs/</id>
     <published>2015-05-21T18:00:00-06:00</published>
-    <updated>2015-05-26T13:06:55-06:00</updated>
+    <updated>2015-05-26T13:21:39-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -234,7 +234,9 @@ and I’m sure Jekyll 3 will continue that trend, but
 &lt;a href="https://middlemanapp.com/"&gt;Middleman&lt;/a&gt; has just always felt so much cleaner
 to me; it’s organized in a way that I like to work. Plus, it’s easier for me
 to standardize on one static site generator across the sites that I
-maintain, and I honed in on Middleman well before Jekyll v2 launched.&lt;/li&gt;
+maintain, and I
+&lt;a href="http://ryan.mcgeary.org/2013/12/19/continuous-integration-deployment-middleman-codeship-github-pages/"&gt;honed in on Middleman&lt;/a&gt;
+well before Jekyll v2 launched.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Twitter Card and Open Graph Support&lt;/strong&gt;: You know those nice catchy pictures
 you get when you share a website on social media? Yeah, I got that. Learn
 more about &lt;a href="https://dev.twitter.com/cards/overview"&gt;Twitter Cards&lt;/a&gt; and
