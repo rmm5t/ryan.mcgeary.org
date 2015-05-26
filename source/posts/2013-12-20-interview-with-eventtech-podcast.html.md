@@ -1,6 +1,8 @@
 ---
 tags: interviews, podcasts, business
 title: "Interview with #EventTech Podcast"
+mp3: "http://files.mcgeary.org/interviews/eventtech-busyconf-mcgeary.mp3"
+ogg: "http://files.mcgeary.org/interviews/eventtech-busyconf-mcgeary.ogg"
 ---
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HBGQbvTPrCY" frameborder="0" allowfullscreen></iframe>
 
