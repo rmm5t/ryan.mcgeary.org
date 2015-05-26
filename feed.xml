@@ -5,11 +5,181 @@
   <id>http://ryan.mcgeary.org/</id>
   <link href="http://ryan.mcgeary.org/"/>
   <link href="http://ryan.mcgeary.org/feed.xml" rel="self"/>
-  <updated>2015-05-21T18:00:00-06:00</updated>
+  <updated>2015-05-25T18:00:00-06:00</updated>
   <author>
     <name>Ryan McGeary</name>
     <email>ryan@mcgeary.org</email>
   </author>
+  <entry>
+    <title>Reverse Engineering an American Express USB WebKey</title>
+    <link rel="alternate" href="http://ryan.mcgeary.org/2015/05/26/reverse-engineering-american-express-usb-webkey/"/>
+    <id>http://ryan.mcgeary.org/2015/05/26/reverse-engineering-american-express-usb-webkey/</id>
+    <published>2015-05-25T18:00:00-06:00</published>
+    <updated>2015-05-26T13:01:34-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;I received an interesting piece of hardware in the mail the other
+day. American Express is piggy-backing on LegalZoom document deliveries with
+an interesting piece of marketing – a USB key-like devices in the shape of a
+credit card.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="American Express Fake USB Keyboard" src="/2015/05/26/reverse-engineering-american-express-usb-webkey/amex-usb-card.jpg" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Thinking it was a USB drive and one that I might be able to format and reuse
+for something else, I plugged it in to my Mac. To my surprise, it immediately
+opened Safari and a website pointing to an American Express credit card
+offer. Huh? I thought OS X didn’t have Autorun support. So, of course, I tried
+it again. This time, I noticed that the address bar in Safari scrolled as if
+someone was typing really fast.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Holy trickery, Batman. It’s mimicking a USB keyboard!&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Here are the steps that it takes:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;kbd&gt;⌃F3&lt;/kbd&gt; to focus the Dock&lt;/li&gt;
+  &lt;li&gt;Types: &lt;code&gt;Safari&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;kbd&gt;return&lt;/kbd&gt; to launch Safari&lt;/li&gt;
+  &lt;li&gt;&lt;kbd&gt;⌘L&lt;/kbd&gt; to focus the address bar&lt;/li&gt;
+  &lt;li&gt;Types: &lt;code&gt;http://www262.americanexpress.com/landing-page/business-cards/sclp/bgold/aff0022/44460?PID=15&amp;amp;BUID=SBS&amp;amp;PSKU=BGR&amp;amp;CRTV=LZBGRLTOWBKYREF15&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;kbd&gt;return&lt;/kbd&gt; to launch site&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;NOTE: If Safari isn’t running or pinned to your Dock, the entire process
+fails. They probably would have been better served to start with
+&lt;kbd&gt;⌘-space&lt;/kbd&gt; and a Spotlight search instead.&lt;/p&gt;
+
+&lt;h2 id="digging-in"&gt;Digging In&lt;/h2&gt;
+
+&lt;p&gt;My curiosity was piqued, and this reminded me of the
+&lt;a href="http://samy.pl/usbdriveby/"&gt;USBdriveby&lt;/a&gt; project that
+&lt;a href="http://samy.pl/"&gt;Samy Kamkar&lt;/a&gt; discussed on a recent
+&lt;a href="http://fourhourworkweek.com/2015/05/02/samy-kamkar/"&gt;Tim Ferriss podcast&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I wondered if I could reprogram this American Express USB device to behave in a
+similar way as the &lt;a href="https://www.pjrc.com/teensy/"&gt;Teensy USB Microcontroller&lt;/a&gt;
+that Samy used.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img src="/2015/05/26/reverse-engineering-american-express-usb-webkey/amex-usb-key.jpg" /&gt;
+&lt;figcaption&gt;"AmEx USB Chip" torn from it's plastic enclosure.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+&lt;img src="/2015/05/26/reverse-engineering-american-express-usb-webkey/teensy.jpg" /&gt;
+&lt;figcaption&gt;Teensy 3.1&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h3 id="find-the-usb-device"&gt;Find the USB Device&lt;/h3&gt;
+
+&lt;p&gt;First, let’s see what OS X thinks about this USB device. We’ll do that by
+inspecting all USB devices both before and after plugging in the USB key. The
+difference will help us find the device itself.&lt;/p&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;system_profiler SPUSBDataType &amp;gt; ~/usbout.txt
+system_profiler SPUSBDataType &amp;gt; ~/usbin.txt
+diff ~/usbout.txt ~/usbin.txt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This should yield a result like the following:&lt;/p&gt;
+
+&lt;pre class="highlight diff"&gt;&lt;code&gt;33a34,44
+&amp;gt;         WEBKEY:
+&amp;gt;
+&amp;gt;           Product ID: 0x6662
+&amp;gt;           Vendor ID: 0x05ac  (Apple Inc.)
+&amp;gt;           Version: 8.15
+&amp;gt;           Speed: Up to 12 Mb/sec
+&amp;gt;           Manufacturer: TP6662
+&amp;gt;           Location ID: 0x14500000 / 27
+&amp;gt;           Current Available (mA): 500
+&amp;gt;           Current Required (mA): 100
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note the &lt;code&gt;Product ID&lt;/code&gt; and &lt;code&gt;Vendor ID&lt;/code&gt; values. We’ll need those later.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;I find it fairly suspicious that it mimics hardware from “Apple Inc.” Kinda sketchy.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id="now-what"&gt;Now What?&lt;/h3&gt;
+
+&lt;p&gt;At this point, I was immediately stuck, but after some research, I found a
+superuser question on Stack Exchange titled
+&lt;em&gt;&lt;a href="http://superuser.com/questions/131897/can-i-reprogram-an-american-express-usb-drive"&gt;Can I “reprogram” an American Express USB drive&lt;/a&gt;?&lt;/em&gt;
+No direct answers, but this answer gave me hope:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;It consists of a Cypress PSoC controller, combined with a 24c02 serial
+eeprom … With a simple program called PonyProg you can read and modify the
+contents of the eeprom.&lt;/em&gt;
+&lt;a href="http://superuser.com/a/216810/8424"&gt;http://superuser.com/a/216810/8424&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I spun my wheels for a long while with no luck, but later, I found an article
+titled
+&lt;em&gt;&lt;a href="http://blog.opensecurityresearch.com/2012/10/hacking-usb-webkeys.html"&gt;Hacking USB Webkeys&lt;/a&gt;&lt;/em&gt;. This
+looked promising.&lt;/p&gt;
+
+&lt;h3 id="hardware-surgery-and-failure"&gt;Hardware Surgery (&lt;em&gt;&lt;strong&gt;and Failure&lt;/strong&gt;&lt;/em&gt;)&lt;/h3&gt;
+
+&lt;p&gt;I slowly pried the chip from it’s plastic enclosure. It was attached with some glue.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img src="/2015/05/26/reverse-engineering-american-express-usb-webkey/amex-usb-chip.jpg" /&gt;
+&lt;figcaption&gt;"AmEx USB Stick" snapped from it's marketing enclosure.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Sweet. Contact points that I should be able to use to access the EEPROM.&lt;/p&gt;
+
+&lt;p&gt;All seemed well, &lt;em&gt;until&lt;/em&gt; I tested the webkey again. I must have damaged
+something, because it now skips every 5th to 8th character as it emulates a
+keyboard. Shoot. Maybe next time.&lt;/p&gt;
+
+&lt;h3 id="lets-pretend-to-read-all-the-eeprom"&gt;Let’s [&lt;em&gt;Pretend to&lt;/em&gt;] Read all the EEPROM&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;&lt;strong&gt;Disclaimer&lt;/strong&gt;: I wasn’t able to test any of this, because I damaged my
+hardware, but I encourage others to carry on where I left off and let me
+know if you have any success!&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;As it turns out, &lt;a href="http://www.lancos.com/prog.html"&gt;PonyProg&lt;/a&gt; (the program
+mentioned on the Stack Exchange post) doesn’t work on OS X, but I found a
+program called &lt;a href="https://github.com/commandtab/ch341eeprom"&gt;ch341eeprom&lt;/a&gt; that
+claimed to perform a similar task.&lt;/p&gt;
+
+&lt;p&gt;It depends on the &lt;a href="http://www.amazon.com/s/ref=as_li_ss_tl?_encoding=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;field-keywords=CH341A&amp;amp;linkCode=ur2&amp;amp;rh=i%3Aaps%2Ck%3ACH341A&amp;amp;tag=rmm5t-20&amp;amp;url=search-alias%3Daps&amp;amp;linkId=FO43SQPQTVQ5OK43"&gt;WinChipHead CH341A&lt;/a&gt;.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img src="/2015/05/26/reverse-engineering-american-express-usb-webkey/winchiphead-ch341a-ic.jpg" /&gt;
+&lt;figcaption&gt;WinChipHead CH341A&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;It also depends on &lt;code&gt;libusb&lt;/code&gt;, so let’s install that using
+&lt;a href="http://brew.sh/"&gt;Homebrew&lt;/a&gt; and then clone the repository so we can compile
+&lt;code&gt;ch341eeprom&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;brew install libusb
+git clone https://github.com/commandtab/ch341eeprom.git
+&lt;span class="nb"&gt;cd &lt;/span&gt;ch341eeprom
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Compile, and try to read the eeprom:&lt;/p&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;make
+ch341eeprom -v -s 24c02 -r ~/eeprom.bin
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;While my attempt at hacking this hardware resulted in catastrophic failure,
+don’t let that stop you from trying something new or breaking down an unknown
+piece of tech. I learned a lot during this little investigative project, and if I find
+another free marketing webkey in the mail, I just might pick-up where I left
+off.&lt;/p&gt;
+
+</content>
+  </entry>
   <entry>
     <title>Rejuvenating My Piece of the Interwebs</title>
     <link rel="alternate" href="http://ryan.mcgeary.org/2015/05/22/rejuvenating-my-piece-of-the-interwebs/"/>
@@ -341,7 +511,7 @@ productivity with just a bit of discipline and relatively low overhead.&lt;/p&gt
     <link rel="alternate" href="http://ryan.mcgeary.org/2012/09/13/disable-chrome-print-dialog-use-osx-instead/"/>
     <id>http://ryan.mcgeary.org/2012/09/13/disable-chrome-print-dialog-use-osx-instead/</id>
     <published>2012-09-12T18:00:00-06:00</published>
-    <updated>2015-05-24T22:14:36-06:00</updated>
+    <updated>2015-05-26T13:01:32-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -392,7 +562,7 @@ want to test the default behavior that most others experience.&lt;/p&gt;
     <link rel="alternate" href="http://ryan.mcgeary.org/2012/06/05/mongodb-schema-design-at-busyconf/"/>
     <id>http://ryan.mcgeary.org/2012/06/05/mongodb-schema-design-at-busyconf/</id>
     <published>2012-06-04T18:00:00-06:00</published>
-    <updated>2015-05-24T22:19:20-06:00</updated>
+    <updated>2015-05-26T13:01:32-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>

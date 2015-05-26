@@ -5,12 +5,20 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta name="author" content="Ryan McGeary" />
-<meta name="description" content="Page 2 of 3Previous pageIt’s fairly common to segment the accounts in your multi-tenant application with subdomains. GitHub gives you a subdomain that matches your username (e.g. rmm5t.github.io). ..." />
+<meta name="description" content="Page 2 of 3Previous pageThis post is in response to the 10gen MongoDB Schema Design Contest. It was also extracted from talks that I’ve given on the subject.BusyConf currently handles 4 major piece..." />
 <meta name="og:title" content="Ryan McGeary" />
-<meta name="og:description" content="Page 2 of 3Previous pageIt’s fairly common to segment the accounts in your multi-tenant application with subdomains. GitHub gives you a subdomain that matches your username (e.g. rmm5t.github.io). ..." />
+<meta name="og:description" content="Page 2 of 3Previous pageThis post is in response to the 10gen MongoDB Schema Design Contest. It was also extracted from talks that I’ve given on the subject.BusyConf currently handles 4 major piece..." />
 <meta name="og:site_name" content="Ryan McGeary" />
+<meta name="og:image" content="http://ryan.mcgeary.org/2012/06/05/mongodb-schema-design-at-busyconf/logical-model.png" />
+<meta name="twitter:image" content="http://ryan.mcgeary.org/2012/06/05/mongodb-schema-design-at-busyconf/logical-model.png" />
+<meta name="og:image" content="http://ryan.mcgeary.org/2012/06/05/mongodb-schema-design-at-busyconf/relational-model.png" />
+
+<meta name="og:image" content="http://ryan.mcgeary.org/2012/06/05/mongodb-schema-design-at-busyconf/mongodb-option1.png" />
+
+<meta name="og:image" content="http://ryan.mcgeary.org/2012/06/05/mongodb-schema-design-at-busyconf/mongodb-option2.png" />
+
 <meta name="og:image" content="http://ryan.mcgeary.org/images/ryan.mcgeary.jpg" />
-<meta name="twitter:image" content="http://ryan.mcgeary.org/images/ryan.mcgeary.jpg" />
+
 <meta name="twitter:site" content="@rmm5t" />
 <meta name="twitter:creator" content="@rmm5t" />
 <meta name="og:type" content="website" />
@@ -58,6 +66,9 @@ résumé</a>, or
 <h2><a href="/blog/">Recent</a></h2>
 <ul class='list-unstyled'>
 <li>
+<a href="/2015/05/26/reverse-engineering-american-express-usb-webkey/">Reverse Engineering an American Express USB WebKey</a>
+</li>
+<li>
 <a href="/2015/05/22/rejuvenating-my-piece-of-the-interwebs/">Rejuvenating My Piece of the Interwebs</a>
 </li>
 <li>
@@ -71,9 +82,6 @@ résumé</a>, or
 </li>
 <li>
 <a href="/2013/12/20/interview-with-eventtech-podcast/">Interview with #EventTech Podcast</a>
-</li>
-<li>
-<a href="/2013/12/19/continuous-integration-deployment-middleman-codeship-github-pages/">Continuous Integration and Deployment with Middleman, Codeship, and GitHub Pages</a>
 </li>
 </ul>
 <h2><a href="/blog/">Topics</a></h2>
@@ -147,6 +155,146 @@ All rights reserved.
 
     <p><a href="/">Previous page</a></p>
 
+  <article>
+    <h1>
+      <a href="/2012/06/05/mongodb-schema-design-at-busyconf/">MongoDB Schema Design at BusyConf</a>
+      <small class="text-nowrap">Jun  5, 2012</small>
+    </h1>
+    <p>This post is in response to the
+<a href="http://blog.10gen.com/post/23237721457/blogging-contest-mongodb-schema-design">10gen MongoDB Schema Design Contest</a>. It
+was also extracted from
+<a href="http://ryan.mcgeary.org/talks/2010/12/14/busyconf-mongodc/">talks</a> that I’ve
+given on the subject.</p>
+
+<h2 id="obligatory-plug">Obligatory Plug</h2>
+
+<p><a href="http://busyconf.com/">BusyConf</a> currently handles 4 major pieces of conference planning –
+it collects speaker proposals, allows the review committee to rate speaker
+proposals, builds an offline-enabled and archived HTML5 schedule (iPhone,
+Android, iPad, Desktop), and handles attendee ticket registration including
+payments, refunds, etc.</p>
+
+<p>We attend conferences, and as attendees, the schedule at the conference is often
+lacking.  It’s poorly organized, lacks information, and requires Internet
+access. This makes it hard as an attendee to choose the talks that you want to go
+to. <a href="http://busyconf.com/">BusyConf</a> is an attempt to solve that problem while also making
+it easier for conference organizers to run a conference.  We handle the calls
+for proposal, we allow organizers to rate proposals, we give them an interface
+to turn activities into a schedule, and we publish that schedule in many
+formats. We also handle ticket registration and credit card payments.</p>
+
+<h2 id="why-mongodb">Why MongoDB?</h2>
+
+<p><a href="http://www.mongodb.org/">MongoDB</a> was a huge win for us while designing our application. The
+goal of this post is to explain why we chose MongoDB, how we use it at BusyConf,
+what design decisions we considered, and what the alternatives might have been.</p>
+
+<p>Here’s a common myth that I’ve heard before: <em>“MongoDB design is easy because
+its schema-less.”</em> I disagree with this. It’s true that a thoughtful design will
+yield a longer term gain in easier development, but it can be tricky to conjure
+up with such a design. I find it much easier to get a relational design right
+the first time, but the costs of maintaining a relational design can sometimes
+be higher.</p>
+
+<blockquote class="blockquote-reverse">
+  <p>“You could use a relational database for that! Why use a document store?”</p>
+</blockquote>
+
+<p>MongoDB’s speed and scalability are wins, but for us, it’s not as important as
+the win we get from rapid development. Rapid development comes from the ability
+to represent richer data models that more closely match the business problems
+and the patterns of access.</p>
+
+<p>Many people say things like: <em>“You could use a relational database for that! Why
+use a document store?”</em>  MongoDB has become our default database for greenfield
+development. We now make ourselves justify the use of relational. Instead of,
+<em>“Why MongoDB?”</em> we ask, <strong><em>“Why NOT MongoDB?”</em></strong></p>
+
+<h2 id="the-logical-model">The Logical Model</h2>
+
+<p>This post only covers the design of our database that represents a conference
+schedule.  The data model that represents a conference schedule is roughly a
+tree – very nested. Imagine a typical conference or convention that you
+attended in the past. Events have days, days have tracks, tracks have time
+slots, time slots have activities, and activities have speakers. In addition,
+days can also have global time slots (like Lunches, Breaks, and Keynotes).</p>
+
+<p><img alt="BusyConf Logical Model" title="BusyConf Logical Model" src="/2012/06/05/mongodb-schema-design-at-busyconf/logical-model.png" /></p>
+
+<p>When we access our data for rendering a schedule, we need to pull all of this at
+once, because we want a seamless, cached experience for the conference attendee.</p>
+
+<h2 id="the-relational-option">The Relational Option</h2>
+
+<p>What might the above logical model look like in a relational database?  The nice
+thing about a relational model is that they are fairly easy to design.  This is
+how we might have modeled our data given a relational database.</p>
+
+<p><img alt="BusyConf Relational Model" title="BusyConf Relational Model" src="/2012/06/05/mongodb-schema-design-at-busyconf/relational-model.png" /></p>
+
+<blockquote class="blockquote-reverse">
+  <p>What kind of queries would be required to pull all the data from this design?</p>
+</blockquote>
+
+<p>It looks pretty straight forward until you imagine having to pull all this data
+at once to render a full schedule. What kind of query or queries would be
+required from a relational database? Would you use one big nasty join, or lots
+of individual queries? Neither seem like a great option.</p>
+
+<p>To add to the problem, little things like the position of tracks are not easily
+represented.  Neither is the potential explosion of meta data that could come
+from each object.</p>
+
+<h2 id="first-attempt-with-mongodb">First Attempt with MongoDB</h2>
+
+<p>Representing our logical model directly within MongoDB was our first instinct,
+BUT putting this into practice actually led us down a road of unnecessary
+complexities:</p>
+
+<p><img alt="BusyConf MongoDB Model - First Attempt" title="BusyConf MongoDB Model - First Attempt" src="/2012/06/05/mongodb-schema-design-at-busyconf/mongodb-option1.png" /></p>
+
+<blockquote class="blockquote-reverse">
+  <p>This first attempt was a mistake.</p>
+</blockquote>
+
+<p>While we solved the problem of quickly accessing the entire event, we no longer
+have an easy way of accessing an individual activity or speaker.  We can quickly
+see the complexities in the drawing above.</p>
+
+<h2 id="current-design-with-mongodb">Current Design with MongoDB</h2>
+
+<p>We iterated on the design many times, but in the end, we took a fairly unique
+approach.</p>
+
+<p><img alt="BusyConf MongoDB Model - Current Design" title="BusyConf MongoDB Model - Current Design" src="/2012/06/05/mongodb-schema-design-at-busyconf/mongodb-option2.png" /></p>
+
+<p>Instead of one collection, we broke out Activities and Speakers.<sup id="fnref:embed"><a href="#fn:embed" class="footnote">1</a></sup> This
+matched our patterns of access much better. Instead of deeply nesting every
+object, we chose to embed arrays of days, tracks, and time slots immediately
+under the event document.</p>
+
+<p>Each object has a unique ID. Everything is more easily addressable, because we
+have less nesting. The logical model is represented with pointers from one
+nested document to another. Of course, we don’t actually see our logical model
+until we piece it together on the client side, but that is okay because we don’t
+need the full logical model until until we put the leg work in to render the
+schedules in the browser.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>MongoDB can be somewhat tricky when it comes to the up front design, but if done
+right, it has some great benefits both in defining and matching your unique
+access patterns along with fairly decent long-term maintenance benefits.</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:embed">
+      <p>Later, we decided to embed Speakers under Activities to improve our patterns of access, but ironically, we plan to switch Speakers back out to their own collection again to provide cleaner normalization. <a href="#fnref:embed" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+  </article>
   <article>
     <h1>
       <a href="/2012/05/07/reserving-subdomains-in-your-multitenant-application/">Reserving Subdomains in Your Multi-Tenant Web Application</a>
@@ -413,27 +561,6 @@ topics, including:</p>
 
 <p>Were you there? Please <a href="http://spkr8.com/t/7045">rate my talk</a>.</p>
 
-
-  </article>
-  <article>
-    <h1>
-      <a href="/2011/02/24/interview-with-ibm-developer-works/">Interview with IBM developerWorks</a>
-      <small class="text-nowrap">Feb 24, 2011</small>
-    </h1>
-    <p>In December, I was interviewed by <a href="http://thediscoblog.com/">Andy Glover</a> for
-the <a href="http://www.ibm.com/developerworks/java/library/j-gloverpodcast2/index.html#mcgeary">IBM developerWorks podcast</a>.
-Today, that interview was published.</p>
-
-<p>I talked about <a href="http://coffeescript.org/">CoffeeScript</a>,
-<a href="http://www.amazon.com/gp/product/0596517742?ie=UTF8&amp;tag=rmm5t-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0596517742">JavaScript</a>,
-<a href="http://jquery.com/">jQuery</a>,
-<a href="http://www.sencha.com/products/touch/">Sencha Touch</a>,
-<a href="http://docs.jquery.com/Qunit">QUnit</a>,
-<a href="http://pivotal.github.com/jasmine/">Jasmine</a>, <a href="http://nodejs.org/">node.js</a>,
-<a href="http://www.mongodb.org/">MongoDB</a>, and my new venture
-<a href="http://busyconf.com/">BusyConf</a>.</p>
-
-<p><a href="http://www.ibm.com/developerworks/java/library/j-gloverpodcast2/index.html#mcgeary">Ryan McGeary on CoffeeScript</a></p>
 
   </article>
 

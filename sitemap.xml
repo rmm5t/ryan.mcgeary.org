@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://ryan.mcgeary.org/drafts/</loc>
-    <lastmod>2015-05-24T22:07:33-06:00</lastmod>
+    <lastmod>2015-05-26T13:01:03-06:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -122,13 +122,13 @@
   </url>
   <url>
     <loc>http://ryan.mcgeary.org/2012/06/05/mongodb-schema-design-at-busyconf/</loc>
-    <lastmod>2015-05-24T22:19:20-06:00</lastmod>
+    <lastmod>2015-05-26T13:01:32-06:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://ryan.mcgeary.org/2012/09/13/disable-chrome-print-dialog-use-osx-instead/</loc>
-    <lastmod>2015-05-24T22:14:36-06:00</lastmod>
+    <lastmod>2015-05-26T13:01:32-06:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -177,6 +177,12 @@
   <url>
     <loc>http://ryan.mcgeary.org/2015/05/22/rejuvenating-my-piece-of-the-interwebs/</loc>
     <lastmod>2015-05-22T17:03:58-06:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://ryan.mcgeary.org/2015/05/26/reverse-engineering-american-express-usb-webkey/</loc>
+    <lastmod>2015-05-26T13:01:34-06:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
