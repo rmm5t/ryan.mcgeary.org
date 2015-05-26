@@ -15,13 +15,13 @@
     <link rel="alternate" href="http://ryan.mcgeary.org/2015/05/26/reverse-engineering-american-express-usb-webkey/"/>
     <id>http://ryan.mcgeary.org/2015/05/26/reverse-engineering-american-express-usb-webkey/</id>
     <published>2015-05-25T18:00:00-06:00</published>
-    <updated>2015-05-26T13:16:06-06:00</updated>
+    <updated>2015-05-26T15:00:22-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
     <content type="html">&lt;p&gt;I received an interesting piece of hardware in the mail the other
 day. American Express is piggy-backing on LegalZoom document deliveries with
-an interesting piece of marketing – a USB key-like devices in the shape of a
+an interesting piece of marketing – a USB key-like device in the shape of a
 credit card.&lt;/p&gt;
 
 &lt;p&gt;&lt;img alt="American Express Fake USB Keyboard" src="/2015/05/26/reverse-engineering-american-express-usb-webkey/amex-usb-card.jpg" /&gt;&lt;/p&gt;
