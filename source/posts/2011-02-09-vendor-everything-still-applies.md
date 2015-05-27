@@ -127,7 +127,7 @@ install` run faster both for new team members and in your continuous integration
 environment. Deployment environments like [Heroku](http://heroku.com/) really
 benefit from this practice too.
 
-[^gemfile-lock]: By the way, for applications, please do [check your `Gemfile.lock` into version control](http://yehudakatz.com/2010/12/16/clarifying-the-roles-of-the-gemspec-and-gemfile/).
+[^gemfile-lock]: By the way, for applications, please do [check your `Gemfile.lock` into version control](http://yehudakatz.com/2010/12/16/clarifying-the-roles-of-the-gemspec-and-gemfile/). For libraries/gems, please do not check it in, and please add `Gemfile.lock` to your `.gitignore` file for the project.
 
 ## How Can I Remember All of This?
 
