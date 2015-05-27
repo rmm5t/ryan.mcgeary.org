@@ -5,12 +5,18 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta name="author" content="Ryan McGeary" />
-<meta name="description" content="Page 2 of 3Previous pageThis post is in response to the 10gen MongoDB Schema Design Contest. It was also extracted from talks that I’ve given on the subject.BusyConf currently handles 4 major piece..." />
+<meta name="description" content="Page 2 of 4Previous pageMALMÖ, SWEDEN — Øredev Developer Conference 2012 — Communicating Through Our Source Code. We hear a lot about how strong communication and collaboration are key to a success..." />
 <meta name="og:title" content="Ryan McGeary" />
-<meta name="og:description" content="Page 2 of 3Previous pageThis post is in response to the 10gen MongoDB Schema Design Contest. It was also extracted from talks that I’ve given on the subject.BusyConf currently handles 4 major piece..." />
+<meta name="og:description" content="Page 2 of 4Previous pageMALMÖ, SWEDEN — Øredev Developer Conference 2012 — Communicating Through Our Source Code. We hear a lot about how strong communication and collaboration are key to a success..." />
 <meta name="og:site_name" content="Ryan McGeary" />
+<meta name="og:image" content="http://ryan.mcgeary.org/2012/09/13/disable-chrome-print-dialog-use-osx-instead/chrome-print-dialog.png" />
+<meta name="twitter:image" content="http://ryan.mcgeary.org/2012/09/13/disable-chrome-print-dialog-use-osx-instead/chrome-print-dialog.png" />
+<meta name="og:image" content="http://ryan.mcgeary.org/2012/09/13/disable-chrome-print-dialog-use-osx-instead/chrome-print-shortcut-override.png" />
+
+<meta name="og:image" content="http://ryan.mcgeary.org/2012/09/13/disable-chrome-print-dialog-use-osx-instead/chrome-print-shortcuts.png" />
+
 <meta name="og:image" content="http://ryan.mcgeary.org/2012/06/05/mongodb-schema-design-at-busyconf/logical-model.png" />
-<meta name="twitter:image" content="http://ryan.mcgeary.org/2012/06/05/mongodb-schema-design-at-busyconf/logical-model.png" />
+
 <meta name="og:image" content="http://ryan.mcgeary.org/2012/06/05/mongodb-schema-design-at-busyconf/relational-model.png" />
 
 <meta name="og:image" content="http://ryan.mcgeary.org/2012/06/05/mongodb-schema-design-at-busyconf/mongodb-option1.png" />
@@ -81,7 +87,7 @@ résumé</a>, or
 <a href="/2014/02/19/busyconf-1-million-cups-st-pete/">Talk: The BusyConf Story</a>
 </li>
 <li>
-<a href="/2013/12/20/interview-with-eventtech-podcast/">Interview with #EventTech Podcast</a>
+<a href="/2014/02/07/co-hosting-ruby5/">Co-Hosting Ruby5 Episode 438</a>
 </li>
 </ul>
 <h2><a href="/blog/">Topics</a></h2>
@@ -151,10 +157,88 @@ All rights reserved.
 </section>
 <div class='content-wrapper'>
 <section id='content'>
-<div class='container'>  <p>Page 2 of 3</p>
+<div class='container'>  <p>Page 2 of 4</p>
 
     <p><a href="/">Previous page</a></p>
 
+  <article>
+    <h1>
+      <a href="/2012/11/09/async-collaboration-oredev/">Talk: Asynchronous Collaboration</a>
+      <small class="text-nowrap">Nov  9, 2012</small>
+    </h1>
+    <iframe src="http://player.vimeo.com/video/53061504" width="550" height="309" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen="true">(video)</iframe>
+
+<p>MALMÖ, SWEDEN — <a href="http://oredev.org/2012/">Øredev Developer Conference 2012</a> —
+Communicating Through Our Source Code. We hear a lot about how strong
+communication and collaboration are key to a successful project. We spend a
+lot of time focusing on stand-up meetings and pair programming, but there are
+potentially other very effective means of keeping the team on the same page
+that not only avoid daily interruptions but also provide long-term benefit.</p>
+
+<p>The goal of this talk is to help your team improve its own collaboration and
+productivity with just a bit of discipline and relatively low overhead.</p>
+
+<p><a href="http://vimeo.com/53061504">Watch the Video</a> [vimeo]</p>
+
+
+  </article>
+  <article>
+    <h1>
+      <a href="/2012/09/13/disable-chrome-print-dialog-use-osx-instead/">Disable Chrome's Print Dialog and Use the OS X System Dialog Instead</a>
+      <small class="text-nowrap">Sep 13, 2012</small>
+    </h1>
+    <p>I really dislike the custom print dialog that ships with Google Chrome
+nowadays (Chrome is currently at v21 at the time of writing). By itself, it’s
+not terrible, but I want my print dialog to look like every other darn print
+dialong on OS X, gosh dammit.</p>
+
+<p><img alt="Google Chrome's Print Dialog" title="Google Chrome's Print Dialog" src="/2012/09/13/disable-chrome-print-dialog-use-osx-instead/chrome-print-dialog.png" /></p>
+
+<p>When Google first introduced the new print dialog, Chrome also included a
+custom setting to disable it under <code>about:flags</code>, but in v20, Chrome removed
+the ability to disabled the print dialog.</p>
+
+<p>There are a couple workarounds on the internet like starting Chrome with an
+<code>--args --disable-print-preview</code>, but that’s not too feasible under normal
+conditions. Other solutions recommend using <kbd>⌘⌥P</kbd> or hold down Option
+(<kbd>⌥</kbd>) when accessing the File menu, but who wants to remember to use
+a different keyboard shortcut for just one application?</p>
+
+<p>Fortunately, OS X comes with a relatively simple way to override keyboard
+shortcuts in specific Applications. Go to System Preferences -&gt; Keyboard -&gt;
+Keyboard Shortcuts. Once there, select Application Shortcuts and add a new
+shortcut for Google Chrome.</p>
+
+<p><img alt="Override for Chrome's Print Shortcut" title="Override for Chrome's Print Shortcut" src="/2012/09/13/disable-chrome-print-dialog-use-osx-instead/chrome-print-shortcut-override.png" /></p>
+
+<p>Make sure the Menu Title reads <code>Print Using System Dialog...</code> exactly, and
+give it the standard print shortcut (<kbd>⌘P</kbd>).</p>
+
+<p><img alt="New Chrome Print Shortcuts" title="New Chrome Print Shortcuts" src="/2012/09/13/disable-chrome-print-dialog-use-osx-instead/chrome-print-shortcuts.png" /></p>
+
+<p>Enjoy! Happy Printing!</p>
+
+<p><strong>UPDATE:</strong> There’s another workaround that’s relatively painless and works
+well. Open up Terminal and override the setting at the command line:</p>
+
+<pre class="highlight shell"><code>defaults write com.google.Chrome DisablePrintPreview -boolean <span class="nb">true</span>
+</code></pre>
+
+<p>This works, but also completely disables the Chrome print dialog altogether,
+so there’s no way to use it with a different keyboard shortcut in case you
+want to test the default behavior that most others experience.</p>
+
+  </article>
+  <article>
+    <h1>
+      <a href="/2012/07/20/co-hosting-ruby5/">Co-Hosting Ruby5 Episode 290</a>
+      <small class="text-nowrap">Jul 20, 2012</small>
+    </h1>
+    <p>I was fortunate to have <a href="/2011/06/24/co-hosting-ruby5/">another</a> opportunity to co-host <a href="https://ruby5.codeschool.com/">Ruby5</a> with <a href="http://codesherpas.com/">David Bock</a> this week.</p>
+
+<p>Check out <a href="https://ruby5.codeschool.com/episodes/294-episode-290-june-22nd-2012">episode #290</a>.</p>
+
+  </article>
   <article>
     <h1>
       <a href="/2012/06/05/mongodb-schema-design-at-busyconf/">MongoDB Schema Design at BusyConf</a>
@@ -163,7 +247,7 @@ All rights reserved.
     <p>This post is in response to the
 <a href="http://blog.10gen.com/post/23237721457/blogging-contest-mongodb-schema-design">10gen MongoDB Schema Design Contest</a>. It
 was also extracted from
-<a href="http://ryan.mcgeary.org/talks/2010/12/14/busyconf-mongodc/">talks</a> that I’ve
+<a href="/2010/12/14/busyconf-mongodc/">talks</a> that I’ve
 given on the subject.</p>
 
 <h2 id="obligatory-plug">Obligatory Plug</h2>
@@ -476,91 +560,12 @@ changed.</p>
   </article>
   <article>
     <h1>
-      <a href="/2011/06/24/co-hosting-ruby5/">Co-Hosting Ruby5</a>
+      <a href="/2011/06/24/co-hosting-ruby5/">Co-Hosting Ruby5 Episode 186</a>
       <small class="text-nowrap">Jun 24, 2011</small>
     </h1>
-    <p>I had the opportunity to co-host <a href="http://ruby5.envylabs.com/">Ruby5</a> with <a href="http://codesherpas.com/">David Bock</a> this week.  It was a fun time.</p>
+    <p>I had the opportunity to co-host <a href="https://ruby5.codeschool.com/">Ruby5</a> with <a href="http://codesherpas.com/">David Bock</a> this week.  It was a fun time.</p>
 
 <p>Check out <a href="http://ruby5.envylabs.com/episodes/189-episode-186-june-24-2011">episode #186</a>.</p>
-
-  </article>
-  <article>
-    <h1>
-      <a href="/2011/04/22/keep-your-hostname-on-public-wifi-networks/">Keep Your Hostname on Public WiFi Networks</a>
-      <small class="text-nowrap">Apr 22, 2011</small>
-    </h1>
-    <p>Have you ever joined a public WiFi network only to have your hostname change to
-something seemingly random?  While hacking with
-<a href="http://twitter.com/wayneeseguin">Wayne Seguin</a> last night on a hotel network,
-he ran into this exact problem on OS X, and it reminded me of a workaround that
-I learned about a few years ago.</p>
-
-<p>Some networks have their DHCP server configured to assign hostnames for all
-machines that connect to it. OS X respects this and will reassign your hostname
-automatically. I suspect this is to help avoid name collisions on the network,
-but if you want to prevent OS X from doing this, there is a workaround.</p>
-
-<p>Open <code>/etc/hostconfig</code> and add the following line:</p>
-
-<pre class="highlight shell"><code><span class="nv">HOSTNAME</span><span class="o">=</span>&lt;your-preferred-hostname&gt;.local
-</code></pre>
-
-<p>Afterwards, OS X will no longer respect the DHCP command to reassign the
-hostname.  This is especially helpful if you have scripts that rely on your
-hostname being set to something specific.</p>
-
-  </article>
-  <article>
-    <h1>
-      <a href="/2011/04/21/coffeescript-reddirt/">Talk: Introduction to CoffeeScript at Red Dirt RubyConf</a>
-      <small class="text-nowrap">Apr 21, 2011</small>
-    </h1>
-    <p>OKLAHOMA CITY — <a href="http://reddirtrubyconf.com/videos/2011">Red Dirt RubyConf</a> — I discovered
-<a href="http://coffeescript.org/">CoffeeScript</a> during a recent project that <a href="http://thegarvin.com">Jim Garvin</a>
-and I were working on.  We knew the app was going to be heavy on the JavaScript,
-and that’s how we started – writing straight JavaScript.  Even though I
-have written JavaScript for years, this time, the JavaScript syntax itself got
-in the way.  CoffeeScript’s elegant syntax relieved the burden.</p>
-
-<p>I quickly fell so in love with CoffeeScript that I have since sworn off writing
-raw JavaScript directly ever again.  The goal of this talk is to convince the
-audience to try CoffeeScript in hopes that they too will find it as valuable as
-I did.</p>
-
-<p><a title="Download the Slides" href="http://files.mcgeary.org/presentations/coffeescript-redirt.pdf">Download the Slides</a> [PDF 29.0 MB]</p>
-
-<p>Were you there? Please <a href="http://spkr8.com/t/7289">rate my talk</a>.</p>
-
-
-  </article>
-  <article>
-    <h1>
-      <a href="/2011/04/02/one-man-lightning-rubynation/">Talk: One Man Lightning Talks</a>
-      <small class="text-nowrap">Apr  2, 2011</small>
-    </h1>
-    <!-- <embed src="http://blip.tv/play/AYK%2B808C" type="application/x-shockwave-flash" width="550" height="339" wmode="transparent" allowscriptaccess="always" allowfullscreen="true" ></embed> -->
-
-<p>RESTON, VA — <a href="http://www.rubynation.org//">RubyNation 2011</a> — To celebrate the
-NovaRUG’s 50th meeting, they opened the floor to lightning talks. As an added
-incentive, the highest voted lightning talk was to be given a speaking slot at
-RubyNation 2011. I guess bringing my friends and family paid off that day. In
-the spirit of that event, I gave back-to-back lightning talks on a wide range of
-topics, including:</p>
-
-<ul>
-  <li>Do Your Commit Messages Suck?</li>
-  <li>“Vendor Everything” Still Applies</li>
-  <li>CoffeeScript: Exposing the Good Parts of JavaScript with Better Syntax</li>
-  <li>How We Use MongoDB at BusyConf</li>
-  <li>HTML5 Application Caching</li>
-</ul>
-
-<p><a title="Download the Slides" href="http://files.mcgeary.org/presentations/one-man-lightning-rubynation.pdf">Download the Slides</a> [PDF 25 MB]</p>
-
-<p><a href="http://blip.tv/rubynation/one-man-lightning-talks-5224811">Watch the Video</a> [blip.tv]</p>
-
-<p>Were you there? Please <a href="http://spkr8.com/t/7045">rate my talk</a>.</p>
-
 
   </article>
 

@@ -86,7 +86,7 @@
   </url>
   <url>
     <loc>http://ryan.mcgeary.org/2011/06/24/co-hosting-ruby5/</loc>
-    <lastmod>2015-05-26T13:06:55-06:00</lastmod>
+    <lastmod>2015-05-26T21:09:05-06:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -122,7 +122,13 @@
   </url>
   <url>
     <loc>http://ryan.mcgeary.org/2012/06/05/mongodb-schema-design-at-busyconf/</loc>
-    <lastmod>2015-05-26T13:06:55-06:00</lastmod>
+    <lastmod>2015-05-26T20:57:24-06:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://ryan.mcgeary.org/2012/07/20/co-hosting-ruby5/</loc>
+    <lastmod>2015-05-26T20:59:22-06:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -135,6 +141,12 @@
   <url>
     <loc>http://ryan.mcgeary.org/2012/11/09/async-collaboration-oredev/</loc>
     <lastmod>2015-05-26T13:06:55-06:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://ryan.mcgeary.org/2013/07/26/co-hosting-rub5/</loc>
+    <lastmod>2015-05-26T21:07:11-06:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -153,6 +165,12 @@
   <url>
     <loc>http://ryan.mcgeary.org/2013/12/20/interview-with-eventtech-podcast/</loc>
     <lastmod>2015-05-26T17:07:15-06:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://ryan.mcgeary.org/2014/02/07/co-hosting-ruby5/</loc>
+    <lastmod>2015-05-26T21:09:59-06:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -176,7 +194,7 @@
   </url>
   <url>
     <loc>http://ryan.mcgeary.org/2015/05/22/rejuvenating-my-piece-of-the-interwebs/</loc>
-    <lastmod>2015-05-26T13:21:39-06:00</lastmod>
+    <lastmod>2015-05-26T20:57:29-06:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -290,6 +308,12 @@
   </url>
   <url>
     <loc>http://ryan.mcgeary.org/page/3/</loc>
+    <lastmod>2015-05-26T13:06:55-06:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://ryan.mcgeary.org/page/4/</loc>
     <lastmod>2015-05-26T13:06:55-06:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
