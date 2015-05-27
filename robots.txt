@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: http://ryan.mcgeary.org/sitemap.xml
