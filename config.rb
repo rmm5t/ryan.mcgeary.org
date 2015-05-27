@@ -74,9 +74,14 @@ helpers do
     "https://speakerd.s3.amazonaws.com/presentations/#{id}/slide_0.jpg"
   end
 
+  def share_url(resource)
+    old_url = Array(resource.data.alias).first
+    URI.join(data.site.url, old_url || resource.url)
+  end
+
   def twitter_share_params(resource)
     {
-      url: URI.join(data.site.url, resource.data.alias || resource.url),
+      url: share_url(resource),
       text: resource.data.title,
       via: data.site.twitter,
       size: "large",
@@ -121,7 +126,7 @@ helpers do
                 class: "g-plus",
                 data: {
                   action: "share", annotation: "bubble",
-                  href: URI.join(data.site.url, resource.data.alias || resource.url),
+                  href: share_url(resource),
                   height: 28,
                 }
   end
