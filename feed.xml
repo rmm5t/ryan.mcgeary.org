@@ -1091,7 +1091,7 @@ Today, that interview was published.&lt;/p&gt;
     <link rel="alternate" href="http://ryan.mcgeary.org/2011/02/09/vendor-everything-still-applies/"/>
     <id>http://ryan.mcgeary.org/2011/02/09/vendor-everything-still-applies/</id>
     <published>2011-02-08T17:00:00-07:00</published>
-    <updated>2015-05-26T13:06:55-06:00</updated>
+    <updated>2015-05-27T16:29:38-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -1253,7 +1253,7 @@ bundle package
 &lt;div class="footnotes"&gt;
   &lt;ol&gt;
     &lt;li id="fn:gemfile-lock"&gt;
-      &lt;p&gt;By the way, for applications, please do &lt;a href="http://yehudakatz.com/2010/12/16/clarifying-the-roles-of-the-gemspec-and-gemfile/"&gt;check your &lt;code&gt;Gemfile.lock&lt;/code&gt; into version control&lt;/a&gt;. &lt;a href="#fnref:gemfile-lock" class="reversefootnote"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;By the way, for applications, please do &lt;a href="http://yehudakatz.com/2010/12/16/clarifying-the-roles-of-the-gemspec-and-gemfile/"&gt;check your &lt;code&gt;Gemfile.lock&lt;/code&gt; into version control&lt;/a&gt;. For libraries/gems, please do not check it in, and please add &lt;code&gt;Gemfile.lock&lt;/code&gt; to your &lt;code&gt;.gitignore&lt;/code&gt; file for the project. &lt;a href="#fnref:gemfile-lock" class="reversefootnote"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
