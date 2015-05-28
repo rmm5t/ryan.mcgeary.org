@@ -30,5 +30,5 @@ BOULDER, CO &mdash; [Boulder Ruby][location] &mdash; I had the opportunity to pr
 * [Rollbar](https://rollbar.com/) / [Honeybadger](https://www.honeybadger.io/)
 * [Papertrail](https://papertrailapp.com/)
 * [StatusPage.io](https://www.statuspage.io/)
-* [Pingdom](https://www.pingdom.com/) / [StatusCake](https://www.statuscake.com/)
+* [Pingdom](https://www.pingdom.com/) / [StatusCake](https://www.statuscake.com/) / [Uptime Robot](http://uptimerobot.com/) / [Monitority](http://monitority.com/)
 * [DNSimple](https://dnsimple.com/r/fb212a64f8e1b6) / [DNS Made Easy](http://www.dnsmadeeasy.com/) / [Dyn](http://dyn.com/)
