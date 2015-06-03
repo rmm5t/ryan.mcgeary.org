@@ -1,0 +1,82 @@
+==================================================================
+https://keybase.io/rmm5t
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://ryan.mcgeary.org
+  * I am rmm5t (https://keybase.io/rmm5t) on keybase.
+  * I have a public key with fingerprint 79DA 34B8 A2E7 3C96 E0CC  5BB2 005A C77D 7CBF 3EAF
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.7.8"
+        },
+        "key": {
+            "fingerprint": "79da34b8a2e73c96e0cc5bb2005ac77d7cbf3eaf",
+            "host": "keybase.io",
+            "key_id": "005AC77D7CBF3EAF",
+            "uid": "9a210abb7f572c54bfa502c87503ac19",
+            "username": "rmm5t"
+        },
+        "merkle_root": {
+            "ctime": 1433349204,
+            "hash": "efecf3e18f64da6fefd6debcd05b484fc675861645547e986749d6e1fae886fae455bbd160c08ce3b2c2c39a914db727b77858d9c262bccb79f3b7c4d022416f",
+            "seqno": 238775
+        },
+        "service": {
+            "hostname": "ryan.mcgeary.org",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1433349240,
+    "expire_in": 157680000,
+    "prev": "05493f9fa25245f4f20d8ee6b1350497db0b931a53440c79a56cc42f1794774f",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owFdUntQFVUcvhd6oOEYvqiGCtcyH4D7OLtnFycNEZrM0gxqBBs85+zZy6rsXveu
+6NVwlGmcAF9TZGrKDMpIlkkYOeJjwMJLBCQ6gRoCKjaAldmQ4yiJ7TI6Y50/ds7O
+9/2+3/f9fmfriHBPmNeTUZ/3fs2MCm9jH/akm3Gr1jDYVINM4hqGLNOpYbs3A+VQ
+JpFZSoMYBWiCbsYapkoTlgRi73PimFxqBXTTcFhsAkyQmbw4l+4Wa7rho5bf0l0t
+BioqEgCWEU+hQBSJsoSIGPMsKyICoQoJ1gSKNEcy2wzY/+nKDGlm6arbhRWTkiGc
+DZNnpQopSakOtmIIUBDPsQhjqImQJyLAGhJZnshQZAVEOMUlBqh1P5KVkyPartkc
+ai1dRrMs0xxKTGzdxTkgCAJQeBY4dlAg26mgGiWOQ07WJKAiSaOaKqkUE5UVMZCB
+RiQoyhInAVEEkCqyBIGiSpTTEJVlyfk6AMYqJ7GElQkVME94IihI4YCKIQ8xhLIo
+qwrhJR4TgqGiCRgSoLI8DzjJHUyALjdMJpEXZAjFPPffytUJdX27M3sQLYiMhBzi
+o8gKJpiWzyn0W6ZtEnOZg2bbtj/RDW4H/S57JcUHs+4LZWHdUJ2tPbxWzqH+byiA
+jWPoKr9u0SzdZYhQklnnuH1orrsjESiCpmiIF3kgakDjWVWmVMKcILJAgSpmsSJw
+SBQAYAlUkCgRAniNgwqAEDwUVXB8Ip8jGdB9BrJXWJTJKwiLecTjDfM89miY+249
+w4c9+eAxb+8ceS/4y+chrf2TCF9D/Ig74T/QqJQbUU9f8IyqLa3rqN9b0qSXGwVf
+nItqHyhe/mrplisF88ecBse/a009gJ7fdWRuoCWzvuSdS1NTI7Lmnb50/feocflT
+Pnzl1s0+77XphYmxdmP5pp+fODFhsPluMGbVzOLDs7vHK5NW973cdWbL0Y2HpxWo
+C5QJ1+eUG1e9A9/3j4kP7bq18wI8dD2tefHaRP7IzNqBX1+4Eh5bEpN5b87GeZ6p
+bXf++ftSffeNe03W7U1f7t9R5o/+KE3W+1uPPoc6e8qq6fr13vnN245/Ez04dvmd
+jG7vgea60LqNDf7+2gYU4vDkqkGpAg/vaqte9OwMYefCpzyjI6dFZ49sPd+/Z9Lg
+otvZ45irpT38zvl1ky+bGfHl8ODFPG5Ek7WwbEOS0HN+w4KYpbsz0+tmvnaz8Tdf
+5OrIr36iER0VE/t3T1r3wdHy7qrkCZ/yqmj3tkzfmv1tb03wMz8fOpBvx2+u2t8Z
+Jz1TvHlt+8rwYbm5b7y+r6vtqtF4sqYormVspTJ5W+Hox//acbFoyWDXniNvhrWd
+2dvbEXr3bEFuWG8p2nIsv+y9YS8lv1jJHexMiuTmnEpr3bBnSdHJG6O2931clV42
+paI6YuK+K29PZC+fSx15qra6ssT8s/BYbcofoR/fqrmYLp890fl1WvL03fn2zYbD
+d8c3tfdcPtQhzzUGFl/7Fw==
+=s3ux
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/rmm5t
+
+==================================================================
