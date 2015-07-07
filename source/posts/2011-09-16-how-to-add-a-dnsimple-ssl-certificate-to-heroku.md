@@ -24,6 +24,17 @@ resulting wildcard certificate will actually come from
 
 ## 2. Build the Public Certificate Chain PEM file
 
+----
+
+_**UPDATE**: If you downloaded the certificate chain directly from Comodo, the
+steps below are necessary; however, now if you log back into DNSimple, they
+now perform this nonsense for you automatically.  Just download the
+pre-concatenated certificate bundle and private key directly from DNSimple and
+follow the instructions for adding or updating your cert (i.e. [Skip to step
+3](#add-the-ssl-endpoint-add-on-to-your-app)). **Thanks DNSimple!**_
+
+----
+
 Along with your SSL certificate, Comodo will send a zip file containing the Root
 CA Certificate and some Intermediate CA Certificates.  Before we can upload our
 certificate to Heroku, we need to concatenate these files together to form the
@@ -32,7 +43,7 @@ certificate chain.
 ```shell
 cat STAR_yourdomain_com.crt EssentialSSLCA_2.crt   \
     ComodoUTNSGCCA.crt UTNAddTrustSGCCA.crt        \
-    AddTrustExternalCARoot.crt > STAR_yourdomain_com-bundle.pem
+    AddTrustExternalCARoot.crt > STAR_yourdomain_com.pem
 ```
 
 Make sure you concatenate these files in the correct order, starting with your
@@ -59,7 +70,7 @@ Read more about the
 ## 4. Upload your SSL Cert and Private Key to Heroku
 
 ```shell
-heroku certs:add STAR_yourdomain_com-bundle.pem STAR_yourdomain_com-private.key
+heroku certs:add STAR_yourdomain_com.pem STAR_yourdomain_com.key
 ```
 
 That's it! You can find more information and instructions on what to do after
@@ -69,7 +80,7 @@ _If you instead need to update an existing cert, use the `cert:update`
 command. This prevents you from having to update your DNS settings:_
 
 ```shell
-heroku certs:update STAR_yourdomain_com-bundle.pem STAR_yourdomain_com-private.key
+heroku certs:update STAR_yourdomain_com-bundle.pem STAR_yourdomain_com.key
 ```
 
 [dnsimple]: https://dnsimple.com/r/fb212a64f8e1b6
