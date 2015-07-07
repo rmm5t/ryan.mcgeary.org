@@ -851,7 +851,7 @@ your schedule is available even after losing an internet connection.&lt;/p&gt;
     <link rel="alternate" href="http://ryan.mcgeary.org/2011/09/16/how-to-add-a-dnsimple-ssl-certificate-to-heroku/"/>
     <id>http://ryan.mcgeary.org/2011/09/16/how-to-add-a-dnsimple-ssl-certificate-to-heroku/</id>
     <published>2011-09-15T18:00:00-06:00</published>
-    <updated>2015-05-26T13:06:55-06:00</updated>
+    <updated>2015-07-07T15:19:53-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -875,6 +875,17 @@ resulting wildcard certificate will actually come from
 
 &lt;h2 id="build-the-public-certificate-chain-pem-file"&gt;2. Build the Public Certificate Chain PEM file&lt;/h2&gt;
 
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;UPDATE&lt;/strong&gt;: If you downloaded the certificate chain directly from Comodo, the
+steps below are necessary; however, now if you log back into DNSimple, they
+now perform this nonsense for you automatically.  Just download the
+pre-concatenated certificate bundle and private key directly from DNSimple and
+follow the instructions for adding or updating your cert (i.e. &lt;a href="#add-the-ssl-endpoint-add-on-to-your-app"&gt;Skip to step
+3&lt;/a&gt;). &lt;strong&gt;Thanks DNSimple!&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
 &lt;p&gt;Along with your SSL certificate, Comodo will send a zip file containing the Root
 CA Certificate and some Intermediate CA Certificates.  Before we can upload our
 certificate to Heroku, we need to concatenate these files together to form the
@@ -882,7 +893,7 @@ certificate chain.&lt;/p&gt;
 
 &lt;pre class="highlight shell"&gt;&lt;code&gt;cat STAR_yourdomain_com.crt EssentialSSLCA_2.crt   &lt;span class="se"&gt;\&lt;/span&gt;
     ComodoUTNSGCCA.crt UTNAddTrustSGCCA.crt        &lt;span class="se"&gt;\&lt;/span&gt;
-    AddTrustExternalCARoot.crt &amp;gt; STAR_yourdomain_com-bundle.pem
+    AddTrustExternalCARoot.crt &amp;gt; STAR_yourdomain_com.pem
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Make sure you concatenate these files in the correct order, starting with your
@@ -907,7 +918,7 @@ work for you, you should already have a passphrase-free cert.&lt;/em&gt;&lt;/p&g
 
 &lt;h2 id="upload-your-ssl-cert-and-private-key-to-heroku"&gt;4. Upload your SSL Cert and Private Key to Heroku&lt;/h2&gt;
 
-&lt;pre class="highlight shell"&gt;&lt;code&gt;heroku certs:add STAR_yourdomain_com-bundle.pem STAR_yourdomain_com-private.key
+&lt;pre class="highlight shell"&gt;&lt;code&gt;heroku certs:add STAR_yourdomain_com.pem STAR_yourdomain_com.key
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;That’s it! You can find more information and instructions on what to do after
@@ -916,7 +927,7 @@ work for you, you should already have a passphrase-free cert.&lt;/em&gt;&lt;/p&g
 &lt;p&gt;&lt;em&gt;If you instead need to update an existing cert, use the &lt;code&gt;cert:update&lt;/code&gt;
 command. This prevents you from having to update your DNS settings:&lt;/em&gt;&lt;/p&gt;
 
-&lt;pre class="highlight shell"&gt;&lt;code&gt;heroku certs:update STAR_yourdomain_com-bundle.pem STAR_yourdomain_com-private.key
+&lt;pre class="highlight shell"&gt;&lt;code&gt;heroku certs:update STAR_yourdomain_com-bundle.pem STAR_yourdomain_com.key
 &lt;/code&gt;&lt;/pre&gt;
 
 </content>
