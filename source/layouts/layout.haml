@@ -3,12 +3,13 @@
   %head
     %meta{ charset: "utf-8" }
     - title = current_page.data.title || yield_content(:title)
+    - title_default = [data.site.name, data.site.summary].join(": ")
     = meta_tag "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"
     = meta_tag "width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no", name: "viewport"
     = meta_tag author,                                  name: "author"
 
     = meta_tag description.truncate(200),               name: "description"
-    = meta_tag title || data.site.name,                 name: "og:title"
+    = meta_tag title || title_default,                  name: "og:title"
     = meta_tag description.truncate(200),               name: "og:description"
     = meta_tag data.site.name,                          name: "og:site_name"
     - body_images.each_with_index do |url, i|
@@ -27,7 +28,7 @@
       = meta_tag "website",                             name: "og:type"
       = meta_tag "summary",                             name: "twitter:card"
 
-    %title= [title, data.site.name].compact.join(" - ")
+    %title= title.present? ? [title, data.site.name].compact.join(" - ") : title_default
     = feed_tag :atom, data.site.feed_url, title: "#{data.site.name} Blog Posts"
     = favicon_tag "/favicon.ico", type: "image/x-icon"
     = stylesheet_link_tag "//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
