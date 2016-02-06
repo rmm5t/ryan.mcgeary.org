@@ -12,7 +12,7 @@ end
 desc "Ping relevant services after new content is published."
 task :ping do
   ping "http://feedburner.google.com/fb/a/pingSubmit?bloglink=http%3A%2F%2Ffeeds.feedburner.com%2Fryanmcgeary"
-  ping "http://rubycorner.com/ping/xmlrpc/fa66e0188d1914df45fdfe84036d1d4b068a61ec"
+  # ping "http://rubycorner.com/ping/xmlrpc/fa66e0188d1914df45fdfe84036d1d4b068a61ec" # defunct
   ping "http://www.google.com/webmasters/sitemaps/ping?sitemap=#{CGI.escape "http://ryan.mcgeary.org/sitemap.xml"}"
   puts "\nDon't forget to submit to http://www.rubyflow.com/ if appropriate too!"
 end
