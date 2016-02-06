@@ -5,11 +5,101 @@
   <id>http://ryan.mcgeary.org/</id>
   <link href="http://ryan.mcgeary.org/"/>
   <link href="http://ryan.mcgeary.org/feed.xml" rel="self"/>
-  <updated>2015-05-25T18:00:00-06:00</updated>
+  <updated>2016-02-04T17:00:00-07:00</updated>
   <author>
     <name>Ryan McGeary</name>
     <email>ryan@mcgeary.org</email>
   </author>
+  <entry>
+    <title>Proper Counter Cache Migrations in Rails</title>
+    <link rel="alternate" href="http://ryan.mcgeary.org/2016/02/05/proper-counter-cache-migrations-in-rails/"/>
+    <id>http://ryan.mcgeary.org/2016/02/05/proper-counter-cache-migrations-in-rails/</id>
+    <published>2016-02-04T17:00:00-07:00</published>
+    <updated>2016-02-05T21:16:04-07:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;This post is less about the
+&lt;a href="http://guides.rubyonrails.org/association_basics.html#counter-cache"&gt;basics of &lt;code&gt;counter_cache&lt;/code&gt; support in Rails&lt;/a&gt;
+and more about best practices for introducing a new counter cache to an
+existing project. More specifically, the goal is to detail the most efficient
+way way to create an ActiveRecord migration to support a new counter cache
+column.&lt;/p&gt;
+
+&lt;h2 id="the-problem"&gt;The Problem&lt;/h2&gt;
+
+&lt;p&gt;You see, the interweb is currently &lt;a title="Slow" href="http://railscasts.com/episodes/23-counter-cache-column"&gt;filled&lt;/a&gt; with some
+&lt;a href="http://blog.obiefernandez.com/content/2011/08/adding-a-counter-cache-to-existing-records.html"&gt;poor advice&lt;/a&gt;
+about
+&lt;a href="http://yerb.net/blog/2014/03/13/three-easy-steps-to-using-counter-caches-in-rails/"&gt;how to seed&lt;/a&gt;
+a counter cache column.&lt;/p&gt;
+
+&lt;p&gt;Now that you’ve clicked on those examples, please erase them from your
+memory. Iterating over the entire table, loading each record into ruby-space
+(without batching, mind you), and relying on either &lt;code&gt;update_counters&lt;/code&gt; or
+&lt;code&gt;reset_counters&lt;/code&gt; in your migration is a sure way for your next deployment to
+take minutes to finish. It doesn’t take millions of records to get hit with
+this pain either.&lt;/p&gt;
+
+&lt;h2 id="the-example"&gt;The Example&lt;/h2&gt;
+
+&lt;p&gt;Let’s assume that we have some stereotypical tables named &lt;code&gt;posts&lt;/code&gt; and
+&lt;code&gt;comments&lt;/code&gt;. Let’s also assume that we decided to add a &lt;code&gt;comments_count&lt;/code&gt;
+counter cache column to the &lt;code&gt;posts&lt;/code&gt; table.&lt;/p&gt;
+
+&lt;h2 id="the-migration"&gt;The Migration&lt;/h2&gt;
+
+&lt;p&gt;Given this example, your migration should look something like this:&lt;/p&gt;
+
+&lt;pre class="highlight ruby"&gt;&lt;code&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;AddCommentsCountToPosts&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="no"&gt;ActiveRecord&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Migration&lt;/span&gt;
+  &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;change&lt;/span&gt;
+    &lt;span class="n"&gt;change_table&lt;/span&gt; &lt;span class="ss"&gt;:posts&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+      &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;integer&lt;/span&gt; &lt;span class="ss"&gt;:comments_count&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;default: &lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
+    &lt;span class="k"&gt;end&lt;/span&gt;
+
+    &lt;span class="n"&gt;reversible&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;dir&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+      &lt;span class="n"&gt;dir&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;up&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="k"&gt;end&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+
+  &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;data&lt;/span&gt;
+    &lt;span class="n"&gt;execute&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;-&lt;/span&gt;&lt;span class="no"&gt;SQL&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;squish&lt;/span&gt;
+        &lt;span class="no"&gt;UPDATE&lt;/span&gt; &lt;span class="n"&gt;posts&lt;/span&gt;
+           &lt;span class="no"&gt;SET&lt;/span&gt; &lt;span class="n"&gt;comments_count&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="no"&gt;SELECT&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="sh"&gt;
+                                   FROM comments
+                                  WHERE comments.post_id = posts.id)
+&lt;/span&gt;&lt;span class="no"&gt;    SQL&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id="the-results"&gt;The Results&lt;/h2&gt;
+
+&lt;p&gt;With over to 25,000 posts and 100,000 comments, using SQL will take seconds
+instead of minutes.&lt;/p&gt;
+
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;-- execute("UPDATE posts SET comments_count = (SELECT count(1) FROM comments WHERE comments.post_id = posts.id)")
+   -&amp;gt; 1.3197s
+   -&amp;gt; 26900 rows
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Let’s compare that with how long it would have taken if we used a
+&lt;code&gt;Post.reset_counters&lt;/code&gt; approach:&lt;/p&gt;
+
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;-- Seeding posts.comments_count -- Better grab a coffee.
+   -&amp;gt; ...........................
+   -&amp;gt; 144.7302s
+   -&amp;gt; 26900 rows
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here is the
+&lt;a href="https://gist.github.com/rmm5t/5aa63288fc5ab858e718"&gt;actual code used to run these two examples&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id="the-moral"&gt;The Moral&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Sometimes SQL can be straightforward and fun.&lt;/em&gt;&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Reverse Engineering an American Express USB WebKey</title>
     <link rel="alternate" href="http://ryan.mcgeary.org/2015/05/26/reverse-engineering-american-express-usb-webkey/"/>

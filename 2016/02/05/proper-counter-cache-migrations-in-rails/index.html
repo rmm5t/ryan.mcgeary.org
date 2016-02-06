@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="author" content="Ryan McGeary" />
+<meta name="description" content="This post is less about the basics of counter_cache support in Rails and more about best practices for introducing a new counter cache to an existing project. More specifically, the goal is to deta..." />
+<meta name="og:title" content="Proper Counter Cache Migrations in Rails" />
+<meta name="og:description" content="This post is less about the basics of counter_cache support in Rails and more about best practices for introducing a new counter cache to an existing project. More specifically, the goal is to deta..." />
+<meta name="og:site_name" content="Ryan McGeary" />
+<meta name="og:image" content="http://ryan.mcgeary.org/images/ryan.mcgeary.jpg" />
+<meta name="twitter:image" content="http://ryan.mcgeary.org/images/ryan.mcgeary.jpg" />
+<meta name="twitter:site" content="@rmm5t" />
+<meta name="twitter:creator" content="@rmm5t" />
+<meta name="og:type" content="article" />
+<meta name="article:published_time" content="2016-02-04T17:00:00-07:00" />
+<meta name="article:tag" content="programming" />
+<meta name="keywords" content="programming" />
+<meta name="twitter:card" content="summary_large_image" />
+<title>Proper Counter Cache Migrations in Rails - Ryan McGeary</title>
+<link rel="alternate" type="application/atom+xml" title="Ryan McGeary Blog Posts" href="http://feeds.feedburner.com/ryanmcgeary" />
+<link type="image/x-icon" href="/favicon.ico" rel="icon" />
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/all.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv-printshiv.min.js" type="text/javascript"></script>
+<![endif]-->
+</head>
+<body class='x2016 x2016_02 x2016_02_05 x2016_02_05_proper-counter-cache-migrations-in-rails x2016_02_05_proper-counter-cache-migrations-in-rails_index'>
+<div id='background'></div>
+<div id='photo'><img src="/images/ryan.mcgeary.png" /></div>
+<header data-offset-top='15' data-spy='affix' id='masthead' role='banner'>
+<p class='sr-only'><a rel="home" href="/">Ryan McGeary</a></p>
+<div class='sm-controls'>
+<a class="btn" data-toggle="class" data-target="#sidebar, #background, #photo, #masthead .logo" data-class="expand" href="#"><i class='fa fa-bars fa-2x'></i>
+</a></div>
+<div class='logo'><a href="/">Ryan McGeary</a></div>
+</header>
+<section id='sidebar'>
+<div class='container'>
+<aside>
+<h2 id="about-me">About Me</h2>
+
+<p><a href="/">Ryan McGeary</a> is a software consultant, business starter,
+rubyist, web guru, CrossFit enthusiast, and amateur
+triathlete. Ryan owns <a href="http://mcgearygroup.com">McGeary Consulting
+Group</a> and is the founder of
+<a href="http://busyconf.com">BusyConf</a> and
+<a href="http://chargestack.com">ChargeStack</a>. He lives near Boulder,
+Colorado.</p>
+
+<p><a href="https://twitter.com/intent/follow?screen_name=rmm5t">Follow me</a>, <a href="https://www.linkedin.com/in/ryanmcgeary">view my
+résumé</a>,
+<a href="http://feeds.feedburner.com/ryanmcgeary">subscribe</a> or <a href="http://mcgearygroup.com/">contact
+me</a>.</p>
+
+
+</aside>
+<nav>
+<h2><a href="/blog/">Recent</a></h2>
+<ul class='list-unstyled'>
+<li>
+<a href="/2016/02/05/proper-counter-cache-migrations-in-rails/">Proper Counter Cache Migrations in Rails</a>
+</li>
+<li>
+<a href="/2015/05/26/reverse-engineering-american-express-usb-webkey/">Reverse Engineering an American Express USB WebKey</a>
+</li>
+<li>
+<a href="/2015/05/22/rejuvenating-my-piece-of-the-interwebs/">Rejuvenating My Piece of the Interwebs</a>
+</li>
+<li>
+<a href="/2015/05/12/cloud-services-you-should-be-using-to-build-your-startup/">Talk: Cloud Services You Should Be Using To Build Your Startup</a>
+</li>
+<li>
+<a href="/2014/08/20/html5-autocomplete-cheatsheet/">HTML5 Autocomplete Cheatsheet</a>
+</li>
+<li>
+<a href="/2014/02/19/busyconf-1-million-cups-st-pete/">Talk: The BusyConf Story</a>
+</li>
+</ul>
+<h2><a href="/blog/">Topics</a></h2>
+<ul class='list-unstyled'>
+<li>
+<a href="/screencasts/">screencasts</a>
+</li>
+<li>
+<a href="/talks/">talks</a>
+</li>
+<li>
+<a href="/programming/">programming</a>
+</li>
+<li>
+<a href="/business/">business</a>
+</li>
+<li>
+<a href="/tech/">tech</a>
+</li>
+<li>
+<a href="/interviews/">interviews</a>
+</li>
+<li>
+<a href="/podcasts/">podcasts</a>
+</li>
+<li>
+<a href="/personal/">personal</a>
+</li>
+</ul>
+<h2><a href="/blog/">Archive</a></h2>
+<ul class='list-unstyled'>
+<li>
+<a href="/2016/">2016</a>
+</li>
+<li>
+<a href="/2015/">2015</a>
+</li>
+<li>
+<a href="/2014/">2014</a>
+</li>
+<li>
+<a href="/2013/">2013</a>
+</li>
+<li>
+<a href="/2012/">2012</a>
+</li>
+<li>
+<a href="/2011/">2011</a>
+</li>
+<li>
+<a href="/2010/">2010</a>
+</li>
+<li>
+<a href="/2008/">2008</a>
+</li>
+</ul>
+</nav>
+<aside>
+<h2><a href="http://feeds.feedburner.com/ryanmcgeary">RSS</a></h2>
+</aside>
+<footer>
+Copyright &copy; 2016
+<br>
+Ryan McGeary
+<br>
+All rights reserved.
+</footer>
+</div>
+<footer></footer>
+</section>
+<div class='content-wrapper'>
+<section id='content'>
+<div class='container'><article>
+<h1>
+Proper Counter Cache Migrations in Rails
+<small class='text-nowrap'>Feb  5, 2016</small>
+</h1>
+
+
+<p>This post is less about the
+<a href="http://guides.rubyonrails.org/association_basics.html#counter-cache">basics of <code>counter_cache</code> support in Rails</a>
+and more about best practices for introducing a new counter cache to an
+existing project. More specifically, the goal is to detail the most efficient
+way way to create an ActiveRecord migration to support a new counter cache
+column.</p>
+
+<h2 id="the-problem">The Problem</h2>
+
+<p>You see, the interweb is currently <a title="Slow" href="http://railscasts.com/episodes/23-counter-cache-column">filled</a> with some
+<a href="http://blog.obiefernandez.com/content/2011/08/adding-a-counter-cache-to-existing-records.html">poor advice</a>
+about
+<a href="http://yerb.net/blog/2014/03/13/three-easy-steps-to-using-counter-caches-in-rails/">how to seed</a>
+a counter cache column.</p>
+
+<p>Now that you’ve clicked on those examples, please erase them from your
+memory. Iterating over the entire table, loading each record into ruby-space
+(without batching, mind you), and relying on either <code>update_counters</code> or
+<code>reset_counters</code> in your migration is a sure way for your next deployment to
+take minutes to finish. It doesn’t take millions of records to get hit with
+this pain either.</p>
+
+<h2 id="the-example">The Example</h2>
+
+<p>Let’s assume that we have some stereotypical tables named <code>posts</code> and
+<code>comments</code>. Let’s also assume that we decided to add a <code>comments_count</code>
+counter cache column to the <code>posts</code> table.</p>
+
+<h2 id="the-migration">The Migration</h2>
+
+<p>Given this example, your migration should look something like this:</p>
+
+<pre class="highlight ruby"><code><span class="k">class</span> <span class="nc">AddCommentsCountToPosts</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span>
+  <span class="k">def</span> <span class="nf">change</span>
+    <span class="n">change_table</span> <span class="ss">:posts</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
+      <span class="n">t</span><span class="p">.</span><span class="nf">integer</span> <span class="ss">:comments_count</span><span class="p">,</span> <span class="ss">default: </span><span class="mi">0</span>
+    <span class="k">end</span>
+
+    <span class="n">reversible</span> <span class="k">do</span> <span class="o">|</span><span class="n">dir</span><span class="o">|</span>
+      <span class="n">dir</span><span class="p">.</span><span class="nf">up</span> <span class="p">{</span> <span class="n">data</span> <span class="p">}</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">data</span>
+    <span class="n">execute</span> <span class="o">&lt;&lt;-</span><span class="no">SQL</span><span class="p">.</span><span class="nf">squish</span>
+        <span class="no">UPDATE</span> <span class="n">posts</span>
+           <span class="no">SET</span> <span class="n">comments_count</span> <span class="o">=</span> <span class="p">(</span><span class="no">SELECT</span> <span class="n">count</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="sh">
+                                   FROM comments
+                                  WHERE comments.post_id = posts.id)
+</span><span class="no">    SQL</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+
+<h2 id="the-results">The Results</h2>
+
+<p>With over to 25,000 posts and 100,000 comments, using SQL will take seconds
+instead of minutes.</p>
+
+<pre class="highlight plaintext"><code>-- execute("UPDATE posts SET comments_count = (SELECT count(1) FROM comments WHERE comments.post_id = posts.id)")
+   -&gt; 1.3197s
+   -&gt; 26900 rows
+</code></pre>
+
+<p>Let’s compare that with how long it would have taken if we used a
+<code>Post.reset_counters</code> approach:</p>
+
+<pre class="highlight plaintext"><code>-- Seeding posts.comments_count -- Better grab a coffee.
+   -&gt; ...........................
+   -&gt; 144.7302s
+   -&gt; 26900 rows
+</code></pre>
+
+<p>Here is the
+<a href="https://gist.github.com/rmm5t/5aa63288fc5ab858e718">actual code used to run these two examples</a>.</p>
+
+<h2 id="the-moral">The Moral</h2>
+
+<p><em>Sometimes SQL can be straightforward and fun.</em></p>
+
+
+<hr>
+<p>
+<em>
+Please
+<a href="https://twitter.com/intent/tweet?hashtags=programming&amp;size=large&amp;text=Proper+Counter+Cache+Migrations+in+Rails&amp;url=http%3A%2F%2Fryan.mcgeary.org%2F2016%2F02%2F05%2Fproper-counter-cache-migrations-in-rails%2F&amp;via=rmm5t">share</a>.
+Also
+<a href="https://twitter.com/intent/follow?screen_name=rmm5t">follow me</a>
+for more.
+</em>
+</p>
+<hr>
+<a class="twitter-share-button" data-url="http://ryan.mcgeary.org/2016/02/05/proper-counter-cache-migrations-in-rails/" data-text="Proper Counter Cache Migrations in Rails" data-via="rmm5t" data-size="large" data-hashtags="programming" href="https://twitter.com/share">Tweet</a>
+<a class="twitter-follow-button" data-show-count="true" data-size="large" href="https://twitter.com/rmm5t">Follow @rmm5t</a>
+<br>
+<div class="g-plus" data-action="share" data-annotation="bubble" data-href="http://ryan.mcgeary.org/2016/02/05/proper-counter-cache-migrations-in-rails/" data-height="28"></div>
+
+
+</article>
+</div>
+</section>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/javascripts/all.js" type="text/javascript"></script>
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-604149-3', 'auto');
+  ga('send', 'pageview');
+</script>
+<script src="https://apis.google.com/js/platform.js" type="text/javascript" async="true" defer="defer"></script>
+</body>
+</html>

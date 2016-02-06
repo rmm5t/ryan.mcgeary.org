@@ -5,9 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta name="author" content="Ryan McGeary" />
-<meta name="description" content="I received a strange piece of hardware in the mail the other day. American Express is piggy-backing on LegalZoom document deliveries with an interesting piece of marketing – a USB key-like device i..." />
+<meta name="description" content="This post is less about the basics of counter_cache support in Rails and more about best practices for introducing a new counter cache to an existing project. More specifically, the goal is to deta..." />
 <meta name="og:title" content="Ryan McGeary: Ruby, Rails, and JavaScript Expert Consultant" />
-<meta name="og:description" content="I received a strange piece of hardware in the mail the other day. American Express is piggy-backing on LegalZoom document deliveries with an interesting piece of marketing – a USB key-like device i..." />
+<meta name="og:description" content="This post is less about the basics of counter_cache support in Rails and more about best practices for introducing a new counter cache to an existing project. More specifically, the goal is to deta..." />
 <meta name="og:site_name" content="Ryan McGeary" />
 <meta name="og:image" content="http://ryan.mcgeary.org/2015/05/26/reverse-engineering-american-express-usb-webkey/amex-usb-card.jpg" />
 <meta name="twitter:image" content="http://ryan.mcgeary.org/2015/05/26/reverse-engineering-american-express-usb-webkey/amex-usb-card.jpg" />
@@ -75,6 +75,9 @@ me</a>.</p>
 <h2><a href="/blog/">Recent</a></h2>
 <ul class='list-unstyled'>
 <li>
+<a href="/2016/02/05/proper-counter-cache-migrations-in-rails/">Proper Counter Cache Migrations in Rails</a>
+</li>
+<li>
 <a href="/2015/05/26/reverse-engineering-american-express-usb-webkey/">Reverse Engineering an American Express USB WebKey</a>
 </li>
 <li>
@@ -88,9 +91,6 @@ me</a>.</p>
 </li>
 <li>
 <a href="/2014/02/19/busyconf-1-million-cups-st-pete/">Talk: The BusyConf Story</a>
-</li>
-<li>
-<a href="/2014/02/07/co-hosting-ruby5/">Co-Hosting Ruby5 Episode 438</a>
 </li>
 </ul>
 <h2><a href="/blog/">Topics</a></h2>
@@ -123,6 +123,9 @@ me</a>.</p>
 <h2><a href="/blog/">Archive</a></h2>
 <ul class='list-unstyled'>
 <li>
+<a href="/2016/">2016</a>
+</li>
+<li>
 <a href="/2015/">2015</a>
 </li>
 <li>
@@ -149,7 +152,7 @@ me</a>.</p>
 <h2><a href="http://feeds.feedburner.com/ryanmcgeary">RSS</a></h2>
 </aside>
 <footer>
-Copyright &copy; 2015
+Copyright &copy; 2016
 <br>
 Ryan McGeary
 <br>
@@ -162,6 +165,92 @@ All rights reserved.
 <section id='content'>
 <div class='container'>
 
+  <article>
+    <h1>
+      <a href="/2016/02/05/proper-counter-cache-migrations-in-rails/">Proper Counter Cache Migrations in Rails</a>
+      <small class="text-nowrap">Feb  5, 2016</small>
+    </h1>
+    <p>This post is less about the
+<a href="http://guides.rubyonrails.org/association_basics.html#counter-cache">basics of <code>counter_cache</code> support in Rails</a>
+and more about best practices for introducing a new counter cache to an
+existing project. More specifically, the goal is to detail the most efficient
+way way to create an ActiveRecord migration to support a new counter cache
+column.</p>
+
+<h2 id="the-problem">The Problem</h2>
+
+<p>You see, the interweb is currently <a title="Slow" href="http://railscasts.com/episodes/23-counter-cache-column">filled</a> with some
+<a href="http://blog.obiefernandez.com/content/2011/08/adding-a-counter-cache-to-existing-records.html">poor advice</a>
+about
+<a href="http://yerb.net/blog/2014/03/13/three-easy-steps-to-using-counter-caches-in-rails/">how to seed</a>
+a counter cache column.</p>
+
+<p>Now that you’ve clicked on those examples, please erase them from your
+memory. Iterating over the entire table, loading each record into ruby-space
+(without batching, mind you), and relying on either <code>update_counters</code> or
+<code>reset_counters</code> in your migration is a sure way for your next deployment to
+take minutes to finish. It doesn’t take millions of records to get hit with
+this pain either.</p>
+
+<h2 id="the-example">The Example</h2>
+
+<p>Let’s assume that we have some stereotypical tables named <code>posts</code> and
+<code>comments</code>. Let’s also assume that we decided to add a <code>comments_count</code>
+counter cache column to the <code>posts</code> table.</p>
+
+<h2 id="the-migration">The Migration</h2>
+
+<p>Given this example, your migration should look something like this:</p>
+
+<pre class="highlight ruby"><code><span class="k">class</span> <span class="nc">AddCommentsCountToPosts</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span>
+  <span class="k">def</span> <span class="nf">change</span>
+    <span class="n">change_table</span> <span class="ss">:posts</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
+      <span class="n">t</span><span class="p">.</span><span class="nf">integer</span> <span class="ss">:comments_count</span><span class="p">,</span> <span class="ss">default: </span><span class="mi">0</span>
+    <span class="k">end</span>
+
+    <span class="n">reversible</span> <span class="k">do</span> <span class="o">|</span><span class="n">dir</span><span class="o">|</span>
+      <span class="n">dir</span><span class="p">.</span><span class="nf">up</span> <span class="p">{</span> <span class="n">data</span> <span class="p">}</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">data</span>
+    <span class="n">execute</span> <span class="o">&lt;&lt;-</span><span class="no">SQL</span><span class="p">.</span><span class="nf">squish</span>
+        <span class="no">UPDATE</span> <span class="n">posts</span>
+           <span class="no">SET</span> <span class="n">comments_count</span> <span class="o">=</span> <span class="p">(</span><span class="no">SELECT</span> <span class="n">count</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="sh">
+                                   FROM comments
+                                  WHERE comments.post_id = posts.id)
+</span><span class="no">    SQL</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+
+<h2 id="the-results">The Results</h2>
+
+<p>With over to 25,000 posts and 100,000 comments, using SQL will take seconds
+instead of minutes.</p>
+
+<pre class="highlight plaintext"><code>-- execute("UPDATE posts SET comments_count = (SELECT count(1) FROM comments WHERE comments.post_id = posts.id)")
+   -&gt; 1.3197s
+   -&gt; 26900 rows
+</code></pre>
+
+<p>Let’s compare that with how long it would have taken if we used a
+<code>Post.reset_counters</code> approach:</p>
+
+<pre class="highlight plaintext"><code>-- Seeding posts.comments_count -- Better grab a coffee.
+   -&gt; ...........................
+   -&gt; 144.7302s
+   -&gt; 26900 rows
+</code></pre>
+
+<p>Here is the
+<a href="https://gist.github.com/rmm5t/5aa63288fc5ab858e718">actual code used to run these two examples</a>.</p>
+
+<h2 id="the-moral">The Moral</h2>
+
+<p><em>Sometimes SQL can be straightforward and fun.</em></p>
+
+  </article>
   <article>
     <h1>
       <a href="/2015/05/26/reverse-engineering-american-express-usb-webkey/">Reverse Engineering an American Express USB WebKey</a>
@@ -611,16 +700,6 @@ ENV[<span class="s2">"COMMIT_MESSAGE_SUFFIX"</span><span class="o">]</span> <spa
 
 <p><em>Disclaimer: I was asked to give this talk at the very last minute. I’m happy with the message, but I’m a little disappointed in the delivery. I wish I had more time to prep for my first TEDx presentation.</em></p>
 
-
-  </article>
-  <article>
-    <h1>
-      <a href="/2013/07/26/co-hosting-rub5/">Co-Hosting Ruby5 Episode 389</a>
-      <small class="text-nowrap">Jul 26, 2013</small>
-    </h1>
-    <p>It was time to co-host <a href="https://ruby5.codeschool.com/">Ruby5</a> again but this time with <a href="https://about.me/cmar">Chris Mar</a>.</p>
-
-<p>Check out <a href="https://ruby5.codeschool.com/episodes/425-episode-389-july-26th-2013">episode #389</a>.</p>
 
   </article>
 
