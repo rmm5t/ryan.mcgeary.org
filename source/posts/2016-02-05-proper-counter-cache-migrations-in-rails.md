@@ -1,7 +1,7 @@
 ---
 title: Proper Counter Cache Migrations in Rails
 tags: programming
-tweet_id:
+tweet_id: 696754693217894400
 ---
 
 This post is less about the
