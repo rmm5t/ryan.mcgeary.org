@@ -3,4 +3,5 @@
 /.sass-cache
 /.cache
 /vendor/ruby
+/log
 /tmp

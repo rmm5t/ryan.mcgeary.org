@@ -214,26 +214,11 @@ end
 # Page options, layouts, aliases and proxies
 ###
 
-# Per-page layout changes:
-#
-# With no layout
-# page "/path/to/file.html", layout: false
-#
-# With alternative layout
-# page "/path/to/file.html", layout: :otherlayout
-#
-# A path which all have the same layout
-# with_layout :admin do
-#   page "/admin/*"
-# end
-
-# Proxy pages (https://middlemanapp.com/advanced/dynamic_pages/)
-# proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
-#  which_fake_page: "Rendering a fake page with a local variable" }
-
 proxy "/blog.html", "/posts/tag.html", locals: { page_type: "all", tagname: "all" }
-page "/feed.xml", layout: false
-page "/sitemap.xml", layout: false, directory_index: false
+
+page "/*.xml", layout: false
+page "/*.json", layout: false
+page "/*.txt", layout: false
 
 ignore "/posts/article.tt"
 

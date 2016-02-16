@@ -50,23 +50,7 @@
 
     %section#sidebar
       .container
-        %aside
-          :markdown
-            ## About Me
-
-            [Ryan McGeary](/) is a software consultant, business starter,
-            rubyist, web guru, CrossFit enthusiast, and amateur
-            triathlete. Ryan owns [McGeary Consulting
-            Group](http://mcgearygroup.com) and is the founder of
-            [BusyConf](http://busyconf.com) and
-            [ChargeStack](http://chargestack.com). He lives near Boulder,
-            Colorado.
-
-            #{twitter_follow_link("Follow me")}, [view my
-            résumé](https://www.linkedin.com/in/ryanmcgeary),
-            [subscribe](#{data.site.feed_url}) or [contact
-            me](http://mcgearygroup.com/).
-
+        %aside= partial "layouts/about"
         %nav
           %h2= link_to "Recent", "/blog/"
           %ul.list-unstyled
