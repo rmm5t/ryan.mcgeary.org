@@ -13,6 +13,7 @@ priority: 0.7
 <% end %>
 
 <% page_articles.each_with_index do |article, i| %>
+  <% next unless article.published? %>
   <article>
     <h1>
       <%= link_to article.title, article %>
