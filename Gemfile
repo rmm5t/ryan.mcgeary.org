@@ -3,7 +3,6 @@ source "https://rubygems.org"
 gem "rake"
 gem "middleman"
 gem "middleman-blog"
-gem "middleman-blog-drafts"      # adds `middleman draft` and `middleman publish`
 gem "middleman-syntax"           # syntax highlighting with rouge
 gem "middleman-alias"            # for redirects from old published URLs
 gem "middleman-livereload"       # for development speed

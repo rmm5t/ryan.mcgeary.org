@@ -20,8 +20,20 @@ priority: 0.3
   <% end %>
 <% end %>
 
+<% published, drafts = page_articles.partition(&:published?) %>
+
+<% if drafts.present? %>
+  <hr>
+  <dl class="dl-horizontal small text-muted">
+    <% drafts.each_with_index do |article, i| %>
+      <dt class="small"><%= time_tag(article.date) %></dt><dd><%= link_to article.title, article, class: "small text-muted" %></dd>
+    <% end %>
+  </dl>
+  <hr>
+<% end %>
+
 <dl class="dl-horizontal">
-  <% page_articles.each_with_index do |article, i| %>
+  <% published.each_with_index do |article, i| %>
     <dt class="text-muted"><%= time_tag(article.date) %></dt><dd><%= link_to article.title, article %></dd>
   <% end %>
 </dl>

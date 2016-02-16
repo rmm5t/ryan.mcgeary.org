@@ -186,13 +186,10 @@ end
 activate :directory_indexes # must come after blog config
 activate :syntax # syntax highlighting
 activate :alias  # for redirecting from old published URLs
-activate :drafts
 
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
-
-  page "/drafts/*", layout: "post"
 end
 
 # Build-specific configuration
@@ -201,8 +198,6 @@ configure :build do
   activate :minify_javascript
   # activate :asset_hash # Enable cache buster
   # activate :relative_assets # Use relative URLs
-
-  ignore "/drafts/*"
 end
 
 set :markdown_engine, :kramdown

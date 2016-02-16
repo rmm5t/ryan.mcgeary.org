@@ -68,9 +68,6 @@ GEM
       addressable (~> 2.3.5)
       middleman-core (~> 3.2)
       tzinfo (>= 0.3.0)
-    middleman-blog-drafts (0.3.3)
-      middleman-blog (~> 3.5)
-      middleman-core (~> 3.2)
     middleman-core (3.4.1)
       activesupport (~> 4.1)
       bundler (~> 1.1)
@@ -157,7 +154,6 @@ DEPENDENCIES
   middleman
   middleman-alias
   middleman-blog
-  middleman-blog-drafts
   middleman-gh-pages
   middleman-google-analytics
   middleman-livereload

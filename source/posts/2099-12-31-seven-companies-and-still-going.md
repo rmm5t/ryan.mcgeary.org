@@ -1,5 +1,7 @@
 ---
 title: Seven Companies and Still Going
+tags: business
+published: false
 ---
 
 * FitFreak (KART Media)

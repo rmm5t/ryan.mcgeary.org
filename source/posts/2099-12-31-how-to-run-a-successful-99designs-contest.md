@@ -1,5 +1,7 @@
 ---
 title: How to Run a Successful 99designs Contest
+tags: business, marketing
+published: false
 ---
 
     TODO: Review personal voice recording
