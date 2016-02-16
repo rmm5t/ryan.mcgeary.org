@@ -1,11 +1,3 @@
-GIT
-  remote: git://github.com/rmm5t/middleman-gh-pages.git
-  revision: d8be1ea45f15ccb34305ecb23ebc061c9a54cada
-  branch: fix-for-clean-builds
-  specs:
-    middleman-gh-pages (0.0.3)
-      rake (> 0.9.3)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -88,6 +80,8 @@ GEM
       rack (>= 1.4.5, < 2.0)
       thor (>= 0.15.2, < 2.0)
       tilt (~> 1.4.1, < 2.0)
+    middleman-gh-pages (0.2.0)
+      rake (> 0.9.3)
     middleman-google-analytics (2.0.1)
       activesupport (~> 4.1)
       erubis
@@ -160,7 +154,7 @@ DEPENDENCIES
   middleman
   middleman-alias
   middleman-blog
-  middleman-gh-pages!
+  middleman-gh-pages
   middleman-google-analytics
   middleman-livereload
   middleman-syntax
