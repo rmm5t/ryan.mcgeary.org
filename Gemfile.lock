@@ -80,7 +80,7 @@ GEM
       rack (>= 1.4.5, < 2.0)
       thor (>= 0.15.2, < 2.0)
       tilt (~> 1.4.1, < 2.0)
-    middleman-gh-pages (0.2.0)
+    middleman-gh-pages (0.3.0)
       rake (> 0.9.3)
     middleman-google-analytics (2.0.1)
       activesupport (~> 4.1)
