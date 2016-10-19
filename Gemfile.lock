@@ -113,6 +113,7 @@ GEM
       tilt (~> 1.4.1)
     padrino-support (0.12.5)
       activesupport (>= 3.1)
+    puma (3.6.0)
     rack (1.6.4)
     rack-livereload (0.3.16)
       rack
@@ -159,7 +160,8 @@ DEPENDENCIES
   middleman-livereload
   middleman-syntax
   nokogiri
+  puma
   rake
 
 BUNDLED WITH
-   1.11.2
+   1.13.1

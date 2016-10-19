@@ -12,3 +12,5 @@ gem "middleman-google-analytics" # for all the measures
 # gem "levenshtein-ffi"            # for similar post algorithm
 gem "builder"                    # For feed.xml.builder
 gem "nokogiri"                   # For article summaries
+
+gem "puma", require: false # for puma-dev
