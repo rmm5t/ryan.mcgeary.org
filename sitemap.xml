@@ -7,6 +7,72 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>http://ryan.mcgeary.org/2013/12/19/continuous-integration-deployment-middleman-codeship-github-pages/</loc>
+    <lastmod>2015-05-26T13:06:55-06:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://ryan.mcgeary.org/2012/02/02/html5-application-caching/</loc>
+    <lastmod>2015-05-26T13:06:55-06:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://ryan.mcgeary.org/2011/01/04/interview-with-life-of-the-freelancer/</loc>
+    <lastmod>2015-05-26T21:12:31-06:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://ryan.mcgeary.org/2012/02/16/just-in-time-inventory-with-spree/</loc>
+    <lastmod>2015-05-26T13:06:55-06:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://ryan.mcgeary.org/2011/04/02/one-man-lightning-rubynation/</loc>
+    <lastmod>2015-05-26T13:06:55-06:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://ryan.mcgeary.org/2012/09/13/disable-chrome-print-dialog-use-osx-instead/</loc>
+    <lastmod>2015-05-26T13:06:55-06:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://ryan.mcgeary.org/2011/04/22/keep-your-hostname-on-public-wifi-networks/</loc>
+    <lastmod>2015-05-26T13:06:55-06:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://ryan.mcgeary.org/2010/11/01/coffeescript-757rb/</loc>
+    <lastmod>2015-05-26T13:06:55-06:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://ryan.mcgeary.org/2014/02/07/co-hosting-ruby5/</loc>
+    <lastmod>2015-05-26T21:09:59-06:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://ryan.mcgeary.org/2011/02/09/vendor-everything-still-applies/</loc>
+    <lastmod>2015-05-27T16:29:38-06:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://ryan.mcgeary.org/2012/07/20/co-hosting-ruby5/</loc>
+    <lastmod>2015-05-26T20:59:22-06:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://ryan.mcgeary.org/2008/01/02/remember-the-milk-conventions/</loc>
     <lastmod>2016-02-15T21:46:48-07:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -19,13 +85,13 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://ryan.mcgeary.org/2010/11/01/coffeescript-757rb/</loc>
-    <lastmod>2015-05-26T13:06:55-06:00</lastmod>
+    <loc>http://ryan.mcgeary.org/2013/12/20/interview-with-eventtech-podcast/</loc>
+    <lastmod>2015-05-26T17:07:15-06:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://ryan.mcgeary.org/2010/12/09/coffeescript-dcrug/</loc>
+    <loc>http://ryan.mcgeary.org/2014/08/20/html5-autocomplete-cheatsheet/</loc>
     <lastmod>2015-05-26T13:06:55-06:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -37,97 +103,31 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://ryan.mcgeary.org/2011/01/03/working-with-os-x-and-emacs/</loc>
-    <lastmod>2015-05-26T13:06:55-06:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://ryan.mcgeary.org/2011/01/04/interview-with-life-of-the-freelancer/</loc>
-    <lastmod>2015-05-26T21:12:31-06:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://ryan.mcgeary.org/2011/02/09/vendor-everything-still-applies/</loc>
-    <lastmod>2015-05-27T16:29:38-06:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://ryan.mcgeary.org/2011/02/24/interview-with-ibm-developer-works/</loc>
-    <lastmod>2015-05-26T13:06:55-06:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://ryan.mcgeary.org/2011/04/02/one-man-lightning-rubynation/</loc>
-    <lastmod>2015-05-26T13:06:55-06:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://ryan.mcgeary.org/2011/04/21/coffeescript-reddirt/</loc>
-    <lastmod>2015-05-26T13:06:55-06:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://ryan.mcgeary.org/2011/04/22/keep-your-hostname-on-public-wifi-networks/</loc>
-    <lastmod>2015-05-26T13:06:55-06:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://ryan.mcgeary.org/2011/06/24/co-hosting-ruby5/</loc>
-    <lastmod>2015-05-26T21:09:05-06:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://ryan.mcgeary.org/2011/09/02/do-your-commit-messages-suck-rockymtnruby/</loc>
-    <lastmod>2015-09-30T22:24:01-06:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>http://ryan.mcgeary.org/2011/09/16/how-to-add-a-dnsimple-ssl-certificate-to-heroku/</loc>
     <lastmod>2015-07-07T15:19:53-06:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://ryan.mcgeary.org/2012/02/02/html5-application-caching/</loc>
+    <loc>http://ryan.mcgeary.org/2013/07/26/co-hosting-rub5/</loc>
+    <lastmod>2015-05-26T21:07:11-06:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://ryan.mcgeary.org/2011/01/03/working-with-os-x-and-emacs/</loc>
     <lastmod>2015-05-26T13:06:55-06:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://ryan.mcgeary.org/2012/02/16/just-in-time-inventory-with-spree/</loc>
-    <lastmod>2015-05-26T13:06:55-06:00</lastmod>
+    <loc>http://ryan.mcgeary.org/2015/05/26/reverse-engineering-american-express-usb-webkey/</loc>
+    <lastmod>2016-02-15T21:46:17-07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://ryan.mcgeary.org/2012/05/07/reserving-subdomains-in-your-multitenant-application/</loc>
-    <lastmod>2015-05-26T13:06:55-06:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://ryan.mcgeary.org/2012/06/05/mongodb-schema-design-at-busyconf/</loc>
-    <lastmod>2015-05-26T20:57:24-06:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://ryan.mcgeary.org/2012/07/20/co-hosting-ruby5/</loc>
-    <lastmod>2015-05-26T20:59:22-06:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://ryan.mcgeary.org/2012/09/13/disable-chrome-print-dialog-use-osx-instead/</loc>
+    <loc>http://ryan.mcgeary.org/2014/02/19/busyconf-1-million-cups-st-pete/</loc>
     <lastmod>2015-05-26T13:06:55-06:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -139,43 +139,19 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://ryan.mcgeary.org/2013/07/26/co-hosting-rub5/</loc>
-    <lastmod>2015-05-26T21:07:11-06:00</lastmod>
+    <loc>http://ryan.mcgeary.org/2011/09/02/do-your-commit-messages-suck-rockymtnruby/</loc>
+    <lastmod>2015-09-30T22:24:01-06:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://ryan.mcgeary.org/2013/12/05/what-makes-someone-successful-tedx/</loc>
-    <lastmod>2015-05-26T13:06:55-06:00</lastmod>
+    <loc>http://ryan.mcgeary.org/2016/02/05/proper-counter-cache-migrations-in-rails/</loc>
+    <lastmod>2016-02-08T11:43:39-07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://ryan.mcgeary.org/2013/12/19/continuous-integration-deployment-middleman-codeship-github-pages/</loc>
-    <lastmod>2015-05-26T13:06:55-06:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://ryan.mcgeary.org/2013/12/20/interview-with-eventtech-podcast/</loc>
-    <lastmod>2015-05-26T17:07:15-06:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://ryan.mcgeary.org/2014/02/07/co-hosting-ruby5/</loc>
-    <lastmod>2015-05-26T21:09:59-06:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://ryan.mcgeary.org/2014/02/19/busyconf-1-million-cups-st-pete/</loc>
-    <lastmod>2015-05-26T13:06:55-06:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://ryan.mcgeary.org/2014/08/20/html5-autocomplete-cheatsheet/</loc>
+    <loc>http://ryan.mcgeary.org/2011/02/24/interview-with-ibm-developer-works/</loc>
     <lastmod>2015-05-26T13:06:55-06:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -193,14 +169,38 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://ryan.mcgeary.org/2015/05/26/reverse-engineering-american-express-usb-webkey/</loc>
-    <lastmod>2016-02-15T21:46:17-07:00</lastmod>
+    <loc>http://ryan.mcgeary.org/2011/06/24/co-hosting-ruby5/</loc>
+    <lastmod>2015-05-26T21:09:05-06:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://ryan.mcgeary.org/2016/02/05/proper-counter-cache-migrations-in-rails/</loc>
-    <lastmod>2016-02-08T11:43:39-07:00</lastmod>
+    <loc>http://ryan.mcgeary.org/2012/06/05/mongodb-schema-design-at-busyconf/</loc>
+    <lastmod>2015-05-26T20:57:24-06:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://ryan.mcgeary.org/2013/12/05/what-makes-someone-successful-tedx/</loc>
+    <lastmod>2015-05-26T13:06:55-06:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://ryan.mcgeary.org/2012/05/07/reserving-subdomains-in-your-multitenant-application/</loc>
+    <lastmod>2015-05-26T13:06:55-06:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://ryan.mcgeary.org/2011/04/21/coffeescript-reddirt/</loc>
+    <lastmod>2015-05-26T13:06:55-06:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://ryan.mcgeary.org/2010/12/09/coffeescript-dcrug/</loc>
+    <lastmod>2015-05-26T13:06:55-06:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -211,7 +211,7 @@
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>http://ryan.mcgeary.org/screencasts/</loc>
+    <loc>http://ryan.mcgeary.org/programming/</loc>
     <lastmod>2016-02-15T17:36:12-07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
@@ -223,7 +223,13 @@
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>http://ryan.mcgeary.org/programming/</loc>
+    <loc>http://ryan.mcgeary.org/interviews/</loc>
+    <lastmod>2016-02-15T17:36:12-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>http://ryan.mcgeary.org/podcasts/</loc>
     <lastmod>2016-02-15T17:36:12-07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
@@ -241,13 +247,7 @@
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>http://ryan.mcgeary.org/interviews/</loc>
-    <lastmod>2016-02-15T17:36:12-07:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>http://ryan.mcgeary.org/podcasts/</loc>
+    <loc>http://ryan.mcgeary.org/screencasts/</loc>
     <lastmod>2016-02-15T17:36:12-07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
