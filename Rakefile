@@ -6,7 +6,7 @@ desc "Opens the development preview in your default browser"
 task :open do
   sh "mkdir -p tmp && touch tmp/restart.txt"
   base = File.open(".powder").read.strip
-  sh "open http://#{base}.dev/"
+  sh "open http://#{base}.test/"
 end
 
 desc "Ping relevant services after new content is published."
