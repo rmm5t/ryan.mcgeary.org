@@ -42,11 +42,11 @@
 </head>
 <body class='page page_2 page_2_index'>
 <div id='background'></div>
-<div id='photo'><img src="/images/ryan.mcgeary.png" /></div>
+<div id='photo'><img src="/images/ryan.mcgeary.png" alt="Ryan.mcgeary" /></div>
 <header data-offset-top='15' data-spy='affix' id='masthead' role='banner'>
-<p class='sr-only'><a rel="home" href="/">Ryan McGeary</a></p>
+<p class='sr-only'><a href="/" rel="home">Ryan McGeary</a></p>
 <div class='sm-controls'>
-<a class="btn" data-toggle="class" data-target="#sidebar, #background, #photo, #masthead .logo" data-class="expand" href="#"><i class='fa fa-bars fa-2x'></i>
+<a href="#" class="btn" data-toggle="class" data-target="#sidebar, #background, #photo, #masthead .logo" data-class="expand"><i class='fa fa-bars fa-2x'></i>
 </a></div>
 <div class='logo'><a href="/">Ryan McGeary</a></div>
 </header>
@@ -392,7 +392,7 @@ access patterns along with fairly decent long-term maintenance benefits.</p>
 <div class="footnotes">
   <ol>
     <li id="fn:embed">
-      <p>Later, we decided to embed Speakers under Activities to improve our patterns of access, but ironically, we plan to switch Speakers back out to their own collection again to provide cleaner normalization. <a href="#fnref:embed" class="reversefootnote">&#8617;</a></p>
+      <p>Later, we decided to embed Speakers under Activities to improve our patterns of access, but ironically, we plan to switch Speakers back out to their own collection again to provide cleaner normalization. <a href="#fnref:embed" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -488,7 +488,7 @@ your schedule is available even after losing an internet connection.</p>
 have a DNSimple account, perfect, you already know how useful it is.  If not,
 <a href="https://dnsimple.com/r/fb212a64f8e1b6">go sign up now</a>, and then come back.</p>
 
-<h2 id="buy-an-ssl-cert-from-dnsimple">1. Buy an SSL Cert from DNSimple</h2>
+<h2 id="1-buy-an-ssl-cert-from-dnsimple">1. Buy an SSL Cert from DNSimple</h2>
 
 <p>The first thing to do is to buy an SSL cert from <a href="https://dnsimple.com/r/fb212a64f8e1b6">DNSimple</a> (I
 usually only buy wildcard certs nowadays). Go to the manage interface for the
@@ -502,7 +502,7 @@ key from the DNSimple servers immediately after you save it to a secure place.</
 resulting wildcard certificate will actually come from
 <a href="http://www.comodo.com/">Comodo</a>).</p>
 
-<h2 id="build-the-public-certificate-chain-pem-file">2. Build the Public Certificate Chain PEM file</h2>
+<h2 id="2-build-the-public-certificate-chain-pem-file">2. Build the Public Certificate Chain PEM file</h2>
 
 <hr />
 
@@ -537,7 +537,7 @@ DNSimple (I think those come from RapidSSL, which might deliver root certs).</p>
 have a passphrase assigned to the certficate.  If you let DNSimple do all the
 work for you, you should already have a passphrase-free cert.</em></p>
 
-<h2 id="add-the-ssl-endpoint-add-on-to-your-app">3. Add the SSL Endpoint Add-on to Your App</h2>
+<h2 id="3-add-the-ssl-endpoint-add-on-to-your-app">3. Add the SSL Endpoint Add-on to Your App</h2>
 
 <pre class="highlight shell"><code>heroku addons:add ssl:endpoint
 </code></pre>
@@ -545,7 +545,7 @@ work for you, you should already have a passphrase-free cert.</em></p>
 <p>Read more about the
 <a href="https://devcenter.heroku.com/articles/ssl-endpoint#add_the_ssl_endpoint_addon_to_your_app">SSL Endpoint Add-on</a>.</p>
 
-<h2 id="upload-your-ssl-cert-and-private-key-to-heroku">4. Upload your SSL Cert and Private Key to Heroku</h2>
+<h2 id="4-upload-your-ssl-cert-and-private-key-to-heroku">4. Upload your SSL Cert and Private Key to Heroku</h2>
 
 <pre class="highlight shell"><code>heroku certs:add STAR_yourdomain_com.pem STAR_yourdomain_com.key
 </code></pre>
@@ -582,7 +582,7 @@ changed.</p>
 
 <p><a href="https://www.youtube.com/watch?v=8YjSty6bfog">Watch the Talk</a></p>
 
-<p><a title="Download the Slides" href="http://files.mcgeary.org/presentations/commit-messages-rockymtnruby.pdf">Download the Slides</a> [PDF 7.8 MB]</p>
+<p><a href="http://files.mcgeary.org/presentations/commit-messages-rockymtnruby.pdf" title="Download the Slides">Download the Slides</a> [PDF 7.8 MB]</p>
 
 <p>Were you there? Please <a href="http://spkr8.com/t/8263">rate my talk</a>.</p>
 

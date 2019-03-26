@@ -31,11 +31,11 @@
 </head>
 <body class='x2011 x2011_09 x2011_09_16 x2011_09_16_how-to-add-a-dnsimple-ssl-certificate-to-heroku x2011_09_16_how-to-add-a-dnsimple-ssl-certificate-to-heroku_index'>
 <div id='background'></div>
-<div id='photo'><img src="/images/ryan.mcgeary.png" /></div>
+<div id='photo'><img src="/images/ryan.mcgeary.png" alt="Ryan.mcgeary" /></div>
 <header data-offset-top='15' data-spy='affix' id='masthead' role='banner'>
-<p class='sr-only'><a rel="home" href="/">Ryan McGeary</a></p>
+<p class='sr-only'><a href="/" rel="home">Ryan McGeary</a></p>
 <div class='sm-controls'>
-<a class="btn" data-toggle="class" data-target="#sidebar, #background, #photo, #masthead .logo" data-class="expand" href="#"><i class='fa fa-bars fa-2x'></i>
+<a href="#" class="btn" data-toggle="class" data-target="#sidebar, #background, #photo, #masthead .logo" data-class="expand"><i class='fa fa-bars fa-2x'></i>
 </a></div>
 <div class='logo'><a href="/">Ryan McGeary</a></div>
 </header>
@@ -162,7 +162,7 @@ How To Add a DNSimple SSL Certificate to Heroku
 have a DNSimple account, perfect, you already know how useful it is.  If not,
 <a href="https://dnsimple.com/r/fb212a64f8e1b6">go sign up now</a>, and then come back.</p>
 
-<h2 id="buy-an-ssl-cert-from-dnsimple">1. Buy an SSL Cert from DNSimple</h2>
+<h2 id="1-buy-an-ssl-cert-from-dnsimple">1. Buy an SSL Cert from DNSimple</h2>
 
 <p>The first thing to do is to buy an SSL cert from <a href="https://dnsimple.com/r/fb212a64f8e1b6">DNSimple</a> (I
 usually only buy wildcard certs nowadays). Go to the manage interface for the
@@ -176,7 +176,7 @@ key from the DNSimple servers immediately after you save it to a secure place.</
 resulting wildcard certificate will actually come from
 <a href="http://www.comodo.com/">Comodo</a>).</p>
 
-<h2 id="build-the-public-certificate-chain-pem-file">2. Build the Public Certificate Chain PEM file</h2>
+<h2 id="2-build-the-public-certificate-chain-pem-file">2. Build the Public Certificate Chain PEM file</h2>
 
 <hr />
 
@@ -211,7 +211,7 @@ DNSimple (I think those come from RapidSSL, which might deliver root certs).</p>
 have a passphrase assigned to the certficate.  If you let DNSimple do all the
 work for you, you should already have a passphrase-free cert.</em></p>
 
-<h2 id="add-the-ssl-endpoint-add-on-to-your-app">3. Add the SSL Endpoint Add-on to Your App</h2>
+<h2 id="3-add-the-ssl-endpoint-add-on-to-your-app">3. Add the SSL Endpoint Add-on to Your App</h2>
 
 <pre class="highlight shell"><code>heroku addons:add ssl:endpoint
 </code></pre>
@@ -219,7 +219,7 @@ work for you, you should already have a passphrase-free cert.</em></p>
 <p>Read more about the
 <a href="https://devcenter.heroku.com/articles/ssl-endpoint#add_the_ssl_endpoint_addon_to_your_app">SSL Endpoint Add-on</a>.</p>
 
-<h2 id="upload-your-ssl-cert-and-private-key-to-heroku">4. Upload your SSL Cert and Private Key to Heroku</h2>
+<h2 id="4-upload-your-ssl-cert-and-private-key-to-heroku">4. Upload your SSL Cert and Private Key to Heroku</h2>
 
 <pre class="highlight shell"><code>heroku certs:add STAR_yourdomain_com.pem STAR_yourdomain_com.key
 </code></pre>
@@ -246,8 +246,8 @@ for more.
 </em>
 </p>
 <hr>
-<a class="twitter-share-button" data-url="http://ryan.mcgeary.org/2011/09/16/how-to-add-a-dnsimple-ssl-certificate-to-heroku/" data-text="How To Add a DNSimple SSL Certificate to Heroku" data-via="rmm5t" data-size="large" data-hashtags="tech" href="https://twitter.com/share">Tweet</a>
-<a class="twitter-follow-button" data-show-count="true" data-size="large" href="https://twitter.com/rmm5t">Follow @rmm5t</a>
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://ryan.mcgeary.org/2011/09/16/how-to-add-a-dnsimple-ssl-certificate-to-heroku/" data-text="How To Add a DNSimple SSL Certificate to Heroku" data-via="rmm5t" data-size="large" data-hashtags="tech">Tweet</a>
+<a href="https://twitter.com/rmm5t" class="twitter-follow-button" data-show-count="true" data-size="large">Follow @rmm5t</a>
 <br>
 <div class="g-plus" data-action="share" data-annotation="bubble" data-href="http://ryan.mcgeary.org/2011/09/16/how-to-add-a-dnsimple-ssl-certificate-to-heroku/" data-height="28"></div>
 

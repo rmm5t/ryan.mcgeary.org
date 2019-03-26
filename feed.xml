@@ -28,7 +28,7 @@ column.&lt;/p&gt;
 
 &lt;h2 id="the-problem"&gt;The Problem&lt;/h2&gt;
 
-&lt;p&gt;You see, the interweb is currently &lt;a title="Slow" href="http://railscasts.com/episodes/23-counter-cache-column"&gt;filled&lt;/a&gt; with some
+&lt;p&gt;You see, the interweb is currently &lt;a href="http://railscasts.com/episodes/23-counter-cache-column" title="Slow"&gt;filled&lt;/a&gt; with some
 &lt;a href="http://blog.obiefernandez.com/content/2011/08/adding-a-counter-cache-to-existing-records.html"&gt;poor advice&lt;/a&gt;
 about
 &lt;a href="http://yerb.net/blog/2014/03/13/three-easy-steps-to-using-counter-caches-in-rails/"&gt;how to seed&lt;/a&gt;
@@ -152,12 +152,12 @@ similar way as the &lt;a href="https://www.pjrc.com/teensy/"&gt;Teensy USB Micro
 that Samy used.&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;img src="/2015/05/26/reverse-engineering-american-express-usb-webkey/amex-usb-key.jpg" /&gt;
+&lt;img src="/2015/05/26/reverse-engineering-american-express-usb-webkey/amex-usb-key.jpg" alt="Amex usb key" /&gt;
 &lt;figcaption&gt;"AmEx USB Stick" snapped from it's marketing enclosure.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;figure&gt;
-&lt;img src="/2015/05/26/reverse-engineering-american-express-usb-webkey/teensy.jpg" /&gt;
+&lt;img src="/2015/05/26/reverse-engineering-american-express-usb-webkey/teensy.jpg" alt="Teensy" /&gt;
 &lt;figcaption&gt;Teensy 3.1&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -215,7 +215,7 @@ looked promising.&lt;/p&gt;
 &lt;p&gt;I slowly pried the chip from it’s plastic enclosure. It was attached with some glue.&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;img src="/2015/05/26/reverse-engineering-american-express-usb-webkey/amex-usb-chip.jpg" /&gt;
+&lt;img src="/2015/05/26/reverse-engineering-american-express-usb-webkey/amex-usb-chip.jpg" alt="Amex usb chip" /&gt;
 &lt;figcaption&gt;"AmEx USB Chip" torn from it's plastic enclosure.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -241,7 +241,7 @@ claimed to perform a similar task.&lt;/p&gt;
 &lt;p&gt;It depends on the &lt;a href="http://www.amazon.com/s/ref=as_li_ss_tl?_encoding=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;field-keywords=CH341A&amp;amp;linkCode=ur2&amp;amp;rh=i%3Aaps%2Ck%3ACH341A&amp;amp;tag=rmm5t-20&amp;amp;url=search-alias%3Daps&amp;amp;linkId=FO43SQPQTVQ5OK43"&gt;WinChipHead CH341A&lt;/a&gt;.&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;img src="/2015/05/26/reverse-engineering-american-express-usb-webkey/winchiphead-ch341a-ic.jpg" /&gt;
+&lt;img src="/2015/05/26/reverse-engineering-american-express-usb-webkey/winchiphead-ch341a-ic.jpg" alt="Winchiphead ch341a ic" /&gt;
 &lt;figcaption&gt;WinChipHead CH341A&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -841,7 +841,7 @@ access patterns along with fairly decent long-term maintenance benefits.&lt;/p&g
 &lt;div class="footnotes"&gt;
   &lt;ol&gt;
     &lt;li id="fn:embed"&gt;
-      &lt;p&gt;Later, we decided to embed Speakers under Activities to improve our patterns of access, but ironically, we plan to switch Speakers back out to their own collection again to provide cleaner normalization. &lt;a href="#fnref:embed" class="reversefootnote"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;Later, we decided to embed Speakers under Activities to improve our patterns of access, but ironically, we plan to switch Speakers back out to their own collection again to provide cleaner normalization. &lt;a href="#fnref:embed" class="reversefootnote"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
@@ -953,7 +953,7 @@ your schedule is available even after losing an internet connection.&lt;/p&gt;
 have a DNSimple account, perfect, you already know how useful it is.  If not,
 &lt;a href="https://dnsimple.com/r/fb212a64f8e1b6"&gt;go sign up now&lt;/a&gt;, and then come back.&lt;/p&gt;
 
-&lt;h2 id="buy-an-ssl-cert-from-dnsimple"&gt;1. Buy an SSL Cert from DNSimple&lt;/h2&gt;
+&lt;h2 id="1-buy-an-ssl-cert-from-dnsimple"&gt;1. Buy an SSL Cert from DNSimple&lt;/h2&gt;
 
 &lt;p&gt;The first thing to do is to buy an SSL cert from &lt;a href="https://dnsimple.com/r/fb212a64f8e1b6"&gt;DNSimple&lt;/a&gt; (I
 usually only buy wildcard certs nowadays). Go to the manage interface for the
@@ -967,7 +967,7 @@ key from the DNSimple servers immediately after you save it to a secure place.&l
 resulting wildcard certificate will actually come from
 &lt;a href="http://www.comodo.com/"&gt;Comodo&lt;/a&gt;).&lt;/p&gt;
 
-&lt;h2 id="build-the-public-certificate-chain-pem-file"&gt;2. Build the Public Certificate Chain PEM file&lt;/h2&gt;
+&lt;h2 id="2-build-the-public-certificate-chain-pem-file"&gt;2. Build the Public Certificate Chain PEM file&lt;/h2&gt;
 
 &lt;hr /&gt;
 
@@ -1002,7 +1002,7 @@ DNSimple (I think those come from RapidSSL, which might deliver root certs).&lt;
 have a passphrase assigned to the certficate.  If you let DNSimple do all the
 work for you, you should already have a passphrase-free cert.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h2 id="add-the-ssl-endpoint-add-on-to-your-app"&gt;3. Add the SSL Endpoint Add-on to Your App&lt;/h2&gt;
+&lt;h2 id="3-add-the-ssl-endpoint-add-on-to-your-app"&gt;3. Add the SSL Endpoint Add-on to Your App&lt;/h2&gt;
 
 &lt;pre class="highlight shell"&gt;&lt;code&gt;heroku addons:add ssl:endpoint
 &lt;/code&gt;&lt;/pre&gt;
@@ -1010,7 +1010,7 @@ work for you, you should already have a passphrase-free cert.&lt;/em&gt;&lt;/p&g
 &lt;p&gt;Read more about the
 &lt;a href="https://devcenter.heroku.com/articles/ssl-endpoint#add_the_ssl_endpoint_addon_to_your_app"&gt;SSL Endpoint Add-on&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id="upload-your-ssl-cert-and-private-key-to-heroku"&gt;4. Upload your SSL Cert and Private Key to Heroku&lt;/h2&gt;
+&lt;h2 id="4-upload-your-ssl-cert-and-private-key-to-heroku"&gt;4. Upload your SSL Cert and Private Key to Heroku&lt;/h2&gt;
 
 &lt;pre class="highlight shell"&gt;&lt;code&gt;heroku certs:add STAR_yourdomain_com.pem STAR_yourdomain_com.key
 &lt;/code&gt;&lt;/pre&gt;
@@ -1051,7 +1051,7 @@ changed.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=8YjSty6bfog"&gt;Watch the Talk&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a title="Download the Slides" href="http://files.mcgeary.org/presentations/commit-messages-rockymtnruby.pdf"&gt;Download the Slides&lt;/a&gt; [PDF 7.8 MB]&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://files.mcgeary.org/presentations/commit-messages-rockymtnruby.pdf" title="Download the Slides"&gt;Download the Slides&lt;/a&gt; [PDF 7.8 MB]&lt;/p&gt;
 
 &lt;p&gt;Were you there? Please &lt;a href="http://spkr8.com/t/8263"&gt;rate my talk&lt;/a&gt;.&lt;/p&gt;
 
@@ -1124,7 +1124,7 @@ raw JavaScript directly ever again.  The goal of this talk is to convince the
 audience to try CoffeeScript in hopes that they too will find it as valuable as
 I did.&lt;/p&gt;
 
-&lt;p&gt;&lt;a title="Download the Slides" href="http://files.mcgeary.org/presentations/coffeescript-redirt.pdf"&gt;Download the Slides&lt;/a&gt; [PDF 29.0 MB]&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://files.mcgeary.org/presentations/coffeescript-redirt.pdf" title="Download the Slides"&gt;Download the Slides&lt;/a&gt; [PDF 29.0 MB]&lt;/p&gt;
 
 &lt;p&gt;Were you there? Please &lt;a href="http://spkr8.com/t/7289"&gt;rate my talk&lt;/a&gt;.&lt;/p&gt;
 
@@ -1156,7 +1156,7 @@ topics, including:&lt;/p&gt;
   &lt;li&gt;HTML5 Application Caching&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a title="Download the Slides" href="http://files.mcgeary.org/presentations/one-man-lightning-rubynation.pdf"&gt;Download the Slides&lt;/a&gt; [PDF 25 MB]&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://files.mcgeary.org/presentations/one-man-lightning-rubynation.pdf" title="Download the Slides"&gt;Download the Slides&lt;/a&gt; [PDF 25 MB]&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="http://blip.tv/rubynation/one-man-lightning-talks-5224811"&gt;Watch the Video&lt;/a&gt; [blip.tv]&lt;/p&gt;
 
@@ -1358,7 +1358,7 @@ bundle package
 &lt;div class="footnotes"&gt;
   &lt;ol&gt;
     &lt;li id="fn:gemfile-lock"&gt;
-      &lt;p&gt;By the way, for applications, please do &lt;a href="http://yehudakatz.com/2010/12/16/clarifying-the-roles-of-the-gemspec-and-gemfile/"&gt;check your &lt;code&gt;Gemfile.lock&lt;/code&gt; into version control&lt;/a&gt;. For libraries/gems, please do not check it in, and please add &lt;code&gt;Gemfile.lock&lt;/code&gt; to your &lt;code&gt;.gitignore&lt;/code&gt; file for the project. &lt;a href="#fnref:gemfile-lock" class="reversefootnote"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;By the way, for applications, please do &lt;a href="http://yehudakatz.com/2010/12/16/clarifying-the-roles-of-the-gemspec-and-gemfile/"&gt;check your &lt;code&gt;Gemfile.lock&lt;/code&gt; into version control&lt;/a&gt;. For libraries/gems, please do not check it in, and please add &lt;code&gt;Gemfile.lock&lt;/code&gt; to your &lt;code&gt;.gitignore&lt;/code&gt; file for the project. &lt;a href="#fnref:gemfile-lock" class="reversefootnote"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
@@ -1375,7 +1375,7 @@ bundle package
     <author>
       <name>Article Author</name>
     </author>
-    <content type="html">&lt;p&gt;&lt;a title="Transform Ideas into Software Reality" href="http://lifeofthefreelancer.com/software-development-consulting-with-ryan-mcgeary/"&gt;&lt;img alt="Video" src="/2011/01/04/interview-with-life-of-the-freelancer/lifeofthefreelancer.jpg" /&gt;&lt;/a&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;a href="http://lifeofthefreelancer.com/software-development-consulting-with-ryan-mcgeary/" title="Transform Ideas into Software Reality"&gt;&lt;img alt="Video" src="/2011/01/04/interview-with-life-of-the-freelancer/lifeofthefreelancer.jpg" /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;A couple months ago, I was interviewed by
 &lt;a href="http://twitter.com/rdempsey"&gt;Robert Dempsey&lt;/a&gt; at
@@ -1385,7 +1385,7 @@ but that interview was published last week.&lt;/p&gt;
 &lt;p&gt;I talk about my past experiences, lessons learned, successes, failures, and
 things I’m focussing on now.&lt;/p&gt;
 
-&lt;p&gt;&lt;a title="Transform Ideas into Software Reality" href="http://lifeofthefreelancer.com/software-development-consulting-with-ryan-mcgeary/"&gt;Transform Ideas into Software Reality&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://lifeofthefreelancer.com/software-development-consulting-with-ryan-mcgeary/" title="Transform Ideas into Software Reality"&gt;Transform Ideas into Software Reality&lt;/a&gt;&lt;/p&gt;
 
 </content>
   </entry>
@@ -1398,7 +1398,7 @@ things I’m focussing on now.&lt;/p&gt;
     <author>
       <name>Article Author</name>
     </author>
-    <content type="html">&lt;object width="640" height="385"&gt;&lt;param name="movie" value="http://www.youtube.com/v/a-jRN_ba41w?fs=1&amp;amp;hl=en_US&amp;amp;color1=0x3a3a3a&amp;amp;color2=0x999999" /&gt;&lt;param name="allowFullScreen" value="true" /&gt;&lt;param name="allowscriptaccess" value="always" /&gt;&lt;embed src="http://www.youtube.com/v/a-jRN_ba41w?fs=1&amp;amp;hl=en_US&amp;amp;color1=0x3a3a3a&amp;amp;color2=0x999999" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="385" /&gt;&lt;/object&gt;
+    <content type="html">&lt;object width="640" height="385"&gt;&lt;param name="movie" value="http://www.youtube.com/v/a-jRN_ba41w?fs=1&amp;amp;hl=en_US&amp;amp;color1=0x3a3a3a&amp;amp;color2=0x999999" /&gt;&amp;lt;/param&amp;gt;&lt;param name="allowFullScreen" value="true" /&gt;&amp;lt;/param&amp;gt;&lt;param name="allowscriptaccess" value="always" /&gt;&amp;lt;/param&amp;gt;&lt;embed src="http://www.youtube.com/v/a-jRN_ba41w?fs=1&amp;amp;hl=en_US&amp;amp;color1=0x3a3a3a&amp;amp;color2=0x999999" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="385" /&gt;&amp;lt;/embed&amp;gt;&lt;/object&gt;
 
 &lt;p&gt;I’m being featured this week on a new site called
 &lt;a href="http://how-i-work.com"&gt;How I Work&lt;/a&gt;.  The site is about letting developers watch
@@ -1447,9 +1447,9 @@ formats.&lt;/p&gt;
 goal of this talk is to explain why we chose MongoDB, how we use it at Busyconf,
 what design decisions we considered, and what the alternatives might have been.&lt;/p&gt;
 
-&lt;p&gt;&lt;a title="Download the Slides" href="http://files.mcgeary.org/presentations/busyconf-mongodc.pdf"&gt;&lt;img alt="BusyConf and MongoDB" src="/2010/12/14/busyconf-mongodc/busyconf-mongodc.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://files.mcgeary.org/presentations/busyconf-mongodc.pdf" title="Download the Slides"&gt;&lt;img alt="BusyConf and MongoDB" src="/2010/12/14/busyconf-mongodc/busyconf-mongodc.png" /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a title="Download the Slides" href="http://files.mcgeary.org/presentations/busyconf-mongodc.pdf"&gt;Download the Slides&lt;/a&gt; [PDF 2.2 MB]&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://files.mcgeary.org/presentations/busyconf-mongodc.pdf" title="Download the Slides"&gt;Download the Slides&lt;/a&gt; [PDF 2.2 MB]&lt;/p&gt;
 
 &lt;p&gt;Were you there? Please &lt;a href="http://spkr8.com/t/5230"&gt;rate my talk&lt;/a&gt;.&lt;/p&gt;
 
@@ -1464,7 +1464,7 @@ what design decisions we considered, and what the alternatives might have been.&
     <author>
       <name>Article Author</name>
     </author>
-    <content type="html">&lt;p&gt;&lt;a title="Download the Slides" href="http://files.mcgeary.org/presentations/coffeescript-dcrug.pdf"&gt;&lt;img alt="CoffeeScript" src="/2010/12/09/coffeescript-dcrug/coffeescript-dcrug.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;a href="http://files.mcgeary.org/presentations/coffeescript-dcrug.pdf" title="Download the Slides"&gt;&lt;img alt="CoffeeScript" src="/2010/12/09/coffeescript-dcrug/coffeescript-dcrug.png" /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;WASHINGTON, DC — &lt;a href="http://www.meetup.com/dcruby/calendar/15339405/"&gt;DCRUG&lt;/a&gt; — I discovered
 &lt;a href="http://coffeescript.org/"&gt;CoffeeScript&lt;/a&gt; during a recent project that &lt;a href="http://thegarvin.com"&gt;Jim Garvin&lt;/a&gt;
@@ -1478,7 +1478,7 @@ raw JavaScript directly ever again.  The goal of this talk is to convince the
 audience to try CoffeeScript in hopes that they too will find it as valuable as
 I did.&lt;/p&gt;
 
-&lt;p&gt;&lt;a title="Download the Slides" href="http://files.mcgeary.org/presentations/coffeescript-dcrug.pdf"&gt;Download the Slides&lt;/a&gt; [PDF 23.0 MB]&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://files.mcgeary.org/presentations/coffeescript-dcrug.pdf" title="Download the Slides"&gt;Download the Slides&lt;/a&gt; [PDF 23.0 MB]&lt;/p&gt;
 
 &lt;p&gt;Were you there? Please &lt;a href="http://spkr8.com/t/5216"&gt;rate my talk&lt;/a&gt;.&lt;/p&gt;
 
@@ -1493,7 +1493,7 @@ I did.&lt;/p&gt;
     <author>
       <name>Article Author</name>
     </author>
-    <content type="html">&lt;p&gt;&lt;a title="Download the Slides" href="http://files.mcgeary.org/presentations/coffeescript-757rb.pdf"&gt;&lt;img alt="CoffeeScript" src="/2010/11/01/coffeescript-757rb/coffeescript-757rb.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;a href="http://files.mcgeary.org/presentations/coffeescript-757rb.pdf" title="Download the Slides"&gt;&lt;img alt="CoffeeScript" src="/2010/11/01/coffeescript-757rb/coffeescript-757rb.png" /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;NORFOLK, VIRGINIA — &lt;a href="http://www.meetup.com/ruby-130/calendar/14404872/"&gt;757rb&lt;/a&gt; — I discovered
 &lt;a href="http://coffeescript.org/"&gt;CoffeeScript&lt;/a&gt; during a recent project that &lt;a href="http://thegarvin.com"&gt;Jim Garvin&lt;/a&gt;
@@ -1507,7 +1507,7 @@ raw JavaScript directly ever again.  The goal of this talk is to convince the
 audience to try CoffeeScript in hopes that they too will find it as valuable as
 I did.&lt;/p&gt;
 
-&lt;p&gt;&lt;a title="Download the Slides" href="http://files.mcgeary.org/presentations/coffeescript-757rb.pdf"&gt;Download the Slides&lt;/a&gt; [PDF 24.6 MB]&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://files.mcgeary.org/presentations/coffeescript-757rb.pdf" title="Download the Slides"&gt;Download the Slides&lt;/a&gt; [PDF 24.6 MB]&lt;/p&gt;
 
 &lt;p&gt;Were you there? Please &lt;a href="http://spkr8.com/t/4988"&gt;rate my talk&lt;/a&gt;.&lt;/p&gt;
 
@@ -1522,7 +1522,7 @@ I did.&lt;/p&gt;
     <author>
       <name>Article Author</name>
     </author>
-    <content type="html">&lt;p&gt;&lt;a title="Download the Slides" href="http://files.mcgeary.org/presentations/coffeescript-navarug-short.pdf"&gt;&lt;img alt="CoffeeScript" src="/2010/10/21/coffeescript-novarug/coffeescript-novarug.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;a href="http://files.mcgeary.org/presentations/coffeescript-navarug-short.pdf" title="Download the Slides"&gt;&lt;img alt="CoffeeScript" src="/2010/10/21/coffeescript-novarug/coffeescript-novarug.png" /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;RESTON, VIRGINIA — &lt;a href="http://novarug.org/articles/2010/09/29/oct-21-lightning-talks"&gt;NovaRUG&lt;/a&gt; — I discovered
 &lt;a href="http://coffeescript.org/"&gt;CoffeeScript&lt;/a&gt; during a recent project that &lt;a href="http://thegarvin.com"&gt;Jim Garvin&lt;/a&gt;
@@ -1536,7 +1536,7 @@ raw JavaScript directly ever again.  The goal of this talk is to convince the
 audience to try CoffeeScript in hopes that they too will find it as valuable as
 I did.&lt;/p&gt;
 
-&lt;p&gt;&lt;a title="Download the Slides" href="http://files.mcgeary.org/presentations/coffeescript-navarug-short.pdf"&gt;Download the Slides&lt;/a&gt; [PDF 17.8 MB]&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://files.mcgeary.org/presentations/coffeescript-navarug-short.pdf" title="Download the Slides"&gt;Download the Slides&lt;/a&gt; [PDF 17.8 MB]&lt;/p&gt;
 
 &lt;p&gt;Were you there? Please &lt;a href="http://spkr8.com/t/4985"&gt;rate my talk&lt;/a&gt;.&lt;/p&gt;
 
