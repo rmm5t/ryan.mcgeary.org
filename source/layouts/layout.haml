@@ -4,6 +4,8 @@
     %meta{ charset: "utf-8" }
     - title = current_page.data.title || yield_content(:title)
     - title_default = [data.site.name, data.site.summary].join(": ")
+
+    = meta_tag "Middleman #{Middleman::VERSION}; Middleman::Blog #{Middleman::Blog::VERSION}; Middleman::Syntax #{Middleman::Syntax::VERSION}; Ruby #{RUBY_VERSION}", name: "generator"
     = meta_tag "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"
     = meta_tag "width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no", name: "viewport"
     = meta_tag author,                                  name: "author"
