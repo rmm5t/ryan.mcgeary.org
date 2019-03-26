@@ -704,7 +704,7 @@ want to test the default behavior that most others experience.&lt;/p&gt;
     <link rel="alternate" href="http://ryan.mcgeary.org/2012/06/05/mongodb-schema-design-at-busyconf/"/>
     <id>http://ryan.mcgeary.org/2012/06/05/mongodb-schema-design-at-busyconf/</id>
     <published>2012-06-04T18:00:00-06:00</published>
-    <updated>2015-05-26T20:57:24-06:00</updated>
+    <updated>2019-03-26T08:42:50-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -713,6 +713,10 @@ want to test the default behavior that most others experience.&lt;/p&gt;
 was also extracted from
 &lt;a href="/2010/12/14/busyconf-mongodc/"&gt;talks&lt;/a&gt; that I’ve
 given on the subject.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt; &lt;a href="https://www.mongodb.com/post/25157962043/announcing-the-winner-of-the-schema-design-blogging"&gt;MongoDB awarded this entry the grand
+prize&lt;/a&gt;
+in the design contest.&lt;/p&gt;
 
 &lt;h2 id="obligatory-plug"&gt;Obligatory Plug&lt;/h2&gt;
 
