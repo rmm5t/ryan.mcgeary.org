@@ -14,6 +14,6 @@ gem "nokogiri"                             # For article summaries
 # gem "middleman-blog-similar"
 # gem "levenshtein-ffi"            # for similar post algorithm
 
-gem "haml", "~> 4.0" # locking to 4.x until we upgrade everything else middleman
+gem "haml", "~> 5.0" # locking to 4.x until we upgrade everything else middleman
 
 gem "puma", require: false # for puma-dev
