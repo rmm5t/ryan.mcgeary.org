@@ -3,7 +3,7 @@
 $ = jQuery
 
 $(document).ready ->
-  $("#photo").tuckOnScroll()
+  # $("#photo").tuckOnScroll()
   $("[data-toggle=class]").toggleClassOnClick()
 
 $.fn.tuckOnScroll = (options) ->
